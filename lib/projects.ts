@@ -107,7 +107,7 @@ export const projects: Project[] = [
     name: 'Beatness',
     category: 'SOCIAL MEDIA',
     year: '2024',
-    image: '/assets/thumbnail-beatness.png',
+    image: '/assets/beatness/beatness-01.jpg',
     accentColor: 'white',
     tagline: 'Contenido que se mueve tan fuerte como el entreno.',
     tags: ['Motion', 'Social media', 'Dirección de arte'],
@@ -122,16 +122,60 @@ export const projects: Project[] = [
       'Pack de más de 15 templates editables, 4 reels de campaña producidos, y una guía visual para que el equipo interno pueda generar contenido sin romper el sistema.',
     gallery: [
       '/assets/beatness/beatness-01.jpg',
+      '/assets/beatness/beatness-reel-cycling-web.mp4',
       '/assets/beatness/beatness-02.jpg',
       '/assets/beatness/beatness-03.jpg',
       '/assets/beatness/beatness-04.jpg',
       '/assets/beatness/beatness-05.jpg',
       '/assets/beatness/beatness-06.png',
-      '/assets/beatness/beatness-07.jpg',
-      '/assets/beatness/beatness-08.png',
       '/assets/beatness/beatness-09.png',
       '/assets/beatness/beatness-10.jpg',
-      '/assets/beatness/beatness-11.png',
+    ],
+    campaigns: [
+      {
+        name: 'Pauta · Diferentes Disciplinas',
+        objective: 'Campaña de paid media en 4 variaciones fotográficas y 2 formatos — post cuadrado y banner HD — para activación de marca en pauta digital.',
+        formats: ['Post · 4 variaciones', 'Banner HD · 2 variaciones'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/beatness/beatness-pauta-post-1.png', '/assets/beatness/beatness-pauta-post-2.png', '/assets/beatness/beatness-pauta-post-3.png', '/assets/beatness/beatness-pauta-post-4.png'], carousel: true },
+              { items: ['/assets/beatness/beatness-pauta-hd-1.png', '/assets/beatness/beatness-pauta-hd-2.png'], carousel: true },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Eventos',
+        objective: 'Piezas de activación para eventos especiales del club — desde inauguraciones y colaboraciones externas hasta clases temáticas y programas inclusivos.',
+        formats: ['Story · Instagram', 'Post · Instagram'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/beatness/beatness-reel-beatdown-web.mp4'] },
+              { items: ['/assets/beatness/beatness-ev-inaug.png'] },
+              { items: ['/assets/beatness/beatness-ev-anika.png'] },
+              { items: ['/assets/beatness/beatness-ev-switch.png'] },
+              { items: ['/assets/beatness/beatness-ev-box-kids.png'] },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'The ___ Beat',
+        objective: 'Serie editorial por disciplina — cada deporte con su propio acento de color y fotografía real en el gym. Box, Funcional, Bootcamp y Cycling en un solo sistema visual.',
+        formats: ['Post · Instagram · 4 disciplinas'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/beatness/beatness-beat-box.jpg', '/assets/beatness/beatness-beat-funcional.jpg', '/assets/beatness/beatness-beat-bootcamp.jpg', '/assets/beatness/beatness-beat-cycling.jpg'], carousel: true },
+            ],
+          },
+        ],
+      },
     ],
   },
   {
