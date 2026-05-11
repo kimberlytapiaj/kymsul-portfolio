@@ -237,7 +237,9 @@ function CampaignBlock({ campaign }: { campaign: SubProject }) {
   const items = extractBentoItems(campaign)
   const n = items.length
   const isPaidMedia = campaign.formats.some(f => f.toLowerCase().includes('paid'))
+  const hasWide = items.some(it => it.wide)
   const gridStyle: React.CSSProperties = (() => {
+    if (hasWide) return { gridTemplateColumns: '1fr' }
     if (n === 1) return { maxWidth: '380px', margin: '0 auto' }
     if (n === 2) return { gridTemplateColumns: 'repeat(2, 1fr)', maxWidth: '760px', margin: '0 auto' }
     return { gridTemplateColumns: 'repeat(3, 1fr)' }
