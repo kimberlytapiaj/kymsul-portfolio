@@ -120,32 +120,58 @@ export const projects: Project[] = [
     name: 'BrainyBudzz',
     category: 'BRANDING · UX UI',
     year: '2025',
-    image: '/assets/thumbnail-brainy.png',
+    image: '/assets/brainy/brainy-12.png',
     accentColor: 'white',
     tagline: 'Aprendizaje que se ve, se siente y se recuerda.',
-    tags: ['Branding', 'UI Design', 'Design System'],
+    tags: ['Branding', 'Identidad visual', 'Mascota', 'UX UI'],
     overview:
-      'BrainyBudzz es una plataforma EdTech dirigida a niños y adolescentes. El producto necesitaba una identidad que compitiera en atención contra redes sociales, sin caer en el caos visual típico del segmento infantil.',
-    role: 'Diseño de marca completo más diseño de interfaz: desde el posicionamiento visual hasta los componentes de UI en Figma, incluyendo design system documentado.',
+      'BrainyBudzz es una plataforma EdTech dirigida a niños en etapa primaria. El reto fue crear una identidad que compitiera en atención contra redes sociales sin caer en el caos visual típico del segmento infantil — energética, pero con sistema.',
+    role: 'Diseño de identidad visual completo: naming, logotipo, mascota Bud, paleta, tipografía y brand book. Dirección visual de la interfaz de la plataforma con mockups de producto.',
     challenge:
       'Crear algo que los niños encuentren divertido y los padres perciban como confiable. Dos audiencias opuestas con criterios de decisión completamente distintos.',
     process:
-      'Desarrollé una mascota modular —Budzz— que funciona como elemento vivo de la marca: puede expresar emociones, adaptarse a distintos contextos y escalar a merchandise o animación. La paleta mezcla energía (amarillo, cian, magenta) con fondos neutros para no saturar. Los componentes UI priorizan tamaño de toque generoso y jerarquía clara.',
+      'Diseñé a Bud — una mascota modular basada en un casco de inventor infantil con visor de realidad virtual — que funciona como elemento vivo de la marca: puede expresar emociones, adaptarse a contextos y escalar a merchandise o animación. La paleta combina los primarios CMY con negro y lavanda para dar energía sin saturar.',
     result:
-      'Design system funcional en Figma con más de 40 componentes, brand book completo, y una mascota lista para animar. La marca pasó validación con usuarios de 8 a 14 años en pruebas de concepto.',
+      'Brand book completo: construcción de logotipo, sistema de reducciones, paleta Pantone documentada, tipografía y mascota lista para animar. Dirección visual de la plataforma con mockups en desktop y mobile.',
     gallery: [
-      '/assets/brainy/brainy-01.png',
-      '/assets/brainy/brainy-02.png',
-      '/assets/brainy/brainy-03.png',
-      '/assets/brainy/brainy-04.png',
-      '/assets/brainy/brainy-05.png',
-      '/assets/brainy/brainy-06.png',
-      '/assets/brainy/brainy-07.png',
-      '/assets/brainy/brainy-08.png',
       '/assets/brainy/brainy-09.png',
-      '/assets/brainy/brainy-10.png',
+      '/assets/brainy/brainy-07.png',
       '/assets/brainy/brainy-11.png',
-      '/assets/brainy/brainy-12.png',
+      '/assets/brainy/brainy-06.png',
+    ],
+    campaigns: [
+      {
+        name: 'Branding',
+        objective: 'Identidad visual completa para BrainyBudzz — construcción del logotipo y mascota Bud, sistema de variantes de color, paleta Pantone y tipografía. Documentado en brand book para aplicaciones futuras.',
+        formats: ['Logotipo', 'Mascota · Bud', 'Paleta de color', 'Tipografía', 'Reducciones'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/brainy/brainy-09.png'] },
+              { items: ['/assets/brainy/brainy-10.png'] },
+              { items: ['/assets/brainy/brainy-07.png'] },
+              { items: ['/assets/brainy/brainy-06.png'] },
+              { items: ['/assets/brainy/brainy-05.png'] },
+              { items: ['/assets/brainy/brainy-08.png'] },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'UX UI · Plataforma',
+        objective: 'Dirección visual de la plataforma educativa — aplicación de la identidad de marca en la interfaz de escritorio y móvil, con mockups de producto mostrando la experiencia de usuario.',
+        formats: ['Desktop · Plataforma', 'Mobile · App'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/brainy/brainy-11.png'], contain: true },
+              { items: ['/assets/brainy/brainy-12.png'], contain: true },
+            ],
+          },
+        ],
+      },
     ],
   },
   {
