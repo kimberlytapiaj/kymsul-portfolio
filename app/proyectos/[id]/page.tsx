@@ -200,7 +200,13 @@ function CampaignBlock({ campaign }: { campaign: SubProject }) {
 
       {/* Grid */}
       {n === 1 ? (
-        <CampaignItem src={campaign.gallery[0]} alt={campaign.name} className="w-full" />
+        campaign.gallery[0].endsWith('.mp4') ? (
+          <video src={campaign.gallery[0]} autoPlay loop muted playsInline className="max-h-[480px] w-auto mx-auto block rounded-sm" />
+        ) : (
+          <div className="h-[420px] bg-[rgba(13,13,13,0.04)] rounded-sm flex items-center justify-center p-3">
+            <img src={campaign.gallery[0]} alt={campaign.name} className="max-w-full max-h-full object-contain" loading="lazy" />
+          </div>
+        )
       ) : !hasVideo ? (
         <div className="grid grid-cols-5 gap-3">
           {campaign.gallery.map((src, i) => (
