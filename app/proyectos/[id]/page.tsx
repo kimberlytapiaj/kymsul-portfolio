@@ -169,6 +169,7 @@ function GalleryItem({ src, alt }: { src: string; alt: string }) {
 
 function CampaignBlock({ campaign }: { campaign: SubProject }) {
   const hasVideo = campaign.gallery.some((s) => s.endsWith('.mp4'))
+  const n = campaign.gallery.length
 
   return (
     <div>
@@ -197,35 +198,35 @@ function CampaignBlock({ campaign }: { campaign: SubProject }) {
         </div>
       </div>
 
-      {/* Grid — videos 1 col, images adaptive */}
-      {hasVideo ? (
-        <div className="grid grid-cols-3 gap-4">
-          {campaign.gallery.map((src, i) => (
-            <video
-              key={i}
-              src={src}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full rounded-sm"
-            />
-          ))}
-        </div>
-      ) : (
+      {/* Grid */}
+      {n === 1 ? (
+        <CampaignItem src={campaign.gallery[0]} alt={campaign.name} className="w-full" />
+      ) : !hasVideo ? (
         <div className="grid grid-cols-5 gap-3">
           {campaign.gallery.map((src, i) => (
             <div key={i} className="h-[280px] bg-[rgba(13,13,13,0.04)] rounded-sm flex items-center justify-center p-2">
-              <img
-                src={src}
-                alt={`${campaign.name} ${i + 1}`}
-                className="max-w-full max-h-full object-contain"
-                loading="lazy"
-              />
+              <img src={src} alt={`${campaign.name} ${i + 1}`} className="max-w-full max-h-full object-contain" loading="lazy" />
             </div>
           ))}
         </div>
+      ) : (
+        <div className={`grid gap-4 ${n === 2 ? 'grid-cols-2' : 'grid-cols-3'}`}>
+          {campaign.gallery.map((src, i) => (
+            <CampaignItem key={i} src={src} alt={`${campaign.name} ${i + 1}`} />
+          ))}
+        </div>
       )}
+    </div>
+  )
+}
+
+function CampaignItem({ src, alt, className = '' }: { src: string; alt: string; className?: string }) {
+  if (src.endsWith('.mp4')) {
+    return <video src={src} autoPlay loop muted playsInline className={`w-full rounded-sm ${className}`} />
+  }
+  return (
+    <div className={`aspect-video bg-[rgba(13,13,13,0.04)] rounded-sm flex items-center justify-center p-3 ${className}`}>
+      <img src={src} alt={alt} className="max-w-full max-h-full object-contain" loading="lazy" />
     </div>
   )
 }
