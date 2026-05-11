@@ -278,13 +278,12 @@ export const projects: Project[] = [
     result:
       'Más de 20 piezas entre paid media estático, reels bilingües y posts editoriales. Sistema de producción que permite adaptar cada pieza a dos idiomas sin perder coherencia de marca.',
     gallery: [
+      '/assets/bwl/bwl-mothers-day-web.mp4',
       '/assets/bwl/bwl-11.png',
       '/assets/bwl/bwl-12.png',
       '/assets/bwl/bwl-13.png',
       '/assets/bwl/bwl-14.png',
       '/assets/bwl/bwl-15.png',
-      '/assets/bwl/bwl-09.png',
-      '/assets/bwl/bwl-10.png',
     ],
     campaigns: [
       {
@@ -304,13 +303,11 @@ export const projects: Project[] = [
       },
       {
         name: 'Optrimax',
-        objective: 'Adaptación bilingüe de reel de producto: versión en inglés para Instagram y versión en chino para RedNote (小红书). Mismo concepto visual, copy nativo en cada idioma. Los estáticos de paid media acompañan el ecosistema de campaña.',
-        formats: ['Reel EN · Instagram', 'Reel 中文 · 小红书', 'Paid Media'],
+        objective: 'Adaptación bilingüe de reel de producto: versión en inglés para Instagram y versión en chino para RedNote (小红书). Mismo concepto visual, copy nativo en cada idioma.',
+        formats: ['Reel EN · Instagram', 'Reel 中文 · 小红书'],
         gallery: [
           '/assets/bwl/bwl-post-71-en-web.mp4',
           '/assets/bwl/bwl-post-71-zh-web.mp4',
-          '/assets/bwl/bwl-09.png',
-          '/assets/bwl/bwl-10.png',
         ],
       },
       {
@@ -324,14 +321,6 @@ export const projects: Project[] = [
           '/assets/bwl/bwl-03.png',
           '/assets/bwl/bwl-04.png',
           '/assets/bwl/bwl-05.png',
-        ],
-      },
-      {
-        name: 'Día de las Madres · BWL',
-        objective: 'Video especial de campaña para Día Internacional de las Madres. Producción de mayor escala: edición cinematográfica con stock premium, música y motion type emocional.',
-        formats: ['Video · Campaña especial'],
-        gallery: [
-          '/assets/bwl/bwl-mothers-day-web.mp4',
         ],
       },
       {
