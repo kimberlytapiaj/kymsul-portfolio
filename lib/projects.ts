@@ -355,7 +355,6 @@ export const projects: Project[] = [
           {
             groups: [
               { items: ['/assets/casta-real/cr-pkg-hero.png', '/assets/casta-real/cr-pkg-hero-v2.png'], carousel: true },
-              { items: ['/assets/casta-real/cr-pkg-transp-front.png', '/assets/casta-real/cr-pkg-transp-mockup.png'], carousel: true },
               { items: ['/assets/casta-real/cr-pkg-desc-front.png', '/assets/casta-real/cr-pkg-desc-mockup.png'], carousel: true },
               { items: ['/assets/casta-real/cr-label-basico.png', '/assets/casta-real/cr-label-mant.png'], carousel: true },
             ],
