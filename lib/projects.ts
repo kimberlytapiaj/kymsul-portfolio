@@ -287,15 +287,22 @@ export const projects: Project[] = [
     ],
     campaigns: [
       {
-        name: 'Avance · Reels',
-        objective: 'Reels de producto en inglés y chino para Instagram y RedNote. Misma pieza, dos idiomas, dos plataformas — cada versión adaptada al contexto visual y cultural de su audiencia.',
-        formats: ['Reel EN', 'Reel 中文', 'Post 77'],
+        name: 'Avance · Post 66',
+        objective: 'Reel de producto adaptado a dos idiomas: versión en inglés para Instagram y versión en chino para RedNote. Swipe para ver la adaptación.',
+        formats: ['Reel EN', 'Reel 中文 · 小红书'],
         gallery: [
           '/assets/bwl/bwl-post-66-web.mp4',
           '/assets/bwl/bwl-post-66-zh-web.mp4',
-          '/assets/bwl/bwl-post-77-web.mp4',
         ],
         type: 'carousel',
+      },
+      {
+        name: 'Avance · Post 77',
+        objective: 'Reel de producto independiente para Instagram. Edición con stock premium y motion type, orientado a conversión.',
+        formats: ['Reel · Instagram'],
+        gallery: [
+          '/assets/bwl/bwl-post-77-web.mp4',
+        ],
       },
       {
         name: 'Avance · Carrusel',

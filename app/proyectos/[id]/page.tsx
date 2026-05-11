@@ -210,6 +210,13 @@ function CampaignGrid({ gallery, name }: { gallery: string[]; name: string }) {
   const hasVideo = gallery.some((s) => s.endsWith('.mp4'))
 
   if (hasVideo) {
+    if (gallery.length === 1 && gallery[0].endsWith('.mp4')) {
+      return (
+        <div className="flex justify-center">
+          <video src={gallery[0]} autoPlay loop muted playsInline className="max-h-[560px] w-auto rounded-sm" />
+        </div>
+      )
+    }
     return (
       <div className="grid grid-cols-3 gap-4">
         {gallery.map((src, i) => (
