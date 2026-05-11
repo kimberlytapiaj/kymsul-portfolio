@@ -1,9 +1,22 @@
+export type SectionGroup = {
+  items: string[]
+  carousel?: boolean
+}
+
+export type Section = {
+  items?: string[]
+  type?: 'carousel'
+  groups?: SectionGroup[]
+}
+
 export type SubProject = {
   name: string
   objective: string
   formats: string[]
   gallery: string[]
   type?: 'carousel'
+  sections?: Section[]
+  subCampaigns?: SubProject[]
 }
 
 export type Project = {
@@ -141,61 +154,115 @@ export const projects: Project[] = [
       '30+ piezas entre editoriales, carruseles y reels para KOP, más contenido diferenciado para Kings Tavern. Sistema con templates replicables entregados al equipo interno.',
     gallery: [
       '/assets/kop/kop-01.png',
-      '/assets/kop/kop-04.png',
       '/assets/kop/kop-02.png',
       '/assets/kop/kop-reel-01-web.mp4',
-      '/assets/kop/kop-07.png',
       '/assets/kop/kop-08.png',
-      '/assets/kop/kop-09.png',
       '/assets/kop/kop-reel-02-web.mp4',
-      '/assets/kop/kop-kt-cover.png',
-      '/assets/kop/kop-kt-slide.png',
     ],
     campaigns: [
       {
-        name: 'Soccer Tournament · Maestro Dobel',
-        objective: 'Campaña integral para torneo de soccer patrocinado. Un mismo diseño adaptado a 5 formatos y pantallas distintas — desde el flyer imprimible hasta el banner de app.',
-        formats: ['Flyer', 'Post', 'Story', 'TV Screen', 'Banner App'],
-        gallery: [
-          '/assets/kop/kop-soccer-flyer.png',
-          '/assets/kop/kop-soccer-post.png',
-          '/assets/kop/kop-soccer-story.png',
-          '/assets/kop/kop-soccer-tv.png',
-          '/assets/kop/kop-soccer-banner.png',
+        name: 'Campañas',
+        objective: 'Sistema de comunicación para eventos, activaciones y operación del club — cada pieza adaptada a los formatos y pantallas necesarios.',
+        formats: [],
+        gallery: [],
+        subCampaigns: [
+          {
+            name: 'Soccer Tournament · Maestro Dobel',
+            objective: 'Campaña integral para torneo de soccer patrocinado. Un mismo diseño adaptado a 5 formatos y pantallas distintas — desde el flyer imprimible hasta el banner de app.',
+            formats: ['Flyer', 'Post', 'Story', 'TV Screen', 'Banner App'],
+            gallery: [
+              '/assets/kop/kop-soccer-flyer.png',
+              '/assets/kop/kop-soccer-post.png',
+              '/assets/kop/kop-soccer-story.png',
+              '/assets/kop/kop-soccer-tv.png',
+              '/assets/kop/kop-soccer-banner.png',
+            ],
+          },
+          {
+            name: 'World Cup 2026 · Sticker Swap',
+            objective: 'Campaña de activación aprovechando la Copa Mundial 2026. Adaptación del concepto a 5 formatos: flyer, social media, TV en instalaciones, banner digital y email.',
+            formats: ['Flyer', 'Post', 'Story', 'TV Screen', 'Banner App'],
+            gallery: [
+              '/assets/kop/kop-wc-flyer.png',
+              '/assets/kop/kop-wc-post.png',
+              '/assets/kop/kop-wc-story.png',
+              '/assets/kop/kop-wc-tv.png',
+              '/assets/kop/kop-wc-banner.png',
+            ],
+          },
+          {
+            name: 'Plan Weeks Opens',
+            objective: 'Sistema de comunicación semanal para horarios de apertura del club. Diseñado como template modular adaptable a cada día y entregado en 4 formatos distintos.',
+            formats: ['Flyer', 'Post', 'Story', 'TV Screen'],
+            gallery: [
+              '/assets/kop/kop-pwo-flyer.png',
+              '/assets/kop/kop-pwo-flyer-day.png',
+              '/assets/kop/kop-pwo-post.png',
+              '/assets/kop/kop-pwo-story.png',
+              '/assets/kop/kop-pwo-tv.png',
+            ],
+          },
+          {
+            name: 'Highlights per Sport',
+            objective: 'Videos de 30 segundos por deporte practicado en el club — Pádel, Soccer y Voleibol — para activación en pantallas del venue y redes sociales.',
+            formats: ['Reel 30s · Pádel', 'Reel 30s · Soccer', 'Reel 30s · Voleibol'],
+            gallery: [
+              '/assets/kop/kop-hl-30-secs-padel-web.mp4',
+              '/assets/kop/kop-hl-30-secs-soccer-web.mp4',
+              '/assets/kop/kop-hl-30-secs-volley-web.mp4',
+            ],
+          },
         ],
       },
       {
-        name: 'World Cup 2026 · Sticker Swap',
-        objective: 'Campaña de activación aprovechando la Copa Mundial 2026. Adaptación del concepto a 5 formatos: flyer, social media, TV en instalaciones, banner digital y email.',
-        formats: ['Flyer', 'Post', 'Story', 'TV Screen', 'Banner App'],
-        gallery: [
-          '/assets/kop/kop-wc-flyer.png',
-          '/assets/kop/kop-wc-post.png',
-          '/assets/kop/kop-wc-story.png',
-          '/assets/kop/kop-wc-tv.png',
-          '/assets/kop/kop-wc-banner.png',
+        name: 'Kings Tavern',
+        objective: 'Contenido editorial para el restaurante interno del club. Una línea visual más cálida y atmosférica que convive con la identidad deportiva de KOP sin romper el feed.',
+        formats: ['Post · Instagram', 'Carrusel · Instagram'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/kop/kop-kt-reel-web.mp4'] },
+              { items: ['/assets/kop/kop-kt-184.png'] },
+              { items: ['/assets/kop/kop-kt-157-1.png', '/assets/kop/kop-kt-157-2.png', '/assets/kop/kop-kt-157-3.png', '/assets/kop/kop-kt-157-4.png', '/assets/kop/kop-kt-157-5.png', '/assets/kop/kop-kt-157-6.png', '/assets/kop/kop-kt-157-7.png'], carousel: true },
+            ],
+          },
         ],
       },
       {
-        name: 'Plan Weeks Opens',
-        objective: 'Sistema de comunicación semanal para horarios de apertura del club. Diseñado como template modular adaptable a cada día y entregado en 4 formatos distintos.',
-        formats: ['Flyer', 'Post', 'Story', 'TV Screen'],
-        gallery: [
-          '/assets/kop/kop-pwo-flyer.png',
-          '/assets/kop/kop-pwo-flyer-day.png',
-          '/assets/kop/kop-pwo-post.png',
-          '/assets/kop/kop-pwo-story.png',
-          '/assets/kop/kop-pwo-tv.png',
+        name: 'Sin Yolanda',
+        objective: 'Serie de reels para la apertura de Sin Yolanda — tres piezas distintas con dos versiones del opening principal para distribución en redes sociales.',
+        formats: ['Reel · Opening v1', 'Reel · Opening v2', 'Reel · Part 2', 'Reel · Part 3'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/kop/kop-sy-reel-01-web.mp4'] },
+              { items: ['/assets/kop/kop-sy-reel-03-web.mp4'] },
+              { items: ['/assets/kop/kop-sy-reel-04-web.mp4'] },
+            ],
+          },
         ],
       },
       {
-        name: 'Highlights per Sport',
-        objective: 'Videos de 30 segundos por deporte practicado en el club — Pádel, Soccer y Voleibol — para activación en pantallas del venue y redes sociales.',
-        formats: ['Reel 30s · Pádel', 'Reel 30s · Soccer', 'Reel 30s · Voleibol'],
-        gallery: [
-          '/assets/kop/kop-hl-30-secs-padel-web.mp4',
-          '/assets/kop/kop-hl-30-secs-soccer-web.mp4',
-          '/assets/kop/kop-hl-30-secs-volley-web.mp4',
+        name: 'Contenido Orgánico',
+        objective: 'Posts editoriales, carruseles educativos y reels para el feed de Instagram de KOP — piezas que construyen identidad de marca semana a semana.',
+        formats: ['Post', 'Carrusel', 'Reel'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/kop/kop-reel-174-web.mp4'] },
+              { items: ['/assets/kop/kop-c143-1.png', '/assets/kop/kop-c143-2.png', '/assets/kop/kop-c143-3.png', '/assets/kop/kop-c143-4.png'], carousel: true },
+              { items: ['/assets/kop/kop-post-140.png'] },
+              { items: ['/assets/kop/kop-reel-147-web.mp4'] },
+              { items: ['/assets/kop/kop-c146-1.png', '/assets/kop/kop-c146-2.png', '/assets/kop/kop-c146-3.png', '/assets/kop/kop-c146-4.png'], carousel: true },
+              { items: ['/assets/kop/kop-reel-150-web.mp4'] },
+              { items: ['/assets/kop/kop-c154-1.png', '/assets/kop/kop-c154-2.png', '/assets/kop/kop-c154-3.png'], carousel: true },
+              { items: ['/assets/kop/kop-c168-1.png', '/assets/kop/kop-c168-2.png', '/assets/kop/kop-c168-3.png'], carousel: true },
+              { items: ['/assets/kop/kop-post-172.png'] },
+            ],
+          },
         ],
       },
     ],
@@ -279,6 +346,7 @@ export const projects: Project[] = [
       'Más de 20 piezas entre paid media estático, reels bilingües y posts editoriales. Sistema de producción que permite adaptar cada pieza a dos idiomas sin perder coherencia de marca.',
     gallery: [
       '/assets/bwl/bwl-mothers-day-web.mp4',
+      '/assets/bwl/bwl-post-76.png',
       '/assets/bwl/bwl-11.png',
       '/assets/bwl/bwl-12.png',
       '/assets/bwl/bwl-13.png',
@@ -287,65 +355,47 @@ export const projects: Project[] = [
     ],
     campaigns: [
       {
-        name: 'Avance · Post 66',
-        objective: 'Reel de producto adaptado a dos idiomas: versión en inglés para Instagram y versión en chino para RedNote. Swipe para ver la adaptación.',
-        formats: ['Reel EN', 'Reel 中文 · 小红书'],
-        gallery: [
-          '/assets/bwl/bwl-post-66-web.mp4',
-          '/assets/bwl/bwl-post-66-zh-web.mp4',
+        name: 'Avance',
+        objective: 'Contenido de producto para Instagram y RedNote: reels bilingües adaptados por plataforma y carrusel educativo pensado para retención y guardados.',
+        formats: ['Reel EN', 'Reel 中文', 'Carrusel'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/bwl/bwl-post-66-web.mp4', '/assets/bwl/bwl-post-66-zh-web.mp4'], carousel: true },
+              { items: ['/assets/bwl/bwl-post-77-web.mp4'] },
+            ],
+          },
+          { items: ['/assets/bwl/bwl-06.png', '/assets/bwl/bwl-07.png', '/assets/bwl/bwl-08.png', '/assets/bwl/bwl-16.png', '/assets/bwl/bwl-17.png'], type: 'carousel' },
         ],
-        type: 'carousel',
-      },
-      {
-        name: 'Avance · Post 77',
-        objective: 'Reel de producto independiente para Instagram. Edición con stock premium y motion type, orientado a conversión.',
-        formats: ['Reel · Instagram'],
-        gallery: [
-          '/assets/bwl/bwl-post-77-web.mp4',
-        ],
-      },
-      {
-        name: 'Avance · Carrusel',
-        objective: 'Post carrusel educativo: "3 Signs your body is asking for help". Secuencia de 5 slides que conecta síntomas con el producto, pensada para retención y guardados en Instagram.',
-        formats: ['Carrusel · 5 slides'],
-        gallery: [
-          '/assets/bwl/bwl-06.png',
-          '/assets/bwl/bwl-07.png',
-          '/assets/bwl/bwl-08.png',
-          '/assets/bwl/bwl-16.png',
-          '/assets/bwl/bwl-17.png',
-        ],
-        type: 'carousel',
       },
       {
         name: 'Optrimax',
         objective: 'Adaptación bilingüe de reel de producto: versión en inglés para Instagram y versión en chino para RedNote (小红书). Mismo concepto visual, copy nativo en cada idioma.',
         formats: ['Reel EN · Instagram', 'Reel 中文 · 小红书'],
-        gallery: [
-          '/assets/bwl/bwl-post-71-en-web.mp4',
-          '/assets/bwl/bwl-post-71-zh-web.mp4',
+        gallery: [],
+        sections: [
+          { items: ['/assets/bwl/bwl-post-71-en-web.mp4', '/assets/bwl/bwl-post-71-zh-web.mp4'], type: 'carousel' },
+          { items: ['/assets/bwl/bwl-pm-12.png', '/assets/bwl/bwl-pm-13.png'] },
         ],
-        type: 'carousel',
       },
       {
         name: 'Drs Secret',
         objective: 'Campaña de paid media con video y set de estáticos. El video activa la marca en pauta dinámica; los estáticos cubren formatos de display y feed con composición limpia orientada a conversión.',
         formats: ['Video · Paid Media', 'Statics · Paid Media'],
-        gallery: [
-          '/assets/bwl/bwl-pm-03-web.mp4',
-          '/assets/bwl/bwl-01.png',
-          '/assets/bwl/bwl-02.png',
-          '/assets/bwl/bwl-03.png',
-          '/assets/bwl/bwl-04.png',
-          '/assets/bwl/bwl-05.png',
+        gallery: [],
+        sections: [
+          { items: ['/assets/bwl/bwl-pm-03-web.mp4'] },
+          { items: ['/assets/bwl/bwl-01.png', '/assets/bwl/bwl-02.png', '/assets/bwl/bwl-03.png', '/assets/bwl/bwl-04.png', '/assets/bwl/bwl-05.png'], type: 'carousel' },
         ],
       },
       {
         name: 'Pentalab',
         objective: 'Pieza de paid media en video para activación de marca. Edición de producto con cierre de marca y empaque — diseñado para captar atención en el primer segundo de pauta.',
         formats: ['Video · Paid Media'],
-        gallery: [
-          '/assets/bwl/bwl-pm-11-web.mp4',
+        gallery: [],
+        sections: [
+          { items: ['/assets/bwl/bwl-pm-11-web.mp4'] },
         ],
       },
     ],

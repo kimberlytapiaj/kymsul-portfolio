@@ -1,8 +1,10 @@
+import React from 'react'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import PageLayout from '@/components/PageLayout'
 import CampaignCarousel from '@/components/CampaignCarousel'
-import { projects, getProject, type SubProject } from '@/lib/projects'
+import MediaCell from '@/components/MediaCell'
+import { projects, getProject, type SubProject, type Section, type SectionGroup } from '@/lib/projects'
 
 const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 
@@ -127,10 +129,10 @@ export default async function CasoPage({ params }: Props) {
 
       {/* Campaigns / Sub-projects */}
       {project.campaigns && project.campaigns.length > 0 && (
-        <section className="border-t border-[rgba(13,13,13,0.08)] px-24 py-24 bg-[rgba(13,13,13,0.02)]">
+        <section className="border-t border-[rgba(13,13,13,0.08)] px-24 py-20 bg-[rgba(13,13,13,0.02)]">
           <div className="max-w-[1440px] mx-auto">
             <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-16">CAMPAÑAS</p>
-            <div className="space-y-24">
+            <div className="space-y-20">
               {project.campaigns.map((campaign, i) => (
                 <CampaignBlock key={i} campaign={campaign} />
               ))}
@@ -168,16 +170,84 @@ function GalleryItem({ src, alt }: { src: string; alt: string }) {
   )
 }
 
+type BentoItem =
+  | { kind: 'video-carousel'; sources: string[] }
+  | { kind: 'image-carousel'; sources: string[] }
+  | { kind: 'video'; src: string }
+  | { kind: 'image'; src: string }
+
+function extractBentoItems(campaign: SubProject): BentoItem[] {
+  const out: BentoItem[] = []
+  const sections = campaign.sections ?? []
+
+  if (sections.length === 0) {
+    for (const src of campaign.gallery) {
+      out.push(src.endsWith('.mp4') ? { kind: 'video', src } : { kind: 'image', src })
+    }
+    return out
+  }
+
+  for (const section of sections) {
+    if (section.groups) {
+      for (const group of section.groups) {
+        if (group.carousel) {
+          const hasVideo = group.items.some(s => s.endsWith('.mp4'))
+          out.push({ kind: hasVideo ? 'video-carousel' : 'image-carousel', sources: group.items })
+        } else {
+          for (const src of group.items) {
+            out.push(src.endsWith('.mp4') ? { kind: 'video', src } : { kind: 'image', src })
+          }
+        }
+      }
+    } else if (section.type === 'carousel') {
+      const hasVideo = section.items!.some(s => s.endsWith('.mp4'))
+      out.push({ kind: hasVideo ? 'video-carousel' : 'image-carousel', sources: section.items! })
+    } else {
+      for (const src of (section.items ?? [])) {
+        out.push(src.endsWith('.mp4') ? { kind: 'video', src } : { kind: 'image', src })
+      }
+    }
+  }
+  return out
+}
+
 function CampaignBlock({ campaign }: { campaign: SubProject }) {
+  // Parent campaign with sub-campaigns: accordion layout
+  if (campaign.subCampaigns && campaign.subCampaigns.length > 0) {
+    return (
+      <div>
+        <div className="mb-6 pb-6 border-b border-[rgba(13,13,13,0.08)]">
+          <p className="text-[32px] text-dark leading-[1] mb-3" style={{ fontFamily: 'var(--font-franklin-cond)' }}>
+            {campaign.name}
+          </p>
+          <p className="font-sans text-[14px] text-muted leading-[1.6] max-w-[560px]">
+            {campaign.objective}
+          </p>
+        </div>
+        <div className="divide-y divide-[rgba(13,13,13,0.08)]">
+          {campaign.subCampaigns.map((sub, i) => (
+            <SubCampaignItem key={i} campaign={sub} />
+          ))}
+        </div>
+      </div>
+    )
+  }
+
+  // Regular campaign: existing layout
+  const items = extractBentoItems(campaign)
+  const n = items.length
+  const isPaidMedia = campaign.formats.some(f => f.toLowerCase().includes('paid'))
+  const gridStyle: React.CSSProperties = (() => {
+    if (n === 1) return { maxWidth: '380px', margin: '0 auto' }
+    if (n === 2) return { gridTemplateColumns: 'repeat(2, 1fr)', maxWidth: '760px', margin: '0 auto' }
+    return { gridTemplateColumns: 'repeat(3, 1fr)' }
+  })()
+
   return (
     <div>
-      {/* Header */}
       <div className="flex items-start justify-between mb-8 pb-6 border-b border-[rgba(13,13,13,0.08)]">
         <div>
-          <p
-            className="text-[32px] text-dark leading-[1] mb-3"
-            style={{ fontFamily: 'var(--font-franklin-cond)' }}
-          >
+          <p className="text-[32px] text-dark leading-[1] mb-3" style={{ fontFamily: 'var(--font-franklin-cond)' }}>
             {campaign.name}
           </p>
           <p className="font-sans text-[14px] text-muted leading-[1.6] max-w-[560px]">
@@ -186,22 +256,100 @@ function CampaignBlock({ campaign }: { campaign: SubProject }) {
         </div>
         <div className="flex flex-wrap gap-2 justify-end max-w-[280px]">
           {campaign.formats.map((f) => (
-            <span
-              key={f}
-              className="bg-[rgba(13,13,13,0.06)] rounded-full px-3 py-1 font-mono text-[10px] text-muted2 tracking-[1.2px]"
-            >
+            <span key={f} className="bg-[rgba(13,13,13,0.06)] rounded-full px-3 py-1 font-mono text-[10px] text-muted2 tracking-[1.2px]">
               {f}
             </span>
           ))}
         </div>
       </div>
+      <div className="grid gap-3 items-start" style={gridStyle}>
+        {items.map((item, i) => (
+          <MediaCell key={i} {...item} name={campaign.name} index={i} isPaidMedia={isPaidMedia} />
+        ))}
+      </div>
+    </div>
+  )
+}
 
-      {/* Gallery */}
-      {campaign.type === 'carousel' ? (
-        <CampaignCarousel gallery={campaign.gallery} name={campaign.name} />
-      ) : (
-        <CampaignGrid gallery={campaign.gallery} name={campaign.name} />
-      )}
+function SubCampaignItem({ campaign }: { campaign: SubProject }) {
+  const items = extractBentoItems(campaign)
+  const n = items.length
+  const isPaidMedia = campaign.formats.some(f => f.toLowerCase().includes('paid'))
+  const hasImages = items.some(it => it.kind === 'image')
+
+  return (
+    <details className="group">
+      <summary className="flex items-center justify-between py-5 cursor-pointer list-none select-none">
+        <div>
+          <p className="font-sans text-[16px] text-dark font-medium leading-[1]">
+            {campaign.name}
+          </p>
+          <p className="font-sans text-[13px] text-muted mt-1.5 leading-[1.5] max-w-[500px]">
+            {campaign.objective}
+          </p>
+        </div>
+        <div className="flex items-center gap-4 shrink-0 ml-8">
+          <div className="flex flex-wrap gap-1.5 justify-end max-w-[260px]">
+            {campaign.formats.map((f) => (
+              <span key={f} className="bg-[rgba(13,13,13,0.06)] rounded-full px-2.5 py-0.5 font-mono text-[9px] text-muted2 tracking-[1.2px]">
+                {f}
+              </span>
+            ))}
+          </div>
+          <span className="font-mono text-[12px] text-muted2 inline-block transition-transform duration-200 group-open:rotate-180">↓</span>
+        </div>
+      </summary>
+      <div className="pb-8 pt-2">
+        <BentoGrid items={items} name={campaign.name} isPaidMedia={isPaidMedia} contain={hasImages} />
+      </div>
+    </details>
+  )
+}
+
+function BentoGrid({ items, name, isPaidMedia, contain }: {
+  items: ReturnType<typeof extractBentoItems>
+  name: string
+  isPaidMedia: boolean
+  contain: boolean
+}) {
+  const n = items.length
+  const hasImages = items.some(it => it.kind === 'image')
+
+  // Mixed-format campaigns: flex-column masonry so every image shows at natural ratio
+  if (hasImages && n >= 3) {
+    const numCols = n <= 3 ? 3 : n === 4 ? 4 : 5
+    const cols: (typeof items)[] = Array.from({ length: numCols }, () => [])
+    items.forEach((item, i) => cols[i % numCols].push(item))
+    return (
+      <div className="flex gap-3 w-full">
+        {cols.map((col, ci) => (
+          <div key={ci} className="flex flex-col gap-3 flex-1 min-w-0">
+            {col.map((item, ii) => {
+              const idx = ci + ii * numCols
+              return (
+                <MediaCell key={idx} {...item} name={name} index={idx} isPaidMedia={isPaidMedia} natural />
+              )
+            })}
+          </div>
+        ))}
+      </div>
+    )
+  }
+
+  // Videos or small sets: uniform aspect-[4/5] grid
+  const style: React.CSSProperties = n === 1
+    ? { maxWidth: '380px', margin: '0 auto' }
+    : n === 2
+    ? { gridTemplateColumns: 'repeat(2, 1fr)', maxWidth: '760px', margin: '0 auto' }
+    : n === 4
+    ? { gridTemplateColumns: 'repeat(2, 1fr)' }
+    : { gridTemplateColumns: 'repeat(3, 1fr)' }
+
+  return (
+    <div className="grid gap-3" style={style}>
+      {items.map((item, i) => (
+        <MediaCell key={i} {...item} name={name} index={i} isPaidMedia={isPaidMedia} contain={contain} />
+      ))}
     </div>
   )
 }
