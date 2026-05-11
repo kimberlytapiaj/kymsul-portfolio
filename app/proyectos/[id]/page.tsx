@@ -176,13 +176,15 @@ type BentoItem =
   | { kind: 'video'; src: string; contain?: boolean; wide?: boolean }
   | { kind: 'image'; src: string; contain?: boolean; wide?: boolean }
 
+const isVideo = (s: string) => s.endsWith('.mp4') || s.endsWith('.webm')
+
 function extractBentoItems(campaign: SubProject): BentoItem[] {
   const out: BentoItem[] = []
   const sections = campaign.sections ?? []
 
   if (sections.length === 0) {
     for (const src of campaign.gallery) {
-      out.push(src.endsWith('.mp4') ? { kind: 'video', src } : { kind: 'image', src })
+      out.push(isVideo(src) ? { kind: 'video', src } : { kind: 'image', src })
     }
     return out
   }
@@ -191,22 +193,22 @@ function extractBentoItems(campaign: SubProject): BentoItem[] {
     if (section.groups) {
       for (const group of section.groups) {
         if (group.carousel) {
-          const hasVideo = group.items.some(s => s.endsWith('.mp4'))
+          const hasVideo = group.items.some(isVideo)
           out.push({ kind: hasVideo ? 'video-carousel' : 'image-carousel', sources: group.items, contain: group.contain, wide: group.wide })
         } else {
           for (const src of group.items) {
-            out.push(src.endsWith('.mp4')
+            out.push(isVideo(src)
               ? { kind: 'video', src, wide: group.wide, contain: group.contain }
               : { kind: 'image', src, wide: group.wide, contain: group.contain })
           }
         }
       }
     } else if (section.type === 'carousel') {
-      const hasVideo = section.items!.some(s => s.endsWith('.mp4'))
+      const hasVideo = section.items!.some(isVideo)
       out.push({ kind: hasVideo ? 'video-carousel' : 'image-carousel', sources: section.items! })
     } else {
       for (const src of (section.items ?? [])) {
-        out.push(src.endsWith('.mp4') ? { kind: 'video', src } : { kind: 'image', src })
+        out.push(isVideo(src) ? { kind: 'video', src } : { kind: 'image', src })
       }
     }
   }

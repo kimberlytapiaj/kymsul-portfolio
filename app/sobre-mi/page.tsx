@@ -1,5 +1,6 @@
 import PageLayout from '@/components/PageLayout'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 
@@ -116,28 +117,17 @@ export default function SobreMiPage() {
             </Link>
           </div>
 
-          {/* Right — visual + stats */}
+          {/* Right — foto + stats */}
           <div>
-            <div className="relative w-full aspect-square mb-10">
-              <img src="/assets/hero-ring.svg" alt="" className="absolute inset-0 w-full h-full" />
-              <img
-                src="/assets/hero-orb-lav.svg"
-                alt=""
-                className="absolute"
-                style={{ left: '14%', top: '18%', width: '52%', height: '52%' }}
+            <div className="relative w-full aspect-[3/4] mb-10 overflow-hidden rounded-sm">
+              <Image
+                src="/assets/kym-foto.jpg"
+                alt="Kym Sul"
+                fill
+                quality={90}
+                className="object-cover object-top"
+                sizes="400px"
               />
-              <img
-                src="/assets/hero-orb-blue.svg"
-                alt=""
-                className="absolute"
-                style={{ left: '34%', top: '29%', width: '36%', height: '36%' }}
-              />
-              <p
-                className="absolute font-fraunces font-light italic text-dark text-[13%] leading-none"
-                style={{ left: '12%', top: '37%', ...WONK }}
-              >
-                kymsul.
-              </p>
             </div>
 
             <div className="grid grid-cols-3 gap-4">

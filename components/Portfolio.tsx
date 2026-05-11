@@ -21,8 +21,9 @@ const DISCIPLINES: Record<string, Discipline[]> = {
   'casta-real':       ['motion', 'social'],
   'nerdheart':        ['motion'],
   'bwl':              ['motion', 'social'],
-  'nomada':           ['branding'],
-  'activated-decor':  ['branding', 'motion'],
+'activated-decor':  ['branding', 'motion'],
+  'procyon':          ['branding', 'social'],
+  'amorcito':         ['social'],
 }
 
 export default function Portfolio() {
@@ -35,6 +36,8 @@ export default function Portfolio() {
   const nerdheart       = getProject('nerdheart')!
   const activatedDecor  = getProject('activated-decor')!
   const bwl             = getProject('bwl')!
+  const procyon         = getProject('procyon')!
+  const amorcito        = getProject('amorcito')!
 
   const filtered = projects.filter(p =>
     active === 'todos' || (DISCIPLINES[p.id] ?? []).includes(active)
@@ -79,8 +82,11 @@ export default function Portfolio() {
             <ProjectCard {...nerdheart}     className="flex-[728_1_0%] h-[524px]" sizes="(max-width: 1440px) 57vw, 742px" />
           </div>
           <div className="flex gap-6 mb-6">
-            <ProjectCard {...activatedDecor} className="flex-[496_1_0%] h-[524px]" sizes="(max-width: 1440px) 39vw, 505px" />
-            <ProjectCard {...bwl}            className="flex-[728_1_0%] h-[524px]" sizes="(max-width: 1440px) 57vw, 742px" />
+            <ProjectCard {...procyon} className="flex-[496_1_0%] h-[524px]" sizes="(max-width: 1440px) 39vw, 505px" />
+            <ProjectCard {...bwl}     className="flex-[728_1_0%] h-[524px]" sizes="(max-width: 1440px) 57vw, 742px" />
+          </div>
+          <div className="mb-6">
+            <ProjectCard {...amorcito} className="w-full h-[604px]" sizes="(max-width: 1440px) 87vw, 1248px" />
           </div>
         </motion.div>
       )}

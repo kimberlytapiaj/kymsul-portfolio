@@ -614,32 +614,187 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 'nomada',
-    name: 'La Cabaña',
-    category: 'BRANDING',
+    id: 'procyon',
+    name: 'Procyon Gaming',
+    category: 'BRANDING · SOCIAL MEDIA',
     year: '2024',
-    image: '/assets/thumbnail-nomada.png',
-    accentColor: '#c7b8ff',
-    tagline: 'Un restaurante que encontró su identidad.',
-    tags: ['Branding', 'Manual de identidad', 'Diseño editorial'],
+    image: '/assets/procyon/procyon-cover.jpg',
+    accentColor: '#7C3AED',
+    tagline: 'Identidad cósmica para una organización esports en ascenso.',
+    tags: ['Branding', 'Identidad visual', 'Manual de marca', 'Social media', 'Motion', 'Esports'],
     overview:
-      'La Cabaña es un restaurante con cocina de autor en Puebla, México. El proyecto fue un reposicionamiento visual completo: desde el logotipo hasta el manual de identidad y el menú impreso.',
-    role: 'Rediseño de identidad visual y diseño editorial: logotipo, paleta, tipografía, manual de identidad y menú impreso.',
+      'Procyon Gaming es una organización de Valorant en LATAM con presencia competitiva en torneos universitarios y ligas regionales. El proyecto fue branding completo desde cero: logotipo, sistema visual, headers de redes sociales, plantillas competitivas y un kit completo para creadores de contenido con marcos animados de streaming.',
+    role: 'Branding end-to-end: logotipo en 9 variantes (horizontal, vertical e icono × original, digital y negativo), paleta cromática, tipografía, manual de marca, headers de redes, producción de contenido competitivo y kit de creadores con overlays animados.',
     challenge:
-      'Cambiar la percepción de un restaurante establecido sin alienar a su clientela base. El nuevo sistema tenía que ser sofisticado pero cálido, premium sin pretensión.',
+      'Construir una identidad que viviera en dos mundos simultáneamente: la arena competitiva —posts de partidos, resultados, torneos— y el ecosistema de creadores —overlays de streaming, banners, posts de bienvenida— sin perder coherencia visual ni personalidad de marca.',
     process:
-      'La nueva identidad parte de la calidez: maderas, luz suave y una tipografía serif con personalidad. El manual de identidad documenta usos correctos e incorrectos del logotipo, paleta extendida y aplicaciones en papelería y menú.',
+      'El punto de partida fue el símbolo: una estrella geométrica con anillo orbital inspirada en la constelación Procyon. Paleta profunda de negro y púrpura, tipografía de display agresiva (Air Millhouse) complementada con Kodchasan para texto. Desde ahí construí el sistema completo — headers de organización, plantillas competitivas para resultados de match y game day, y el kit de creadores con banners, posts de bienvenida y marcos animados en WEBM.',
     result:
-      'Sistema de identidad completo, menú impreso en dos versiones (carta y tabla), y brand guidelines listos para aplicar en cualquier pieza nueva.',
+      'Sistema de identidad completo entregado: 9 variantes de logotipo, headers para Twitter, Facebook y Twitch, más de 10 piezas de contenido competitivo, 4 banners de creadores, 3 posts de bienvenida y 3 marcos animados de streaming listos para producción.',
+    gallery: [],
+    campaigns: [
+      {
+        name: 'Identidad Visual',
+        objective: 'Sistema de logotipo en 9 variantes (horizontal, vertical e icono × original, digital y negativo) más headers de organización para todas las plataformas sociales.',
+        formats: ['Logotipo · 3 versiones', 'Paleta cromática', 'Tipografía', 'Headers · Twitter · Facebook · Twitch'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              {
+                items: [
+                  '/assets/procyon/procyon-logo-h-original.png',
+                  '/assets/procyon/procyon-logo-h-digital.png',
+                  '/assets/procyon/procyon-logo-v-original.png',
+                  '/assets/procyon/procyon-logo-icon.png',
+                ],
+                carousel: true,
+                contain: true,
+              },
+              { items: ['/assets/procyon/procyon-header.jpg'], wide: true },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Social Media · Competitivo',
+        objective: 'Plantillas de contenido competitivo para partidos de la Overload League — Game Day, Winners y Defeat — con personajes 3D de Valorant y jugadores reales del roster.',
+        formats: ['Game Day', 'Winners', 'Defeat', 'Instagram · 4:5'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/procyon/procyon-gameday-01.png'] },
+              { items: ['/assets/procyon/procyon-winners-01.png'] },
+              { items: ['/assets/procyon/procyon-defeat-01.png'] },
+              { items: ['/assets/procyon/procyon-gameday-02.png'] },
+              { items: ['/assets/procyon/procyon-winners-02.png'] },
+              { items: ['/assets/procyon/procyon-defeat-02.png'] },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Creadores de Contenido',
+        objective: 'Kit completo para los creadores de contenido de la org — banners para Twitter y Twitch, y posts de bienvenida para cada creator del roster.',
+        formats: ['Banners · Twitter · Twitch', 'Posts de bienvenida', 'Content Creator kit'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              {
+                items: [
+                  '/assets/procyon/procyon-banner-loremu.png',
+                  '/assets/procyon/procyon-banner-yass.png',
+                  '/assets/procyon/procyon-banner-nubes.png',
+                  '/assets/procyon/procyon-banner-nubes-branded.png',
+                ],
+                carousel: true,
+                wide: true,
+              },
+              { items: ['/assets/procyon/procyon-welcome-loremu.png'] },
+              { items: ['/assets/procyon/procyon-welcome-yass.png'] },
+              { items: ['/assets/procyon/procyon-welcome-nubes.png'] },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Marcos Animados · Streaming',
+        objective: 'Overlays de streaming animados en WEBM para los creadores de contenido de Procyon Gaming — marcos personalizados para cada streamer del roster.',
+        formats: ['Streaming overlay · WEBM', 'Loremu · Nubes · Sweety'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/procyon/procyon-marco-loremu.webm'] },
+              { items: ['/assets/procyon/procyon-marco-nubes.webm'] },
+              { items: ['/assets/procyon/procyon-marco-sweety.webm'] },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'amorcito',
+    name: 'Amorcito Corazón',
+    category: 'SOCIAL MEDIA',
+    year: '2026',
+    image: '/assets/amorcito/ac-cover.png',
+    accentColor: '#C9871A',
+    tagline: 'El sushi más chingón de México, en cinco sucursales.',
+    tags: ['Social media', 'Dirección de arte', 'Campañas', 'Print', 'Punto de venta'],
+    overview:
+      'Amorcito Corazón es una cadena de restaurantes japonés-mexicano con cinco sucursales en Puebla. El trabajo abarca la dirección de arte y producción de contenido para redes sociales — desde la parrilla mensual de fotografía editorial hasta campañas de activación, kit de sucursales y materiales de punto de venta.',
+    role: 'Dirección de arte y producción de contenido: parrilla mensual, campañas de activación, adaptación a múltiples formatos (feed, stories, HD, print) y diseño de materiales POS.',
+    challenge:
+      'Mantener coherencia visual en una cadena con cinco locaciones y un posicionamiento que mezcla lo japonés y lo mexicano — dos mundos visuales distintos — sin caer en la obviedad de ninguno de los dos.',
+    process:
+      'La dirección de arte parte del espacio: iluminación cálida, neón amarillo, madera y piezas de cerámica. La fotografía editorial ancla cada parrilla mensual, y desde ahí se construyen las piezas de campaña, el material impreso y los kits de activación adaptados a cada formato y sucursal.',
+    result:
+      'Producción continua: parrillas mensuales de Feb y Marzo 2026, campaña San Valentín con adaptación a digital y print, kit de cinco sucursales en post + story, tent card de coctelería y encuesta de expansión.',
     gallery: [
-      '/assets/nomada/nomada-01.png',
-      '/assets/nomada/nomada-02.png',
-      '/assets/nomada/nomada-03.png',
-      '/assets/nomada/nomada-04.png',
-      '/assets/nomada/nomada-05.png',
-      '/assets/nomada/nomada-06.png',
-      '/assets/nomada/nomada-07.png',
-      '/assets/nomada/nomada-08.png',
+      '/assets/amorcito/ac-cover.png',
+      '/assets/amorcito/ac-feb-02.png',
+      '/assets/amorcito/ac-feb-03.png',
+      '/assets/amorcito/ac-feb-04.png',
+      '/assets/amorcito/ac-feb-05.png',
+      '/assets/amorcito/ac-feb-06.png',
+      '/assets/amorcito/ac-mar-02.jpg',
+      '/assets/amorcito/ac-mar-03.jpg',
+      '/assets/amorcito/ac-mar-05.jpg',
+      '/assets/amorcito/ac-mar-07.jpg',
+      '/assets/amorcito/ac-mar-09.jpg',
+      '/assets/amorcito/ac-reel-01.mp4',
+      '/assets/amorcito/ac-reel-02.mp4',
+      '/assets/amorcito/ac-reel-tiktok.mp4',
+      '/assets/amorcito/ac-pantallas.mp4',
+    ],
+    campaigns: [
+      {
+        name: 'Campaña San Valentín',
+        objective: 'Campaña de activación para el 14 de febrero — mini campaña UGC "¿Tienes una historia con tu amorcito?" en tres stories para Instagram: convocatoria, mecánica y cierre.',
+        formats: ['Stories · Instagram', 'UGC · Activación'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/amorcito/ac-ugc-01.png'] },
+              { items: ['/assets/amorcito/ac-ugc-02.png'] },
+              { items: ['/assets/amorcito/ac-ugc-03.png'] },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Kit de Sucursales',
+        objective: 'Kit de contenido para las cinco sucursales en Puebla — post cuadrado y story con las ubicaciones, adaptado en dos versiones de fotografía para rotar en el feed.',
+        formats: ['Post · Instagram', '5 sucursales'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/amorcito/ac-suc-post-01.png'] },
+              { items: ['/assets/amorcito/ac-suc-post-02.png'] },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Materiales de Punto de Venta',
+        objective: 'Diseño de materiales físicos para las mesas — tent card de coctelería con QR y encuesta de expansión para identificar demanda de nueva sucursal.',
+        formats: ['Tent card · Coctelería', 'Encuesta · Nueva sucursal', 'Print'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/amorcito/ac-tentcard.png'], wide: true },
+              { items: ['/assets/amorcito/ac-encuesta.png'], contain: true },
+            ],
+          },
+        ],
+      },
     ],
   },
 ]
