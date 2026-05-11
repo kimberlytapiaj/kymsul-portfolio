@@ -221,11 +221,16 @@ function CampaignBlock({ campaign }: { campaign: SubProject }) {
 }
 
 function CampaignItem({ src, alt, className = '' }: { src: string; alt: string; className?: string }) {
+  const wrap = `h-[420px] bg-[rgba(13,13,13,0.04)] rounded-sm flex items-center justify-center overflow-hidden ${className}`
   if (src.endsWith('.mp4')) {
-    return <video src={src} autoPlay loop muted playsInline className={`w-full rounded-sm ${className}`} />
+    return (
+      <div className={wrap}>
+        <video src={src} autoPlay loop muted playsInline className="h-full w-auto max-w-full" />
+      </div>
+    )
   }
   return (
-    <div className={`aspect-video bg-[rgba(13,13,13,0.04)] rounded-sm flex items-center justify-center p-3 ${className}`}>
+    <div className={`${wrap} p-3`}>
       <img src={src} alt={alt} className="max-w-full max-h-full object-contain" loading="lazy" />
     </div>
   )
