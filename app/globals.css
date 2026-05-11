@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-bg: #f5f3ee;
+  --color-dark: #0d0d0d;
+  --color-muted: #55504a;
+  --color-muted2: #948e84;
+  --color-lav: #c6b8ff;
+  --font-fraunces: var(--font-fraunces-var);
+  --font-mono: var(--font-jetbrains-var);
+  --font-sans: var(--font-inter-var);
+  --font-franklin-cond: var(--font-franklin-cond-var), Impact, 'Arial Narrow', sans-serif;
+  --font-franklin: var(--font-franklin-var), Impact, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f3ee;
+  color: #0d0d0d;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee-scroll 28s linear infinite;
+  will-change: transform;
+}
