@@ -148,13 +148,7 @@ export const projects: Project[] = [
         sections: [
           {
             groups: [
-              { items: ['/assets/brainy/brainy-09.png'] },
-              { items: ['/assets/brainy/brainy-10.png'] },
-              { items: ['/assets/brainy/brainy-07.png'] },
-              { items: ['/assets/brainy/brainy-06.png'] },
-              { items: ['/assets/brainy/brainy-05.png'] },
-              { items: ['/assets/brainy/brainy-08.png'] },
-              { items: ['/assets/brainy/brainy-11.png'], contain: true },
+              { items: ['/assets/brainy/brainy-09.png', '/assets/brainy/brainy-10.png', '/assets/brainy/brainy-07.png', '/assets/brainy/brainy-06.png', '/assets/brainy/brainy-05.png', '/assets/brainy/brainy-08.png', '/assets/brainy/brainy-11.png'], carousel: true, contain: true, wide: true },
             ],
           },
         ],
