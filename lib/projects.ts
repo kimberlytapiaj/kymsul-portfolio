@@ -315,31 +315,50 @@ export const projects: Project[] = [
   {
     id: 'casta-real',
     name: 'Casta Real',
-    category: 'SOCIAL MEDIA',
+    category: 'SOCIAL MEDIA · PACKAGING',
     year: '2024',
     image: '/assets/thumbnail-casta-real.png',
     accentColor: 'white',
     tagline: 'Fuerza que se ve. Origen que se nota.',
-    tags: ['Social media', 'Editorial fotográfico', 'Dirección de arte'],
+    tags: ['Social media', 'Editorial fotográfico', 'Packaging', 'Dirección de arte'],
     overview:
-      'Casta Real es una marca de suplementos deportivos con raíces mexicanas. Su identidad de marca ya tenía fuerza; lo que faltaba era un sistema de contenido que lo comunicara sin perder autenticidad.',
-    role: 'Dirección de arte y producción de contenido para Instagram: editorial fotográfico, editorial tipográfico y piezas de campaña.',
+      'Casta Real es una marca de suplementos deportivos con raíces mexicanas. Su identidad de marca ya tenía fuerza; lo que faltaba era un sistema de contenido y packaging que lo comunicara sin perder autenticidad.',
+    role: 'Dirección de arte, producción de contenido para Instagram y diseño de packaging: editorial fotográfico, editorial tipográfico, reels y etiquetas para dos líneas de producto.',
     challenge:
-      'El mercado de suplementos está saturado de contenido agresivo y genérico. El reto fue crear algo visualmente contundente que destacara sin caer en los clichés del fitness estadounidense.',
+      'El mercado de suplementos está saturado de contenido agresivo y genérico. El reto fue crear algo visualmente contundente que destacara sin caer en los clichés del fitness estadounidense — tanto en redes como en el empaque físico.',
     process:
-      'Desarrollé dos líneas editoriales paralelas: una fotográfica con atletas reales en entornos de entrenamiento, y una tipográfica con frases de identidad en layout bold. Ambas comparten paleta —negro, blanco y tierra— y tipografía densa que refuerza el peso de la marca.',
+      'Desarrollé dos líneas editoriales paralelas: una fotográfica con atletas reales en entornos de entrenamiento, y una tipográfica con frases de identidad en layout bold. Para el packaging, la misma paleta —negro, blanco y tierra— aplicada a dos formatos distintos: bolsa de transporte y presentación de descanso.',
     result:
-      '15+ piezas editoriales entre fotografía y tipografía, con coherencia visual total. Sistema replicable para el equipo de marketing interno.',
+      '15+ piezas editoriales, 2 reels de contenido y packaging completo para dos líneas de producto. Sistema visual coherente entre digital y físico.',
     gallery: [
       '/assets/casta-real/cr-01.png',
+      '/assets/casta-real/cr-reel-01-web.mp4',
       '/assets/casta-real/cr-02.png',
       '/assets/casta-real/cr-03.png',
-      '/assets/casta-real/cr-04.jpg',
+      '/assets/casta-real/cr-10.png',
+      '/assets/casta-real/cr-reel-02-web.mp4',
       '/assets/casta-real/cr-05.jpg',
-      '/assets/casta-real/cr-06.jpg',
+      '/assets/casta-real/cr-11.png',
       '/assets/casta-real/cr-07.png',
       '/assets/casta-real/cr-08.png',
       '/assets/casta-real/cr-09.jpg',
+    ],
+    campaigns: [
+      {
+        name: 'Packaging',
+        objective: 'Diseño de etiquetas y empaque para dos líneas de producto — Transporte y Descanso — manteniendo la identidad de fuerza y origen que define la marca en todos sus puntos de contacto físicos.',
+        formats: ['Empaque · Transporte', 'Empaque · Descanso'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/casta-real/cr-pkg-hero.png', '/assets/casta-real/cr-pkg-hero-v2.png'], carousel: true },
+              { items: ['/assets/casta-real/cr-pkg-transp-front.png', '/assets/casta-real/cr-pkg-transp-mockup.png'], carousel: true },
+              { items: ['/assets/casta-real/cr-pkg-desc-front.png', '/assets/casta-real/cr-pkg-desc-mockup.png'], carousel: true },
+            ],
+          },
+        ],
+      },
     ],
   },
   {
