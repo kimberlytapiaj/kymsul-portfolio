@@ -43,24 +43,25 @@ export const projects: Project[] = [
   {
     id: 'zealix',
     name: 'Zealix',
-    category: 'BRANDING · UX UI',
+    category: 'BRANDING · SOCIAL MEDIA',
     year: '2025',
     image: '/assets/thumbnail-zealix.jpg',
     accentColor: 'white',
     tagline: 'Marca completa para un software que transforma restaurantes.',
-    tags: ['Identidad visual', 'Brand guidelines', 'UX UI · Dirección', 'Social media'],
+    tags: ['Identidad visual', 'Brand guidelines', 'Manual de marca', 'Social media'],
     overview:
-      'Zealix es un software de gestión inteligente para restaurantes, bares y cafeterías — desde inventario y ventas hasta automatización con IA. El proyecto fue end-to-end: construí la marca desde cero y apoyé la dirección de UX UI del producto.',
-    role: 'Branding completo: naming, logotipo, paleta cromática, sistema tipográfico y brand guidelines. Dirección de arte en UX UI: lineamientos visuales para la interfaz del POS y materiales de producto. Producción de contenido para redes sociales.',
+      'Zealix es un software de gestión inteligente para restaurantes, bares y cafeterías — desde inventario y ventas hasta automatización con IA. El proyecto fue end-to-end: construí la identidad de marca desde cero, desde el naming y el logotipo hasta el sistema tipográfico, paleta y papelería.',
+    role: 'Branding completo: naming, logotipo, paleta cromática, sistema tipográfico, papelería y brand guidelines. Producción de contenido editorial para redes sociales aplicando la identidad en contextos reales.',
     challenge:
-      'Diseñar una marca que comunicara tecnología de punta sin alienar a dueños de negocio que no son nativos digitales. La identidad tenía que funcionar tanto en el producto digital —pantallas de POS— como en redes sociales y materiales impresos.',
+      'Diseñar una marca que comunicara tecnología de punta sin alienar a dueños de negocio que no son nativos digitales. La identidad tenía que funcionar tanto en materiales impresos —manual, tarjeta, brochure— como en redes sociales con coherencia visual consistente.',
     process:
-      'Definí el territorio visual desde el posicionamiento: moderno, claro, con personalidad. El logotipo parte de una forma geométrica que sugiere conectividad y movimiento. La paleta —negro profundo, blanco y acento violeta— distingue sin distanciar. Para el UX UI dirigí la coherencia entre la identidad de marca y la interfaz del sistema, asegurando que cada pantalla reforzara la confianza del producto.',
+      'Definí el territorio visual desde el posicionamiento: moderno, claro, con personalidad. El logotipo parte de una forma geométrica que sugiere conectividad y movimiento. La paleta —negro profundo, blanco y acento violeta— distingue sin distanciar. El manual documenta cada decisión para que el sistema escale con coherencia.',
     result:
-      'Sistema de identidad listo para escalar: logotipo en múltiples versiones, paleta documentada, tipografía, manual de uso y dirección visual del producto digital. Más contenido editorial para redes sociales aplicando la identidad en contextos reales.',
+      'Sistema de identidad listo para escalar: logotipo en múltiples versiones, paleta documentada, tipografía, papelería completa y manual de uso. Contenido editorial para redes sociales aplicando la identidad en contextos reales de restaurantes.',
     gallery: [
-      '/assets/zealix/zealix-pos-03.jpg',
       '/assets/zealix/zealix-manual-mockup.jpg',
+      '/assets/zealix/zealix-tarjeta.jpg',
+      '/assets/zealix/zealix-brochure.png',
       '/assets/zealix/zealix-post-11.png',
     ],
     campaigns: [
@@ -82,16 +83,13 @@ export const projects: Project[] = [
       },
       {
         name: 'UX UI · Dirección',
-        objective: 'Dirección visual del producto digital — lineamientos de interfaz para el sistema POS, la app móvil y el asistente con IA, asegurando coherencia entre la identidad de marca y cada pantalla del software.',
-        formats: ['POS · Dashboard', 'App · Vista de Mesas', 'App · Menú', 'App · Inventario', 'Asistente Zea AI'],
+        objective: 'Dirección visual del producto digital — lineamientos de interfaz para el sistema POS y el asistente IA móvil, asegurando coherencia entre la identidad de marca y cada pantalla del software.',
+        formats: ['POS · Asistente Zea AI', 'App · Zea Mobile'],
         gallery: [],
         sections: [
           {
             groups: [
-              { items: ['/assets/zealix/zealix-pos-01.jpg', '/assets/zealix/zealix-pos-02.jpg'], carousel: true, contain: true },
-              { items: ['/assets/zealix/zealix-ipad-mesas.png'] },
-              { items: ['/assets/zealix/zealix-ipad-menu.png'] },
-              { items: ['/assets/zealix/zealix-mac-inventario.png'], contain: true },
+              { items: ['/assets/zealix/zealix-pos-01.jpg'], contain: true },
               { items: ['/assets/zealix/zealix-zea-mobile.jpg'], contain: true },
             ],
           },
