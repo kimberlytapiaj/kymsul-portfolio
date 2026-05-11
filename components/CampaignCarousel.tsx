@@ -34,16 +34,17 @@ export default function CampaignCarousel({ gallery, name }: Props) {
         className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
-        {gallery.map((src, i) => (
-          <div key={i} className="snap-center shrink-0 w-full">
-            <img
-              src={src}
-              alt={`${name} ${i + 1}`}
-              className="w-full rounded-sm"
-              loading="lazy"
-            />
-          </div>
-        ))}
+        {gallery.map((src, i) =>
+          src.endsWith('.mp4') ? (
+            <div key={i} className="snap-center shrink-0 w-full flex items-center justify-center h-[520px]">
+              <video src={src} autoPlay loop muted playsInline className="h-full w-auto rounded-sm" />
+            </div>
+          ) : (
+            <div key={i} className="snap-center shrink-0 w-full">
+              <img src={src} alt={`${name} ${i + 1}`} className="w-full rounded-sm" loading="lazy" />
+            </div>
+          )
+        )}
       </div>
 
       {/* Arrows */}

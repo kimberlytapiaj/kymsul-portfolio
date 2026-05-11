@@ -295,6 +295,7 @@ export const projects: Project[] = [
           '/assets/bwl/bwl-post-66-zh-web.mp4',
           '/assets/bwl/bwl-post-77-web.mp4',
         ],
+        type: 'carousel',
       },
       {
         name: 'Avance · Carrusel',
@@ -317,6 +318,7 @@ export const projects: Project[] = [
           '/assets/bwl/bwl-post-71-en-web.mp4',
           '/assets/bwl/bwl-post-71-zh-web.mp4',
         ],
+        type: 'carousel',
       },
       {
         name: 'Drs Secret',
