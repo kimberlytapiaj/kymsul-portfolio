@@ -277,18 +277,30 @@ export const projects: Project[] = [
     result:
       'Más de 20 piezas entre paid media estático, reels de producto y posts editoriales. Contenido adaptado a múltiples formatos y dos idiomas, listo para campaña.',
     gallery: [
-      '/assets/bwl/bwl-01.png',
-      '/assets/bwl/bwl-02.png',
-      '/assets/bwl/bwl-03.png',
-      '/assets/bwl/bwl-04.png',
-      '/assets/bwl/bwl-06.png',
-      '/assets/bwl/bwl-07.png',
-      '/assets/bwl/bwl-09.png',
-      '/assets/bwl/bwl-10.png',
       '/assets/bwl/bwl-11.png',
       '/assets/bwl/bwl-12.png',
+      '/assets/bwl/bwl-13.png',
+      '/assets/bwl/bwl-14.png',
+      '/assets/bwl/bwl-15.png',
     ],
     campaigns: [
+      {
+        name: 'Paid Media',
+        objective: 'Piezas de pauta para redes sociales: anuncios estáticos diseñados para conversión, con composición limpia y jerarquía clara de mensaje. Sets adaptados a distintos objetivos de campaña.',
+        formats: ['Content 06', 'Content 09', 'Content 12', 'Content 13'],
+        gallery: [
+          '/assets/bwl/bwl-01.png',
+          '/assets/bwl/bwl-02.png',
+          '/assets/bwl/bwl-03.png',
+          '/assets/bwl/bwl-04.png',
+          '/assets/bwl/bwl-05.png',
+          '/assets/bwl/bwl-06.png',
+          '/assets/bwl/bwl-07.png',
+          '/assets/bwl/bwl-08.png',
+          '/assets/bwl/bwl-09.png',
+          '/assets/bwl/bwl-10.png',
+        ],
+      },
       {
         name: 'Social Posts · Motion',
         objective: 'Reels de producto para redes sociales: edición con stock premium, motion type y ritmo visual. Piezas diseñadas para capturar atención en los primeros 2 segundos.',
