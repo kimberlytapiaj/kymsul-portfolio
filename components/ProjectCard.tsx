@@ -8,7 +8,7 @@ type ProjectCardProps = {
   category: string
   year: string
   image: string
-  tagline: string
+  tagline?: string
   accentColor?: string
   className?: string
 }
@@ -45,16 +45,11 @@ export default function ProjectCard({
       <div className="pt-[10px] pb-0">
         <div className="h-px bg-[rgba(13,13,13,0.08)] mb-[10px]" />
         <div className="flex items-start justify-between gap-6">
-          <div className="min-w-0">
-            <p className="font-fraunces text-[22px] text-dark leading-none" style={WONK}>
-              {name}
-            </p>
-            <p className="font-sans text-[12px] text-muted mt-1.5 leading-snug">
-              {tagline}
-            </p>
-          </div>
-          <div className="shrink-0 flex flex-col items-end gap-[5px] pt-0.5">
-            <p className="font-mono text-[10px] text-muted2 tracking-[1.4px] text-right">{category}</p>
+          <p className="font-fraunces text-[22px] text-dark" style={WONK}>
+            {name}
+          </p>
+          <div className="shrink-0 flex items-baseline gap-4">
+            <p className="font-mono text-[10px] text-muted2 tracking-[1.4px]">{category}</p>
             <p className="font-mono text-[10px] text-muted2">{year}</p>
           </div>
         </div>
