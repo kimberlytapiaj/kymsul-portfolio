@@ -287,19 +287,27 @@ export const projects: Project[] = [
     ],
     campaigns: [
       {
-        name: 'Avance',
+        name: 'Avance · Reels',
         objective: 'Reels de producto en inglés y chino para Instagram y RedNote. Misma pieza, dos idiomas, dos plataformas — cada versión adaptada al contexto visual y cultural de su audiencia.',
-        formats: ['Reel EN', 'Reel 中文', 'Post 77', 'Paid Media'],
+        formats: ['Reel EN', 'Reel 中文', 'Post 77'],
         gallery: [
           '/assets/bwl/bwl-post-66-web.mp4',
           '/assets/bwl/bwl-post-66-zh-web.mp4',
           '/assets/bwl/bwl-post-77-web.mp4',
+        ],
+      },
+      {
+        name: 'Avance · Carrusel',
+        objective: 'Post carrusel educativo: "3 Signs your body is asking for help". Secuencia de 5 slides que conecta síntomas con el producto, pensada para retención y guardados en Instagram.',
+        formats: ['Carrusel · 5 slides'],
+        gallery: [
           '/assets/bwl/bwl-06.png',
           '/assets/bwl/bwl-07.png',
           '/assets/bwl/bwl-08.png',
           '/assets/bwl/bwl-16.png',
           '/assets/bwl/bwl-17.png',
         ],
+        type: 'carousel',
       },
       {
         name: 'Optrimax',
