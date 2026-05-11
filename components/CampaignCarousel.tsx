@@ -1,5 +1,7 @@
 'use client'
+import Image from 'next/image'
 import { useRef, useState, useEffect } from 'react'
+import LazyVideo from './LazyVideo'
 
 type Props = {
   gallery: string[]
@@ -49,11 +51,17 @@ export default function CampaignCarousel({ gallery, name, className, compact, fi
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {gallery.map((src, i) => (
-            <div key={i} className="snap-center shrink-0 w-full h-full">
+            <div key={i} className="relative snap-center shrink-0 w-full h-full">
               {src.endsWith('.mp4') ? (
-                <video src={src} autoPlay loop muted playsInline className={`w-full h-full ${contain ? 'object-contain' : 'object-cover'}`} />
+                <LazyVideo src={src} className={`w-full h-full ${contain ? 'object-contain' : 'object-cover'}`} />
               ) : (
-                <img src={src} alt={`${name} ${i + 1}`} className={`w-full h-full ${contain ? 'object-contain' : 'object-cover'}`} loading="lazy" />
+                <Image
+                  src={src}
+                  alt={`${name} ${i + 1}`}
+                  fill
+                  sizes="100vw"
+                  className={contain ? 'object-contain' : 'object-cover'}
+                />
               )}
             </div>
           ))}
@@ -103,16 +111,24 @@ export default function CampaignCarousel({ gallery, name, className, compact, fi
           src.endsWith('.mp4') ? (
             compact ? (
               <div key={i} className="snap-center shrink-0 w-full aspect-[9/16]">
-                <video src={src} autoPlay loop muted playsInline className="w-full h-full object-cover rounded-sm" />
+                <LazyVideo src={src} className="w-full h-full object-cover rounded-sm" />
               </div>
             ) : (
               <div key={i} className="snap-center shrink-0 w-full flex items-center justify-center h-[520px]">
-                <video src={src} autoPlay loop muted playsInline className="h-full w-auto rounded-sm" />
+                <LazyVideo src={src} className="h-full w-auto rounded-sm" />
               </div>
             )
           ) : (
             <div key={i} className="snap-center shrink-0 w-full">
-              <img src={src} alt={`${name} ${i + 1}`} className="w-full rounded-sm" loading="lazy" />
+              <Image
+                src={src}
+                alt={`${name} ${i + 1}`}
+                width={0}
+                height={0}
+                sizes="(max-width: 768px) 100vw, 560px"
+                style={{ width: '100%', height: 'auto' }}
+                className="rounded-sm"
+              />
             </div>
           )
         )}

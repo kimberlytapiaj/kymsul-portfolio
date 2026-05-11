@@ -1,3 +1,5 @@
+import FadeIn from './FadeIn'
+
 const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 
 const specs = [
@@ -24,23 +26,23 @@ const specs = [
 export default function Specialization() {
   return (
     <section className="px-24 pt-24 pb-24">
-      {/* Header */}
-      <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-6">
-        ESPECIALIZACIÓN
-      </p>
-      <p
-        className="font-fraunces font-light text-[64px] text-dark leading-[1.02] mb-24 max-w-[500px]"
-        style={WONK}
-      >
-        Tres sistemas<br />
-        que se potencian<br />
-        entre sí.
-      </p>
+      <FadeIn>
+        <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-6">
+          ESPECIALIZACIÓN
+        </p>
+        <p
+          className="font-fraunces font-light text-[64px] text-dark leading-[1.02] mb-24 max-w-[500px]"
+          style={WONK}
+        >
+          Tres sistemas<br />
+          que se potencian<br />
+          entre sí.
+        </p>
+      </FadeIn>
 
-      {/* 3 columns */}
       <div className="grid grid-cols-3 gap-6">
-        {specs.map((spec) => (
-          <div key={spec.num}>
+        {specs.map((spec, i) => (
+          <FadeIn key={spec.num} delay={i * 0.1}>
             <div className="h-px bg-dark mb-4" />
             <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-6">
               — {spec.num}
@@ -52,7 +54,7 @@ export default function Specialization() {
             <p className="font-sans text-[14px] text-muted leading-normal">
               {spec.desc}
             </p>
-          </div>
+          </FadeIn>
         ))}
       </div>
     </section>

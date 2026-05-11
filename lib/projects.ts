@@ -418,30 +418,64 @@ export const projects: Project[] = [
   {
     id: 'nerdheart',
     name: 'NerdHeart',
-    category: 'MOTION',
+    category: 'UX UI · MOTION',
     year: '2024',
-    image: '/assets/thumbnail-tierra.png',
+    image: '/assets/nerdheart/nerdheart-mockup-monitors.jpg',
     accentColor: '#d6cc94',
     tagline: 'Una marca que vive en el movimiento.',
-    tags: ['Motion graphics', 'Brand animation', 'After Effects'],
+    tags: ['UX UI', 'Landing page', 'Motion graphics', 'Ilustración'],
     overview:
-      'NerdHeart es una marca de cultura pop —stickers, merch, contenido digital— con una mascota ya establecida pero sin sistema de animación. El trabajo fue traducir esa personalidad a movimiento.',
-    role: 'Diseño y producción de identidad en movimiento: stings de logo, loops para redes, stickers animados y sistema de animación reutilizable en After Effects.',
+      'NerdHeart es una plataforma de productividad y automatización digital con una identidad de marca propia — mascota, sello animado y sistema visual. El proyecto abarcó desde el diseño de la landing page hasta la identidad en movimiento.',
+    role: 'Diseño UX UI de landing page, design system y componentes. Producción de identidad en movimiento: sello animado, sticker GIF de la mascota y elementos gráficos para merchandising.',
     challenge:
-      'La mascota existía en 2D plano. Había que definir cómo se mueve, cuáles son sus principios de animación, y crear un sistema que otros puedan usar sin conocer After Effects a fondo.',
+      'Crear una identidad que funcione tanto en digital —landing, componentes UI— como en físico —stickers, sello, merch— sin perder coherencia. La mascota tenía que ser igual de expresiva en estático que en movimiento.',
     process:
-      'Primero definí los principios de animación de la marca: rebote suave, timing orgánico, sin movimientos mecánicos. Construí un rig básico en AE para la mascota y documenté las curvas de velocidad como preset reutilizable. Cada pieza tiene versiones de 3, 6 y 15 segundos.',
+      'Diseñé la landing page partiendo de la personalidad de la marca: tipografía expresiva, paleta pastel-neon y la mascota como hilo conductor de cada sección. En paralelo, definí los principios de animación del sello —rotación orgánica, timing suave— y produje los GIFs entregables para uso digital y físico.',
     result:
-      'Sistema de 8 piezas animadas: 2 stings de logo, 3 loops para stories/feed, 3 stickers GIF listos para Tenor. Archivos fuente organizados y un mini-manual de uso.',
+      'Landing page completa con design system documentado, mockups de dispositivo y 4 piezas animadas: sello rotatorio en 3 versiones y sticker de la mascota listos para Tenor y merchandising.',
     gallery: [
+      '/assets/nerdheart/nerdheart-mockup-monitors.jpg',
+      '/assets/nerdheart/nerdheart-mockup-phone.jpg',
       '/assets/nerdheart/nerdheart-01.gif',
-      '/assets/nerdheart/nerdheart-02.gif',
-      '/assets/nerdheart/nerdheart-03.gif',
-      '/assets/nerdheart/nerdheart-04.gif',
-      '/assets/nerdheart/nerdheart-05.gif',
-      '/assets/nerdheart/nerdheart-06.png',
-      '/assets/nerdheart/nerdheart-07.png',
-      '/assets/nerdheart/nerdheart-08.png',
+      '/assets/nerdheart/nerdheart-mockup-laptop.jpg',
+    ],
+    campaigns: [
+      {
+        name: 'UX UI · Landing Page',
+        objective: 'Diseño de landing page completa para NerdHeart — desde wireframes y design system hasta entrega final con mockups en desktop y mobile.',
+        formats: ['Landing page · Desktop', 'Landing page · Mobile', 'Design system'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/nerdheart/nerdheart-mockup-monitors.jpg'] },
+              { items: ['/assets/nerdheart/nerdheart-mockup-laptop.jpg'] },
+              { items: ['/assets/nerdheart/nerdheart-mockup-phone.jpg'] },
+              { items: ['/assets/nerdheart/nerdheart-mockup-phone2.png'] },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Motion · Ilustración',
+        objective: 'Sello animado de la marca en 3 versiones y sticker GIF de la mascota — entregables listos para uso digital, redes sociales y merchandising físico.',
+        formats: ['Sello animado', 'Sticker GIF', 'PNG estáticos'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/nerdheart/nerdheart-01.gif'] },
+              { items: ['/assets/nerdheart/nerdheart-02.gif'] },
+              { items: ['/assets/nerdheart/nerdheart-03.gif'] },
+              { items: ['/assets/nerdheart/nerdheart-04.gif'] },
+              { items: ['/assets/nerdheart/nerdheart-05.gif'] },
+              { items: ['/assets/nerdheart/nerdheart-06.png'] },
+              { items: ['/assets/nerdheart/nerdheart-07.png'] },
+              { items: ['/assets/nerdheart/nerdheart-08.png'] },
+            ],
+          },
+        ],
+      },
     ],
   },
   {
@@ -512,6 +546,69 @@ export const projects: Project[] = [
         gallery: [],
         sections: [
           { items: ['/assets/bwl/bwl-pm-11-web.mp4'] },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'activated-decor',
+    name: 'Activated Decor',
+    category: 'BRANDING · MOTION',
+    year: '2024',
+    image: '/assets/activated-decor/ad-cover.png',
+    accentColor: '#8B1A1A',
+    tagline: 'Rebranding que transforma un espacio en una marca.',
+    tags: ['Rebranding', 'Identidad visual', 'Logotipo animado', 'Brand guidelines', 'Motion'],
+    overview:
+      'Activated Decor es un estudio de interiorismo y decoración. El proyecto fue un rebranding completo: desde el sistema de identidad visual —logotipo, paleta, tipografía— hasta la producción del logotipo animado en múltiples versiones para uso digital y redes sociales.',
+    role: 'Rebranding completo: construcción del logotipo y sistema de marca, brand guidelines, paleta cromática, tipografía y producción de identidad en movimiento — logotipo animado en tres versiones y dos combinaciones de color.',
+    challenge:
+      'Reflejar la sofisticación y precisión de un estudio de diseño de interiores en un sistema de marca que funcionara tanto en aplicaciones físicas como en entornos digitales con logos en movimiento.',
+    process:
+      'Desarrollé el monograma "ad" como base del sistema — geométrico, limpio, con personalidad. La paleta negro profundo y burdeos aporta elegancia y distinción. El manual de identidad documenta construcción del logotipo, usos correctos en distintos fondos, tipografía (Poppins + Inter) y variantes de aplicación. Los logos animados se produjeron en tres versiones —icono, logotipo completo, versión corta— y dos paletas de color.',
+    result:
+      'Sistema de identidad completo con brand guidelines, logotipo en tres versiones estáticas y animadas entregadas en GIF y MOV para uso digital, redes sociales y aplicaciones de marca.',
+    gallery: [],
+    campaigns: [
+      {
+        name: 'Brand Identity',
+        objective: 'Sistema de identidad visual completo para Activated Decor — logotipo y monograma, paleta cromática, tipografía, construcción del sistema y guía de usos correctos e incorrectos.',
+        formats: ['Logotipo · 3 versiones', 'Paleta cromática', 'Tipografía', 'Brand guidelines'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              {
+                items: [
+                  '/assets/activated-decor/ad-03.png',
+                  '/assets/activated-decor/ad-07.png',
+                  '/assets/activated-decor/ad-08.png',
+                  '/assets/activated-decor/ad-04.png',
+                  '/assets/activated-decor/ad-05.png',
+                  '/assets/activated-decor/ad-09.png',
+                  '/assets/activated-decor/ad-10.png',
+                ],
+                carousel: true,
+                contain: true,
+                wide: true,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Motion · Logotipo Animado',
+        objective: 'Logotipo animado en tres versiones — icono, logotipo completo y versión corta — producidos en dos combinaciones de color: negro/rojo y blanco/rojo.',
+        formats: ['Logotipo animado · Negro/Rojo', 'Logotipo animado · Blanco/Rojo', 'GIF · MOV'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/activated-decor/ad-icon-br.gif'], contain: true },
+              { items: ['/assets/activated-decor/ad-logotype-br.gif'], contain: true },
+              { items: ['/assets/activated-decor/ad-shorter-br.gif'], contain: true },
+            ],
+          },
         ],
       },
     ],

@@ -20,9 +20,27 @@ export default function ContactoPage() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  // Crea tu form gratis en formspree.io y reemplaza el ID aquí
+  const FORMSPREE_ID = 'YOUR_FORM_ID'
+
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    setSent(true)
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          nombre: form.nombre,
+          email: form.email,
+          tipo: form.tipo,
+          mensaje: form.mensaje,
+        }),
+      })
+      if (res.ok) setSent(true)
+    } catch {
+      // fallback: abre cliente de correo
+      window.location.href = `mailto:contacto@kymsul.art?subject=Proyecto: ${form.tipo}&body=${encodeURIComponent(form.mensaje)}`
+    }
   }
 
   return (

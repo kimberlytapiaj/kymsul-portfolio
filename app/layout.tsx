@@ -7,16 +7,19 @@ const fraunces = Fraunces({
   subsets: ['latin'],
   variable: '--font-fraunces-var',
   axes: ['SOFT', 'WONK'],
+  display: 'swap',
 })
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   variable: '--font-jetbrains-var',
+  display: 'swap',
 })
 
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter-var',
+  display: 'swap',
 })
 
 const franklinCond = localFont({

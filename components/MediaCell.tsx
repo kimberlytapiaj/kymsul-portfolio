@@ -1,6 +1,8 @@
 'use client'
+import Image from 'next/image'
 import { useState, useEffect, useCallback } from 'react'
 import CampaignCarousel from './CampaignCarousel'
+import LazyVideo from './LazyVideo'
 
 type BentoItem =
   | { kind: 'video-carousel'; sources: string[] }
@@ -77,20 +79,37 @@ function Thumbnail(props: Props) {
       return <CampaignCarousel gallery={props.sources} name={props.name} fill />
     }
     if (props.kind === 'video') {
-      return <video src={props.src} autoPlay loop muted playsInline className="w-full aspect-[9/16] object-cover" />
+      return <LazyVideo src={props.src} className="w-full aspect-[9/16] object-cover" />
     }
-    return <img src={props.src} alt={`${props.name} ${props.index + 1}`} className="w-full max-h-[220px] object-contain block" loading="lazy" />
+    return (
+      <Image
+        src={props.src}
+        alt={`${props.name} ${props.index + 1}`}
+        width={0}
+        height={0}
+        sizes="33vw"
+        style={{ width: '100%', height: 'auto', maxHeight: '220px', objectFit: 'contain' }}
+      />
+    )
   }
 
-  const imgClass = props.contain ? 'w-full h-full object-contain' : 'w-full h-full object-cover'
+  const imgFit = props.contain ? 'object-contain' : 'object-cover'
 
   if (props.kind === 'video-carousel' || props.kind === 'image-carousel') {
     return <CampaignCarousel gallery={props.sources} name={props.name} fill contain={props.contain} />
   }
   if (props.kind === 'video') {
-    return <video src={props.src} autoPlay loop muted playsInline className="w-full h-full object-cover" />
+    return <LazyVideo src={props.src} className={`w-full h-full ${imgFit}`} />
   }
-  return <img src={props.src} alt={`${props.name} ${props.index + 1}`} className={imgClass} loading="lazy" />
+  return (
+    <Image
+      src={props.src}
+      alt={`${props.name} ${props.index + 1}`}
+      fill
+      sizes="(max-width: 1440px) 33vw, 480px"
+      className={imgFit}
+    />
+  )
 }
 
 function ModalContent(props: Props) {

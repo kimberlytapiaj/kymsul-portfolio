@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 
@@ -11,6 +12,7 @@ type ProjectCardProps = {
   tagline?: string
   accentColor?: string
   className?: string
+  sizes?: string
 }
 
 export default function ProjectCard({
@@ -22,14 +24,18 @@ export default function ProjectCard({
   tagline,
   accentColor = 'white',
   className = '',
+  sizes = '(max-width: 1440px) 55vw, 728px',
 }: ProjectCardProps) {
   return (
     <Link href={`/proyectos/${id}`} className={`overflow-hidden flex flex-col cursor-pointer group ${className}`}>
       <div className="relative flex-1 overflow-hidden">
-        <img
+        <Image
           src={image}
           alt={name}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+          fill
+          quality={90}
+          sizes={sizes}
+          className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
         />
         <div className="absolute bottom-0 left-0 right-0 h-11 bg-gradient-to-t from-black/60 to-transparent flex items-center px-5">
           <span

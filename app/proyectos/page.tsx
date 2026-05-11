@@ -1,11 +1,18 @@
 import PageLayout from '@/components/PageLayout'
 import ProjectCard from '@/components/ProjectCard'
-import { projects } from '@/lib/projects'
+import { projects, getProject } from '@/lib/projects'
 
 const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 
 export default function ProyectosPage() {
-  const [zealix, brainy, beatness, kop, castaReal, nerdheart, nomada, bwl] = projects
+  const zealix = getProject('zealix')!
+  const brainy = getProject('brainy')!
+  const beatness = getProject('beatness')!
+  const kop = getProject('kop')!
+  const castaReal = getProject('casta-real')!
+  const nerdheart = getProject('nerdheart')!
+  const nomada = getProject('nomada')!
+  const bwl = getProject('bwl')!
 
   return (
     <PageLayout>

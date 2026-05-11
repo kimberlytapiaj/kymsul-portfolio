@@ -1,9 +1,11 @@
 import React from 'react'
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import PageLayout from '@/components/PageLayout'
 import CampaignCarousel from '@/components/CampaignCarousel'
 import MediaCell from '@/components/MediaCell'
+import LazyVideo from '@/components/LazyVideo'
 import { projects, getProject, type SubProject, type Section, type SectionGroup } from '@/lib/projects'
 
 const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
@@ -63,11 +65,15 @@ export default async function CasoPage({ params }: Props) {
       </section>
 
       {/* Cover image */}
-      <div className="w-full aspect-[16/7] overflow-hidden">
-        <img
+      <div className="relative w-full aspect-[16/7] overflow-hidden">
+        <Image
           src={project.image}
           alt={project.name}
-          className="w-full h-full object-cover"
+          fill
+          priority
+          quality={90}
+          sizes="100vw"
+          className="object-cover"
         />
       </div>
 
@@ -149,23 +155,17 @@ export default async function CasoPage({ params }: Props) {
 
 function GalleryItem({ src, alt }: { src: string; alt: string }) {
   if (src.endsWith('.mp4')) {
-    return (
-      <video
-        src={src}
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="w-full rounded-sm"
-      />
-    )
+    return <LazyVideo src={src} className="w-full rounded-sm" />
   }
   return (
-    <img
+    <Image
       src={src}
       alt={alt}
-      className="w-full object-cover rounded-sm"
-      loading="lazy"
+      width={0}
+      height={0}
+      sizes="(max-width: 1440px) 50vw, 700px"
+      style={{ width: '100%', height: 'auto' }}
+      className="rounded-sm"
     />
   )
 }
@@ -195,7 +195,9 @@ function extractBentoItems(campaign: SubProject): BentoItem[] {
           out.push({ kind: hasVideo ? 'video-carousel' : 'image-carousel', sources: group.items, contain: group.contain, wide: group.wide })
         } else {
           for (const src of group.items) {
-            out.push(src.endsWith('.mp4') ? { kind: 'video', src } : { kind: 'image', src })
+            out.push(src.endsWith('.mp4')
+              ? { kind: 'video', src, wide: group.wide, contain: group.contain }
+              : { kind: 'image', src, wide: group.wide, contain: group.contain })
           }
         }
       }
@@ -239,7 +241,7 @@ function CampaignBlock({ campaign }: { campaign: SubProject }) {
   const isPaidMedia = campaign.formats.some(f => f.toLowerCase().includes('paid'))
   const hasWide = items.some(it => it.wide)
   const gridStyle: React.CSSProperties = (() => {
-    if (hasWide) return { gridTemplateColumns: '1fr' }
+    if (hasWide) return { gridTemplateColumns: 'repeat(3, 1fr)' }
     if (n === 1) return { maxWidth: '380px', margin: '0 auto' }
     if (n === 2) return { gridTemplateColumns: 'repeat(2, 1fr)', maxWidth: '760px', margin: '0 auto' }
     return { gridTemplateColumns: 'repeat(3, 1fr)' }
@@ -353,43 +355,6 @@ function BentoGrid({ items, name, isPaidMedia, contain }: {
     <div className="grid gap-3" style={style}>
       {items.map((item, i) => (
         <MediaCell key={i} {...item} name={name} index={i} isPaidMedia={isPaidMedia} contain={contain} />
-      ))}
-    </div>
-  )
-}
-
-function CampaignGrid({ gallery, name }: { gallery: string[]; name: string }) {
-  const hasVideo = gallery.some((s) => s.endsWith('.mp4'))
-
-  if (hasVideo) {
-    if (gallery.length === 1 && gallery[0].endsWith('.mp4')) {
-      return (
-        <div className="flex justify-center">
-          <video src={gallery[0]} autoPlay loop muted playsInline className="max-h-[560px] w-auto rounded-sm" />
-        </div>
-      )
-    }
-    return (
-      <div className="grid grid-cols-3 gap-4">
-        {gallery.map((src, i) => (
-          <div key={i} className="h-[420px] bg-[rgba(13,13,13,0.04)] rounded-sm flex items-center justify-center overflow-hidden">
-            {src.endsWith('.mp4') ? (
-              <video src={src} autoPlay loop muted playsInline className="h-full w-auto max-w-full" />
-            ) : (
-              <img src={src} alt={`${name} ${i + 1}`} className="max-w-full max-h-full object-contain p-3" loading="lazy" />
-            )}
-          </div>
-        ))}
-      </div>
-    )
-  }
-
-  return (
-    <div className="grid grid-cols-5 gap-3">
-      {gallery.map((src, i) => (
-        <div key={i} className="h-[280px] bg-[rgba(13,13,13,0.04)] rounded-sm flex items-center justify-center p-2">
-          <img src={src} alt={`${name} ${i + 1}`} className="max-w-full max-h-full object-contain" loading="lazy" />
-        </div>
       ))}
     </div>
   )
