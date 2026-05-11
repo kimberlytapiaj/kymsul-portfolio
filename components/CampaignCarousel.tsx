@@ -27,7 +27,7 @@ export default function CampaignCarousel({ gallery, name }: Props) {
   }, [])
 
   return (
-    <div className="relative">
+    <div className="relative max-w-[560px] mx-auto">
       {/* Track — one slide per view */}
       <div
         ref={trackRef}
