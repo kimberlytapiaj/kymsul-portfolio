@@ -5,7 +5,7 @@ import { projects } from '@/lib/projects'
 const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 
 export default function ProyectosPage() {
-  const [zealix, brainy, beatness, kop, castaReal, nerdheart, nomada] = projects
+  const [zealix, brainy, beatness, kop, castaReal, nerdheart, nomada, bwl] = projects
 
   return (
     <PageLayout>
@@ -66,7 +66,7 @@ export default function ProyectosPage() {
           </div>
 
           {/* Row 4 — NerdHeart + La Cabaña */}
-          <div className="flex gap-6">
+          <div className="flex gap-6 mb-16">
             <div className="flex-[496_1_0%]">
               <ProjectCard {...nerdheart} className="h-[460px]" />
               <ProjectMeta project={nerdheart} />
@@ -75,6 +75,12 @@ export default function ProyectosPage() {
               <ProjectCard {...nomada} className="h-[460px]" />
               <ProjectMeta project={nomada} />
             </div>
+          </div>
+
+          {/* Row 5 — BWL full width */}
+          <div>
+            <ProjectCard {...bwl} className="w-full h-[500px]" />
+            <ProjectMeta project={bwl} wide />
           </div>
 
         </div>

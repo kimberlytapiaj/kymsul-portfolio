@@ -113,8 +113,12 @@ export default async function CasoPage({ params }: Props) {
 
           {/* Main gallery */}
           {project.gallery.length > 1 && (
-            <div className="mt-24 grid grid-cols-2 gap-4">
-              {project.gallery.map((src, i) => <GalleryItem key={i} src={src} alt={`${project.name} ${i + 1}`} />)}
+            <div className="mt-24 columns-2 gap-4">
+              {project.gallery.map((src, i) => (
+                <div key={i} className="break-inside-avoid mb-4">
+                  <GalleryItem src={src} alt={`${project.name} ${i + 1}`} />
+                </div>
+              ))}
             </div>
           )}
         </div>
@@ -209,15 +213,16 @@ function CampaignBlock({ campaign }: { campaign: SubProject }) {
           ))}
         </div>
       ) : (
-        <div className="grid grid-cols-5 gap-3 items-start">
+        <div className="grid grid-cols-5 gap-3">
           {campaign.gallery.map((src, i) => (
-            <img
-              key={i}
-              src={src}
-              alt={`${campaign.name} ${i + 1}`}
-              className="w-full object-contain rounded-sm"
-              loading="lazy"
-            />
+            <div key={i} className="h-[280px] bg-[rgba(13,13,13,0.04)] rounded-sm flex items-center justify-center p-2">
+              <img
+                src={src}
+                alt={`${campaign.name} ${i + 1}`}
+                className="max-w-full max-h-full object-contain"
+                loading="lazy"
+              />
+            </div>
           ))}
         </div>
       )}

@@ -2,7 +2,7 @@ import ProjectCard from './ProjectCard'
 import { projects } from '@/lib/projects'
 
 export default function Portfolio() {
-  const [zealix, brainy, beatness, kop, castaReal, nerdheart, nomada] = projects
+  const [zealix, brainy, beatness, kop, castaReal, nerdheart, nomada, bwl] = projects
 
   return (
     <section id="portafolio" className="px-24 pt-16 pb-0">
@@ -28,9 +28,14 @@ export default function Portfolio() {
       </div>
 
       {/* Row 4: NerdHeart + La Cabaña */}
-      <div className="flex gap-6">
+      <div className="flex gap-6 mb-6">
         <ProjectCard {...nerdheart} className="flex-[496_1_0%] h-[524px]" />
         <ProjectCard {...nomada} className="flex-[728_1_0%] h-[524px]" />
+      </div>
+
+      {/* Row 5: BWL full-width */}
+      <div>
+        <ProjectCard {...bwl} className="w-full h-[604px]" />
       </div>
     </section>
   )

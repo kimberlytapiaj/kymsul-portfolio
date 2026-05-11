@@ -259,6 +259,49 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: 'bwl',
+    name: 'BWL',
+    category: 'SOCIAL MEDIA · MOTION',
+    year: '2025',
+    image: '/assets/bwl/bwl-01.png',
+    accentColor: 'white',
+    tagline: 'Contenido que convierte, en dos idiomas.',
+    tags: ['Social media', 'Motion', 'Paid media', 'Dirección de arte'],
+    overview:
+      'BWL es una marca de wellness con presencia en el mercado anglosajón y asiático. El trabajo abarcó producción de contenido para redes sociales y piezas de paid media: desde estáticos de campaña hasta reels editados con material de archivo premium.',
+    role: 'Dirección de arte, edición de video y producción de contenido para Instagram y paid media. Versiones en inglés y chino para distintos mercados.',
+    challenge:
+      'Crear contenido que funcionara en dos contextos culturales distintos sin perder coherencia visual. Cada pieza tenía que ser legible y atractiva tanto para audiencias occidentales como asiáticas.',
+    process:
+      'Diseñé un sistema visual limpio y premium que priorizara la imagen del producto: tipografía clara, paleta neutra con acentos y composiciones ordenadas. Los videos usan stock de alta calidad editado con ritmo, transiciones suaves y motion type para reforzar el mensaje sin saturar.',
+    result:
+      'Más de 20 piezas entre paid media estático, reels de producto y posts editoriales. Contenido adaptado a múltiples formatos y dos idiomas, listo para campaña.',
+    gallery: [
+      '/assets/bwl/bwl-01.png',
+      '/assets/bwl/bwl-02.png',
+      '/assets/bwl/bwl-03.png',
+      '/assets/bwl/bwl-04.png',
+      '/assets/bwl/bwl-06.png',
+      '/assets/bwl/bwl-07.png',
+      '/assets/bwl/bwl-09.png',
+      '/assets/bwl/bwl-10.png',
+      '/assets/bwl/bwl-11.png',
+      '/assets/bwl/bwl-12.png',
+    ],
+    campaigns: [
+      {
+        name: 'Social Posts · Motion',
+        objective: 'Reels de producto para redes sociales: edición con stock premium, motion type y ritmo visual. Piezas diseñadas para capturar atención en los primeros 2 segundos.',
+        formats: ['Post 66', 'Post 77', 'Post 79'],
+        gallery: [
+          '/assets/bwl/bwl-post-66-web.mp4',
+          '/assets/bwl/bwl-post-77-web.mp4',
+          '/assets/bwl/bwl-post-79-web.mp4',
+        ],
+      },
+    ],
+  },
+  {
     id: 'nomada',
     name: 'La Cabaña',
     category: 'BRANDING',
