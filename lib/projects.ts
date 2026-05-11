@@ -346,12 +346,10 @@ export const projects: Project[] = [
       'Más de 20 piezas entre paid media estático, reels bilingües y posts editoriales. Sistema de producción que permite adaptar cada pieza a dos idiomas sin perder coherencia de marca.',
     gallery: [
       '/assets/bwl/bwl-mothers-day-web.mp4',
-      '/assets/bwl/bwl-post-76.png',
       '/assets/bwl/bwl-11.png',
       '/assets/bwl/bwl-12.png',
       '/assets/bwl/bwl-13.png',
       '/assets/bwl/bwl-14.png',
-      '/assets/bwl/bwl-15.png',
     ],
     campaigns: [
       {
