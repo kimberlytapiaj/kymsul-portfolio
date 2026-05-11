@@ -20,8 +20,15 @@ export default function CampaignCarousel({ gallery, name, className, compact, fi
     track.scrollTo({ left: track.clientWidth * index, behavior: 'smooth' })
   }
 
-  const scroll = (dir: 1 | -1) =>
+  const scroll = (e: React.MouseEvent, dir: 1 | -1) => {
+    e.stopPropagation()
     scrollTo(Math.max(0, Math.min(gallery.length - 1, current + dir)))
+  }
+
+  const scrollToIndex = (e: React.MouseEvent, index: number) => {
+    e.stopPropagation()
+    scrollTo(index)
+  }
 
   useEffect(() => {
     const track = trackRef.current
@@ -55,14 +62,14 @@ export default function CampaignCarousel({ gallery, name, className, compact, fi
         {gallery.length > 1 && (
           <>
             <button
-              onClick={() => scroll(-1)}
+              onClick={(e) => scroll(e, -1)}
               aria-label="Anterior"
               className="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center font-mono text-[12px] text-white hover:bg-black/50 transition-colors z-10"
             >
               ←
             </button>
             <button
-              onClick={() => scroll(1)}
+              onClick={(e) => scroll(e, 1)}
               aria-label="Siguiente"
               className="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center font-mono text-[12px] text-white hover:bg-black/50 transition-colors z-10"
             >
@@ -72,7 +79,7 @@ export default function CampaignCarousel({ gallery, name, className, compact, fi
               {gallery.map((_, i) => (
                 <button
                   key={i}
-                  onClick={() => scrollTo(i)}
+                  onClick={(e) => scrollToIndex(e, i)}
                   className={`w-1.5 h-1.5 rounded-full transition-colors ${
                     i === current ? 'bg-white' : 'bg-white/40'
                   }`}
@@ -114,14 +121,14 @@ export default function CampaignCarousel({ gallery, name, className, compact, fi
       {gallery.length > 1 && (
         <>
           <button
-            onClick={() => scroll(-1)}
+            onClick={(e) => scroll(e, -1)}
             aria-label="Anterior"
             className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 shadow-md flex items-center justify-center font-mono text-[13px] hover:bg-white transition-colors z-10"
           >
             ←
           </button>
           <button
-            onClick={() => scroll(1)}
+            onClick={(e) => scroll(e, 1)}
             aria-label="Siguiente"
             className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 shadow-md flex items-center justify-center font-mono text-[13px] hover:bg-white transition-colors z-10"
           >
@@ -135,7 +142,7 @@ export default function CampaignCarousel({ gallery, name, className, compact, fi
           {gallery.map((_, i) => (
             <button
               key={i}
-              onClick={() => scrollTo(i)}
+              onClick={(e) => scrollToIndex(e, i)}
               className={`w-1.5 h-1.5 rounded-full transition-colors ${
                 i === current ? 'bg-dark' : 'bg-[rgba(13,13,13,0.2)]'
               }`}
