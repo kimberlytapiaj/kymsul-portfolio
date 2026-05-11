@@ -159,6 +159,7 @@ export const projects: Project[] = [
               { items: ['/assets/beatness/beatness-ev-anika.png'] },
               { items: ['/assets/beatness/beatness-ev-switch.png'] },
               { items: ['/assets/beatness/beatness-ev-box-kids.png'] },
+              { items: ['/assets/beatness/beatness-ev-tec.png'] },
             ],
           },
         ],
