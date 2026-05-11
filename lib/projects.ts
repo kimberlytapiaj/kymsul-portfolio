@@ -265,17 +265,17 @@ export const projects: Project[] = [
     year: '2025',
     image: '/assets/bwl/bwl-01.png',
     accentColor: 'white',
-    tagline: 'Contenido que convierte, en dos idiomas.',
-    tags: ['Social media', 'Motion', 'Paid media', 'Dirección de arte'],
+    tagline: 'Una marca china que habla dos idiomas sin perder su voz.',
+    tags: ['Social media', 'Motion', 'Paid media', 'RedNote · 小红书'],
     overview:
-      'BWL es una marca de wellness con presencia en el mercado anglosajón y asiático. El trabajo abarcó producción de contenido para redes sociales y piezas de paid media: desde estáticos de campaña hasta reels editados con material de archivo premium.',
-    role: 'Dirección de arte, edición de video y producción de contenido para Instagram y paid media. Versiones en inglés y chino para distintos mercados.',
+      'BWL es una marca china de wellness con múltiples líneas de producto. El trabajo abarca producción de contenido para Instagram y paid media en inglés, más adaptación de reels al chino para RedNote (小红书) — cada pieza traducida y reformateada para el contexto cultural y el algoritmo de cada plataforma.',
+    role: 'Dirección de arte, edición de video y producción de contenido. Adaptación bilingüe chino-inglés para Instagram y RedNote.',
     challenge:
-      'Crear contenido que funcionara en dos contextos culturales distintos sin perder coherencia visual. Cada pieza tenía que ser legible y atractiva tanto para audiencias occidentales como asiáticas.',
+      'Adaptar el mismo contenido a dos plataformas con culturas visuales distintas: lo que funciona en Instagram no necesariamente conecta en RedNote. Cada versión tenía que sentirse nativa en su plataforma, no una simple traducción.',
     process:
-      'Diseñé un sistema visual limpio y premium que priorizara la imagen del producto: tipografía clara, paleta neutra con acentos y composiciones ordenadas. Los videos usan stock de alta calidad editado con ritmo, transiciones suaves y motion type para reforzar el mensaje sin saturar.',
+      'Para cada reel: primero la versión en inglés con stock premium, motion type y ritmo occidental; luego la adaptación al chino con tipografía ajustada, copy nativo y referencias visuales que conectan con la audiencia de RedNote. Los estáticos de paid media siguen una línea limpia y premium que funciona en ambos mercados.',
     result:
-      'Más de 20 piezas entre paid media estático, reels de producto y posts editoriales. Contenido adaptado a múltiples formatos y dos idiomas, listo para campaña.',
+      'Más de 20 piezas entre paid media estático, reels bilingües y posts editoriales. Sistema de producción que permite adaptar cada pieza a dos idiomas sin perder coherencia de marca.',
     gallery: [
       '/assets/bwl/bwl-11.png',
       '/assets/bwl/bwl-12.png',
