@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import PageLayout from '@/components/PageLayout'
+import CampaignCarousel from '@/components/CampaignCarousel'
 import { projects, getProject, type SubProject } from '@/lib/projects'
 
 const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
@@ -168,9 +169,6 @@ function GalleryItem({ src, alt }: { src: string; alt: string }) {
 }
 
 function CampaignBlock({ campaign }: { campaign: SubProject }) {
-  const hasVideo = campaign.gallery.some((s) => s.endsWith('.mp4'))
-  const n = campaign.gallery.length
-
   return (
     <div>
       {/* Header */}
@@ -198,49 +196,12 @@ function CampaignBlock({ campaign }: { campaign: SubProject }) {
         </div>
       </div>
 
-      {/* Grid */}
-      {n === 1 ? (
-        campaign.gallery[0].endsWith('.mp4') ? (
-          <video src={campaign.gallery[0]} autoPlay loop muted playsInline className="max-h-[480px] w-auto mx-auto block rounded-sm" />
-        ) : (
-          <div className="h-[420px] bg-[rgba(13,13,13,0.04)] rounded-sm flex items-center justify-center p-3">
-            <img src={campaign.gallery[0]} alt={campaign.name} className="max-w-full max-h-full object-contain" loading="lazy" />
-          </div>
-        )
-      ) : !hasVideo ? (
-        <div className="grid grid-cols-5 gap-3">
-          {campaign.gallery.map((src, i) => (
-            <div key={i} className="h-[280px] bg-[rgba(13,13,13,0.04)] rounded-sm flex items-center justify-center p-2">
-              <img src={src} alt={`${campaign.name} ${i + 1}`} className="max-w-full max-h-full object-contain" loading="lazy" />
-            </div>
-          ))}
-        </div>
-      ) : (
-        <div className={`grid gap-4 ${n === 2 ? 'grid-cols-2' : 'grid-cols-3'}`}>
-          {campaign.gallery.map((src, i) => (
-            <CampaignItem key={i} src={src} alt={`${campaign.name} ${i + 1}`} />
-          ))}
-        </div>
-      )}
+      {/* Carousel */}
+      <CampaignCarousel gallery={campaign.gallery} name={campaign.name} />
     </div>
   )
 }
 
-function CampaignItem({ src, alt, className = '' }: { src: string; alt: string; className?: string }) {
-  const wrap = `h-[420px] bg-[rgba(13,13,13,0.04)] rounded-sm flex items-center justify-center overflow-hidden ${className}`
-  if (src.endsWith('.mp4')) {
-    return (
-      <div className={wrap}>
-        <video src={src} autoPlay loop muted playsInline className="h-full w-auto max-w-full" />
-      </div>
-    )
-  }
-  return (
-    <div className={`${wrap} p-3`}>
-      <img src={src} alt={alt} className="max-w-full max-h-full object-contain" loading="lazy" />
-    </div>
-  )
-}
 
 function NextProject({ currentId }: { currentId: string }) {
   const idx = projects.findIndex((p) => p.id === currentId)
