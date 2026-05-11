@@ -1,6 +1,9 @@
+import Link from 'next/link'
+
 const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 
 type ProjectCardProps = {
+  id: string
   name: string
   category: string
   year: string
@@ -10,6 +13,7 @@ type ProjectCardProps = {
 }
 
 export default function ProjectCard({
+  id,
   name,
   category,
   year,
@@ -18,7 +22,7 @@ export default function ProjectCard({
   className = '',
 }: ProjectCardProps) {
   return (
-    <div className={`overflow-hidden flex flex-col cursor-pointer group ${className}`}>
+    <Link href={`/proyectos/${id}`} className={`overflow-hidden flex flex-col cursor-pointer group ${className}`}>
       {/* Thumbnail */}
       <div className="relative flex-1 overflow-hidden">
         <img
@@ -58,6 +62,6 @@ export default function ProjectCard({
           </p>
         </div>
       </div>
-    </div>
+    </Link>
   )
 }
