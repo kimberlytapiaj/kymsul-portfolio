@@ -5,7 +5,6 @@ export type Project = {
   year: string
   image: string
   accentColor?: string
-  // Case study fields
   tagline: string
   tags: string[]
   overview: string
@@ -36,7 +35,16 @@ export const projects: Project[] = [
     result:
       'Sistema de identidad listo para escalar: logotipo en múltiples versiones, paleta de color documentada, tipografía primaria y secundaria, y un manual de uso que el equipo interno puede aplicar sin depender de diseñador.',
     gallery: [
-      '/assets/thumbnail-zealix.png',
+      '/assets/zealix/zealix-01.png',
+      '/assets/zealix/zealix-02.png',
+      '/assets/zealix/zealix-03.png',
+      '/assets/zealix/zealix-04.png',
+      '/assets/zealix/zealix-05.png',
+      '/assets/zealix/zealix-06.png',
+      '/assets/zealix/zealix-07.png',
+      '/assets/zealix/zealix-08.png',
+      '/assets/zealix/zealix-09.png',
+      '/assets/zealix/zealix-10.png',
     ],
   },
   {
@@ -58,7 +66,18 @@ export const projects: Project[] = [
     result:
       'Design system funcional en Figma con más de 40 componentes, brand book completo, y una mascota lista para animar. La marca pasó validación con usuarios de 8 a 14 años en pruebas de concepto.',
     gallery: [
-      '/assets/thumbnail-brainy.png',
+      '/assets/brainy/brainy-01.png',
+      '/assets/brainy/brainy-02.png',
+      '/assets/brainy/brainy-03.png',
+      '/assets/brainy/brainy-04.png',
+      '/assets/brainy/brainy-05.png',
+      '/assets/brainy/brainy-06.png',
+      '/assets/brainy/brainy-07.png',
+      '/assets/brainy/brainy-08.png',
+      '/assets/brainy/brainy-09.png',
+      '/assets/brainy/brainy-10.png',
+      '/assets/brainy/brainy-11.png',
+      '/assets/brainy/brainy-12.png',
     ],
   },
   {
@@ -80,7 +99,78 @@ export const projects: Project[] = [
     result:
       'Pack de más de 15 templates editables, 4 reels de campaña producidos, y una guía visual para que el equipo interno pueda generar contenido sin romper el sistema.',
     gallery: [
-      '/assets/thumbnail-beatness.png',
+      '/assets/beatness/beatness-01.jpg',
+      '/assets/beatness/beatness-02.jpg',
+      '/assets/beatness/beatness-03.jpg',
+      '/assets/beatness/beatness-04.jpg',
+      '/assets/beatness/beatness-05.jpg',
+      '/assets/beatness/beatness-06.png',
+      '/assets/beatness/beatness-07.jpg',
+      '/assets/beatness/beatness-08.png',
+      '/assets/beatness/beatness-09.png',
+      '/assets/beatness/beatness-10.jpg',
+      '/assets/beatness/beatness-11.png',
+    ],
+  },
+  {
+    id: 'kop',
+    name: 'KOP',
+    category: 'SOCIAL MEDIA',
+    year: '2024',
+    image: '/assets/thumbnail-kop.png',
+    accentColor: 'white',
+    tagline: 'Donde el deporte se convierte en estilo de vida.',
+    tags: ['Social media', 'Dirección de arte', 'Contenido editorial'],
+    overview:
+      'KOP es un club de pádel y tenis en Guadalajara con enfoque en comunidad activa. Necesitaban un sistema de contenido que reflejara energía deportiva y al mismo tiempo atrajera a un perfil premium.',
+    role: 'Dirección de arte y producción de contenido para Instagram: editorial deportivo, carruseles educativos, efemérides y reels.',
+    challenge:
+      'Conectar dos audiencias: jugadores serios que quieren información técnica, y personas que buscan un espacio social activo. El contenido tenía que funcionar para ambos sin sentirse partido.',
+    process:
+      'Creé un sistema visual de dos velocidades: posts editoriales de alto impacto para imagen de marca, y carruseles informativos con tipografía fuerte y datos concretos. La paleta combina negro, blanco y un verde energético que distingue en el feed sin saturar.',
+    result:
+      'Sistema de 30+ piezas entre editoriales, carruseles y reels. Identidad de contenido consistente que el equipo puede replicar con los templates entregados.',
+    gallery: [
+      '/assets/kop/kop-01.png',
+      '/assets/kop/kop-02.png',
+      '/assets/kop/kop-03.png',
+      '/assets/kop/kop-04.png',
+      '/assets/kop/kop-05.png',
+      '/assets/kop/kop-06.png',
+      '/assets/kop/kop-07.png',
+      '/assets/kop/kop-08.png',
+      '/assets/kop/kop-09.png',
+      '/assets/kop/kop-10.png',
+    ],
+  },
+  {
+    id: 'casta-real',
+    name: 'Casta Real',
+    category: 'SOCIAL MEDIA',
+    year: '2024',
+    image: '/assets/thumbnail-casta-real.png',
+    accentColor: 'white',
+    tagline: 'Fuerza que se ve. Origen que se nota.',
+    tags: ['Social media', 'Editorial fotográfico', 'Dirección de arte'],
+    overview:
+      'Casta Real es una marca de suplementos deportivos con raíces mexicanas. Su identidad de marca ya tenía fuerza; lo que faltaba era un sistema de contenido que lo comunicara sin perder autenticidad.',
+    role: 'Dirección de arte y producción de contenido para Instagram: editorial fotográfico, editorial tipográfico y piezas de campaña.',
+    challenge:
+      'El mercado de suplementos está saturado de contenido agresivo y genérico. El reto fue crear algo visualmente contundente que destacara sin caer en los clichés del fitness estadounidense.',
+    process:
+      'Desarrollé dos líneas editoriales paralelas: una fotográfica con atletas reales en entornos de entrenamiento, y una tipográfica con frases de identidad en layout bold. Ambas comparten paleta —negro, blanco y tierra— y tipografía densa que refuerza el peso de la marca.',
+    result:
+      '15+ piezas editoriales entre fotografía y tipografía, con coherencia visual total. Sistema replicable para el equipo de marketing interno.',
+    gallery: [
+      '/assets/casta-real/cr-01.png',
+      '/assets/casta-real/cr-02.png',
+      '/assets/casta-real/cr-03.png',
+      '/assets/casta-real/cr-04.jpg',
+      '/assets/casta-real/cr-05.jpg',
+      '/assets/casta-real/cr-06.jpg',
+      '/assets/casta-real/cr-07.png',
+      '/assets/casta-real/cr-08.png',
+      '/assets/casta-real/cr-09.jpg',
     ],
   },
   {
@@ -102,29 +192,43 @@ export const projects: Project[] = [
     result:
       'Sistema de 8 piezas animadas: 2 stings de logo, 3 loops para stories/feed, 3 stickers GIF listos para Tenor. Archivos fuente organizados y un mini-manual de uso.',
     gallery: [
-      '/assets/thumbnail-tierra.png',
+      '/assets/nerdheart/nerdheart-01.gif',
+      '/assets/nerdheart/nerdheart-02.gif',
+      '/assets/nerdheart/nerdheart-03.gif',
+      '/assets/nerdheart/nerdheart-04.gif',
+      '/assets/nerdheart/nerdheart-05.gif',
+      '/assets/nerdheart/nerdheart-06.png',
+      '/assets/nerdheart/nerdheart-07.png',
+      '/assets/nerdheart/nerdheart-08.png',
     ],
   },
   {
     id: 'nomada',
-    name: 'Nómada',
-    category: 'BRAND · WEB',
+    name: 'La Cabaña',
+    category: 'BRANDING',
     year: '2024',
     image: '/assets/thumbnail-nomada.png',
     accentColor: '#c7b8ff',
     tagline: 'Un restaurante que encontró su identidad.',
-    tags: ['Branding', 'Web design', 'Fotografía'],
+    tags: ['Branding', 'Manual de identidad', 'Diseño editorial'],
     overview:
-      'La Cabaña — Nómada es un restaurante con cocina de autor en Puebla, México. El nombre evocaba cantina; la experiencia real era otra cosa. El proyecto fue un reposicionamiento completo.',
-    role: 'Rediseño de identidad visual, diseño de menú impreso, dirección de fotografía de producto y diseño web.',
+      'La Cabaña es un restaurante con cocina de autor en Puebla, México. El proyecto fue un reposicionamiento visual completo: desde el logotipo hasta el manual de identidad y el menú impreso.',
+    role: 'Rediseño de identidad visual y diseño editorial: logotipo, paleta, tipografía, manual de identidad y menú impreso.',
     challenge:
       'Cambiar la percepción de un restaurante establecido sin alienar a su clientela base. El nuevo sistema tenía que ser sofisticado pero cálido, premium sin pretensión.',
     process:
-      'La nueva identidad parte del concepto de nomadismo culinario: elementos de diferentes tradiciones que convergen en una experiencia. El logotipo usa serif clásico con detalles irregulares que sugieren artesanía. El menú impreso fue diseñado para fotogenia — pensado para ser fotografiado por clientes. El sitio web prioriza la reservación y la carta.',
+      'La nueva identidad parte de la calidez: maderas, luz suave y una tipografía serif con personalidad. El manual de identidad documenta usos correctos e incorrectos del logotipo, paleta extendida y aplicaciones en papelería y menú.',
     result:
-      'Sistema de identidad completo, menú impreso en dos versiones (carta y tabla), fotografía de platos y espacio, y sitio web de una página con reservaciones.',
+      'Sistema de identidad completo, menú impreso en dos versiones (carta y tabla), y brand guidelines listos para aplicar en cualquier pieza nueva.',
     gallery: [
-      '/assets/thumbnail-nomada.png',
+      '/assets/nomada/nomada-01.png',
+      '/assets/nomada/nomada-02.png',
+      '/assets/nomada/nomada-03.png',
+      '/assets/nomada/nomada-04.png',
+      '/assets/nomada/nomada-05.png',
+      '/assets/nomada/nomada-06.png',
+      '/assets/nomada/nomada-07.png',
+      '/assets/nomada/nomada-08.png',
     ],
   },
 ]

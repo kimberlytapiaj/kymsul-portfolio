@@ -5,7 +5,7 @@ import { projects } from '@/lib/projects'
 const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 
 export default function ProyectosPage() {
-  const [zealix, brainy, beatness, nerdheart, nomada] = projects
+  const [zealix, brainy, beatness, kop, castaReal, nerdheart, nomada] = projects
 
   return (
     <PageLayout>
@@ -17,16 +17,10 @@ export default function ProyectosPage() {
           </p>
           <div className="flex items-end justify-between">
             <div>
-              <p
-                className="text-[96px] text-dark leading-[0.9]"
-                style={{ fontFamily: 'var(--font-franklin-cond)' }}
-              >
+              <p className="text-[96px] text-dark leading-[0.9]" style={{ fontFamily: 'var(--font-franklin-cond)' }}>
                 Todo el
               </p>
-              <p
-                className="font-fraunces font-light italic text-[96px] text-dark leading-[0.9]"
-                style={WONK}
-              >
+              <p className="font-fraunces font-light italic text-[96px] text-dark leading-[0.9]" style={WONK}>
                 trabajo.
               </p>
             </div>
@@ -59,7 +53,19 @@ export default function ProyectosPage() {
             <ProjectMeta project={beatness} wide />
           </div>
 
-          {/* Row 3 — NerdHeart + Nómada */}
+          {/* Row 3 — KOP + Casta Real */}
+          <div className="flex gap-6 mb-16">
+            <div className="flex-[496_1_0%]">
+              <ProjectCard {...kop} className="h-[460px]" />
+              <ProjectMeta project={kop} />
+            </div>
+            <div className="flex-[728_1_0%]">
+              <ProjectCard {...castaReal} className="h-[460px]" />
+              <ProjectMeta project={castaReal} />
+            </div>
+          </div>
+
+          {/* Row 4 — NerdHeart + La Cabaña */}
           <div className="flex gap-6">
             <div className="flex-[496_1_0%]">
               <ProjectCard {...nerdheart} className="h-[460px]" />

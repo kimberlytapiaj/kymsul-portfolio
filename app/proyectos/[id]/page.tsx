@@ -113,13 +113,14 @@ export default async function CasoPage({ params }: Props) {
 
           {/* Gallery */}
           {project.gallery.length > 1 && (
-            <div className="mt-24 grid grid-cols-2 gap-6">
+            <div className="mt-24 grid grid-cols-2 gap-4">
               {project.gallery.map((src, i) => (
                 <img
                   key={i}
                   src={src}
                   alt={`${project.name} ${i + 1}`}
-                  className="w-full object-cover"
+                  className="w-full object-cover rounded-sm"
+                  loading="lazy"
                 />
               ))}
             </div>
