@@ -10,23 +10,17 @@ export default function CampaignCarousel({ gallery, name }: Props) {
   const scrollTo = (index: number) => {
     const track = trackRef.current
     if (!track) return
-    const item = track.children[index] as HTMLElement
-    if (item) track.scrollTo({ left: item.offsetLeft, behavior: 'smooth' })
+    track.scrollTo({ left: track.clientWidth * index, behavior: 'smooth' })
   }
 
-  const scroll = (dir: 1 | -1) => scrollTo(Math.max(0, Math.min(gallery.length - 1, current + dir)))
+  const scroll = (dir: 1 | -1) =>
+    scrollTo(Math.max(0, Math.min(gallery.length - 1, current + dir)))
 
   useEffect(() => {
     const track = trackRef.current
     if (!track) return
     const handler = () => {
-      let closest = 0
-      let minDist = Infinity
-      Array.from(track.children).forEach((child, i) => {
-        const dist = Math.abs((child as HTMLElement).offsetLeft - track.scrollLeft)
-        if (dist < minDist) { minDist = dist; closest = i }
-      })
-      setCurrent(closest)
+      setCurrent(Math.round(track.scrollLeft / track.clientWidth))
     }
     track.addEventListener('scroll', handler, { passive: true })
     return () => track.removeEventListener('scroll', handler)
@@ -34,14 +28,21 @@ export default function CampaignCarousel({ gallery, name }: Props) {
 
   return (
     <div className="relative">
-      {/* Track */}
+      {/* Track — one slide per view */}
       <div
         ref={trackRef}
-        className="flex overflow-x-auto gap-3 snap-x snap-mandatory scroll-smooth"
+        className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
         {gallery.map((src, i) => (
-          <CarouselItem key={i} src={src} alt={`${name} ${i + 1}`} />
+          <div key={i} className="snap-center shrink-0 w-full">
+            <img
+              src={src}
+              alt={`${name} ${i + 1}`}
+              className="w-full rounded-sm"
+              loading="lazy"
+            />
+          </div>
         ))}
       </div>
 
@@ -72,38 +73,13 @@ export default function CampaignCarousel({ gallery, name }: Props) {
             <button
               key={i}
               onClick={() => scrollTo(i)}
-              className={`w-1.5 h-1.5 rounded-full transition-colors ${i === current ? 'bg-dark' : 'bg-[rgba(13,13,13,0.2)]'}`}
+              className={`w-1.5 h-1.5 rounded-full transition-colors ${
+                i === current ? 'bg-dark' : 'bg-[rgba(13,13,13,0.2)]'
+              }`}
             />
           ))}
         </div>
       )}
-    </div>
-  )
-}
-
-function CarouselItem({ src, alt }: { src: string; alt: string }) {
-  if (src.endsWith('.mp4')) {
-    return (
-      <div className="snap-center shrink-0 h-[520px] flex items-center">
-        <video
-          src={src}
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="h-full w-auto max-w-[700px] rounded-sm"
-        />
-      </div>
-    )
-  }
-  return (
-    <div className="snap-center shrink-0 h-[520px] max-w-[700px] bg-[rgba(13,13,13,0.03)] rounded-sm flex items-center justify-center p-4">
-      <img
-        src={src}
-        alt={alt}
-        className="max-w-full max-h-full object-contain"
-        loading="lazy"
-      />
     </div>
   )
 }

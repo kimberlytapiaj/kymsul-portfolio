@@ -3,6 +3,7 @@ export type SubProject = {
   objective: string
   formats: string[]
   gallery: string[]
+  type?: 'carousel'
 }
 
 export type Project = {

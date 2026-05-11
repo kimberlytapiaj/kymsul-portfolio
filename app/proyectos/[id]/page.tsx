@@ -196,8 +196,42 @@ function CampaignBlock({ campaign }: { campaign: SubProject }) {
         </div>
       </div>
 
-      {/* Carousel */}
-      <CampaignCarousel gallery={campaign.gallery} name={campaign.name} />
+      {/* Gallery */}
+      {campaign.type === 'carousel' ? (
+        <CampaignCarousel gallery={campaign.gallery} name={campaign.name} />
+      ) : (
+        <CampaignGrid gallery={campaign.gallery} name={campaign.name} />
+      )}
+    </div>
+  )
+}
+
+function CampaignGrid({ gallery, name }: { gallery: string[]; name: string }) {
+  const hasVideo = gallery.some((s) => s.endsWith('.mp4'))
+
+  if (hasVideo) {
+    return (
+      <div className="grid grid-cols-3 gap-4">
+        {gallery.map((src, i) => (
+          <div key={i} className="h-[420px] bg-[rgba(13,13,13,0.04)] rounded-sm flex items-center justify-center overflow-hidden">
+            {src.endsWith('.mp4') ? (
+              <video src={src} autoPlay loop muted playsInline className="h-full w-auto max-w-full" />
+            ) : (
+              <img src={src} alt={`${name} ${i + 1}`} className="max-w-full max-h-full object-contain p-3" loading="lazy" />
+            )}
+          </div>
+        ))}
+      </div>
+    )
+  }
+
+  return (
+    <div className="grid grid-cols-5 gap-3">
+      {gallery.map((src, i) => (
+        <div key={i} className="h-[280px] bg-[rgba(13,13,13,0.04)] rounded-sm flex items-center justify-center p-2">
+          <img src={src} alt={`${name} ${i + 1}`} className="max-w-full max-h-full object-contain" loading="lazy" />
+        </div>
+      ))}
     </div>
   )
 }
