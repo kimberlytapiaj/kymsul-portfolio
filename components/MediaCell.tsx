@@ -14,6 +14,7 @@ type Props = BentoItem & {
   isPaidMedia?: boolean
   contain?: boolean
   natural?: boolean
+  wide?: boolean
 }
 
 export default function MediaCell(props: Props) {
@@ -32,7 +33,7 @@ export default function MediaCell(props: Props) {
     }
   }, [open, close])
 
-  const cellClass = props.natural ? 'w-full' : 'aspect-[4/5]'
+  const cellClass = props.wide ? 'w-full aspect-[16/7]' : props.natural ? 'w-full' : 'aspect-[4/5]'
 
   return (
     <>
@@ -84,7 +85,7 @@ function Thumbnail(props: Props) {
   const imgClass = props.contain ? 'w-full h-full object-contain' : 'w-full h-full object-cover'
 
   if (props.kind === 'video-carousel' || props.kind === 'image-carousel') {
-    return <CampaignCarousel gallery={props.sources} name={props.name} fill />
+    return <CampaignCarousel gallery={props.sources} name={props.name} fill contain={props.contain} />
   }
   if (props.kind === 'video') {
     return <video src={props.src} autoPlay loop muted playsInline className="w-full h-full object-cover" />

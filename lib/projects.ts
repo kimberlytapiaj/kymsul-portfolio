@@ -1,6 +1,8 @@
 export type SectionGroup = {
   items: string[]
   carousel?: boolean
+  contain?: boolean
+  wide?: boolean
 }
 
 export type Section = {
@@ -41,32 +43,78 @@ export const projects: Project[] = [
   {
     id: 'zealix',
     name: 'Zealix',
-    category: 'BRANDING',
+    category: 'BRANDING · UX UI',
     year: '2025',
-    image: '/assets/thumbnail-zealix.png',
+    image: '/assets/thumbnail-zealix.jpg',
     accentColor: 'white',
-    tagline: 'Identidad para una fintech que se mueve a otra velocidad.',
-    tags: ['Identidad visual', 'Brand guidelines', 'Naming'],
+    tagline: 'Marca completa para un software que transforma restaurantes.',
+    tags: ['Identidad visual', 'Brand guidelines', 'UX UI · Dirección', 'Social media'],
     overview:
-      'Zealix es una plataforma fintech que usa inteligencia artificial para simplificar la gestión financiera de negocios en crecimiento. Necesitaban una marca que transmitiera tecnología sin frío, y confianza sin rigidez.',
-    role: 'Branding completo: naming, logotipo, paleta cromática, sistema tipográfico y brand guidelines para equipos internos y externos.',
+      'Zealix es un software de gestión inteligente para restaurantes, bares y cafeterías — desde inventario y ventas hasta automatización con IA. El proyecto fue end-to-end: construí la marca desde cero y apoyé la dirección de UX UI del producto.',
+    role: 'Branding completo: naming, logotipo, paleta cromática, sistema tipográfico y brand guidelines. Dirección de arte en UX UI: lineamientos visuales para la interfaz del POS y materiales de producto. Producción de contenido para redes sociales.',
     challenge:
-      'El reto era posicionar a Zealix entre dos mundos: lo suficientemente tech para atraer a early adopters, y lo suficientemente accesible para dueños de negocios que no son nativos digitales.',
+      'Diseñar una marca que comunicara tecnología de punta sin alienar a dueños de negocio que no son nativos digitales. La identidad tenía que funcionar tanto en el producto digital —pantallas de POS— como en redes sociales y materiales impresos.',
     process:
-      'Empecé con un audit de competidores directos en fintech LATAM y definí el territorio visual: moderno, limpio, con personalidad. El logotipo parte de una forma geométrica que sugiere movimiento ascendente. La paleta —negro profundo, blanco y un acento violeta— distingue sin distanciar.',
+      'Definí el territorio visual desde el posicionamiento: moderno, claro, con personalidad. El logotipo parte de una forma geométrica que sugiere conectividad y movimiento. La paleta —negro profundo, blanco y acento violeta— distingue sin distanciar. Para el UX UI dirigí la coherencia entre la identidad de marca y la interfaz del sistema, asegurando que cada pantalla reforzara la confianza del producto.',
     result:
-      'Sistema de identidad listo para escalar: logotipo en múltiples versiones, paleta de color documentada, tipografía primaria y secundaria, y un manual de uso que el equipo interno puede aplicar sin depender de diseñador.',
+      'Sistema de identidad listo para escalar: logotipo en múltiples versiones, paleta documentada, tipografía, manual de uso y dirección visual del producto digital. Más contenido editorial para redes sociales aplicando la identidad en contextos reales.',
     gallery: [
-      '/assets/zealix/zealix-01.png',
-      '/assets/zealix/zealix-02.png',
-      '/assets/zealix/zealix-03.png',
-      '/assets/zealix/zealix-04.png',
-      '/assets/zealix/zealix-05.png',
-      '/assets/zealix/zealix-06.png',
-      '/assets/zealix/zealix-07.png',
-      '/assets/zealix/zealix-08.png',
-      '/assets/zealix/zealix-09.png',
-      '/assets/zealix/zealix-10.png',
+      '/assets/zealix/zealix-pos-03.jpg',
+      '/assets/zealix/zealix-manual-mockup.jpg',
+      '/assets/zealix/zealix-post-11.png',
+    ],
+    campaigns: [
+      {
+        name: 'Branding',
+        objective: 'Identidad visual completa para Zealix — desde el naming y construcción del logotipo hasta el sistema tipográfico, paleta cromática y papelería. Documentado en un manual de uso para equipos internos y externos.',
+        formats: ['Manual de identidad', 'Logotipo', 'Tipografía', 'Papelería'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/zealix/zealix-manual-01.png', '/assets/zealix/zealix-manual-06.png', '/assets/zealix/zealix-manual-09.png', '/assets/zealix/zealix-manual-14.png', '/assets/zealix/zealix-manual-15.png'], carousel: true, contain: true, wide: true },
+              { items: ['/assets/zealix/zealix-sketches.jpg'] },
+              { items: ['/assets/zealix/zealix-brochure.png'] },
+              { items: ['/assets/zealix/zealix-tarjeta.jpg'] },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'UX UI · Dirección',
+        objective: 'Dirección visual del producto digital — lineamientos de interfaz para el sistema POS, la app móvil y el asistente con IA, asegurando coherencia entre la identidad de marca y cada pantalla del software.',
+        formats: ['POS · Dashboard', 'App · Vista de Mesas', 'App · Menú', 'App · Inventario', 'Asistente Zea AI'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/zealix/zealix-pos-01.jpg', '/assets/zealix/zealix-pos-02.jpg'], carousel: true, contain: true },
+              { items: ['/assets/zealix/zealix-ipad-mesas.png'] },
+              { items: ['/assets/zealix/zealix-ipad-menu.png'] },
+              { items: ['/assets/zealix/zealix-mac-inventario.png'], contain: true },
+              { items: ['/assets/zealix/zealix-zea-mobile.jpg'], contain: true },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Social Media',
+        objective: 'Contenido editorial para Instagram aplicando la identidad de marca en contextos reales — fotografía, copy y composición para conectar con dueños de restaurantes, bares y cafeterías.',
+        formats: ['Post · Instagram'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/zealix/zealix-post-08-1.png', '/assets/zealix/zealix-post-08-2.png', '/assets/zealix/zealix-post-08-3.png', '/assets/zealix/zealix-post-08-4.png', '/assets/zealix/zealix-post-08-5.png', '/assets/zealix/zealix-post-08-6.png', '/assets/zealix/zealix-post-08-7.png'], carousel: true },
+              { items: ['/assets/zealix/zealix-post-09.png'] },
+              { items: ['/assets/zealix/zealix-post-14.png'] },
+              { items: ['/assets/zealix/zealix-post-10.png'] },
+              { items: ['/assets/zealix/zealix-post-01.png'] },
+              { items: ['/assets/zealix/zealix-post-05.png'] },
+            ],
+          },
+        ],
+      },
     ],
   },
   {

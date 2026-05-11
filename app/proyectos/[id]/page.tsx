@@ -171,10 +171,10 @@ function GalleryItem({ src, alt }: { src: string; alt: string }) {
 }
 
 type BentoItem =
-  | { kind: 'video-carousel'; sources: string[] }
-  | { kind: 'image-carousel'; sources: string[] }
-  | { kind: 'video'; src: string }
-  | { kind: 'image'; src: string }
+  | { kind: 'video-carousel'; sources: string[]; contain?: boolean; wide?: boolean }
+  | { kind: 'image-carousel'; sources: string[]; contain?: boolean; wide?: boolean }
+  | { kind: 'video'; src: string; contain?: boolean; wide?: boolean }
+  | { kind: 'image'; src: string; contain?: boolean; wide?: boolean }
 
 function extractBentoItems(campaign: SubProject): BentoItem[] {
   const out: BentoItem[] = []
@@ -192,7 +192,7 @@ function extractBentoItems(campaign: SubProject): BentoItem[] {
       for (const group of section.groups) {
         if (group.carousel) {
           const hasVideo = group.items.some(s => s.endsWith('.mp4'))
-          out.push({ kind: hasVideo ? 'video-carousel' : 'image-carousel', sources: group.items })
+          out.push({ kind: hasVideo ? 'video-carousel' : 'image-carousel', sources: group.items, contain: group.contain, wide: group.wide })
         } else {
           for (const src of group.items) {
             out.push(src.endsWith('.mp4') ? { kind: 'video', src } : { kind: 'image', src })
@@ -264,7 +264,9 @@ function CampaignBlock({ campaign }: { campaign: SubProject }) {
       </div>
       <div className="grid gap-3 items-start" style={gridStyle}>
         {items.map((item, i) => (
-          <MediaCell key={i} {...item} name={campaign.name} index={i} isPaidMedia={isPaidMedia} />
+          <div key={i} className={item.wide ? 'col-span-3' : ''}>
+            <MediaCell {...item} name={campaign.name} index={i} isPaidMedia={isPaidMedia} />
+          </div>
         ))}
       </div>
     </div>

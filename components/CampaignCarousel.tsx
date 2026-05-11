@@ -7,9 +7,10 @@ type Props = {
   className?: string
   compact?: boolean
   fill?: boolean
+  contain?: boolean
 }
 
-export default function CampaignCarousel({ gallery, name, className, compact, fill }: Props) {
+export default function CampaignCarousel({ gallery, name, className, compact, fill, contain }: Props) {
   const trackRef = useRef<HTMLDivElement>(null)
   const [current, setCurrent] = useState(0)
 
@@ -43,9 +44,9 @@ export default function CampaignCarousel({ gallery, name, className, compact, fi
           {gallery.map((src, i) => (
             <div key={i} className="snap-center shrink-0 w-full h-full">
               {src.endsWith('.mp4') ? (
-                <video src={src} autoPlay loop muted playsInline className="w-full h-full object-cover" />
+                <video src={src} autoPlay loop muted playsInline className={`w-full h-full ${contain ? 'object-contain' : 'object-cover'}`} />
               ) : (
-                <img src={src} alt={`${name} ${i + 1}`} className="w-full h-full object-cover" loading="lazy" />
+                <img src={src} alt={`${name} ${i + 1}`} className={`w-full h-full ${contain ? 'object-contain' : 'object-cover'}`} loading="lazy" />
               )}
             </div>
           ))}
