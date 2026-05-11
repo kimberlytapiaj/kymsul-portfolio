@@ -23,6 +23,7 @@ const DISCIPLINES: Record<string, Discipline[]> = {
   'bwl':              ['motion', 'social'],
 'activated-decor':  ['branding', 'motion'],
   'procyon':          ['branding', 'social'],
+  'corazon-mixteco':  ['social'],
   'amorcito':         ['social'],
 }
 

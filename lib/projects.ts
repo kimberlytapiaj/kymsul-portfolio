@@ -717,6 +717,94 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: 'corazon-mixteco',
+    name: 'Corazón Mixteco',
+    category: 'SOCIAL MEDIA',
+    year: '2026',
+    image: '/assets/corazon-mixteco/cm-mar-02.jpg',
+    accentColor: '#7B2D8B',
+    tagline: 'La herencia del buen queso, en cada pieza de contenido.',
+    tags: ['Social media', 'Dirección de arte', 'Fotografía editorial', 'Carruseles', 'Print'],
+    overview:
+      'Corazón Mixteco es una marca de quesos artesanales oaxaqueños con 60 años de historia. El trabajo abarca la dirección de arte y producción de contenido mensual para redes sociales: parrillas editoriales de producto, carruseles educativos, reels y materiales de punto de venta.',
+    role: 'Dirección de arte y producción de contenido: parrillas mensuales de Febrero y Marzo 2026, carruseles educativos de producto, reels y diseño de banner roll-up para exhibición.',
+    challenge:
+      'Comunicar autenticidad artesanal y tradición oaxaqueña en un feed de Instagram sin caer en lo folclórico ni en lo genérico. El queso tiene que verse como lo que es: un producto premium de origen.',
+    process:
+      'Cada parrilla parte del producto como protagonista — fotografía de food con luz natural, props de madera, barro y textiles oaxaqueños. Los carruseles educativos complementan el editorial explicando procesos y tips de cuidado. Los copies juegan con el lenguaje coloquial mexicano sin perder el tono premium.',
+    result:
+      'Producción continua: parrillas editoriales de Febrero y Marzo 2026, dos carruseles educativos, cuatro reels de Marzo y banner roll-up para punto de venta.',
+    gallery: [
+      '/assets/corazon-mixteco/cm-post-01.png',
+      '/assets/corazon-mixteco/cm-mar-01.jpg',
+      '/assets/corazon-mixteco/cm-post-02.png',
+      '/assets/corazon-mixteco/cm-mar-12.jpg',
+      '/assets/corazon-mixteco/cm-post-06.png',
+      '/assets/corazon-mixteco/cm-mar-02.jpg',
+      '/assets/corazon-mixteco/cm-post-07.png',
+      '/assets/corazon-mixteco/cm-post-09.png',
+      '/assets/corazon-mixteco/cm-post-10.png',
+      '/assets/corazon-mixteco/cm-mar-03.jpg',
+      '/assets/corazon-mixteco/cm-mar-04.jpg',
+      '/assets/corazon-mixteco/cm-mar-05.jpg',
+      '/assets/corazon-mixteco/cm-mar-06.jpg',
+      '/assets/corazon-mixteco/cm-mar-07.jpg',
+      '/assets/corazon-mixteco/cm-mar-09.jpg',
+      '/assets/corazon-mixteco/cm-mar-10.jpg',
+      '/assets/corazon-mixteco/cm-reel-mar-01.mp4',
+      '/assets/corazon-mixteco/cm-reel-mar-02.mp4',
+      '/assets/corazon-mixteco/cm-reel-mar-03.mp4',
+      '/assets/corazon-mixteco/cm-reel-mar-04.mp4',
+      '/assets/corazon-mixteco/cm-reel-feb-01.mp4',
+    ],
+    campaigns: [
+      {
+        name: 'Carruseles Educativos',
+        objective: 'Carruseles de producto que educan al consumidor sobre autenticidad y cuidado del queso artesanal — dos formatos: identificación de queso artesanal y tips de conservación.',
+        formats: ['Carrusel · Instagram', 'Educativo · Producto'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              {
+                items: [
+                  '/assets/corazon-mixteco/cm-car1-cover.png',
+                  '/assets/corazon-mixteco/cm-car1-02.png',
+                  '/assets/corazon-mixteco/cm-car1-03.png',
+                  '/assets/corazon-mixteco/cm-car1-04.png',
+                  '/assets/corazon-mixteco/cm-car1-05.png',
+                ],
+                carousel: true,
+              },
+              {
+                items: [
+                  '/assets/corazon-mixteco/cm-car2-cover.png',
+                  '/assets/corazon-mixteco/cm-car2-02.png',
+                  '/assets/corazon-mixteco/cm-car2-03.png',
+                  '/assets/corazon-mixteco/cm-car2-04.png',
+                ],
+                carousel: true,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Material Print',
+        objective: 'Banner roll-up para punto de venta y exhibiciones — comunica las dos líneas principales de producto (Quesillo y Panela) con identidad de marca clara y datos de contacto.',
+        formats: ['Banner roll-up · Punto de venta', 'Print'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/corazon-mixteco/cm-banner.png'], contain: true },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: 'amorcito',
     name: 'Amorcito Corazón',
     category: 'SOCIAL MEDIA',
