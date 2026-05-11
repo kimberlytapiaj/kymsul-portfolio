@@ -1,3 +1,10 @@
+export type SubProject = {
+  name: string
+  objective: string
+  formats: string[]
+  gallery: string[]
+}
+
 export type Project = {
   id: string
   name: string
@@ -13,6 +20,7 @@ export type Project = {
   process: string
   result: string
   gallery: string[]
+  campaigns?: SubProject[]
 }
 
 export const projects: Project[] = [
@@ -141,6 +149,54 @@ export const projects: Project[] = [
       '/assets/kop/kop-reel-02-web.mp4',
       '/assets/kop/kop-kt-cover.png',
       '/assets/kop/kop-kt-slide.png',
+    ],
+    campaigns: [
+      {
+        name: 'Soccer Tournament · Maestro Dobel',
+        objective: 'Campaña integral para torneo de soccer patrocinado. Un mismo diseño adaptado a 5 formatos y pantallas distintas — desde el flyer imprimible hasta el banner de app.',
+        formats: ['Flyer', 'Post', 'Story', 'TV Screen', 'Banner App'],
+        gallery: [
+          '/assets/kop/kop-soccer-flyer.png',
+          '/assets/kop/kop-soccer-post.png',
+          '/assets/kop/kop-soccer-story.png',
+          '/assets/kop/kop-soccer-tv.png',
+          '/assets/kop/kop-soccer-banner.png',
+        ],
+      },
+      {
+        name: 'World Cup 2026 · Sticker Swap',
+        objective: 'Campaña de activación aprovechando la Copa Mundial 2026. Adaptación del concepto a 5 formatos: flyer, social media, TV en instalaciones, banner digital y email.',
+        formats: ['Flyer', 'Post', 'Story', 'TV Screen', 'Banner App'],
+        gallery: [
+          '/assets/kop/kop-wc-flyer.png',
+          '/assets/kop/kop-wc-post.png',
+          '/assets/kop/kop-wc-story.png',
+          '/assets/kop/kop-wc-tv.png',
+          '/assets/kop/kop-wc-banner.png',
+        ],
+      },
+      {
+        name: 'Plan Weeks Opens',
+        objective: 'Sistema de comunicación semanal para horarios de apertura del club. Diseñado como template modular adaptable a cada día y entregado en 4 formatos distintos.',
+        formats: ['Flyer', 'Post', 'Story', 'TV Screen'],
+        gallery: [
+          '/assets/kop/kop-pwo-flyer.png',
+          '/assets/kop/kop-pwo-flyer-day.png',
+          '/assets/kop/kop-pwo-post.png',
+          '/assets/kop/kop-pwo-story.png',
+          '/assets/kop/kop-pwo-tv.png',
+        ],
+      },
+      {
+        name: 'Highlights per Sport',
+        objective: 'Videos de 30 segundos por deporte practicado en el club — Pádel, Soccer y Voleibol — para activación en pantallas del venue y redes sociales.',
+        formats: ['Reel 30s · Pádel', 'Reel 30s · Soccer', 'Reel 30s · Voleibol'],
+        gallery: [
+          '/assets/kop/kop-hl-30-secs-padel-web.mp4',
+          '/assets/kop/kop-hl-30-secs-soccer-web.mp4',
+          '/assets/kop/kop-hl-30-secs-volley-web.mp4',
+        ],
+      },
     ],
   },
   {

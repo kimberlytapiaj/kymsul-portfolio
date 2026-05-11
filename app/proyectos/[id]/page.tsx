@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import PageLayout from '@/components/PageLayout'
-import { projects, getProject } from '@/lib/projects'
+import { projects, getProject, type SubProject } from '@/lib/projects'
 
 const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 
@@ -111,38 +111,117 @@ export default async function CasoPage({ params }: Props) {
 
           </div>
 
-          {/* Gallery */}
+          {/* Main gallery */}
           {project.gallery.length > 1 && (
             <div className="mt-24 grid grid-cols-2 gap-4">
-              {project.gallery.map((src, i) =>
-                src.endsWith('.mp4') ? (
-                  <video
-                    key={i}
-                    src={src}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full rounded-sm"
-                  />
-                ) : (
-                  <img
-                    key={i}
-                    src={src}
-                    alt={`${project.name} ${i + 1}`}
-                    className="w-full object-cover rounded-sm"
-                    loading="lazy"
-                  />
-                )
-              )}
+              {project.gallery.map((src, i) => <GalleryItem key={i} src={src} alt={`${project.name} ${i + 1}`} />)}
             </div>
           )}
         </div>
       </section>
 
+      {/* Campaigns / Sub-projects */}
+      {project.campaigns && project.campaigns.length > 0 && (
+        <section className="border-t border-[rgba(13,13,13,0.08)] px-24 py-24 bg-[rgba(13,13,13,0.02)]">
+          <div className="max-w-[1440px] mx-auto">
+            <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-16">CAMPAÑAS</p>
+            <div className="space-y-24">
+              {project.campaigns.map((campaign, i) => (
+                <CampaignBlock key={i} campaign={campaign} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Next project nav */}
       <NextProject currentId={id} />
     </PageLayout>
+  )
+}
+
+function GalleryItem({ src, alt }: { src: string; alt: string }) {
+  if (src.endsWith('.mp4')) {
+    return (
+      <video
+        src={src}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="w-full rounded-sm"
+      />
+    )
+  }
+  return (
+    <img
+      src={src}
+      alt={alt}
+      className="w-full object-cover rounded-sm"
+      loading="lazy"
+    />
+  )
+}
+
+function CampaignBlock({ campaign }: { campaign: SubProject }) {
+  const hasVideo = campaign.gallery.some((s) => s.endsWith('.mp4'))
+
+  return (
+    <div>
+      {/* Header */}
+      <div className="flex items-start justify-between mb-8 pb-6 border-b border-[rgba(13,13,13,0.08)]">
+        <div>
+          <p
+            className="text-[32px] text-dark leading-[1] mb-3"
+            style={{ fontFamily: 'var(--font-franklin-cond)' }}
+          >
+            {campaign.name}
+          </p>
+          <p className="font-sans text-[14px] text-muted leading-[1.6] max-w-[560px]">
+            {campaign.objective}
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-2 justify-end max-w-[280px]">
+          {campaign.formats.map((f) => (
+            <span
+              key={f}
+              className="bg-[rgba(13,13,13,0.06)] rounded-full px-3 py-1 font-mono text-[10px] text-muted2 tracking-[1.2px]"
+            >
+              {f}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* Grid — videos 1 col, images adaptive */}
+      {hasVideo ? (
+        <div className="grid grid-cols-3 gap-4">
+          {campaign.gallery.map((src, i) => (
+            <video
+              key={i}
+              src={src}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full rounded-sm"
+            />
+          ))}
+        </div>
+      ) : (
+        <div className="grid grid-cols-5 gap-3 items-start">
+          {campaign.gallery.map((src, i) => (
+            <img
+              key={i}
+              src={src}
+              alt={`${campaign.name} ${i + 1}`}
+              className="w-full object-contain rounded-sm"
+              loading="lazy"
+            />
+          ))}
+        </div>
+      )}
+    </div>
   )
 }
 
