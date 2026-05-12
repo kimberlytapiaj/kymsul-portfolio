@@ -4,25 +4,24 @@ import { motion } from 'framer-motion'
 import ProjectCard from './ProjectCard'
 import { projects, getProject } from '@/lib/projects'
 
-type Discipline = 'todos' | 'branding' | 'motion' | 'social'
+type Discipline = 'todos' | 'branding' | 'motion' | 'social' | 'ia'
 
 const FILTERS: { label: string; value: Discipline }[] = [
   { label: 'TODOS', value: 'todos' },
   { label: 'BRANDING', value: 'branding' },
   { label: 'MOTION', value: 'motion' },
   { label: 'SOCIAL MEDIA', value: 'social' },
+  { label: 'IA', value: 'ia' },
 ]
 
 const DISCIPLINES: Record<string, Discipline[]> = {
+  'ai-creative':      ['ia', 'motion', 'social'],
   'zealix':           ['branding', 'social'],
   'brainy':           ['branding'],
   'beatness':         ['motion', 'social'],
   'kop':              ['motion', 'social'],
-  'casta-real':       ['motion', 'social'],
-  'nerdheart':        ['motion'],
-  'bwl':              ['motion', 'social'],
-'activated-decor':  ['branding', 'motion'],
-  'procyon':          ['branding', 'social'],
+  'bwl':              ['motion', 'social', 'ia'],
+  'activated-decor':  ['branding', 'motion'],
   'corazon-mixteco':  ['social'],
   'amorcito':         ['social'],
 }
@@ -30,15 +29,11 @@ const DISCIPLINES: Record<string, Discipline[]> = {
 export default function Portfolio() {
   const [active, setActive] = useState<Discipline>('todos')
 
-  const zealix          = getProject('zealix')!
-  const brainy          = getProject('brainy')!
-  const beatness        = getProject('beatness')!
-  const kop             = getProject('kop')!
-  const nerdheart       = getProject('nerdheart')!
-  const activatedDecor  = getProject('activated-decor')!
-  const bwl             = getProject('bwl')!
-  const procyon         = getProject('procyon')!
-  const amorcito        = getProject('amorcito')!
+  const aiCreative = getProject('ai-creative')!
+  const zealix     = getProject('zealix')!
+  const kop        = getProject('kop')!
+  const bwl        = getProject('bwl')!
+  const amorcito   = getProject('amorcito')!
 
   const filtered = projects.filter(p =>
     active === 'todos' || (DISCIPLINES[p.id] ?? []).includes(active)
@@ -72,22 +67,15 @@ export default function Portfolio() {
       {active === 'todos' && (
         <motion.div key="bento" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}>
           <div className="flex gap-6 mb-6">
-            <ProjectCard {...zealix}    className="flex-[728_1_0%] h-[524px]" sizes="(max-width: 1440px) 57vw, 742px" />
-            <ProjectCard {...brainy}    className="flex-[496_1_0%] h-[524px]" sizes="(max-width: 1440px) 39vw, 505px" />
+            <ProjectCard {...zealix}  className="flex-[728_1_0%] h-[524px]" sizes="(max-width: 1440px) 57vw, 742px" />
+            <ProjectCard {...kop}     className="flex-[496_1_0%] h-[524px]" sizes="(max-width: 1440px) 39vw, 505px" />
           </div>
           <div className="mb-6">
-            <ProjectCard {...beatness}  className="w-full h-[604px]" sizes="(max-width: 1440px) 87vw, 1248px" />
+            <ProjectCard {...bwl} className="w-full h-[604px]" sizes="(max-width: 1440px) 87vw, 1248px" />
           </div>
           <div className="flex gap-6 mb-6">
-            <ProjectCard {...kop}           className="flex-[496_1_0%] h-[524px]" sizes="(max-width: 1440px) 39vw, 505px" />
-            <ProjectCard {...nerdheart}     className="flex-[728_1_0%] h-[524px]" sizes="(max-width: 1440px) 57vw, 742px" />
-          </div>
-          <div className="flex gap-6 mb-6">
-            <ProjectCard {...procyon} className="flex-[496_1_0%] h-[524px]" sizes="(max-width: 1440px) 39vw, 505px" />
-            <ProjectCard {...bwl}     className="flex-[728_1_0%] h-[524px]" sizes="(max-width: 1440px) 57vw, 742px" />
-          </div>
-          <div className="mb-6">
-            <ProjectCard {...amorcito} className="w-full h-[604px]" sizes="(max-width: 1440px) 87vw, 1248px" />
+            <ProjectCard {...amorcito}   className="flex-[496_1_0%] h-[524px]" sizes="(max-width: 1440px) 39vw, 505px" />
+            <ProjectCard {...aiCreative} className="flex-[728_1_0%] h-[524px]" sizes="(max-width: 1440px) 57vw, 742px" />
           </div>
         </motion.div>
       )}

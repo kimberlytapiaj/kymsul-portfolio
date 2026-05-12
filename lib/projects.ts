@@ -57,7 +57,7 @@ export const projects: Project[] = [
     process:
       'Definí el territorio visual desde el posicionamiento: moderno, claro, con personalidad. El logotipo parte de una forma geométrica que sugiere conectividad y movimiento. La paleta —negro profundo, blanco y acento violeta— distingue sin distanciar. El manual documenta cada decisión para que el sistema escale con coherencia.',
     result:
-      'Sistema de identidad listo para escalar: logotipo en múltiples versiones, paleta documentada, tipografía, papelería completa y manual de uso. Contenido editorial para redes sociales aplicando la identidad en contextos reales de restaurantes.',
+      'Sistema de identidad listo para escalar: logotipo en múltiples versiones, paleta documentada, tipografía, papelería completa y manual de uso. La marca está activa y en uso mientras el cliente avanza hacia su lanzamiento comercial — señal de que el sistema fue adoptado sin fricción desde el primer día.',
     gallery: [
       '/assets/zealix/zealix-manual-mockup.jpg',
       '/assets/zealix/zealix-tarjeta.jpg',
@@ -235,22 +235,23 @@ export const projects: Project[] = [
   {
     id: 'kop',
     name: 'KOP · Kings Tavern',
-    category: 'SOCIAL MEDIA',
+    category: 'SOCIAL MEDIA · MOTION',
     year: '2024',
     image: '/assets/thumbnail-kop.png',
     accentColor: 'white',
     tagline: 'Donde el deporte se convierte en estilo de vida.',
-    tags: ['Social media', 'Dirección de arte', 'Reels', 'Sub-marca'],
+    tags: ['Social media', 'Dirección de arte', 'Reels', 'Sub-marca', 'Paid Media', 'IA Generativa'],
     overview:
-      'KOP es un club de pádel y tenis en Guadalajara. El proyecto incluyó tanto la marca principal —contenido deportivo para el club— como Kings Tavern, su restaurante interno, con una línea editorial propia dentro del mismo ecosistema.',
-    role: 'Dirección de arte y producción de contenido para Instagram: editorial deportivo, carruseles educativos, efemérides, reels y contenido diferenciado para Kings Tavern.',
+      'KOP es un club de pádel y tenis en San Antonio, TX. El proyecto incluyó tanto la marca principal —contenido deportivo para el club— como Kings Tavern, su restaurante interno, con una línea editorial propia dentro del mismo ecosistema.',
+    role: 'Dirección de arte, producción de contenido y motion: editorial deportivo, carruseles educativos, reels, contenido diferenciado para Kings Tavern y paid media producido con imagen generativa IA y script de automatización en After Effects.',
     challenge:
       'Manejar dos voces dentro de una misma cuenta sin que el contenido del restaurante opacara la identidad deportiva del club, ni viceversa. Cada sub-marca tenía que sentirse cohesionada pero distinguible.',
     process:
-      'Creé un sistema visual de dos velocidades: posts editoriales de alto impacto para KOP —negro, blanco y verde energético— y una línea más cálida y atmosférica para Kings Tavern que convive sin romper el feed. Los carruseles educativos (pádel en 60 min, pádel vs pickleball) posicionan al club como referente del deporte.',
+      'Creé un sistema visual de dos velocidades: posts editoriales de alto impacto para KOP —negro, blanco y verde energético— y una línea más cálida y atmosférica para Kings Tavern que convive sin romper el feed. Las piezas de paid media combinan imagen generativa con Gemini y un script de After Effects que monta el reel completo —timeline, texto, end card— en un solo clic.',
     result:
-      '30+ piezas entre editoriales, carruseles y reels para KOP, más contenido diferenciado para Kings Tavern. Sistema con templates replicables entregados al equipo interno.',
+      '30+ piezas entre editoriales, carruseles y reels para KOP, más contenido diferenciado para Kings Tavern. El reel de apertura de Sin Yolanda alcanzó 26.3K views y 212 likes en 6 semanas de forma orgánica. Reel de paid media de 22 segundos producido con flujo IA + script. Sistema con templates replicables entregados al equipo interno.',
     gallery: [
+      '/assets/kop/kop-paidmedia-01.mp4',
       '/assets/kop/kop-01.png',
       '/assets/kop/kop-02.png',
       '/assets/kop/kop-reel-01-web.mp4',
@@ -329,7 +330,7 @@ export const projects: Project[] = [
       },
       {
         name: 'Sin Yolanda',
-        objective: 'Serie de reels para la apertura de Sin Yolanda — tres piezas distintas con dos versiones del opening principal para distribución en redes sociales.',
+        objective: 'Serie de reels para la apertura de Sin Yolanda — tres piezas distintas con dos versiones del opening principal para distribución en redes sociales. El opening principal acumuló 26.3K views y 212 likes en 6 semanas de forma orgánica.',
         formats: ['Reel · Opening v1', 'Reel · Opening v2', 'Reel · Part 2', 'Reel · Part 3'],
         gallery: [],
         sections: [
@@ -366,119 +367,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 'casta-real',
-    name: 'Casta Real',
-    category: 'SOCIAL MEDIA · PACKAGING',
-    year: '2024',
-    image: '/assets/thumbnail-casta-real.png',
-    accentColor: 'white',
-    tagline: 'Fuerza que se ve. Origen que se nota.',
-    tags: ['Social media', 'Editorial fotográfico', 'Packaging', 'Dirección de arte'],
-    overview:
-      'Casta Real es una marca de suplementos deportivos con raíces mexicanas. Su identidad de marca ya tenía fuerza; lo que faltaba era un sistema de contenido y packaging que lo comunicara sin perder autenticidad.',
-    role: 'Dirección de arte, producción de contenido para Instagram y diseño de packaging: editorial fotográfico, editorial tipográfico, reels y etiquetas para dos líneas de producto.',
-    challenge:
-      'El mercado de suplementos está saturado de contenido agresivo y genérico. El reto fue crear algo visualmente contundente que destacara sin caer en los clichés del fitness estadounidense — tanto en redes como en el empaque físico.',
-    process:
-      'Desarrollé dos líneas editoriales paralelas: una fotográfica con atletas reales en entornos de entrenamiento, y una tipográfica con frases de identidad en layout bold. Para el packaging, la misma paleta —negro, blanco y tierra— aplicada a dos formatos distintos: bolsa de transporte y presentación de descanso.',
-    result:
-      '15+ piezas editoriales, 2 reels de contenido y packaging completo para dos líneas de producto. Sistema visual coherente entre digital y físico.',
-    gallery: [
-      '/assets/casta-real/cr-01.png',
-      '/assets/casta-real/cr-reel-01-web.mp4',
-      '/assets/casta-real/cr-02.png',
-      '/assets/casta-real/cr-03.png',
-      '/assets/casta-real/cr-10.png',
-      '/assets/casta-real/cr-reel-02-web.mp4',
-      '/assets/casta-real/cr-05.jpg',
-      '/assets/casta-real/cr-11.png',
-      '/assets/casta-real/cr-12.jpg',
-      '/assets/casta-real/cr-13.jpg',
-      '/assets/casta-real/cr-07.png',
-      '/assets/casta-real/cr-08.png',
-      '/assets/casta-real/cr-09.jpg',
-    ],
-    campaigns: [
-      {
-        name: 'Packaging',
-        objective: 'Diseño de etiquetas y empaque para dos líneas de producto — Transporte y Descanso — manteniendo la identidad de fuerza y origen que define la marca en todos sus puntos de contacto físicos.',
-        formats: ['Empaque · Transporte', 'Empaque · Descanso'],
-        gallery: [],
-        sections: [
-          {
-            groups: [
-              { items: ['/assets/casta-real/cr-pkg-hero.png', '/assets/casta-real/cr-pkg-hero-v2.png'], carousel: true },
-              { items: ['/assets/casta-real/cr-label-basico.png', '/assets/casta-real/cr-label-mant.png'], carousel: true },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 'nerdheart',
-    name: 'NerdHeart',
-    category: 'UX UI · MOTION',
-    year: '2024',
-    image: '/assets/nerdheart/nerdheart-mockup-monitors.jpg',
-    accentColor: '#d6cc94',
-    tagline: 'Una marca que vive en el movimiento.',
-    tags: ['UX UI', 'Landing page', 'Motion graphics', 'Ilustración'],
-    overview:
-      'NerdHeart es una plataforma de productividad y automatización digital con una identidad de marca propia — mascota, sello animado y sistema visual. El proyecto abarcó desde el diseño de la landing page hasta la identidad en movimiento.',
-    role: 'Diseño UX UI de landing page, design system y componentes. Producción de identidad en movimiento: sello animado, sticker GIF de la mascota y elementos gráficos para merchandising.',
-    challenge:
-      'Crear una identidad que funcione tanto en digital —landing, componentes UI— como en físico —stickers, sello, merch— sin perder coherencia. La mascota tenía que ser igual de expresiva en estático que en movimiento.',
-    process:
-      'Diseñé la landing page partiendo de la personalidad de la marca: tipografía expresiva, paleta pastel-neon y la mascota como hilo conductor de cada sección. En paralelo, definí los principios de animación del sello —rotación orgánica, timing suave— y produje los GIFs entregables para uso digital y físico.',
-    result:
-      'Landing page completa con design system documentado, mockups de dispositivo y 4 piezas animadas: sello rotatorio en 3 versiones y sticker de la mascota listos para Tenor y merchandising.',
-    gallery: [
-      '/assets/nerdheart/nerdheart-mockup-monitors.jpg',
-      '/assets/nerdheart/nerdheart-mockup-phone.jpg',
-      '/assets/nerdheart/nerdheart-01.gif',
-      '/assets/nerdheart/nerdheart-mockup-laptop.jpg',
-    ],
-    campaigns: [
-      {
-        name: 'UX UI · Landing Page',
-        objective: 'Diseño de landing page completa para NerdHeart — desde wireframes y design system hasta entrega final con mockups en desktop y mobile.',
-        formats: ['Landing page · Desktop', 'Landing page · Mobile', 'Design system'],
-        gallery: [],
-        sections: [
-          {
-            groups: [
-              { items: ['/assets/nerdheart/nerdheart-mockup-monitors.jpg'] },
-              { items: ['/assets/nerdheart/nerdheart-mockup-laptop.jpg'] },
-              { items: ['/assets/nerdheart/nerdheart-mockup-phone.jpg'] },
-              { items: ['/assets/nerdheart/nerdheart-mockup-phone2.png'] },
-            ],
-          },
-        ],
-      },
-      {
-        name: 'Motion · Ilustración',
-        objective: 'Sello animado de la marca en 3 versiones y sticker GIF de la mascota — entregables listos para uso digital, redes sociales y merchandising físico.',
-        formats: ['Sello animado', 'Sticker GIF', 'PNG estáticos'],
-        gallery: [],
-        sections: [
-          {
-            groups: [
-              { items: ['/assets/nerdheart/nerdheart-01.gif'] },
-              { items: ['/assets/nerdheart/nerdheart-02.gif'] },
-              { items: ['/assets/nerdheart/nerdheart-03.gif'] },
-              { items: ['/assets/nerdheart/nerdheart-04.gif'] },
-              { items: ['/assets/nerdheart/nerdheart-05.gif'] },
-              { items: ['/assets/nerdheart/nerdheart-06.png'] },
-              { items: ['/assets/nerdheart/nerdheart-07.png'] },
-              { items: ['/assets/nerdheart/nerdheart-08.png'] },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  {
     id: 'bwl',
     name: 'BWL',
     category: 'SOCIAL MEDIA · MOTION',
@@ -486,7 +374,7 @@ export const projects: Project[] = [
     image: '/assets/bwl/bwl-01.png',
     accentColor: 'white',
     tagline: 'Una marca china que habla dos idiomas sin perder su voz.',
-    tags: ['Social media', 'Motion', 'Paid media', 'RedNote · 小红书'],
+    tags: ['Social media', 'Motion', 'Paid media', 'RedNote · 小红书', 'IA Generativa'],
     overview:
       'BWL es una marca china de wellness con múltiples líneas de producto. El trabajo abarca producción de contenido para Instagram y paid media en inglés, más adaptación de reels al chino para RedNote (小红书) — cada pieza traducida y reformateada para el contexto cultural y el algoritmo de cada plataforma.',
     role: 'Dirección de arte, edición de video y producción de contenido. Adaptación bilingüe chino-inglés para Instagram y RedNote.',
@@ -557,17 +445,17 @@ export const projects: Project[] = [
     year: '2024',
     image: '/assets/activated-decor/ad-cover.png',
     accentColor: '#8B1A1A',
-    tagline: 'Rebranding que transforma un espacio en una marca.',
+    tagline: 'Rebranding para la marca detrás de los TV lifts de Disney+, Four Seasons y Ritz-Carlton.',
     tags: ['Rebranding', 'Identidad visual', 'Logotipo animado', 'Brand guidelines', 'Motion'],
     overview:
-      'Activated Decor es un estudio de interiorismo y decoración. El proyecto fue un rebranding completo: desde el sistema de identidad visual —logotipo, paleta, tipografía— hasta la producción del logotipo animado en múltiples versiones para uso digital y redes sociales.',
+      'Activated Decor es una empresa canadiense que diseña y fabrica sistemas motorizados de elevación y ocultamiento de televisores para arquitectura de lujo. Sus instalaciones están en Disney+, Four Seasons, Hilton, Marriott y Ritz-Carlton. El proyecto fue un rebranding completo: sistema de identidad visual, brand guidelines y logotipo animado en múltiples versiones para uso digital.',
     role: 'Rebranding completo: construcción del logotipo y sistema de marca, brand guidelines, paleta cromática, tipografía y producción de identidad en movimiento — logotipo animado en tres versiones y dos combinaciones de color.',
     challenge:
-      'Reflejar la sofisticación y precisión de un estudio de diseño de interiores en un sistema de marca que funcionara tanto en aplicaciones físicas como en entornos digitales con logos en movimiento.',
+      'Su propio producto tiene como objetivo desaparecer — "Quiet. Precise. Invisible." es su posicionamiento. El reto fue construir una marca que fuera recordable y premium para el B2B, sin contradecir la filosofía de invisibilidad que venden a sus clientes de lujo.',
     process:
-      'Desarrollé el monograma "ad" como base del sistema — geométrico, limpio, con personalidad. La paleta negro profundo y burdeos aporta elegancia y distinción. El manual de identidad documenta construcción del logotipo, usos correctos en distintos fondos, tipografía (Poppins + Inter) y variantes de aplicación. Los logos animados se produjeron en tres versiones —icono, logotipo completo, versión corta— y dos paletas de color.',
+      'Desarrollé el monograma "ad" como base del sistema — geométrico, limpio, con personalidad. La paleta negro profundo y burdeos comunica lujo técnico sin caer en lo corporativo genérico. El manual de identidad documenta construcción del logotipo, usos correctos en distintos fondos, tipografía y variantes de aplicación. Los logos animados se produjeron en tres versiones —icono, logotipo completo, versión corta— y dos paletas de color.',
     result:
-      'Sistema de identidad completo con brand guidelines, logotipo en tres versiones estáticas y animadas entregadas en GIF y MOV para uso digital, redes sociales y aplicaciones de marca.',
+      'Sistema de identidad completo con brand guidelines, logotipo en tres versiones estáticas y animadas entregadas en GIF y MOV — una marca a la altura de los venues de lujo donde viven sus productos.',
     gallery: [],
     campaigns: [
       {
@@ -614,102 +502,163 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 'procyon',
-    name: 'Procyon Gaming',
-    category: 'BRANDING · SOCIAL MEDIA',
-    year: '2024',
-    image: '/assets/procyon/procyon-cover.jpg',
-    accentColor: '#7C3AED',
-    tagline: 'Identidad cósmica para una organización esports en ascenso.',
-    tags: ['Branding', 'Identidad visual', 'Manual de marca', 'Social media', 'Motion', 'Esports'],
+    id: 'ai-creative',
+    name: 'Sistema Creativo IA',
+    category: 'IA GENERATIVA',
+    year: '2026',
+    image: '/assets/kop/kop-kt-184.png',
+    accentColor: '#0D0D0D',
+    tagline: 'Del prompt al entregable. Sin fricción.',
+    tags: ['IA Generativa', 'Gemini', 'Script AE', 'Script PS', 'Automatización', 'Codex'],
     overview:
-      'Procyon Gaming es una organización de Valorant en LATAM con presencia competitiva en torneos universitarios y ligas regionales. El proyecto fue branding completo desde cero: logotipo, sistema visual, headers de redes sociales, plantillas competitivas y un kit completo para creadores de contenido con marcos animados de streaming.',
-    role: 'Branding end-to-end: logotipo en 9 variantes (horizontal, vertical e icono × original, digital y negativo), paleta cromática, tipografía, manual de marca, headers de redes, producción de contenido competitivo y kit de creadores con overlays animados.',
+      'Flujo de producción creativa con inteligencia artificial aplicado a clientes reales: imagen generativa, automatización de edición y generación de componentes de diseño mediante scripts. No como experimento — como método de trabajo.',
+    role: 'Dirección creativa, prompt engineering, generación de imagen con Gemini y ChatGPT, y automatización de montaje en After Effects y Photoshop con scripts escritos con Codex.',
     challenge:
-      'Construir una identidad que viviera en dos mundos simultáneamente: la arena competitiva —posts de partidos, resultados, torneos— y el ecosistema de creadores —overlays de streaming, banners, posts de bienvenida— sin perder coherencia visual ni personalidad de marca.',
+      'El reto no es usar IA — es usarla de forma que el resultado no se vea genérico y siga comunicando la identidad del cliente. Integrar estas herramientas sin que el cliente note la diferencia en calidad, solo en velocidad.',
     process:
-      'El punto de partida fue el símbolo: una estrella geométrica con anillo orbital inspirada en la constelación Procyon. Paleta profunda de negro y púrpura, tipografía de display agresiva (Air Millhouse) complementada con Kodchasan para texto. Desde ahí construí el sistema completo — headers de organización, plantillas competitivas para resultados de match y game day, y el kit de creadores con banners, posts de bienvenida y marcos animados en WEBM.',
+      'Tres capas: (1) Imagen generativa — prompt engineering para crear fotografía de escena sin sesión fotográfica. (2) Script AE — automatización que monta el reel completo con motion type, escalado de clips y end card en minutos; el director de arte interviene solo para seleccionar los cortes y ajustar detalles finales. (3) Script PS — Claude Code investiga la marca, genera componentes por separado con IA e itera versiones hasta producir el PSD editable final.',
     result:
-      'Sistema de identidad completo entregado: 9 variantes de logotipo, headers para Twitter, Facebook y Twitch, más de 10 piezas de contenido competitivo, 4 banners de creadores, 3 posts de bienvenida y 3 marcos animados de streaming listos para producción.',
+      'Lo que antes tomaba horas de edición ahora toma minutos de script + revisión creativa. Un reel de 22 segundos producido por script con intervención humana solo en selección de cortes. Un flyer en 5 formatos generado desde brief hasta PSD. Posts editoriales de producto sin sesión fotográfica. Sistema documentado y replicable por cliente.',
     gallery: [],
     campaigns: [
       {
-        name: 'Identidad Visual',
-        objective: 'Sistema de logotipo en 9 variantes (horizontal, vertical e icono × original, digital y negativo) más headers de organización para todas las plataformas sociales.',
-        formats: ['Logotipo · 3 versiones', 'Paleta cromática', 'Tipografía', 'Headers · Twitter · Facebook · Twitch'],
+        name: 'KOP · Antes / Después',
+        objective: 'Foto real del restaurante subida a Gemini. Tres iteraciones: prompt simple rechazado → constraint de marca ("don\'t change any beverage or meal, just add a soccer court") → exploración de dos conceptos con objetivo de engagement → prompt técnico final especificando ángulo top-down, pasto artificial, líneas blancas y atmósfera post-partido. Resultado: la misma comida del restaurante recompuesta sobre cancha de soccer, sin sesión fotográfica.',
+        formats: ['Foto original · iPhone', 'Prompt · Gemini', 'King\'s Tavern · Post'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/kop/kop-kt-original-01.jpg', '/assets/kop/kop-kt-original-02.jpg'], carousel: true },
+              { items: ['/assets/kop/kop-kt-184.png'] },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'KOP · Imagen Generativa',
+        objective: 'Posts editoriales para KOP y King\'s Tavern generados con Gemini y ChatGPT — fotografía de escena, composiciones de marca y flats de producto sin sesión fotográfica.',
+        formats: ['Post · Instagram', 'Carrusel · Instagram', 'Gemini · ChatGPT'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/kop/kop-post-140.png'] },
+              { items: ['/assets/kop/kop-post-142.png'] },
+              { items: ['/assets/kop/kop-post-170.png'] },
+              { items: ['/assets/kop/kop-post-172.png'] },
+              { items: ['/assets/kop/kop-c143-1.png', '/assets/kop/kop-c143-2.png', '/assets/kop/kop-c143-3.png', '/assets/kop/kop-c143-4.png'], carousel: true },
+              { items: ['/assets/kop/kop-c171-1.png', '/assets/kop/kop-c171-2.png', '/assets/kop/kop-c171-3.png', '/assets/kop/kop-c171-4.png', '/assets/kop/kop-c171-5.png'], carousel: true },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'KOP · Script AE + Paid Media',
+        objective: 'Brief + carpeta de recursos → Claude Code leyó el brand file, generó el script AE (307 líneas) y el componente Remotion en paralelo. Refinamiento por prompts: timing ajustado de 0.83s a 2s por deporte ("haz que dure más para apreciarlos"), verificación de 8 clips con momento exacto de cada corte. Resultado: reel de 22s listo para renderizar en AE en un solo clic.',
+        formats: ['Reel 22s · Paid Media', 'Script AE · Claude Code', 'Remotion · Preview', '1080×1920 · 30fps'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/kop/kop-paidmedia-01.mp4'] },
+              { items: ['/assets/kop/kop-post-206-web.mp4'] },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'KOP · Script PS + World Cup 2026',
+        objective: 'Claude investigó la marca en web + carpeta de lineamientos antes de diseñar. Primera versión rechazada por estética ("KOP no suele tener una estética tan marcada") → pivote al look real del feed. Dos versiones de exploración con vibe World Cup 2026. Criterio clave de dirección: "usa stock en vez de fondos IA para que se vea menos IA". Jerarquía del flyer consultada como director de arte (5 niveles para tamaño carta). Versión aprobada adaptada a 5 formatos con script de Photoshop.',
+        formats: ['01 · Componentes IA', '02 · Ensamblado', '03 · Exploración · No aprobadas', '04 · Final · 5 formatos', 'Script PS · Claude Code'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/kop/kop-ai-component-headline.png', '/assets/kop/kop-ai-component-family.png', '/assets/kop/kop-ai-component-badge.png', '/assets/kop/kop-ai-component-strip.png'], carousel: true, contain: true },
+              { items: ['/assets/kop/kop-ai-assembled.png'], contain: true },
+              { items: ['/assets/kop/kop-ai-iter-v2.png', '/assets/kop/kop-ai-iter-v3.png'], carousel: true, contain: true },
+              { items: ['/assets/kop/kop-wc-post.png', '/assets/kop/kop-wc-story.png', '/assets/kop/kop-wc-flyer.png', '/assets/kop/kop-wc-tv.png', '/assets/kop/kop-wc-banner.png'], carousel: true },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'BWL · Paid Media IA',
+        objective: 'Reel de paid media y estático de producto generados con IA para BWL — imagen de lifestyle sin producción fotográfica, video de producto sin locación ni modelos.',
+        formats: ['Paid Media · Video', 'Paid Media · Estático', 'Gemini · Runway'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/bwl/bwl-pm-11-web.mp4', '/assets/bwl/bwl-pm-12.png'] },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'BWL · Post 71 · Proceso',
+        objective: 'Dirección de arte en Gemini Flow: prompt inicial con constraint de marca ("no modifiques ningún elemento, solo adapta al video"), seguido de correcciones de naturalidad ("arregla las manos, no es una pose natural para abrir el jugo") y dirección de actuación ("persona joven rejuvenecida, natural y fresh, que tome el vaso y sonría"). Los clips generados se montaron luego en After Effects.',
+        formats: ['Prompt · Gemini Flow', 'Clips IA · Fuente', 'Reel Final EN · AE', 'Reel Final 中文 · AE'],
         gallery: [],
         sections: [
           {
             groups: [
               {
                 items: [
-                  '/assets/procyon/procyon-logo-h-original.png',
-                  '/assets/procyon/procyon-logo-h-digital.png',
-                  '/assets/procyon/procyon-logo-v-original.png',
-                  '/assets/procyon/procyon-logo-icon.png',
+                  '/assets/bwl/bwl-71-ai-sobre-web.mp4',
+                  '/assets/bwl/bwl-71-ai-juice-web.mp4',
+                  '/assets/bwl/bwl-71-ai-mod-web.mp4',
+                  '/assets/bwl/bwl-71-ai-gen-web.mp4',
                 ],
                 carousel: true,
-                contain: true,
               },
-              { items: ['/assets/procyon/procyon-header.jpg'], wide: true },
+              { items: ['/assets/bwl/bwl-post-71-en-web.mp4', '/assets/bwl/bwl-post-71-zh-web.mp4'] },
             ],
           },
         ],
       },
       {
-        name: 'Social Media · Competitivo',
-        objective: 'Plantillas de contenido competitivo para partidos de la Overload League — Game Day, Winners y Defeat — con personajes 3D de Valorant y jugadores reales del roster.',
-        formats: ['Game Day', 'Winners', 'Defeat', 'Instagram · 4:5'],
-        gallery: [],
-        sections: [
-          {
-            groups: [
-              { items: ['/assets/procyon/procyon-gameday-01.png'] },
-              { items: ['/assets/procyon/procyon-winners-01.png'] },
-              { items: ['/assets/procyon/procyon-defeat-01.png'] },
-              { items: ['/assets/procyon/procyon-gameday-02.png'] },
-              { items: ['/assets/procyon/procyon-winners-02.png'] },
-              { items: ['/assets/procyon/procyon-defeat-02.png'] },
-            ],
-          },
-        ],
-      },
-      {
-        name: 'Creadores de Contenido',
-        objective: 'Kit completo para los creadores de contenido de la org — banners para Twitter y Twitch, y posts de bienvenida para cada creator del roster.',
-        formats: ['Banners · Twitter · Twitch', 'Posts de bienvenida', 'Content Creator kit'],
+        name: 'BWL · Post 77 · Proceso',
+        objective: 'Imagen generada con Gemini y cinco clips de video de producto generados con IA — usados como material base para el reel final montado en After Effects.',
+        formats: ['Imagen · Gemini', 'Clips IA · Fuente', 'Reel Final · AE', 'Runway · Gemini'],
         gallery: [],
         sections: [
           {
             groups: [
               {
                 items: [
-                  '/assets/procyon/procyon-banner-loremu.png',
-                  '/assets/procyon/procyon-banner-yass.png',
-                  '/assets/procyon/procyon-banner-nubes.png',
-                  '/assets/procyon/procyon-banner-nubes-branded.png',
+                  '/assets/bwl/bwl-77-ai-product-reel-web.mp4',
+                  '/assets/bwl/bwl-77-ai-cup-web.mp4',
+                  '/assets/bwl/bwl-77-ai-reel-de-web.mp4',
+                  '/assets/bwl/bwl-77-ai-reel-para-web.mp4',
+                  '/assets/bwl/bwl-77-ai-collagen-web.mp4',
                 ],
                 carousel: true,
-                wide: true,
               },
-              { items: ['/assets/procyon/procyon-welcome-loremu.png'] },
-              { items: ['/assets/procyon/procyon-welcome-yass.png'] },
-              { items: ['/assets/procyon/procyon-welcome-nubes.png'] },
+              { items: ['/assets/bwl/bwl-post-77-web.mp4'] },
             ],
           },
         ],
       },
       {
-        name: 'Marcos Animados · Streaming',
-        objective: 'Overlays de streaming animados en WEBM para los creadores de contenido de Procyon Gaming — marcos personalizados para cada streamer del roster.',
-        formats: ['Streaming overlay · WEBM', 'Loremu · Nubes · Sweety'],
+        name: 'BWL · Post 79 · Proceso',
+        objective: 'Los clips generados con IA que se usaron como material base del reel — sunbeam, cinemagraph y animaciones de producto — montados luego en After Effects para el entregable final.',
+        formats: ['Clips IA · Fuente', 'Reel Final · AE', 'Gemini · Runway'],
         gallery: [],
         sections: [
           {
             groups: [
-              { items: ['/assets/procyon/procyon-marco-loremu.webm'] },
-              { items: ['/assets/procyon/procyon-marco-nubes.webm'] },
-              { items: ['/assets/procyon/procyon-marco-sweety.webm'] },
+              {
+                items: [
+                  '/assets/bwl/bwl-79-ai-sunbeam-web.mp4',
+                  '/assets/bwl/bwl-79-ai-cinemagraph-web.mp4',
+                  '/assets/bwl/bwl-79-ai-reel-web.mp4',
+                  '/assets/bwl/bwl-79-ai-video-web.mp4',
+                ],
+                carousel: true,
+              },
+              { items: ['/assets/bwl/bwl-post-79-web.mp4'] },
             ],
           },
         ],
@@ -724,7 +673,7 @@ export const projects: Project[] = [
     image: '/assets/corazon-mixteco/cm-mar-02.jpg',
     accentColor: '#7B2D8B',
     tagline: 'La herencia del buen queso, en cada pieza de contenido.',
-    tags: ['Social media', 'Dirección de arte', 'Fotografía editorial', 'Carruseles', 'Print'],
+    tags: ['Social media', 'Dirección de arte', 'Fotografía editorial', 'Carruseles', 'Print', 'IA Generativa'],
     overview:
       'Corazón Mixteco es una marca de quesos artesanales oaxaqueños con 60 años de historia. El trabajo abarca la dirección de arte y producción de contenido mensual para redes sociales: parrillas editoriales de producto, carruseles educativos, reels y materiales de punto de venta.',
     role: 'Dirección de arte y producción de contenido: parrillas mensuales de Febrero y Marzo 2026, carruseles educativos de producto, reels y diseño de banner roll-up para exhibición.',
@@ -812,7 +761,7 @@ export const projects: Project[] = [
     image: '/assets/amorcito/ac-cover.png',
     accentColor: '#C9871A',
     tagline: 'El sushi más chingón de México, en cinco sucursales.',
-    tags: ['Social media', 'Dirección de arte', 'Campañas', 'Print', 'Punto de venta'],
+    tags: ['Social media', 'Dirección de arte', 'Campañas', 'Print', 'Punto de venta', 'IA Generativa'],
     overview:
       'Amorcito Corazón es una cadena de restaurantes japonés-mexicano con cinco sucursales en Puebla. El trabajo abarca la dirección de arte y producción de contenido para redes sociales — desde la parrilla mensual de fotografía editorial hasta campañas de activación, kit de sucursales y materiales de punto de venta.',
     role: 'Dirección de arte y producción de contenido: parrilla mensual, campañas de activación, adaptación a múltiples formatos (feed, stories, HD, print) y diseño de materiales POS.',
