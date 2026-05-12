@@ -5,21 +5,21 @@ const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 const specs = [
   {
     num: '01',
-    light: 'Motion',
-    bold: 'graphics',
-    desc: 'Identidades en movimiento, stings, loops para redes y producción audiovisual end-to-end.',
+    light: 'Branding',
+    bold: 'estratégico',
+    desc: 'Identidad visual completa: posicionamiento, sistema visual, guidelines y aplicaciones. La marca como base de todo lo demás.',
   },
   {
     num: '02',
-    light: 'IA',
-    bold: 'aplicada',
-    desc: 'Pipelines creativos con modelos generativos. Stable Diffusion, Runway, Veo, Midjourney.',
+    light: 'Motion &',
+    bold: 'contenido visual',
+    desc: 'Reels, motion graphics y sistemas de contenido para redes — piezas que comunican con movimiento y mantienen coherencia de marca.',
   },
   {
     num: '03',
-    light: 'Branding',
-    bold: 'estratégico',
-    desc: 'Sistemas de marca completos: posicionamiento, sistema visual, guías y aplicaciones.',
+    light: 'Producción',
+    bold: 'con IA',
+    desc: 'Flujos creativos con modelos generativos que escalan la producción sin escalar el equipo. Gemini, Runway, Stable Diffusion.',
   },
 ]
 
@@ -34,8 +34,8 @@ export default function Specialization() {
           className="font-fraunces font-light text-[clamp(36px,6vw,64px)] text-dark leading-[1.02] mb-16 lg:mb-24 max-w-[500px]"
           style={WONK}
         >
-          Tres sistemas<br />
-          que se potencian<br />
+          Tres servicios<br />
+          que se construyen<br />
           entre sí.
         </p>
       </FadeIn>
