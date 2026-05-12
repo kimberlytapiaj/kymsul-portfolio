@@ -37,7 +37,7 @@ export default function Hero() {
       <div className="border-t border-[rgba(13,13,13,0.1)] pt-6 lg:pt-7">
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 lg:gap-16">
           <p className="font-sans text-[15px] lg:text-[17px] text-muted leading-[1.6] max-w-[520px]">
-            Brand identity, contenido y producción con IA — todo desde un sistema, no desde piezas sueltas.
+            Brand identity, motion, contenido y producción con IA — todo desde un sistema, no desde piezas sueltas.
           </p>
           <a
             href="#portafolio"
