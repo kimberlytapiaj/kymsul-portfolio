@@ -30,6 +30,8 @@ export default function Marquee() {
       <div className="marquee-track flex items-center gap-6 w-max">
         <MarqueeSet />
         <MarqueeSet />
+        <MarqueeSet />
+        <MarqueeSet />
       </div>
     </div>
   )
