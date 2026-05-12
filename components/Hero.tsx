@@ -11,22 +11,16 @@ export default function Hero() {
         </p>
       </div>
 
-      {/* Headline — 3 líneas, tipo como masa visual */}
+      {/* Headline — 2 líneas, tamaño estable en todos los monitores */}
       <div className="leading-[0.88] mb-10 lg:mb-14">
         <p
-          className="text-[clamp(64px,13vw,190px)] text-dark leading-[0.88]"
+          className="text-[clamp(56px,9.5vw,136px)] text-dark leading-[0.88]"
           style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 700 }}
         >
-          Marcas
+          Marcas construidas
         </p>
         <p
-          className="text-[clamp(64px,13vw,190px)] text-dark leading-[0.88]"
-          style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 700 }}
-        >
-          construidas
-        </p>
-        <p
-          className="font-fraunces font-light italic text-[clamp(64px,13vw,190px)] text-dark leading-[0.88]"
+          className="font-fraunces font-light italic text-[clamp(56px,9.5vw,136px)] text-dark leading-[0.88]"
           style={WONK}
         >
           para crecer.
