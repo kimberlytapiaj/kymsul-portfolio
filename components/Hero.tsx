@@ -4,15 +4,11 @@ export default function Hero() {
   return (
     <section className="max-w-[1440px] mx-auto px-6 lg:px-24 pt-10 lg:pt-16 pb-0">
 
-      {/* Eyebrow + badge */}
-      <div className="flex items-center justify-between mb-8 lg:mb-10">
+      {/* Eyebrow */}
+      <div className="mb-8 lg:mb-10">
         <p className="font-mono text-[10px] lg:text-[11px] text-muted2 tracking-[1.76px]">
           MOTION · BRAND · IA
         </p>
-        <div className="flex items-center gap-[7px] border border-[rgba(13,13,13,0.12)] rounded-full px-[10px] py-[6px]">
-          <img src="/assets/dot-green.svg" alt="" className="w-[7px] h-[7px]" />
-          <span className="font-sans text-[11px] lg:text-[12px] text-muted">Disponible</span>
-        </div>
       </div>
 
       {/* Headline */}
