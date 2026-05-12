@@ -20,16 +20,10 @@ export default function Hero() {
           Marcas construidas
         </p>
         <p
-          className="font-fraunces font-light text-[clamp(52px,10vw,144px)] text-dark leading-[0.88]"
-          style={WONK}
-        >
-          para
-        </p>
-        <p
           className="font-fraunces font-light italic text-[clamp(52px,10vw,144px)] text-dark leading-[0.88]"
           style={WONK}
         >
-          crecer.
+          para crecer.
         </p>
       </div>
 
