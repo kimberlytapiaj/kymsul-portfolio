@@ -234,7 +234,7 @@ export const projects: Project[] = [
   },
   {
     id: 'kop',
-    name: 'KOP · Kings Tavern',
+    name: 'KOP',
     category: 'SOCIAL MEDIA · MOTION',
     year: '2024',
     image: '/assets/thumbnail-kop.png',
