@@ -7,23 +7,23 @@ import { projects, getProject } from '@/lib/projects'
 type Discipline = 'todos' | 'branding' | 'motion' | 'social' | 'ia'
 
 const FILTERS: { label: string; value: Discipline }[] = [
-  { label: 'TODOS', value: 'todos' },
-  { label: 'BRANDING', value: 'branding' },
-  { label: 'MOTION', value: 'motion' },
+  { label: 'TODOS',       value: 'todos' },
+  { label: 'BRANDING',    value: 'branding' },
+  { label: 'MOTION',      value: 'motion' },
   { label: 'SOCIAL MEDIA', value: 'social' },
-  { label: 'IA', value: 'ia' },
+  { label: 'IA',          value: 'ia' },
 ]
 
 const DISCIPLINES: Record<string, Discipline[]> = {
-  'zealix':           ['branding', 'social'],
-  'brainy':           ['branding'],
-  'beatness':         ['motion', 'social'],
-  'kop':              ['motion', 'social'],
-  'activated-decor':  ['branding', 'motion'],
-  'bwl':              ['motion', 'social', 'ia'],
-  'ai-creative':      ['ia', 'motion', 'social'],
-  'corazon-mixteco':  ['social'],
-  'amorcito':         ['social'],
+  'zealix':          ['branding', 'social'],
+  'brainy':          ['branding'],
+  'beatness':        ['motion', 'social'],
+  'kop':             ['motion', 'social'],
+  'activated-decor': ['branding', 'motion'],
+  'bwl':             ['motion', 'social', 'ia'],
+  'ai-creative':     ['ia', 'motion', 'social'],
+  'corazon-mixteco': ['social'],
+  'amorcito':        ['social'],
 }
 
 type ProjectMetaProps = {
@@ -33,11 +33,11 @@ type ProjectMetaProps = {
 
 function ProjectMeta({ project, wide }: ProjectMetaProps) {
   return (
-    <div className={`mt-6 ${wide ? 'grid grid-cols-2 gap-12' : ''}`}>
-      <p className="font-sans text-[14px] text-muted leading-[1.6] max-w-[480px]">
+    <div className={`mt-5 lg:mt-6 ${wide ? 'lg:grid lg:grid-cols-2 lg:gap-12' : ''}`}>
+      <p className="font-sans text-[13px] lg:text-[14px] text-muted leading-[1.6] max-w-[480px]">
         {project.overview}
       </p>
-      <div className={`flex flex-wrap gap-2 ${wide ? 'items-start content-start' : 'mt-3'}`}>
+      <div className={`flex flex-wrap gap-2 mt-3 ${wide ? 'lg:mt-0 lg:items-start lg:content-start' : ''}`}>
         {project.tags.map((tag) => (
           <span
             key={tag}
@@ -69,16 +69,16 @@ export default function ProyectosGrid() {
   )
 
   return (
-    <section className="px-24 pt-16 pb-24">
+    <section className="px-6 lg:px-24 pt-10 lg:pt-16 pb-16 lg:pb-24">
       <div className="max-w-[1440px] mx-auto">
 
         {/* Filtros */}
-        <div className="flex items-center gap-2 mb-12">
+        <div className="flex flex-wrap items-center gap-2 mb-10 lg:mb-12">
           {FILTERS.map(({ label, value }) => (
             <button
               key={value}
               onClick={() => setActive(value)}
-              className={`font-mono text-[10px] tracking-[1.4px] rounded-full px-4 py-[7px] transition-colors cursor-pointer ${
+              className={`font-mono text-[10px] tracking-[1.4px] rounded-full px-3 lg:px-4 py-[7px] transition-colors cursor-pointer ${
                 active === value
                   ? 'bg-dark text-bg'
                   : 'text-muted2 border border-[rgba(13,13,13,0.15)] hover:text-dark hover:border-dark/40'
@@ -93,52 +93,65 @@ export default function ProyectosGrid() {
         {active === 'todos' && (
           <motion.div key="todos" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}>
 
-            <div className="flex gap-6 mb-16">
-              <div className="flex-[728_1_0%]">
-                <ProjectCard {...zealix} className="h-[460px]" />
-                <ProjectMeta project={zealix} />
-              </div>
-              <div className="flex-[496_1_0%]">
-                <ProjectCard {...brainy} className="h-[460px]" />
-                <ProjectMeta project={brainy} />
-              </div>
+            {/* Mobile: columna única */}
+            <div className="flex flex-col gap-10 lg:hidden">
+              {[zealix, brainy, kop, bwl, beatness, amorcito, corazonMixteco, activatedDecor, aiCreative].map(p => (
+                <div key={p.id}>
+                  <ProjectCard {...p} className="w-full h-[260px]" sizes="95vw" />
+                  <ProjectMeta project={p} />
+                </div>
+              ))}
             </div>
 
-            <div className="flex gap-6 mb-16">
-              <div className="flex-[496_1_0%]">
-                <ProjectCard {...kop} className="h-[460px]" />
-                <ProjectMeta project={kop} />
+            {/* Desktop: layout editorial */}
+            <div className="hidden lg:block">
+              <div className="flex gap-6 mb-16">
+                <div className="flex-[728_1_0%]">
+                  <ProjectCard {...zealix} className="h-[460px]" />
+                  <ProjectMeta project={zealix} />
+                </div>
+                <div className="flex-[496_1_0%]">
+                  <ProjectCard {...brainy} className="h-[460px]" />
+                  <ProjectMeta project={brainy} />
+                </div>
               </div>
-              <div className="flex-[728_1_0%]">
-                <ProjectCard {...bwl} className="h-[460px]" />
-                <ProjectMeta project={bwl} />
+
+              <div className="flex gap-6 mb-16">
+                <div className="flex-[496_1_0%]">
+                  <ProjectCard {...kop} className="h-[460px]" />
+                  <ProjectMeta project={kop} />
+                </div>
+                <div className="flex-[728_1_0%]">
+                  <ProjectCard {...bwl} className="h-[460px]" />
+                  <ProjectMeta project={bwl} />
+                </div>
               </div>
-            </div>
 
-            <div className="mb-16">
-              <ProjectCard {...beatness} className="w-full h-[500px]" />
-              <ProjectMeta project={beatness} wide />
-            </div>
-
-            <div className="flex gap-6 mb-16">
-              <div className="flex-[728_1_0%]">
-                <ProjectCard {...amorcito} className="h-[460px]" />
-                <ProjectMeta project={amorcito} />
+              <div className="mb-16">
+                <ProjectCard {...beatness} className="w-full h-[500px]" />
+                <ProjectMeta project={beatness} wide />
               </div>
-              <div className="flex-[496_1_0%]">
-                <ProjectCard {...corazonMixteco} className="h-[460px]" />
-                <ProjectMeta project={corazonMixteco} />
+
+              <div className="flex gap-6 mb-16">
+                <div className="flex-[728_1_0%]">
+                  <ProjectCard {...amorcito} className="h-[460px]" />
+                  <ProjectMeta project={amorcito} />
+                </div>
+                <div className="flex-[496_1_0%]">
+                  <ProjectCard {...corazonMixteco} className="h-[460px]" />
+                  <ProjectMeta project={corazonMixteco} />
+                </div>
               </div>
-            </div>
 
-            <div className="mb-16">
-              <ProjectCard {...activatedDecor} className="w-full h-[500px]" />
-              <ProjectMeta project={activatedDecor} wide />
-            </div>
+              <div className="mb-16">
+                <ProjectCard {...activatedDecor} className="w-full h-[500px]" />
+                <ProjectMeta project={activatedDecor} wide />
+              </div>
 
-            <div>
-              <ProjectCard {...aiCreative} className="w-full h-[500px]" />
-              <ProjectMeta project={aiCreative} wide />
+              <div>
+                <ProjectCard {...aiCreative} className="w-full h-[500px]" />
+                <ProjectMeta project={aiCreative} wide />
+              </div>
             </div>
 
           </motion.div>
@@ -151,7 +164,7 @@ export default function ProyectosGrid() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3 }}
-            className="grid grid-cols-3 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-6"
           >
             {filtered.map((project, i) => (
               <motion.div
@@ -162,14 +175,14 @@ export default function ProyectosGrid() {
               >
                 <ProjectCard
                   {...project}
-                  className="h-[420px]"
-                  sizes="(max-width: 1440px) 30vw, 400px"
+                  className="h-[260px] sm:h-[320px] lg:h-[420px]"
+                  sizes="(max-width: 640px) 95vw, (max-width: 1024px) 45vw, 30vw"
                 />
                 <ProjectMeta project={project} />
               </motion.div>
             ))}
             {filtered.length === 0 && (
-              <p className="col-span-3 text-center font-mono text-[11px] text-muted2 tracking-[1.76px] py-24">
+              <p className="col-span-full text-center font-mono text-[11px] text-muted2 tracking-[1.76px] py-24">
                 SIN PROYECTOS
               </p>
             )}

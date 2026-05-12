@@ -25,13 +25,13 @@ const specs = [
 
 export default function Specialization() {
   return (
-    <section className="px-24 pt-24 pb-24">
+    <section className="px-6 lg:px-24 pt-16 lg:pt-24 pb-16 lg:pb-24">
       <FadeIn>
-        <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-6">
+        <p className="font-mono text-[10px] lg:text-[11px] text-muted2 tracking-[1.76px] mb-6">
           ESPECIALIZACIÓN
         </p>
         <p
-          className="font-fraunces font-light text-[64px] text-dark leading-[1.02] mb-24 max-w-[500px]"
+          className="font-fraunces font-light text-[clamp(36px,6vw,64px)] text-dark leading-[1.02] mb-16 lg:mb-24 max-w-[500px]"
           style={WONK}
         >
           Tres sistemas<br />
@@ -40,14 +40,14 @@ export default function Specialization() {
         </p>
       </FadeIn>
 
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-6">
         {specs.map((spec, i) => (
           <FadeIn key={spec.num} delay={i * 0.1}>
             <div className="h-px bg-dark mb-4" />
             <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-6">
               — {spec.num}
             </p>
-            <p className="text-[42px] text-dark leading-normal mb-6" style={WONK}>
+            <p className="text-[clamp(28px,5vw,42px)] text-dark leading-normal mb-6" style={WONK}>
               <span className="font-fraunces font-light">{spec.light} </span>
               <span className="font-fraunces font-semibold">{spec.bold}</span>
             </p>

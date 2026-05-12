@@ -5,46 +5,24 @@ import Image from 'next/image'
 const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 
 const capacidades = [
-  {
-    cat: 'SOFTWARE',
-    items: ['After Effects', 'Premiere Pro', 'Illustrator', 'Photoshop', 'IA Tools'],
-  },
-  {
-    cat: 'MOTION',
-    items: ['Motion graphics', 'Storyboarding', 'Animación 2D/3D', 'Color grading', 'Kinetic typography'],
-  },
-  {
-    cat: 'BRANDING',
-    items: ['Identity systems', 'Typography', 'Art direction', 'Brand strategy', 'Guidelines'],
-  },
-  {
-    cat: 'CONTENT',
-    items: ['Content design', 'Campaign visuals', 'Social media visuals', 'Visual storytelling', 'Content strategy'],
-  },
+  { cat: 'SOFTWARE', items: ['After Effects', 'Premiere Pro', 'Illustrator', 'Photoshop', 'IA Tools'] },
+  { cat: 'MOTION',   items: ['Motion graphics', 'Storyboarding', 'Animación 2D/3D', 'Color grading', 'Kinetic typography'] },
+  { cat: 'BRANDING', items: ['Identity systems', 'Typography', 'Art direction', 'Brand strategy', 'Guidelines'] },
+  { cat: 'CONTENT',  items: ['Content design', 'Campaign visuals', 'Social media visuals', 'Visual storytelling', 'Content strategy'] },
 ]
 
 const trayectoria = [
-  { year: '2020',      title: 'Primeros proyectos',      detail: 'Freelance · Puebla' },
-  { year: '2021',      title: 'Sistemas de contenido',   detail: 'Motion + Brand + Social Media' },
-  { year: '2022',      title: 'IA en el flujo',          detail: 'Midjourney, Stable Diffusion' },
-  { year: '2023',      title: 'Kymsul',                  detail: 'Marca propia · Brand & Motion' },
-  { year: '2024–25',   title: 'Brand Lead, Zealix',      detail: 'Identidad visual · SaaS' },
-  { year: '2026 →',    title: 'NexLaunch',               detail: 'Junior Graphic Designer · Agencia' },
+  { year: '2020',    title: 'Primeros proyectos',    detail: 'Freelance · Puebla' },
+  { year: '2021',    title: 'Sistemas de contenido', detail: 'Motion + Brand + Social Media' },
+  { year: '2022',    title: 'IA en el flujo',        detail: 'Midjourney, Stable Diffusion' },
+  { year: '2023',    title: 'Kymsul',                detail: 'Marca propia · Brand & Motion' },
+  { year: '2024–25', title: 'Brand Lead, Zealix',    detail: 'Identidad visual · SaaS' },
+  { year: '2026 →',  title: 'NexLaunch',             detail: 'Junior Graphic Designer · Agencia' },
 ]
 
 const formacion = [
-  {
-    inst: 'Universidad del Valle de México',
-    degree: 'Licenciatura en Diseño Digital',
-    period: '2023 – 2026',
-    note: 'En curso',
-  },
-  {
-    inst: 'Universidad Anáhuac México',
-    degree: 'Diplomado en Diseño Multimedia',
-    period: '2023 – 2024',
-    note: '',
-  },
+  { inst: 'Universidad del Valle de México', degree: 'Licenciatura en Diseño Digital',    period: '2023 – 2026', note: 'En curso' },
+  { inst: 'Universidad Anáhuac México',      degree: 'Diplomado en Diseño Multimedia',    period: '2023 – 2024', note: '' },
 ]
 
 export default function SobreMiPage() {
@@ -52,40 +30,40 @@ export default function SobreMiPage() {
     <PageLayout>
 
       {/* ── Hero — Foto + Nombre ─────────────── */}
-      <section className="px-24 pt-20 pb-20 border-b border-[rgba(13,13,13,0.08)]">
-        <div className="max-w-[1440px] mx-auto flex gap-16 items-start">
+      <section className="px-6 lg:px-24 pt-12 lg:pt-20 pb-12 lg:pb-20 border-b border-[rgba(13,13,13,0.08)]">
+        <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
 
           {/* Foto */}
-          <div className="relative w-[320px] shrink-0 aspect-[3/4] overflow-hidden rounded-sm">
+          <div className="relative w-full lg:w-[320px] shrink-0 aspect-[3/4] lg:aspect-[3/4] overflow-hidden rounded-sm">
             <Image
               src="/assets/kym-foto.jpg"
               alt="Kimberly Tapia Rubio"
               fill
               quality={90}
               className="object-cover object-top"
-              sizes="320px"
+              sizes="(max-width: 1024px) 100vw, 320px"
             />
           </div>
 
           {/* Nombre + datos */}
-          <div className="flex-1 pt-2">
-            <div className="mb-8 leading-[0.9]">
-              <p className="text-[88px] text-dark" style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 700 }}>
+          <div className="flex-1 pt-0 lg:pt-2">
+            <div className="mb-6 lg:mb-8 leading-[0.9]">
+              <p className="text-[clamp(52px,12vw,88px)] text-dark" style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 700 }}>
                 Kimberly
               </p>
-              <p className="text-[88px] text-dark" style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 400 }}>
+              <p className="text-[clamp(52px,12vw,88px)] text-dark" style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 400 }}>
                 Tapia
               </p>
-              <p className="font-fraunces font-light italic text-[88px] text-dark" style={WONK}>
+              <p className="font-fraunces font-light italic text-[clamp(52px,12vw,88px)] text-dark" style={WONK}>
                 Rubio.
               </p>
             </div>
 
-            <p className="font-sans text-[16px] text-muted leading-[1.65] max-w-[480px] mb-10">
+            <p className="font-sans text-[15px] lg:text-[16px] text-muted leading-[1.65] max-w-[480px] mb-8 lg:mb-10">
               Diseñadora digital enfocada en la construcción de sistemas visuales. Integro branding, motion y contenido digital para desarrollar identidades con intención.
             </p>
 
-            <div className="flex gap-12 border-t border-[rgba(13,13,13,0.08)] pt-8">
+            <div className="flex flex-wrap gap-8 lg:gap-12 border-t border-[rgba(13,13,13,0.08)] pt-6 lg:pt-8">
               <div>
                 <p className="font-mono text-[10px] text-muted2 tracking-[1.4px] mb-2">ROL</p>
                 <p className="font-sans text-[14px] text-dark">Brand & Content Designer</p>
@@ -105,21 +83,21 @@ export default function SobreMiPage() {
       </section>
 
       {/* ── Práctica — sección negra ─────────── */}
-      <section className="bg-dark px-24 py-24">
-        <div className="max-w-[1440px] mx-auto flex gap-24 items-start">
+      <section className="bg-dark px-6 lg:px-24 py-16 lg:py-24">
+        <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row gap-10 lg:gap-24 items-start">
           <div className="flex-[1_1_0%]">
             <p className="font-mono text-[11px] text-[rgba(255,255,255,0.4)] tracking-[1.76px] mb-8">
               PRÁCTICA
             </p>
-            <p className="text-bg leading-[1]" style={{ fontFamily: 'var(--font-franklin-cond)', fontSize: '56px', fontWeight: 700 }}>
+            <p className="text-bg leading-[1]" style={{ fontFamily: 'var(--font-franklin-cond)', fontSize: 'clamp(36px,6vw,56px)', fontWeight: 700 }}>
               Diseño desde{' '}
               <span className="text-[#A89EF5]">sistema,</span>
             </p>
-            <p className="text-bg leading-[1]" style={{ fontFamily: 'var(--font-franklin-cond)', fontSize: '56px', fontWeight: 700 }}>
+            <p className="text-bg leading-[1]" style={{ fontFamily: 'var(--font-franklin-cond)', fontSize: 'clamp(36px,6vw,56px)', fontWeight: 700 }}>
               no desde piezas.
             </p>
           </div>
-          <div className="flex-[1_1_0%] space-y-5 pt-2">
+          <div className="flex-[1_1_0%] space-y-5 pt-0 lg:pt-2">
             <p className="font-sans text-[15px] text-[rgba(255,255,255,0.7)] leading-[1.7]">
               Mi enfoque parte de entender el diseño como un sistema que conecta identidad, comunicación y experiencia.
             </p>
@@ -134,23 +112,23 @@ export default function SobreMiPage() {
       </section>
 
       {/* ── Capacidades ──────────────────────── */}
-      <section className="px-24 py-24 border-b border-[rgba(13,13,13,0.08)]">
+      <section className="px-6 lg:px-24 py-16 lg:py-24 border-b border-[rgba(13,13,13,0.08)]">
         <div className="max-w-[1440px] mx-auto">
           <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-6">
             CAPACIDADES
           </p>
-          <p className="font-sans text-[48px] text-dark leading-[1.1] mb-16 max-w-[600px]">
+          <p className="font-sans text-[clamp(28px,5vw,48px)] text-dark leading-[1.1] mb-12 lg:mb-16 max-w-[600px]">
             La herramienta sigue a la <strong>intención.</strong>
           </p>
-          <div className="grid grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {capacidades.map(({ cat, items }) => (
-              <div key={cat} className="border-t border-[rgba(13,13,13,0.12)] pt-8">
-                <p className="font-mono text-[10px] text-muted2 tracking-[1.4px] mb-6">
+              <div key={cat} className="border-t border-[rgba(13,13,13,0.12)] pt-6 lg:pt-8">
+                <p className="font-mono text-[10px] text-muted2 tracking-[1.4px] mb-5 lg:mb-6">
                   {cat}
                 </p>
                 <ul className="space-y-3">
                   {items.map((item) => (
-                    <li key={item} className="font-sans text-[14px] text-muted leading-[1.5]">
+                    <li key={item} className="font-sans text-[13px] lg:text-[14px] text-muted leading-[1.5]">
                       {item}
                     </li>
                   ))}
@@ -162,26 +140,26 @@ export default function SobreMiPage() {
       </section>
 
       {/* ── Formación ────────────────────────── */}
-      <section className="px-24 py-24 border-b border-[rgba(13,13,13,0.08)]">
+      <section className="px-6 lg:px-24 py-16 lg:py-24 border-b border-[rgba(13,13,13,0.08)]">
         <div className="max-w-[1440px] mx-auto">
-          <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-16">
+          <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-10 lg:mb-16">
             FORMACIÓN
           </p>
           <div>
             {formacion.map(({ inst, degree, period, note }, i) => (
               <div
                 key={inst}
-                className={`flex items-baseline gap-12 py-5 ${i < formacion.length - 1 ? 'border-b border-[rgba(13,13,13,0.08)]' : ''}`}
+                className={`flex flex-col lg:flex-row lg:items-baseline gap-2 lg:gap-12 py-5 ${i < formacion.length - 1 ? 'border-b border-[rgba(13,13,13,0.08)]' : ''}`}
               >
-                <p className="font-mono text-[12px] text-muted2 tracking-[1.4px] w-[80px] shrink-0">
+                <p className="font-mono text-[11px] text-muted2 tracking-[1.4px] lg:w-[80px] shrink-0">
                   {period}
                 </p>
                 <div className="flex-1">
-                  <p className="font-sans text-[18px] text-dark">{degree}</p>
+                  <p className="font-sans text-[16px] lg:text-[18px] text-dark">{degree}</p>
                   <p className="font-mono text-[11px] text-muted2 tracking-[1.2px] mt-1">{inst}</p>
                 </div>
                 {note && (
-                  <span className="font-mono text-[10px] text-muted2 tracking-[1.2px] border border-[rgba(13,13,13,0.15)] rounded-full px-3 py-1">
+                  <span className="self-start font-mono text-[10px] text-muted2 tracking-[1.2px] border border-[rgba(13,13,13,0.15)] rounded-full px-3 py-1">
                     {note}
                   </span>
                 )}
@@ -192,24 +170,24 @@ export default function SobreMiPage() {
       </section>
 
       {/* ── Trayectoria ──────────────────────── */}
-      <section className="px-24 py-24 border-b border-[rgba(13,13,13,0.08)]">
+      <section className="px-6 lg:px-24 py-16 lg:py-24 border-b border-[rgba(13,13,13,0.08)]">
         <div className="max-w-[1440px] mx-auto">
-          <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-16">
+          <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-10 lg:mb-16">
             TRAYECTORIA
           </p>
           <div>
             {trayectoria.map(({ year, title, detail }, i) => (
               <div
                 key={year}
-                className={`flex items-baseline gap-12 py-5 ${i < trayectoria.length - 1 ? 'border-b border-[rgba(13,13,13,0.08)]' : ''}`}
+                className={`flex flex-col lg:flex-row lg:items-baseline gap-1 lg:gap-12 py-5 ${i < trayectoria.length - 1 ? 'border-b border-[rgba(13,13,13,0.08)]' : ''}`}
               >
-                <p className="font-mono text-[12px] text-muted2 tracking-[1.4px] w-[80px] shrink-0">
+                <p className="font-mono text-[11px] text-muted2 tracking-[1.4px] lg:w-[80px] shrink-0">
                   {year}
                 </p>
-                <p className="font-sans text-[18px] text-dark flex-1">
+                <p className="font-sans text-[17px] lg:text-[18px] text-dark flex-1">
                   {title}
                 </p>
-                <p className="font-mono text-[11px] text-muted2 tracking-[1.2px] text-right">
+                <p className="font-mono text-[10px] lg:text-[11px] text-muted2 tracking-[1.2px] lg:text-right">
                   {detail}
                 </p>
               </div>
@@ -219,24 +197,24 @@ export default function SobreMiPage() {
       </section>
 
       {/* ── CTA ──────────────────────────────── */}
-      <section className="bg-dark px-24 py-24">
-        <div className="max-w-[1440px] mx-auto flex items-center justify-between">
+      <section className="bg-dark px-6 lg:px-24 py-16 lg:py-24">
+        <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10">
           <div>
             <p
               className="text-bg leading-[0.9]"
-              style={{ fontFamily: 'var(--font-franklin-cond)', fontSize: '72px', fontWeight: 700 }}
+              style={{ fontFamily: 'var(--font-franklin-cond)', fontSize: 'clamp(48px,8vw,72px)', fontWeight: 700 }}
             >
               ¿Tienes una
             </p>
-            <p className="font-fraunces font-light italic text-[72px] text-[#A89EF5] leading-[0.9]" style={WONK}>
+            <p className="font-fraunces font-light italic text-[#A89EF5] leading-[0.9]" style={{ ...WONK, fontSize: 'clamp(48px,8vw,72px)' }}>
               idea?
             </p>
           </div>
-          <div className="max-w-[320px]">
+          <div className="lg:max-w-[320px]">
             <p className="font-sans text-[15px] text-[rgba(255,255,255,0.7)] leading-[1.65] mb-8">
               Cuéntame qué estás construyendo. Reviso cada solicitud personalmente y respondo en menos de 48 horas.
             </p>
-            <div className="flex gap-3">
+            <div className="flex flex-wrap gap-3">
               <Link
                 href="/contacto"
                 className="inline-flex items-center bg-[#A89EF5] text-dark font-sans text-[13px] rounded-full px-6 py-[14px] hover:opacity-90 transition-opacity"
