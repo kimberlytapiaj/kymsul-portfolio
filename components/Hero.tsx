@@ -7,7 +7,7 @@ export default function Hero() {
       {/* Eyebrow */}
       <div className="mb-8 lg:mb-10">
         <p className="font-mono text-[10px] lg:text-[11px] text-muted2 tracking-[1.76px]">
-          MOTION · BRAND · IA
+          BRAND · CONTENIDO · IA
         </p>
       </div>
 
@@ -17,19 +17,19 @@ export default function Hero() {
           className="text-[clamp(52px,10vw,144px)] text-dark leading-[0.88]"
           style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 700 }}
         >
-          Marcas que
+          Marcas construidas
         </p>
         <p
           className="font-fraunces font-light text-[clamp(52px,10vw,144px)] text-dark leading-[0.88]"
           style={WONK}
         >
-          evolucionan
+          para
         </p>
         <p
           className="font-fraunces font-light italic text-[clamp(52px,10vw,144px)] text-dark leading-[0.88]"
           style={WONK}
         >
-          con intención.
+          crecer.
         </p>
       </div>
 
@@ -38,9 +38,8 @@ export default function Hero() {
 
       {/* Sub-copy + CTA */}
       <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 lg:gap-16 pb-12 lg:pb-24">
-        <p className="font-sans text-[15px] lg:text-[17px] text-muted leading-[1.6] max-w-[480px]">
-          Diseño como sistema. Motion como lenguaje.<br />
-          IA como expansión creativa.
+        <p className="font-sans text-[15px] lg:text-[17px] text-muted leading-[1.6] max-w-[520px]">
+          Brand identity, contenido y producción con IA — todo desde un sistema, no desde piezas sueltas.
         </p>
         <a
           href="#portafolio"
