@@ -47,7 +47,7 @@ export default function Specialization() {
             <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-6">
               — {spec.num}
             </p>
-            <p className="text-[clamp(28px,5vw,42px)] text-dark leading-normal mb-6" style={WONK}>
+            <p className="text-[clamp(28px,5vw,42px)] text-dark leading-[1.05] mb-6" style={WONK}>
               <span className="font-fraunces font-light">{spec.light} </span>
               <span className="font-fraunces font-semibold">{spec.bold}</span>
             </p>
