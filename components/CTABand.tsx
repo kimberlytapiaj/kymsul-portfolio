@@ -4,18 +4,19 @@ const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 
 export default function CTABand() {
   return (
-    <section className="bg-dark w-full overflow-hidden" style={{ minHeight: 480 }}>
-      <div className="max-w-[1440px] mx-auto px-24 relative" style={{ minHeight: 480 }}>
+    <section className="bg-dark w-full">
+      <div className="max-w-[1440px] mx-auto px-24 py-24 flex items-center justify-between gap-16">
+
         {/* Left heading */}
-        <div className="absolute" style={{ left: 96, top: 96 }}>
+        <div className="shrink-0">
           <p
-            className="font-fraunces font-light text-white leading-[0.9] text-[112px]"
+            className="font-fraunces font-light text-white leading-[0.9] text-[80px]"
             style={WONK}
           >
             ¿Tienes una
           </p>
           <p
-            className="font-fraunces italic text-lav leading-[0.9] text-[112px]"
+            className="font-fraunces italic text-lav leading-[0.9] text-[80px]"
             style={WONK}
           >
             idea?
@@ -23,8 +24,8 @@ export default function CTABand() {
         </div>
 
         {/* Right content */}
-        <div className="absolute" style={{ left: 694, top: 140 }}>
-          <p className="font-sans text-[18px] text-[rgba(255,255,255,0.72)] leading-normal mb-10 max-w-[440px]">
+        <div className="max-w-[440px] shrink-0">
+          <p className="font-sans text-[18px] text-[rgba(255,255,255,0.72)] leading-normal mb-10">
             Cuéntame qué estás construyendo.<br />
             Reviso cada solicitud personalmente<br />
             y respondo en menos de 48 horas.
@@ -44,6 +45,7 @@ export default function CTABand() {
             </Link>
           </div>
         </div>
+
       </div>
     </section>
   )
