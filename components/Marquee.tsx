@@ -1,6 +1,6 @@
 const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 
-const items = ['Motion graphics', 'Branding', 'IA generativa', 'Dirección creativa']
+const items = ['Brand identity', 'Contenido', 'IA', 'Dirección creativa']
 
 function MarqueeDot() {
   return <img src="/assets/marquee-dot.svg" alt="" className="w-[6px] h-[6px] shrink-0" />
