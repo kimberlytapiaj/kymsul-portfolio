@@ -5,9 +5,9 @@ const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 const navLinks = ['Inicio', 'Proyectos', 'Sobre Mí', 'Servicios', 'Contacto']
 const navHrefs = ['/', '/proyectos', '/sobre-mi', '/servicios', '/contacto']
 const socialLinks = [
-  { label: 'Instagram', href: '#' },
-  { label: 'Behance',   href: '#' },
-  { label: 'LinkedIn',  href: '#' },
+  { label: 'Instagram', href: 'https://www.instagram.com/kymsul/' },
+  { label: 'Behance',   href: 'https://www.behance.net/kimberlytapia2' },
+  { label: 'LinkedIn',  href: 'https://www.linkedin.com/in/kimberly-tapia-rubio-39a35828a/' },
 ]
 
 
@@ -63,7 +63,7 @@ export default function Footer() {
               <ul className="space-y-[18px] lg:space-y-[22px]">
                 {socialLinks.map(({ label, href }) => (
                   <li key={label}>
-                    <a href={href} className="font-sans text-[13px] text-muted hover:text-dark transition-colors">
+                    <a href={href} target="_blank" rel="noopener noreferrer" className="font-sans text-[13px] text-muted hover:text-dark transition-colors">
                       {label}
                     </a>
                   </li>
