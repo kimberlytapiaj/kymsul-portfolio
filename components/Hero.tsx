@@ -3,7 +3,7 @@ const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 // PROPUESTA C refinada — Headline grande, sub + CTA en footer spread
 export default function Hero() {
   return (
-    <section className="max-w-[1440px] mx-auto px-6 lg:px-24 pt-12 lg:pt-16 pb-16 lg:pb-20">
+    <section className="max-w-[1440px] mx-auto px-6 lg:px-24 pt-12 lg:pt-16 pb-8 lg:pb-20">
 
       {/* Eyebrow */}
       <div className="mb-10 lg:mb-14">
@@ -13,24 +13,24 @@ export default function Hero() {
       </div>
 
       {/* Headline — tamaño controlado para no partir el lav */}
-      <div className="mb-10 lg:mb-14">
+      <div className="mb-6 lg:mb-14">
         <p
-          className="text-[clamp(40px,7.5vw,108px)] leading-[0.88] text-dark"
+          className="text-[clamp(28px,7.5vw,108px)] leading-[0.88] text-dark"
           style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 700 }}
         >
           Brand identity,
         </p>
         <p
-          className="font-fraunces font-light text-[clamp(40px,7.5vw,108px)] leading-[0.88] text-dark"
+          className="font-fraunces font-light text-[clamp(28px,7.5vw,108px)] leading-[0.88] text-dark"
           style={WONK}
         >
           contenido visual
         </p>
         <p
-          className="font-fraunces font-light italic text-[clamp(40px,7.5vw,108px)] leading-[0.88] text-lav"
+          className="font-fraunces font-light italic text-[clamp(28px,7.5vw,108px)] leading-[0.88] text-lav"
           style={WONK}
         >
-          producción{' '}<br className="lg:hidden" />IA-native.
+          producción IA‑native.
         </p>
       </div>
 

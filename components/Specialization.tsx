@@ -49,7 +49,7 @@ export default function Specialization() {
       </FadeIn>
 
       {/* Cards */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-6">
         {specs.map((spec, i) => (
           <FadeIn key={spec.num} delay={i * 0.1}>
             <div className="h-px bg-dark mb-4" />

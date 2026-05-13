@@ -47,12 +47,12 @@ export default function Portfolio() {
         <p className="font-mono text-[10px] lg:text-[11px] text-muted2 tracking-[1.76px]">
           PORTAFOLIO
         </p>
-        <div className="flex items-center gap-2 flex-wrap">
+        <div className="flex items-center gap-2 overflow-x-auto flex-nowrap pb-1 sm:flex-wrap sm:overflow-visible">
           {FILTERS.map(({ label, value }) => (
             <button
               key={value}
               onClick={() => setActive(value)}
-              className={`font-mono text-[10px] tracking-[1.4px] rounded-full px-3 lg:px-4 py-[7px] transition-colors cursor-pointer ${
+              className={`whitespace-nowrap font-mono text-[10px] tracking-[1.4px] rounded-full px-3 lg:px-4 py-[7px] transition-colors cursor-pointer ${
                 active === value
                   ? 'bg-dark text-bg'
                   : 'text-muted2 border border-[rgba(13,13,13,0.15)] hover:text-dark hover:border-dark/40'
