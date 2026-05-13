@@ -5,11 +5,37 @@ const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 const navLinks = ['Inicio', 'Proyectos', 'Sobre Mí', 'Servicios', 'Contacto']
 const navHrefs = ['/', '/proyectos', '/sobre-mi', '/servicios', '/contacto']
 const socialLinks = [
-  { label: 'Instagram', href: 'https://www.instagram.com/kymsul/' },
-  { label: 'Behance',   href: 'https://www.behance.net/kimberlytapia2' },
-  { label: 'LinkedIn',  href: 'https://www.linkedin.com/in/kimberly-tapia-rubio-39a35828a/' },
+  {
+    label: 'Instagram',
+    href: 'https://www.instagram.com/kymsul/',
+    icon: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+      </svg>
+    ),
+  },
+  {
+    label: 'Behance',
+    href: 'https://www.behance.net/kimberlytapia2',
+    icon: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M7.5 11.25c.69 0 1.25-.56 1.25-1.25S8.19 8.75 7.5 8.75H5v2.5h2.5zm.5 1.5H5v2.75h3c.76 0 1.375-.615 1.375-1.375S8.76 12.75 8 12.75zM22 9h-5.5v1h5.5V9zM3 7H9c1.38 0 2.5 1.12 2.5 2.5 0 .9-.48 1.69-1.2 2.13.97.4 1.7 1.35 1.7 2.37C12 15.76 10.76 17 9.25 17H3V7zm13.25 1.75c-2.07 0-3.75 1.68-3.75 3.75s1.68 3.75 3.75 3.75c1.5 0 2.8-.88 3.4-2.17h-1.77c-.35.47-.9.79-1.63.79-1.03 0-1.88-.74-2.08-1.71h5.6c.04-.22.06-.44.06-.66 0-2.07-1.68-3.75-3.75-3.75zm-2.08 3c.2-.97 1.05-1.71 2.08-1.71 1.03 0 1.88.74 2.08 1.71h-4.16z"/>
+      </svg>
+    ),
+  },
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/kimberly-tapia-rubio-39a35828a/',
+    icon: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/>
+        <circle cx="4" cy="4" r="2"/>
+      </svg>
+    ),
+  },
 ]
-
 
 export default function Footer() {
   return (
@@ -40,8 +66,8 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Links — stack on mobile, row on desktop */}
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-16">
+          {/* Links */}
+          <div className="grid grid-cols-2 gap-10 lg:gap-16">
 
             {/* Navegación */}
             <div>
@@ -57,22 +83,8 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Social */}
-            <div>
-              <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-6">SOCIAL</p>
-              <ul className="space-y-[18px] lg:space-y-[22px]">
-                {socialLinks.map(({ label, href }) => (
-                  <li key={label}>
-                    <a href={href} target="_blank" rel="noopener noreferrer" className="font-sans text-[13px] text-muted hover:text-dark transition-colors">
-                      {label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
             {/* Contacto */}
-            <div className="col-span-2 lg:col-span-1">
+            <div>
               <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-6">CONTACTO</p>
               <ul className="space-y-[18px] lg:space-y-[22px]">
                 <li>
@@ -97,7 +109,20 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-[rgba(13,13,13,0.06)] mt-12 lg:mt-14 py-4 flex items-center justify-between">
           <span className="font-mono text-[10px] lg:text-[11px] text-muted2 tracking-[1.76px]">© 2026 KYMSUL</span>
-          <span className="font-mono text-[10px] lg:text-[11px] text-muted2 tracking-[1.76px]">kymsul.art</span>
+          <div className="flex items-center gap-4">
+            {socialLinks.map(({ label, href, icon }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="text-muted2 hover:text-dark transition-colors"
+              >
+                {icon}
+              </a>
+            ))}
+          </div>
           <span className="hidden lg:block font-mono text-[11px] text-muted2 tracking-[1.76px]">Puebla, México</span>
         </div>
 
