@@ -67,7 +67,7 @@ export default function Footer() {
           </div>
 
           {/* Links */}
-          <div className="grid grid-cols-2 gap-10 lg:gap-16">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-16">
 
             {/* Navegación */}
             <div>
@@ -83,8 +83,22 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Contacto */}
+            {/* Social */}
             <div>
+              <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-6">SOCIAL</p>
+              <ul className="space-y-[18px] lg:space-y-[22px]">
+                {socialLinks.map(({ label, href }) => (
+                  <li key={label}>
+                    <a href={href} target="_blank" rel="noopener noreferrer" className="font-sans text-[13px] text-muted hover:text-dark transition-colors">
+                      {label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Contacto */}
+            <div className="col-span-2 lg:col-span-1">
               <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-6">CONTACTO</p>
               <ul className="space-y-[18px] lg:space-y-[22px]">
                 <li>
