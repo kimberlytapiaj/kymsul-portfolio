@@ -25,7 +25,7 @@ const specs = [
 
 export default function Specialization() {
   return (
-    <section className="px-6 lg:px-24 pt-16 lg:pt-24 pb-16 lg:pb-24">
+    <section className="max-w-[1440px] mx-auto px-6 lg:px-24 pt-16 lg:pt-24 pb-16 lg:pb-24">
 
       {/* Header — título izquierda, contexto derecha */}
       <FadeIn>
