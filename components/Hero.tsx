@@ -48,7 +48,7 @@ export default function Hero() {
           href="#portafolio"
           className="self-start lg:self-end shrink-0 inline-flex items-center bg-dark text-bg font-sans text-[13px] rounded-full px-6 py-[14px] hover:opacity-80 transition-opacity"
         >
-          Ver proyectos →
+          Ver proyectos
         </a>
       </div>
 
