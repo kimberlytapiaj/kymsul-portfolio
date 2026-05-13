@@ -15,19 +15,19 @@ export default function Hero() {
       {/* Headline — tamaño controlado para no partir el lav */}
       <div className="mb-6 lg:mb-14">
         <p
-          className="text-[clamp(28px,7.5vw,108px)] leading-[0.88] text-dark"
+          className="text-[clamp(34px,7.5vw,108px)] leading-[0.88] text-dark"
           style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 700 }}
         >
           Brand identity,
         </p>
         <p
-          className="font-fraunces font-light text-[clamp(28px,7.5vw,108px)] leading-[0.88] text-dark"
+          className="font-fraunces font-light text-[clamp(28px,7.5vw,100px)] leading-[0.88] text-dark"
           style={WONK}
         >
           contenido visual
         </p>
         <p
-          className="font-fraunces font-light italic text-[clamp(28px,7.5vw,108px)] leading-[0.88] text-lav"
+          className="font-fraunces font-light italic text-[clamp(22px,7.5vw,90px)] leading-[0.88] text-lav"
           style={WONK}
         >
           producción IA‑native.

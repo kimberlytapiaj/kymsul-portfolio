@@ -12,7 +12,7 @@ function MarqueeSet() {
       {items.map((item, i) => (
         <span key={i} className="flex items-center gap-6 shrink-0">
           <span
-            className="font-fraunces italic font-light text-[26px] text-dark whitespace-nowrap"
+            className="font-fraunces italic font-light text-[16px] lg:text-[26px] text-dark whitespace-nowrap"
             style={WONK}
           >
             {item}
@@ -26,7 +26,7 @@ function MarqueeSet() {
 
 export default function Marquee() {
   return (
-    <div className="border-t border-b border-[rgba(13,13,13,0.12)] h-[72px] overflow-hidden flex items-center">
+    <div className="border-t border-b border-[rgba(13,13,13,0.12)] h-[44px] lg:h-[72px] overflow-hidden flex items-center">
       <div className="marquee-track flex items-center gap-6 w-max">
         <MarqueeSet />
         <MarqueeSet />
