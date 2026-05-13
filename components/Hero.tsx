@@ -8,29 +8,29 @@ export default function Hero() {
       {/* Eyebrow */}
       <div className="mb-10 lg:mb-14">
         <p className="font-mono text-[10px] lg:text-[11px] text-muted2 tracking-[1.76px]">
-          BRAND · MOTION & CONTENIDO · IA
+          BRAND & MOTION DESIGNER
         </p>
       </div>
 
       {/* Headline — tamaño controlado para no partir el lav */}
       <div className="mb-10 lg:mb-14">
         <p
-          className="text-[clamp(52px,7.5vw,108px)] leading-[0.88] text-dark"
+          className="text-[clamp(40px,7.5vw,108px)] leading-[0.88] text-dark"
           style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 700 }}
         >
           Brand identity,
         </p>
         <p
-          className="font-fraunces font-light text-[clamp(52px,7.5vw,108px)] leading-[0.88] text-dark"
+          className="font-fraunces font-light text-[clamp(40px,7.5vw,108px)] leading-[0.88] text-dark"
           style={WONK}
         >
           contenido visual
         </p>
         <p
-          className="font-fraunces font-light italic text-[clamp(52px,7.5vw,108px)] leading-[0.88] text-lav"
+          className="font-fraunces font-light italic text-[clamp(40px,7.5vw,108px)] leading-[0.88] text-lav"
           style={WONK}
         >
-          producción IA-native.
+          producción{' '}<br className="lg:hidden" />IA-native.
         </p>
       </div>
 
