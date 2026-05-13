@@ -40,7 +40,7 @@ export default function Hero() {
           <p className="font-mono text-[10px] lg:text-[11px] text-muted2 tracking-[1.76px] mb-2">
             DESDE UNA SOLA DIRECCIÓN CREATIVA
           </p>
-          <p className="font-sans text-[15px] lg:text-[17px] text-muted leading-[1.5] max-w-[420px]">
+          <p className="font-sans text-[15px] lg:text-[17px] text-muted leading-[1.5] max-w-[540px]">
             Todo lo que tu marca necesita para verse, moverse e impactar.
           </p>
         </div>
