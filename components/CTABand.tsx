@@ -10,13 +10,13 @@ export default function CTABand() {
         {/* Heading */}
         <div className="shrink-0">
           <p
-            className="font-fraunces font-light text-white leading-[0.9] text-[clamp(52px,8vw,80px)]"
+            className="font-fraunces font-light text-white leading-[0.9] text-[clamp(36px,4.5vw,56px)]"
             style={WONK}
           >
             ¿Tu marca tiene
           </p>
           <p
-            className="font-fraunces italic text-lav leading-[0.9] text-[clamp(52px,8vw,80px)]"
+            className="font-fraunces italic text-lav leading-[0.9] text-[clamp(36px,4.5vw,56px)]"
             style={WONK}
           >
             algo que decir?
