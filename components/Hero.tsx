@@ -1,45 +1,55 @@
 const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 
+// PROPUESTA C refinada — Headline grande, sub + CTA en footer spread
 export default function Hero() {
   return (
-    <section className="max-w-[1440px] mx-auto px-6 lg:px-24 pt-10 lg:pt-16 pb-10 lg:pb-14">
+    <section className="max-w-[1440px] mx-auto px-6 lg:px-24 pt-12 lg:pt-16 pb-16 lg:pb-20">
 
       {/* Eyebrow */}
-      <div className="mb-4 lg:mb-5">
+      <div className="mb-10 lg:mb-14">
         <p className="font-mono text-[10px] lg:text-[11px] text-muted2 tracking-[1.76px]">
-          BRAND · CONTENIDO · IA
+          BRAND · MOTION & CONTENIDO · IA
         </p>
       </div>
 
-      {/* Headline — 2 líneas, tamaño estable en todos los monitores */}
-      <div className="leading-[0.88] mb-10 lg:mb-14">
+      {/* Headline — tamaño controlado para no partir el lav */}
+      <div className="mb-10 lg:mb-14">
         <p
-          className="text-[clamp(56px,8.5vw,124px)] text-dark leading-[0.88]"
+          className="text-[clamp(52px,7.5vw,108px)] leading-[0.88] text-dark"
           style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 700 }}
         >
-          Marcas construidas
+          Brand identity,
         </p>
         <p
-          className="font-fraunces font-light italic text-[clamp(56px,8.5vw,124px)] text-dark leading-[0.88]"
+          className="font-fraunces font-light text-[clamp(52px,7.5vw,108px)] leading-[0.88] text-dark"
           style={WONK}
         >
-          para crecer.
+          contenido visual
+        </p>
+        <p
+          className="font-fraunces font-light italic text-[clamp(52px,7.5vw,108px)] leading-[0.88] text-lav"
+          style={WONK}
+        >
+          producción IA-native.
         </p>
       </div>
 
-      {/* Divider + Sub-copy + CTA */}
-      <div className="border-t border-[rgba(13,13,13,0.1)] pt-6 lg:pt-7">
-        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 lg:gap-16">
-          <p className="font-sans text-[15px] lg:text-[17px] text-muted leading-[1.6] max-w-[520px]">
-            Brand identity, motion, contenido y producción con IA — todo desde un sistema, no desde piezas sueltas.
+      {/* Footer: sub izquierda, CTA derecha */}
+      <div className="border-t border-[rgba(13,13,13,0.1)] pt-6 lg:pt-8 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5">
+        <div>
+          <p className="font-mono text-[10px] lg:text-[11px] text-muted2 tracking-[1.76px] mb-2">
+            DESDE UNA SOLA DIRECCIÓN CREATIVA
           </p>
-          <a
-            href="#portafolio"
-            className="self-start shrink-0 inline-flex items-center bg-dark text-bg font-sans text-[13px] rounded-full px-6 py-[14px] hover:opacity-80 transition-opacity"
-          >
-            Ver proyectos →
-          </a>
+          <p className="font-sans text-[15px] lg:text-[17px] text-muted leading-[1.5] max-w-[420px]">
+            Todo lo que tu marca necesita para verse, moverse e impactar.
+          </p>
         </div>
+        <a
+          href="#portafolio"
+          className="self-start lg:self-end shrink-0 inline-flex items-center bg-dark text-bg font-sans text-[13px] rounded-full px-6 py-[14px] hover:opacity-80 transition-opacity"
+        >
+          Ver proyectos →
+        </a>
       </div>
 
     </section>
