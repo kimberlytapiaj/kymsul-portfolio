@@ -38,9 +38,6 @@ export default function Footer() {
             >
               Sistema.
             </p>
-            <p className="font-mono text-[10px] text-muted2 tracking-[1.4px] mt-6">
-              DIRECTORA CREATIVA · AXOMY STUDIO
-            </p>
           </div>
 
           {/* Links — stack on mobile, row on desktop */}
