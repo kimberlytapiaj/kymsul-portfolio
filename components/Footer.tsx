@@ -10,14 +10,6 @@ const socialLinks = [
   { label: 'LinkedIn',  href: '#' },
 ]
 
-function Badge({ label, dot }: { label: string; dot: string }) {
-  return (
-    <span className="inline-flex items-center gap-[7px] border border-[rgba(13,13,13,0.12)] rounded-full px-[10px] py-[6px]">
-      <img src={dot} alt="" className="w-[7px] h-[7px]" />
-      <span className="font-sans text-[12px] text-muted">{label}</span>
-    </span>
-  )
-}
 
 export default function Footer() {
   return (
@@ -29,23 +21,24 @@ export default function Footer() {
           {/* Brand block */}
           <div className="flex-1">
             <p
-              className="text-[clamp(40px,7vw,68px)] text-dark leading-normal"
-              style={{ fontFamily: 'var(--font-franklin)' }}
+              className="text-[clamp(40px,7vw,68px)] text-dark leading-[0.92]"
+              style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 700 }}
             >
-              Evolución
+              Brand.
             </p>
             <p
-              className="font-fraunces font-light italic text-[clamp(40px,7vw,68px)] text-dark leading-normal"
+              className="font-fraunces font-light text-[clamp(40px,7vw,68px)] text-dark leading-[0.92]"
               style={WONK}
             >
-              de marcas.
+              Motion.
             </p>
-            <div className="flex items-center gap-3 mt-6 mb-3 flex-wrap">
-              <Badge label="Branding" dot="/assets/dot-lav.svg" />
-              <Badge label="IA"       dot="/assets/dot-blue.svg" />
-              <Badge label="Motion"   dot="/assets/dot-warm.svg" />
-            </div>
-            <p className="font-mono text-[10px] text-muted2 tracking-[1.4px] mt-4">
+            <p
+              className="font-fraunces font-light italic text-[clamp(40px,7vw,68px)] text-dark leading-[0.92]"
+              style={WONK}
+            >
+              Sistema.
+            </p>
+            <p className="font-mono text-[10px] text-muted2 tracking-[1.4px] mt-6">
               DIRECTORA CREATIVA · AXOMY STUDIO
             </p>
           </div>

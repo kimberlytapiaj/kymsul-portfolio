@@ -13,22 +13,20 @@ export default function CTABand() {
             className="font-fraunces font-light text-white leading-[0.9] text-[clamp(52px,8vw,80px)]"
             style={WONK}
           >
-            ¿Tienes una
+            ¿Tu marca tiene
           </p>
           <p
             className="font-fraunces italic text-lav leading-[0.9] text-[clamp(52px,8vw,80px)]"
             style={WONK}
           >
-            idea?
+            algo que decir?
           </p>
         </div>
 
         {/* Right content */}
         <div className="lg:max-w-[440px]">
           <p className="font-sans text-[15px] lg:text-[18px] text-[rgba(255,255,255,0.72)] leading-normal mb-8">
-            Cuéntame qué estás construyendo.<br />
-            Reviso cada solicitud personalmente<br />
-            y respondo en menos de 48 horas.
+            Cuéntame qué estás construyendo. Siempre reviso personalmente y respondo rápido.
           </p>
           <div className="flex items-center gap-4">
             <Link

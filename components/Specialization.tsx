@@ -13,33 +13,42 @@ const specs = [
     num: '02',
     light: 'Motion &',
     bold: 'contenido visual',
-    desc: 'Reels, motion graphics y sistemas de contenido para redes — piezas que comunican con movimiento y mantienen coherencia de marca.',
+    desc: 'Reels, motion graphics y sistemas de contenido para redes, piezas que comunican con movimiento y mantienen coherencia de marca.',
   },
   {
     num: '03',
     light: 'Producción',
-    bold: 'con IA',
-    desc: 'Flujos creativos con modelos generativos que escalan la producción sin escalar el equipo. Gemini, Runway, Stable Diffusion.',
+    bold: 'IA‑native',
+    desc: 'Flujos creativos con Imagen 2, Veo y Claude, generación de video, imagen y concepto integrados al proceso de marca desde el inicio.',
   },
 ]
 
 export default function Specialization() {
   return (
     <section className="px-6 lg:px-24 pt-16 lg:pt-24 pb-16 lg:pb-24">
+
+      {/* Header — título izquierda, contexto derecha */}
       <FadeIn>
-        <p className="font-mono text-[10px] lg:text-[11px] text-muted2 tracking-[1.76px] mb-6">
-          ESPECIALIZACIÓN
-        </p>
-        <p
-          className="font-fraunces font-light text-[clamp(36px,6vw,64px)] text-dark leading-[1.02] mb-16 lg:mb-24 max-w-[500px]"
-          style={WONK}
-        >
-          Tres servicios<br />
-          que se construyen<br />
-          entre sí.
-        </p>
+        <div className="mb-16 lg:mb-24">
+          <p className="font-mono text-[10px] lg:text-[11px] text-muted2 tracking-[1.76px] mb-5">
+            ESPECIALIZACIÓN
+          </p>
+          <p
+            className="font-fraunces font-light text-[clamp(40px,5.5vw,72px)] text-dark leading-[1.0]"
+            style={WONK}
+          >
+            Tres servicios.
+          </p>
+          <p
+            className="font-fraunces font-light text-[clamp(40px,5.5vw,72px)] text-dark leading-[1.0]"
+            style={WONK}
+          >
+            Un sistema.
+          </p>
+        </div>
       </FadeIn>
 
+      {/* Cards */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-6">
         {specs.map((spec, i) => (
           <FadeIn key={spec.num} delay={i * 0.1}>
@@ -47,7 +56,7 @@ export default function Specialization() {
             <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-6">
               — {spec.num}
             </p>
-            <p className="text-[clamp(28px,5vw,42px)] text-dark leading-[1.05] mb-6" style={WONK}>
+            <p className="text-[clamp(28px,3.5vw,42px)] text-dark leading-[1.05] mb-6" style={WONK}>
               <span className="font-fraunces font-light">{spec.light} </span>
               <span className="font-fraunces font-semibold">{spec.bold}</span>
             </p>
