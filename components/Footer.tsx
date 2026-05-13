@@ -109,6 +109,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-[rgba(13,13,13,0.06)] mt-12 lg:mt-14 py-4 flex items-center justify-between">
           <span className="font-mono text-[10px] lg:text-[11px] text-muted2 tracking-[1.76px]">© 2026 KYMSUL</span>
+          <span className="font-mono text-[10px] lg:text-[11px] text-muted2 tracking-[1.76px]">kymsul.art</span>
           <div className="flex items-center gap-4">
             {socialLinks.map(({ label, href, icon }) => (
               <a
@@ -123,7 +124,6 @@ export default function Footer() {
               </a>
             ))}
           </div>
-          <span className="hidden lg:block font-mono text-[11px] text-muted2 tracking-[1.76px]">Puebla, México</span>
         </div>
 
       </div>
