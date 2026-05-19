@@ -64,9 +64,9 @@ export const projects: Project[] = [
     gallery: [
       '/assets/zealix/zealix-manual-mockup.jpg',
       '/assets/zealix/zealix-pos-01.jpg',
-      '/assets/zealix/zealix-tarjeta.jpg',
+      '/assets/zealix/zealix-01.png',
       '/assets/zealix/zealix-zea-mobile.jpg',
-      '/assets/zealix/zealix-brochure.png',
+      '/assets/zealix/zealix-06.png',
     ],
     campaigns: [
       {
