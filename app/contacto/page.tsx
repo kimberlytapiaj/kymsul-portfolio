@@ -46,19 +46,19 @@ export default function ContactoPage() {
   return (
     <PageLayout>
       {/* Header */}
-      <section className="px-24 pt-20 pb-20 border-b border-[rgba(13,13,13,0.08)]">
+      <section className="px-6 lg:px-24 pt-12 lg:pt-20 pb-12 lg:pb-20 border-b border-[rgba(13,13,13,0.08)]">
         <div className="max-w-[1440px] mx-auto">
           <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-6">
             CONTACTO
           </p>
           <p
-            className="text-[96px] text-dark leading-[0.9]"
+            className="text-[clamp(48px,8vw,96px)] text-dark leading-[0.9]"
             style={{ fontFamily: 'var(--font-franklin-cond)' }}
           >
             ¿Hablamos?
           </p>
           <p
-            className="font-fraunces font-light italic text-[96px] text-dark leading-[0.9]"
+            className="font-fraunces font-light italic text-[clamp(48px,8vw,96px)] text-dark leading-[0.9]"
             style={WONK}
           >
             Cuéntame tu idea.
@@ -67,11 +67,8 @@ export default function ContactoPage() {
       </section>
 
       {/* Content */}
-      <section className="px-24 py-20">
-        <div
-          className="max-w-[1440px] mx-auto grid gap-24"
-          style={{ gridTemplateColumns: '1fr 400px' }}
-        >
+      <section className="px-6 lg:px-24 py-12 lg:py-20">
+        <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-12 lg:gap-24">
           {/* Form */}
           <div>
             {sent ? (
@@ -169,7 +166,7 @@ export default function ContactoPage() {
           </div>
 
           {/* Contact info */}
-          <div className="pl-8 border-l border-[rgba(13,13,13,0.08)]">
+          <div className="lg:pl-8 border-t lg:border-t-0 lg:border-l border-[rgba(13,13,13,0.08)] pt-8 lg:pt-0">
             <div className="sticky top-24 space-y-12">
               <div>
                 <p className="font-mono text-[10px] text-muted2 tracking-[1.4px] mb-4">

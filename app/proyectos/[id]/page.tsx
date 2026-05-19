@@ -24,7 +24,7 @@ export default async function CasoPage({ params }: Props) {
   return (
     <PageLayout>
       {/* Hero */}
-      <section className="px-24 pt-20 pb-16 border-b border-[rgba(13,13,13,0.08)]">
+      <section className="px-6 lg:px-24 pt-12 lg:pt-20 pb-10 lg:pb-16 border-b border-[rgba(13,13,13,0.08)]">
         <div className="max-w-[1440px] mx-auto">
           <Link
             href="/proyectos"
@@ -32,25 +32,25 @@ export default async function CasoPage({ params }: Props) {
           >
             ← PROYECTOS
           </Link>
-          <div className="mt-10 flex items-end justify-between">
+          <div className="mt-8 lg:mt-10 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
             <div>
               <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-4">
                 {project.category} · {project.year}
               </p>
               <h1
-                className="text-[80px] text-dark leading-[0.9]"
+                className="text-[clamp(40px,7vw,80px)] text-dark leading-[0.9]"
                 style={{ fontFamily: 'var(--font-franklin-cond)' }}
               >
                 {project.name}
               </h1>
               <p
-                className="font-fraunces font-light italic text-[48px] text-muted leading-[1.1] mt-2"
+                className="font-fraunces font-light italic text-[clamp(24px,4vw,48px)] text-muted leading-[1.1] mt-2"
                 style={WONK}
               >
                 {project.tagline}
               </p>
             </div>
-            <div className="flex flex-wrap gap-2 max-w-[320px] justify-end pb-2">
+            <div className="flex flex-wrap gap-2 lg:max-w-[320px] lg:justify-end pb-2">
               {project.tags.map((tag) => (
                 <span
                   key={tag}
@@ -78,9 +78,9 @@ export default async function CasoPage({ params }: Props) {
       </div>
 
       {/* Content */}
-      <section className="px-24 py-24">
+      <section className="px-6 lg:px-24 py-12 lg:py-24">
         <div className="max-w-[1440px] mx-auto">
-          <div className="grid grid-cols-[1fr_2fr] gap-24">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-10 lg:gap-24">
 
             {/* Left: meta */}
             <div className="space-y-10">
@@ -128,7 +128,7 @@ export default async function CasoPage({ params }: Props) {
 
           {/* Main gallery */}
           {project.gallery.length > 1 && (
-            <div className="mt-24 columns-2 gap-4">
+            <div className="mt-12 lg:mt-24 columns-1 lg:columns-2 gap-4">
               {project.gallery.map((src, i) => (
                 <div key={i} className="break-inside-avoid mb-4">
                   <GalleryItem src={src} alt={`${project.name} ${i + 1}`} />
@@ -141,7 +141,7 @@ export default async function CasoPage({ params }: Props) {
 
       {/* Campaigns / Sub-projects */}
       {project.campaigns && project.campaigns.length > 0 && (
-        <section className="border-t border-[rgba(13,13,13,0.08)] px-24 py-20 bg-[rgba(13,13,13,0.02)]">
+        <section className="border-t border-[rgba(13,13,13,0.08)] px-6 lg:px-24 py-12 lg:py-20 bg-[rgba(13,13,13,0.02)]">
           <div className="max-w-[1440px] mx-auto">
             <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-16">CAMPAÑAS</p>
             <div className="space-y-20">
@@ -374,7 +374,7 @@ function NextProject({ currentId }: { currentId: string }) {
   const next = projects[(idx + 1) % projects.length]
 
   return (
-    <section className="border-t border-[rgba(13,13,13,0.08)] px-24 py-16">
+    <section className="border-t border-[rgba(13,13,13,0.08)] px-6 lg:px-24 py-10 lg:py-16">
       <div className="max-w-[1440px] mx-auto flex items-center justify-between">
         <p className="font-mono text-[11px] text-muted2 tracking-[1.76px]">SIGUIENTE PROYECTO</p>
         <Link

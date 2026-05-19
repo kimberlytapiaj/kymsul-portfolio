@@ -49,16 +49,6 @@ export default function Nav() {
 
           {/* Right side */}
           <div className="flex items-center gap-4">
-            {/* Lang toggle */}
-            <div className="border border-[rgba(13,13,13,0.15)] rounded-full p-[3px] flex items-center">
-              <span className="bg-dark text-bg font-mono text-[10px] rounded-full w-9 h-[26px] flex items-center justify-center">
-                ES
-              </span>
-              <span className="text-muted2 font-mono text-[10px] rounded-full w-9 h-[26px] flex items-center justify-center cursor-pointer">
-                EN
-              </span>
-            </div>
-
             {/* Hamburger — mobile only */}
             <button
               className="lg:hidden flex flex-col gap-[5px] p-1"

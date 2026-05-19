@@ -6,36 +6,6 @@ const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 const services = [
   {
     num: '01',
-    light: 'Motion',
-    bold: 'graphics',
-    tagline: 'Tu marca, en movimiento.',
-    desc: 'Produzco identidades audiovisuales completas: desde el concepto hasta la entrega final. Stings de marca, loops para redes, openers de YouTube, reels y contenido animado adaptado a cada plataforma.',
-    deliverables: [
-      'Sting / logo animado',
-      'Pack de templates para redes',
-      'Intro & outro para video',
-      'Motion guidelines',
-      'Archivos fuente editables',
-    ],
-    tools: ['After Effects', 'Premiere Pro', 'Remotion', 'CapCut'],
-  },
-  {
-    num: '02',
-    light: 'IA',
-    bold: 'aplicada',
-    tagline: 'Creatividad aumentada, no reemplazada.',
-    desc: 'Integro modelos de IA generativa en flujos de trabajo creativos reales. Desde generación de conceptos visuales hasta pipelines de producción automatizados que reducen tiempos y amplían posibilidades.',
-    deliverables: [
-      'Conceptualización con IA',
-      'Generación de assets visuales',
-      'Pipeline de producción custom',
-      'Prompts y workflows documentados',
-      'Integración en tu flujo actual',
-    ],
-    tools: ['Midjourney', 'Runway', 'Stable Diffusion', 'Veo', 'ComfyUI'],
-  },
-  {
-    num: '03',
     light: 'Branding',
     bold: 'estratégico',
     tagline: 'Sistemas de marca que escalan.',
@@ -49,25 +19,55 @@ const services = [
     ],
     tools: ['Figma', 'Illustrator', 'Photoshop', 'Canva'],
   },
+  {
+    num: '02',
+    light: 'Producción',
+    bold: 'IA‑native',
+    tagline: 'Creatividad aumentada, no reemplazada.',
+    desc: 'Flujos creativos con Gemini, Runway y Claude Code: generación de imagen, video y concepto integrados al proceso de marca. Lo que antes requería locación y horas de edición ahora es iteración de prompts con dirección de arte.',
+    deliverables: [
+      'Conceptualización con IA',
+      'Generación de assets visuales',
+      'Pipeline de producción custom',
+      'Prompts y workflows documentados',
+      'Integración en tu flujo actual',
+    ],
+    tools: ['Gemini', 'Runway', 'Veo', 'Claude Code', 'ComfyUI'],
+  },
+  {
+    num: '03',
+    light: 'Contenido &',
+    bold: 'motion visual',
+    tagline: 'Tu marca, en movimiento.',
+    desc: 'Sistemas de contenido para redes con motion como herramienta: reels, templates y piezas que comunican con coherencia de marca en cada formato. Desde el concepto hasta la entrega final.',
+    deliverables: [
+      'Sting / logo animado',
+      'Pack de templates para redes',
+      'Intro & outro para video',
+      'Motion guidelines',
+      'Archivos fuente editables',
+    ],
+    tools: ['After Effects', 'Premiere Pro', 'Remotion', 'CapCut'],
+  },
 ]
 
 export default function ServiciosPage() {
   return (
     <PageLayout>
       {/* Header */}
-      <section className="px-24 pt-20 pb-20 border-b border-[rgba(13,13,13,0.08)]">
+      <section className="px-6 lg:px-24 pt-12 lg:pt-20 pb-12 lg:pb-20 border-b border-[rgba(13,13,13,0.08)]">
         <div className="max-w-[1440px] mx-auto">
           <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-6">
             SERVICIOS
           </p>
           <p
-            className="text-[96px] text-dark leading-[0.9]"
+            className="text-[clamp(48px,8vw,96px)] text-dark leading-[0.9]"
             style={{ fontFamily: 'var(--font-franklin-cond)' }}
           >
             Tres disciplinas,
           </p>
           <p
-            className="font-fraunces font-light italic text-[96px] text-dark leading-[0.9]"
+            className="font-fraunces font-light italic text-[clamp(48px,8vw,96px)] text-dark leading-[0.9]"
             style={WONK}
           >
             un sistema.
@@ -76,36 +76,35 @@ export default function ServiciosPage() {
       </section>
 
       {/* Services list */}
-      <section className="px-24 py-0">
+      <section className="px-6 lg:px-24 py-0">
         <div className="max-w-[1440px] mx-auto">
           {services.map((s) => (
             <div
               key={s.num}
-              className="py-20 border-b border-[rgba(13,13,13,0.08)] grid gap-16"
-              style={{ gridTemplateColumns: '1fr 1fr' }}
+              className="py-12 lg:py-20 border-b border-[rgba(13,13,13,0.08)] grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16"
             >
               {/* Left */}
               <div>
                 <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-6">
                   — {s.num}
                 </p>
-                <p className="text-[56px] text-dark leading-none mb-2" style={WONK}>
+                <p className="text-[clamp(36px,4.5vw,56px)] text-dark leading-none mb-2" style={WONK}>
                   <span className="font-fraunces font-light">{s.light} </span>
                   <span className="font-fraunces font-semibold">{s.bold}</span>
                 </p>
                 <p
-                  className="font-fraunces font-light italic text-[20px] text-muted2 mb-8"
+                  className="font-fraunces font-light italic text-[18px] lg:text-[20px] text-muted2 mb-8"
                   style={WONK}
                 >
                   {s.tagline}
                 </p>
-                <p className="font-sans text-[16px] text-muted leading-[1.6]">
+                <p className="font-sans text-[15px] lg:text-[16px] text-muted leading-[1.6]">
                   {s.desc}
                 </p>
               </div>
 
               {/* Right */}
-              <div className="pl-16">
+              <div className="lg:pl-16">
                 <div className="mb-10">
                   <p className="font-mono text-[10px] text-muted2 tracking-[1.4px] mb-4">
                     ENTREGABLES

@@ -12,7 +12,7 @@ const capacidades = [
 ]
 
 const trayectoria = [
-  { year: '2020',    title: 'Primeros proyectos',    detail: 'Freelance · Puebla' },
+  { year: '2020',    title: 'Primeros proyectos',    detail: 'Proyectos propios · Puebla' },
   { year: '2021',    title: 'Sistemas de contenido', detail: 'Motion + Brand + Social Media' },
   { year: '2022',    title: 'IA en el flujo',        detail: 'Midjourney, Stable Diffusion' },
   { year: '2023',    title: 'Kymsul',                detail: 'Marca propia · Brand & Motion' },
@@ -91,7 +91,7 @@ export default function SobreMiPage() {
             </p>
             <p className="text-bg leading-[1]" style={{ fontFamily: 'var(--font-franklin-cond)', fontSize: 'clamp(36px,6vw,56px)', fontWeight: 700 }}>
               Diseño desde{' '}
-              <span className="text-[#A89EF5]">sistema,</span>
+              <span className="text-lav">sistema,</span>
             </p>
             <p className="text-bg leading-[1]" style={{ fontFamily: 'var(--font-franklin-cond)', fontSize: 'clamp(36px,6vw,56px)', fontWeight: 700 }}>
               no desde piezas.
@@ -206,7 +206,7 @@ export default function SobreMiPage() {
             >
               ¿Tienes una
             </p>
-            <p className="font-fraunces font-light italic text-[#A89EF5] leading-[0.9]" style={{ ...WONK, fontSize: 'clamp(48px,8vw,72px)' }}>
+            <p className="font-fraunces font-light italic text-lav leading-[0.9]" style={{ ...WONK, fontSize: 'clamp(48px,8vw,72px)' }}>
               idea?
             </p>
           </div>
@@ -225,7 +225,7 @@ export default function SobreMiPage() {
                 href="/proyectos"
                 className="inline-flex items-center border border-[rgba(255,255,255,0.2)] text-bg font-sans text-[13px] rounded-full px-6 py-[14px] hover:border-[rgba(255,255,255,0.5)] transition-colors"
               >
-                Conóceme
+                Ver proyectos
               </Link>
             </div>
           </div>

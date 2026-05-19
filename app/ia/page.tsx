@@ -138,7 +138,7 @@ export default function IAPage() {
             <p className="text-[rgba(255,255,255,0.25)] tracking-[1.4px] text-[9px] mb-5">
               BRAND FILE · OBSIDIAN
             </p>
-            <p className="text-[#A89EF5]">## Colores</p>
+            <p className="text-lav">## Colores</p>
             <p className="text-[rgba(255,255,255,0.55)]">
               Primario: <span className="text-bg">#4945e9</span>
             </p>
@@ -162,7 +162,7 @@ export default function IAPage() {
             </p>
             <p className="text-[rgba(255,255,255,0.45)]">
               {'>'} Leyendo{' '}
-              <span className="text-[#A89EF5]">Axomy Studio — Brand Guidelines.md</span>
+              <span className="text-lav">Axomy Studio — Brand Guidelines.md</span>
             </p>
             <p className="text-[rgba(255,255,255,0.45)]">
               {'>'} Cargando paleta · tipografía · reglas visuales...
@@ -181,7 +181,7 @@ export default function IAPage() {
             </p>
             <p className="text-[rgba(255,255,255,0.45)]">
               Coherente con marca →{' '}
-              <span className="text-[#A89EF5]">aprobado en primera revisión</span>
+              <span className="text-lav">aprobado en primera revisión</span>
             </p>
           </div>
 

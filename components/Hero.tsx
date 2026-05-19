@@ -38,7 +38,7 @@ export default function Hero() {
       <div className="border-t border-[rgba(13,13,13,0.1)] pt-6 lg:pt-8 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5">
         <div>
           <p className="font-mono text-[10px] lg:text-[11px] text-muted2 tracking-[1.76px] mb-2">
-            DESDE UNA SOLA DIRECCIÓN CREATIVA
+            PUEBLA, MX · DISPONIBLE
           </p>
           <p className="font-sans text-[15px] lg:text-[17px] text-muted leading-[1.5] max-w-[540px]">
             Sistemas de marca que se ven, comunican e impactan desde una sola dirección creativa.
