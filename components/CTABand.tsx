@@ -24,24 +24,13 @@ export default function CTABand() {
         </div>
 
         {/* Right content */}
-        <div className="lg:max-w-[440px]">
-          <p className="font-sans text-[15px] lg:text-[18px] text-[rgba(255,255,255,0.72)] leading-normal mb-8">
-            Cuéntame qué estás construyendo. Siempre reviso personalmente y respondo rápido.
-          </p>
-          <div className="flex items-center gap-4">
-            <Link
-              href="/contacto"
-              className="bg-lav text-dark font-sans text-[13px] rounded-full px-6 lg:px-8 h-[50px] inline-flex items-center hover:opacity-90 transition-opacity"
-            >
-              Trabajemos juntos
-            </Link>
-            <Link
-              href="/sobre-mi"
-              className="border border-[rgba(255,255,255,0.3)] text-white font-sans text-[13px] rounded-full px-6 lg:px-8 h-[50px] inline-flex items-center hover:border-white/60 transition-colors"
-            >
-              Conóceme
-            </Link>
-          </div>
+        <div>
+          <Link
+            href="/contacto"
+            className="bg-lav text-dark font-sans text-[13px] rounded-full px-8 h-[50px] inline-flex items-center hover:opacity-90 transition-opacity"
+          >
+            Trabajemos juntos
+          </Link>
         </div>
 
       </div>
