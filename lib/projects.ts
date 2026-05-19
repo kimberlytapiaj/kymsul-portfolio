@@ -218,7 +218,6 @@ export const projects: Project[] = [
       'Campaña de paid media para las disciplinas del club en múltiples formatos, más reels, piezas de activación y contenido orgánico para feed e historias. Collab Beatness × Kinabela: 2 reels de invitación y levantamiento de contenido en el evento.',
     gallery: [
       '/assets/beatness/beatness-01.jpg',
-      '/assets/beatness/beatness-reel-cycling-web.mp4',
       '/assets/beatness/beatness-02.jpg',
       '/assets/beatness/beatness-03.jpg',
       '/assets/beatness/beatness-04.jpg',
@@ -256,6 +255,21 @@ export const projects: Project[] = [
               { items: ['/assets/beatness/beatness-ev-switch.png'] },
               { items: ['/assets/beatness/beatness-ev-box-kids.png'] },
               { items: ['/assets/beatness/beatness-ev-tec.png'] },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Collab · Beatness × Kinabela',
+        objective: 'Clase de cycling en el rooftop de Kinabela Derma — collab entre el fitness studio y la clínica de estética. Reels de invitación, pieza de activación y levantamiento de contenido en el evento.',
+        formats: ['Reel · Invitación', 'Reel · Evento', 'Post · Activación'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/beatness/beatness-reel-cycling-web.mp4'] },
+              { items: ['/assets/beatness/beatness-reel-04feb-web.mp4'] },
+              { items: ['/assets/beatness/beatness-ev-double-ride.png'] },
             ],
           },
         ],
