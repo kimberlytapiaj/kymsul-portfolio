@@ -5,7 +5,7 @@ import Image from 'next/image'
 const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 
 const capacidades = [
-  { cat: 'SOFTWARE', items: ['After Effects', 'Premiere Pro', 'Illustrator', 'Photoshop', 'IA Tools'] },
+  { cat: 'SOFTWARE', items: ['After Effects', 'Premiere Pro', 'Illustrator', 'Photoshop', 'Figma · Canva', 'Gemini · Veo · Runway'] },
   { cat: 'MOTION',   items: ['Motion graphics', 'Storyboarding', 'Animación 2D/3D', 'Color grading', 'Kinetic typography'] },
   { cat: 'BRANDING', items: ['Identity systems', 'Typography', 'Art direction', 'Brand strategy', 'Guidelines'] },
   { cat: 'CONTENT',  items: ['Content design', 'Campaign visuals', 'Social media visuals', 'Visual storytelling', 'Content strategy'] },
@@ -14,10 +14,10 @@ const capacidades = [
 const trayectoria = [
   { year: '2020',    title: 'Primeros proyectos',    detail: 'Proyectos propios · Puebla' },
   { year: '2021',    title: 'Sistemas de contenido', detail: 'Motion + Brand + Social Media' },
-  { year: '2022',    title: 'IA en el flujo',        detail: 'Midjourney, Stable Diffusion' },
+  { year: '2022',    title: 'IA en el flujo',        detail: 'Primeras exploraciones · Midjourney' },
   { year: '2023',    title: 'Kymsul',                detail: 'Marca propia · Brand & Motion' },
   { year: '2024–25', title: 'Brand Lead, Zealix',    detail: 'Identidad visual · SaaS' },
-  { year: '2026 →',  title: 'NexLaunch',             detail: 'Junior Graphic Designer · Agencia' },
+  { year: '2026 →',  title: 'NexLaunch',             detail: 'Jr Graphic Designer · Reels, campañas multiformato, adaptación bilingüe' },
 ]
 
 const formacion = [
