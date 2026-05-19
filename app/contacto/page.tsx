@@ -205,13 +205,19 @@ export default function ContactoPage() {
                   SOCIAL
                 </p>
                 <div className="space-y-3">
-                  {['Instagram', 'Behance', 'LinkedIn'].map((s) => (
+                  {[
+                    { label: 'Instagram', href: 'https://www.instagram.com/kymsul/' },
+                    { label: 'Behance',   href: '#' },
+                    { label: 'LinkedIn',  href: '#' },
+                  ].map((s) => (
                     <a
-                      key={s}
-                      href="#"
+                      key={s.label}
+                      href={s.href}
+                      target={s.href !== '#' ? '_blank' : undefined}
+                      rel={s.href !== '#' ? 'noopener noreferrer' : undefined}
                       className="block font-sans text-[15px] text-muted hover:text-dark transition-colors"
                     >
-                      {s} →
+                      {s.label} →
                     </a>
                   ))}
                 </div>
