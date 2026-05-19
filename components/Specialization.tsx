@@ -19,7 +19,7 @@ const specs = [
     num: '03',
     light: 'Contenido &',
     bold: 'motion visual',
-    desc: 'Sistemas de contenido para redes con motion como herramienta: reels, templates y piezas que comunican con coherencia de marca en cada formato.',
+    desc: 'Sistemas de contenido para redes con motion como herramienta: reels, templates y piezas que comunican con coherencia de marca en cada plataforma.',
   },
 ]
 

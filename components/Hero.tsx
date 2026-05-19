@@ -8,7 +8,7 @@ export default function Hero() {
       {/* Eyebrow */}
       <div className="mb-10 lg:mb-14">
         <p className="font-mono text-[10px] lg:text-[11px] text-muted2 tracking-[1.76px]">
-          BRAND & CONTENT DESIGNER
+          BRAND · MOTION · CONTENT DESIGNER
         </p>
       </div>
 
