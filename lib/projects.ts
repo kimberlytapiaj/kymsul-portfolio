@@ -218,7 +218,7 @@ export const projects: Project[] = [
       'Paid media, reels, stories y carruseles orgánicos para el club. Collab Beatness × Kinabela: 2 clases de cycling llenas en el rooftop — ~40 personas.',
     gallery: [
       '/assets/beatness/beatness-01.jpg',
-      '/assets/beatness/beatness-reel-cycling-web.mp4',
+      '/assets/beatness/beatness-reel-04feb-web.mp4',
       '/assets/beatness/beatness-02.jpg',
       '/assets/beatness/beatness-03.jpg',
       '/assets/beatness/beatness-04.jpg',
@@ -269,7 +269,7 @@ export const projects: Project[] = [
         sections: [
           {
             groups: [
-              { items: ['/assets/beatness/beatness-reel-04feb-web.mp4'] },
+              { items: ['/assets/beatness/beatness-reel-cycling-web.mp4'] },
             ],
           },
         ],
