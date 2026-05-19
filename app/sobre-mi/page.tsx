@@ -13,12 +13,10 @@ const capacidades = [
 ]
 
 const trayectoria = [
-  { year: '2020',    title: 'Motion para streamers',      detail: 'Overlays · Emotes · Starting screens · Puebla' },
-  { year: '2021',    title: 'Primeras comisiones',        detail: 'Clientes reales · Motion + Diseño de marca' },
-  { year: '2022',    title: 'IA en el flujo',             detail: 'Primeras exploraciones · Midjourney' },
-  { year: '2023',    title: 'Kymsul',                     detail: 'Lanzamiento · Pivote a branding · Primeros clientes de marca' },
-  { year: '2024–25', title: 'Directora de Arte · Zealix', detail: 'Naming · Identidad visual · SaaS' },
-  { year: '2026 →',  title: 'NexLaunch',                  detail: 'Brand & Content Designer · Producción creativa multimarca' },
+  { year: '2023',    title: 'Kymsul',                     detail: 'Comisiones streaming · +80 clientes · Assets animados' },
+  { year: '2023–24', title: 'Brand design freelance',     detail: 'Branding end-to-end · Identidades de marca · Múltiples industrias' },
+  { year: '2024 →',  title: 'Directora de Arte · Zealix', detail: 'Naming · Identidad visual · Dirección creativa · SaaS' },
+  { year: '2026 →',  title: 'NexLaunch',                  detail: 'Brand & Content Designer · Producción IA-native · Multimarca', current: true },
 ]
 
 const formacion = [
@@ -40,52 +38,56 @@ export default function SobreMiPage() {
   return (
     <PageLayout>
 
-      {/* ── Hero — Foto + Nombre ─────────────── */}
-      <section className="px-6 lg:px-24 pt-12 lg:pt-20 pb-12 lg:pb-20 border-b border-[rgba(13,13,13,0.08)]">
+      {/* ── Hero — dark editorial ─────────── */}
+      <section className="bg-dark px-6 lg:px-24 pt-12 lg:pt-20 pb-12 lg:pb-20">
         <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
 
           {/* Foto */}
-          <div className="relative w-full lg:w-[320px] shrink-0 aspect-[3/4] lg:aspect-[3/4] overflow-hidden rounded-sm">
+          <div className="relative w-full lg:w-[300px] shrink-0 aspect-[3/4] overflow-hidden">
             <Image
               src="/assets/kym-foto.jpg"
               alt="Kimberly Tapia Rubio"
               fill
               quality={90}
-              className="object-cover object-top"
-              sizes="(max-width: 1024px) 100vw, 320px"
+              className="object-cover object-top grayscale contrast-110"
+              sizes="(max-width: 1024px) 100vw, 300px"
             />
           </div>
 
           {/* Nombre + datos */}
           <div className="flex-1 pt-0 lg:pt-2">
-            <div className="mb-6 lg:mb-8 leading-[0.9]">
-              <p className="text-[clamp(52px,12vw,88px)] text-dark" style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 700 }}>
+            <p className="font-mono text-[10px] text-[rgba(255,255,255,0.35)] tracking-[2px] mb-8 lg:mb-10">
+              BRAND & CONTENT DESIGNER
+            </p>
+
+            <div className="mb-8 lg:mb-10 leading-[0.88]">
+              <p className="text-[clamp(56px,12vw,96px)] text-bg" style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 700 }}>
                 Kimberly
               </p>
-              <p className="text-[clamp(52px,12vw,88px)] text-dark" style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 400 }}>
+              <p className="text-[clamp(56px,12vw,96px)] text-bg" style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 400 }}>
                 Tapia
               </p>
-              <p className="font-fraunces font-light italic text-[clamp(52px,12vw,88px)] text-dark" style={WONK}>
+              <p className="font-fraunces font-light italic text-[clamp(56px,12vw,96px)] text-lav leading-[1]" style={WONK}>
                 Rubio.
               </p>
             </div>
 
-            <p className="font-sans text-[15px] lg:text-[16px] text-muted leading-[1.65] max-w-[480px] mb-8 lg:mb-10">
+            <p className="font-sans text-[15px] lg:text-[16px] text-[rgba(255,255,255,0.6)] leading-[1.7] max-w-[460px] mb-10 lg:mb-12">
               Diseñadora digital enfocada en la construcción de sistemas visuales. Integro branding, motion y contenido digital para desarrollar identidades con intención.
             </p>
 
-            <div className="flex flex-wrap gap-8 lg:gap-12 border-t border-[rgba(13,13,13,0.08)] pt-6 lg:pt-8">
+            <div className="flex flex-wrap gap-10 lg:gap-14 border-t border-[rgba(255,255,255,0.08)] pt-6 lg:pt-8">
               <div>
-                <p className="font-mono text-[10px] text-muted2 tracking-[1.4px] mb-2">ROL</p>
-                <p className="font-sans text-[14px] text-dark">Brand & Content Designer</p>
+                <p className="font-mono text-[10px] text-[rgba(255,255,255,0.3)] tracking-[1.6px] mb-2">ROL</p>
+                <p className="font-sans text-[14px] text-bg">Brand & Content Designer</p>
               </div>
               <div>
-                <p className="font-mono text-[10px] text-muted2 tracking-[1.4px] mb-2">BASE</p>
-                <p className="font-sans text-[14px] text-dark">Puebla, MX</p>
+                <p className="font-mono text-[10px] text-[rgba(255,255,255,0.3)] tracking-[1.6px] mb-2">BASE</p>
+                <p className="font-sans text-[14px] text-bg">Puebla, MX</p>
               </div>
               <div>
-                <p className="font-mono text-[10px] text-muted2 tracking-[1.4px] mb-2">DESDE</p>
-                <p className="font-sans text-[14px] text-dark">2020</p>
+                <p className="font-mono text-[10px] text-[rgba(255,255,255,0.3)] tracking-[1.6px] mb-2">DESDE</p>
+                <p className="font-sans text-[14px] text-bg">2020</p>
               </div>
             </div>
           </div>
@@ -93,11 +95,11 @@ export default function SobreMiPage() {
         </div>
       </section>
 
-      {/* ── Práctica — sección negra ─────────── */}
-      <section className="bg-dark px-6 lg:px-24 py-16 lg:py-24">
+      {/* ── Práctica ─────────────────────── */}
+      <section className="bg-dark border-t border-[rgba(255,255,255,0.06)] px-6 lg:px-24 py-16 lg:py-24">
         <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row gap-10 lg:gap-24 items-start">
           <div className="flex-[1_1_0%]">
-            <p className="font-mono text-[11px] text-[rgba(255,255,255,0.4)] tracking-[1.76px] mb-8">
+            <p className="font-mono text-[11px] text-[rgba(255,255,255,0.35)] tracking-[1.76px] mb-8">
               PRÁCTICA
             </p>
             <p className="text-bg leading-[1]" style={{ fontFamily: 'var(--font-franklin-cond)', fontSize: 'clamp(36px,6vw,56px)', fontWeight: 700 }}>
@@ -109,20 +111,20 @@ export default function SobreMiPage() {
             </p>
           </div>
           <div className="flex-[1_1_0%] space-y-5 pt-0 lg:pt-2">
-            <p className="font-sans text-[15px] text-[rgba(255,255,255,0.7)] leading-[1.7]">
+            <p className="font-sans text-[15px] text-[rgba(255,255,255,0.65)] leading-[1.7]">
               Mi enfoque parte de entender el diseño como un sistema que conecta identidad, comunicación y experiencia.
             </p>
-            <p className="font-sans text-[15px] text-[rgba(255,255,255,0.7)] leading-[1.7]">
+            <p className="font-sans text-[15px] text-[rgba(255,255,255,0.65)] leading-[1.7]">
               Trabajo desde lo visual, pero también desde la estructura: narrativa, movimiento y lógica detrás de cada decisión.
             </p>
-            <p className="font-sans text-[15px] text-[rgba(255,255,255,0.7)] leading-[1.7]">
+            <p className="font-sans text-[15px] text-[rgba(255,255,255,0.65)] leading-[1.7]">
               Busco colaborar con marcas y creadores que entienden el valor de construir con intención, no solo de verse bien.
             </p>
           </div>
         </div>
       </section>
 
-      {/* ── Capacidades ──────────────────────── */}
+      {/* ── Capacidades ──────────────────── */}
       <section className="px-6 lg:px-24 py-16 lg:py-24 border-b border-[rgba(13,13,13,0.08)]">
         <div className="max-w-[1440px] mx-auto">
           <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-6">
@@ -133,8 +135,8 @@ export default function SobreMiPage() {
           </p>
           <div className="grid grid-cols-2 lg:grid-cols-5 gap-6">
             {capacidades.map(({ cat, items }) => (
-              <div key={cat} className="border-t border-[rgba(13,13,13,0.12)] pt-6 lg:pt-8">
-                <p className="font-mono text-[10px] text-muted2 tracking-[1.4px] mb-5 lg:mb-6">
+              <div key={cat} className="border-t-2 border-[#0d0d0d] pt-6 lg:pt-8">
+                <p className="font-mono text-[10px] text-lav tracking-[1.4px] mb-5 lg:mb-6">
                   {cat}
                 </p>
                 <ul className="space-y-3">
@@ -150,7 +152,34 @@ export default function SobreMiPage() {
         </div>
       </section>
 
-      {/* ── Formación ────────────────────────── */}
+      {/* ── Trayectoria ──────────────────── */}
+      <section className="bg-dark px-6 lg:px-24 py-16 lg:py-24">
+        <div className="max-w-[1440px] mx-auto">
+          <p className="font-mono text-[11px] text-[rgba(255,255,255,0.35)] tracking-[1.76px] mb-10 lg:mb-16">
+            TRAYECTORIA
+          </p>
+          <div>
+            {trayectoria.map(({ year, title, detail, current }, i) => (
+              <div
+                key={year}
+                className={`flex flex-col lg:flex-row lg:items-baseline gap-1 lg:gap-12 py-5 ${i < trayectoria.length - 1 ? 'border-b border-[rgba(255,255,255,0.07)]' : ''}`}
+              >
+                <p className={`font-mono text-[11px] tracking-[1.4px] lg:w-[80px] shrink-0 ${current ? 'text-lav' : 'text-[rgba(255,255,255,0.35)]'}`}>
+                  {year}
+                </p>
+                <p className={`font-sans text-[17px] lg:text-[18px] flex-1 ${current ? 'text-bg' : 'text-[rgba(255,255,255,0.75)]'}`}>
+                  {title}
+                </p>
+                <p className="font-mono text-[10px] lg:text-[11px] text-[rgba(255,255,255,0.3)] tracking-[1.2px] lg:text-right">
+                  {detail}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Formación ────────────────────── */}
       <section className="px-6 lg:px-24 py-16 lg:py-24 border-b border-[rgba(13,13,13,0.08)]">
         <div className="max-w-[1440px] mx-auto">
           <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-10 lg:mb-16">
@@ -170,7 +199,7 @@ export default function SobreMiPage() {
                   <p className="font-mono text-[11px] text-muted2 tracking-[1.2px] mt-1">{inst}</p>
                 </div>
                 {note && (
-                  <span className="self-start font-mono text-[10px] text-muted2 tracking-[1.2px] border border-[rgba(13,13,13,0.15)] rounded-full px-3 py-1">
+                  <span className="self-start font-mono text-[10px] text-lav tracking-[1.2px] border border-[rgba(198,184,255,0.4)] rounded-full px-3 py-1">
                     {note}
                   </span>
                 )}
@@ -180,17 +209,17 @@ export default function SobreMiPage() {
         </div>
       </section>
 
-      {/* ── Certificaciones ─────────────────── */}
+      {/* ── Certificaciones ─────────────── */}
       <section className="px-6 lg:px-24 py-16 lg:py-24 border-b border-[rgba(13,13,13,0.08)]">
         <div className="max-w-[1440px] mx-auto">
           <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-10 lg:mb-16">
             CERTIFICACIONES
           </p>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16">
-            {certificaciones.map(({ course, inst, year }, i) => (
+            {certificaciones.map(({ course, inst, year }) => (
               <div
                 key={course}
-                className={`flex flex-col gap-1 py-5 border-b border-[rgba(13,13,13,0.08)]`}
+                className="flex flex-col gap-1 py-5 border-b border-[rgba(13,13,13,0.08)]"
               >
                 <div className="flex items-baseline justify-between gap-4">
                   <p className="font-sans text-[15px] lg:text-[16px] text-dark">{course}</p>
@@ -203,34 +232,7 @@ export default function SobreMiPage() {
         </div>
       </section>
 
-      {/* ── Trayectoria ──────────────────────── */}
-      <section className="px-6 lg:px-24 py-16 lg:py-24 border-b border-[rgba(13,13,13,0.08)]">
-        <div className="max-w-[1440px] mx-auto">
-          <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-10 lg:mb-16">
-            TRAYECTORIA
-          </p>
-          <div>
-            {trayectoria.map(({ year, title, detail }, i) => (
-              <div
-                key={year}
-                className={`flex flex-col lg:flex-row lg:items-baseline gap-1 lg:gap-12 py-5 ${i < trayectoria.length - 1 ? 'border-b border-[rgba(13,13,13,0.08)]' : ''}`}
-              >
-                <p className="font-mono text-[11px] text-muted2 tracking-[1.4px] lg:w-[80px] shrink-0">
-                  {year}
-                </p>
-                <p className="font-sans text-[17px] lg:text-[18px] text-dark flex-1">
-                  {title}
-                </p>
-                <p className="font-mono text-[10px] lg:text-[11px] text-muted2 tracking-[1.2px] lg:text-right">
-                  {detail}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── CTA ──────────────────────────────── */}
+      {/* ── CTA ──────────────────────────── */}
       <section className="bg-dark px-6 lg:px-24 py-16 lg:py-24">
         <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10">
           <div>
@@ -245,13 +247,13 @@ export default function SobreMiPage() {
             </p>
           </div>
           <div className="lg:max-w-[320px]">
-            <p className="font-sans text-[15px] text-[rgba(255,255,255,0.7)] leading-[1.65] mb-8">
+            <p className="font-sans text-[15px] text-[rgba(255,255,255,0.65)] leading-[1.65] mb-8">
               Cuéntame qué estás construyendo. Reviso cada solicitud personalmente y respondo en menos de 48 horas.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/contacto"
-                className="inline-flex items-center bg-[#A89EF5] text-dark font-sans text-[13px] rounded-full px-6 py-[14px] hover:opacity-90 transition-opacity"
+                className="inline-flex items-center bg-lav text-dark font-sans text-[13px] rounded-full px-6 py-[14px] hover:opacity-90 transition-opacity"
               >
                 Trabajemos juntos →
               </Link>
