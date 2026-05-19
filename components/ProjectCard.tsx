@@ -11,6 +11,7 @@ type ProjectCardProps = {
   image: string
   tagline?: string
   accentColor?: string
+  agency?: string
   className?: string
   sizes?: string
 }
@@ -23,6 +24,7 @@ export default function ProjectCard({
   image,
   tagline,
   accentColor = 'white',
+  agency,
   className = '',
   sizes = '(max-width: 1440px) 55vw, 728px',
 }: ProjectCardProps) {

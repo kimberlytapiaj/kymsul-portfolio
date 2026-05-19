@@ -32,6 +32,7 @@ export type Project = {
   tags: string[]
   overview: string
   role: string
+  agency?: string
   challenge: string
   process: string
   result: string
@@ -244,6 +245,7 @@ export const projects: Project[] = [
     overview:
       'KOP es un club de pádel y tenis en San Antonio, TX. El proyecto incluyó tanto la marca principal —contenido deportivo para el club— como Kings Tavern, su restaurante interno, con una línea editorial propia dentro del mismo ecosistema.',
     role: 'Dirección de arte, producción de contenido y motion: editorial deportivo, carruseles educativos, reels, contenido diferenciado para Kings Tavern y paid media producido con imagen generativa IA y script de automatización en After Effects.',
+    agency: 'NexLaunch',
     challenge:
       'Manejar dos voces dentro de una misma cuenta sin que el contenido del restaurante opacara la identidad deportiva del club, ni viceversa. Cada sub-marca tenía que sentirse cohesionada pero distinguible.',
     process:
@@ -378,12 +380,13 @@ export const projects: Project[] = [
     overview:
       'BWL es una marca china de wellness con múltiples líneas de producto. El trabajo abarca producción de contenido para Instagram y paid media en inglés, más adaptación de reels al chino para RedNote (小红书) — cada pieza traducida y reformateada para el contexto cultural y el algoritmo de cada plataforma.',
     role: 'Dirección de arte, edición de video y producción de contenido. Adaptación bilingüe chino-inglés para Instagram y RedNote.',
+    agency: 'NexLaunch',
     challenge:
       'Adaptar el mismo contenido a dos plataformas con culturas visuales distintas: lo que funciona en Instagram no necesariamente conecta en RedNote. Cada versión tenía que sentirse nativa en su plataforma, no una simple traducción.',
     process:
       'Para cada reel: primero la versión en inglés con stock premium, motion type y ritmo occidental; luego la adaptación al chino con tipografía ajustada, copy nativo y referencias visuales que conectan con la audiencia de RedNote. Los estáticos de paid media siguen una línea limpia y premium que funciona en ambos mercados.',
     result:
-      'Más de 20 piezas entre paid media estático, reels bilingües y posts editoriales. Sistema de producción que permite adaptar cada pieza a dos idiomas sin perder coherencia de marca.',
+      'Más de 20 piezas entre paid media estático, reels bilingües y posts editoriales. Sistema de producción que permite adaptar cada pieza a dos idiomas sin perder coherencia de marca. Campaña May 1 · Global Love Your Skin Month: 53 likes y 43 sends — ratio de envíos alto para contenido editorial.',
     gallery: [
       '/assets/bwl/bwl-mothers-day-web.mp4',
       '/assets/bwl/bwl-11.png',
@@ -392,6 +395,38 @@ export const projects: Project[] = [
       '/assets/bwl/bwl-14.png',
     ],
     campaigns: [
+      {
+        name: 'May 1 · Global Love Your Skin Month',
+        objective: 'Campaña editorial para el Día Mundial del Amor por tu Piel — carrusel con fotografía de pieles diversas y copy inclusivo, adaptado en versión inglés para Instagram y chino para RedNote. 53 likes · 43 sends orgánicos.',
+        formats: ['Carrusel EN · Instagram', 'Carrusel 中文 · 小红书'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              {
+                items: [
+                  '/assets/bwl/bwl-glysm-01.png',
+                  '/assets/bwl/bwl-glysm-02.png',
+                  '/assets/bwl/bwl-glysm-03.png',
+                  '/assets/bwl/bwl-glysm-04.png',
+                  '/assets/bwl/bwl-glysm-05.png',
+                ],
+                carousel: true,
+              },
+              {
+                items: [
+                  '/assets/bwl/bwl-glysm-zh-01.png',
+                  '/assets/bwl/bwl-glysm-zh-02.png',
+                  '/assets/bwl/bwl-glysm-zh-03.png',
+                  '/assets/bwl/bwl-glysm-zh-04.png',
+                  '/assets/bwl/bwl-glysm-zh-05.png',
+                ],
+                carousel: true,
+              },
+            ],
+          },
+        ],
+      },
       {
         name: 'Avance',
         objective: 'Contenido de producto para Instagram y RedNote: reels bilingües adaptados por plataforma y carrusel educativo pensado para retención y guardados.',

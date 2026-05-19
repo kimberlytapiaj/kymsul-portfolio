@@ -96,6 +96,12 @@ export default async function CasoPage({ params }: Props) {
                 <p className="font-mono text-[10px] text-muted2 tracking-[1.6px] mb-3">DISCIPLINA</p>
                 <p className="font-sans text-[14px] text-muted">{project.category}</p>
               </div>
+              {project.agency && (
+                <div>
+                  <p className="font-mono text-[10px] text-muted2 tracking-[1.6px] mb-3">AGENCIA</p>
+                  <p className="font-sans text-[14px] text-muted">{project.agency}</p>
+                </div>
+              )}
             </div>
 
             {/* Right: case study text */}

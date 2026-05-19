@@ -11,9 +11,9 @@ const specs = [
   },
   {
     num: '02',
-    light: 'Motion &',
-    bold: 'contenido visual',
-    desc: 'Reels, motion graphics y sistemas de contenido para redes, piezas que comunican con movimiento y mantienen coherencia de marca.',
+    light: 'Contenido &',
+    bold: 'motion visual',
+    desc: 'Sistemas de contenido para redes con motion como herramienta: reels, templates y piezas que comunican con coherencia de marca en cada formato.',
   },
   {
     num: '03',
