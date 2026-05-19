@@ -167,14 +167,14 @@ export const projects: Project[] = [
     tagline: 'Aprendizaje que se ve, se siente y se recuerda.',
     tags: ['Branding', 'Identidad visual', 'Mascota', 'Brand book'],
     overview:
-      'BrainyBudzz es una plataforma EdTech dirigida a niños en etapa primaria. El reto fue crear una identidad que compitiera en atención contra redes sociales sin caer en el caos visual típico del segmento infantil — energética, pero con sistema.',
-    role: 'Diseño de identidad visual completo: naming, logotipo, mascota Bud, paleta, tipografía y brand book. Aplicación de la identidad en la plataforma digital.',
+      'BrainyBudzz es una plataforma EdTech gamificada dirigida a niños en etapa primaria. El reto fue crear una identidad que compitiera en atención contra redes sociales sin caer en el caos visual típico del segmento infantil: energética, pero con sistema.',
+    role: 'Diseño del logotipo, sistema visual completo, personaje Bud y aplicaciones de identidad en mockup digital.',
     challenge:
       'Crear algo que los niños encuentren divertido y los padres perciban como confiable. Dos audiencias opuestas con criterios de decisión completamente distintos.',
     process:
-      'Diseñé a Bud — una mascota modular basada en un casco de inventor infantil con visor de realidad virtual — que funciona como elemento vivo de la marca: puede expresar emociones, adaptarse a contextos y escalar a merchandise o animación. La paleta combina los primarios CMY con negro y lavanda para dar energía sin saturar.',
+      'Diseñé a Bud, una mascota modular basada en un casco de inventor infantil con visor de realidad virtual, que funciona como elemento vivo de la marca: puede expresar emociones, adaptarse a contextos y escalar a merchandise o animación. La paleta combina los primarios CMY con negro y lavanda para dar energía sin saturar.',
     result:
-      'Brand book completo: construcción de logotipo, sistema de reducciones, paleta Pantone documentada, tipografía y mascota lista para animar. Identidad aplicada a la plataforma digital en desktop y mobile.',
+      'Brand book completo: construcción de logotipo, sistema de reducciones, paleta Pantone documentada, tipografía y personaje Bud. Identidad aplicada en mockup digital de la plataforma.',
     gallery: [
       '/assets/brainy/brainy-12.png',
       '/assets/brainy/brainy-09.png',
