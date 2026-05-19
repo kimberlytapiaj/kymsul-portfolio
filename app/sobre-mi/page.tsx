@@ -27,6 +27,15 @@ const formacion = [
   { inst: 'Amerike, Puebla',                 degree: 'Lic. Comunicación y Producción Audiovisual',    period: '2026 →',      note: 'Próximamente' },
 ]
 
+const certificaciones = [
+  { course: 'Storytelling and Influencing: Communicate with Impact', inst: 'Macquarie University · Coursera', year: '2025' },
+  { course: 'Business Analytics',                                     inst: 'Campus BBVA · Coursera',          year: '2025' },
+  { course: 'Script Writing: Write a Pilot Episode for TV or Web Series', inst: 'Michigan State University · Coursera', year: '2026' },
+  { course: 'Write a Feature Length Screenplay for Film or Television',   inst: 'Michigan State University · Coursera', year: '2026' },
+  { course: 'Creative Writing: The Craft of Character',              inst: 'Wesleyan University · Coursera',   year: '2026' },
+  { course: 'Creative Writing: The Craft of Setting and Description', inst: 'Wesleyan University · Coursera',  year: '2026' },
+]
+
 export default function SobreMiPage() {
   return (
     <PageLayout>
@@ -165,6 +174,29 @@ export default function SobreMiPage() {
                     {note}
                   </span>
                 )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Certificaciones ─────────────────── */}
+      <section className="px-6 lg:px-24 py-16 lg:py-24 border-b border-[rgba(13,13,13,0.08)]">
+        <div className="max-w-[1440px] mx-auto">
+          <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-10 lg:mb-16">
+            CERTIFICACIONES
+          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16">
+            {certificaciones.map(({ course, inst, year }, i) => (
+              <div
+                key={course}
+                className={`flex flex-col gap-1 py-5 border-b border-[rgba(13,13,13,0.08)]`}
+              >
+                <div className="flex items-baseline justify-between gap-4">
+                  <p className="font-sans text-[15px] lg:text-[16px] text-dark">{course}</p>
+                  <p className="font-mono text-[10px] text-muted2 tracking-[1.2px] shrink-0">{year}</p>
+                </div>
+                <p className="font-mono text-[11px] text-muted2 tracking-[1.2px]">{inst}</p>
               </div>
             ))}
           </div>
