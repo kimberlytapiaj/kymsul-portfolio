@@ -53,7 +53,7 @@ export const projects: Project[] = [
     tags: ['Naming', 'Identidad visual', 'Brand guidelines', 'Manual de marca', 'Papelería', 'Social media', 'Estrategia de contenido'],
     overview:
       'Zealix es una plataforma mexicana con IA como motor central, diseñada para automatizar la gestión de restaurantes, cafeterías y negocios de comida — desde el inventario y las órdenes hasta el análisis de rentabilidad con el asistente Zea AI. El proyecto fue end-to-end: naming de Zealix y Zea, identidad visual completa desde boceto, aplicación de identidad en el producto digital, papelería corporativa y estrategia de contenido para redes sociales.',
-    role: 'Naming de Zealix y Zea (asistente IA). Identidad visual desde cero: bocetos, construcción del logotipo (isotipo · logotipo · imagotipo), sistema tipográfico en tres niveles (SUSE · Rubik · Inter), paleta cromática en modo claro y oscuro, manual de identidad, papelería corporativa para 6 integrantes. Mockups de identidad aplicada al producto: POS y app Zea Mobile. Estrategia de contenido y dirección creativa del equipo de social media para IG · FB · LinkedIn.',
+    role: 'Directora de Arte y Diseñadora de Marca. Naming de Zealix y Zea (asistente IA). Identidad visual desde cero: bocetos, construcción del logotipo (isotipo · logotipo · imagotipo), sistema tipográfico en tres niveles (SUSE · Rubik · Inter), paleta cromática en modo claro y oscuro, manual de identidad, papelería corporativa para 6 integrantes. Mockups de identidad aplicada al producto: POS y app Zea Mobile. Dirección creativa del equipo de diseño — estrategia de contenido, formatos y directrices de ejecución para IG · FB · LinkedIn.',
     challenge:
       'Construir una marca tecnológica mexicana que se sintiera accesible para dueños de restaurante sin experiencia en software, sin perder la credibilidad que un producto B2B requiere. La identidad tenía que anclar lo mexicano sin caer en lo folclórico. El sistema tenía que funcionar en modo claro y oscuro, en pantalla y en impresión, con contenido tan claro que cualquier operador de negocio lo entendiera sin tecnicismos.',
     process:
@@ -63,9 +63,9 @@ export const projects: Project[] = [
     campaignsLabel: 'TRABAJO',
     gallery: [
       '/assets/zealix/zealix-manual-mockup.jpg',
-      '/assets/zealix/zealix-dashboard.png',
+      '/assets/zealix/zealix-pos-01.jpg',
       '/assets/zealix/zealix-tarjeta.jpg',
-      '/assets/zealix/zealix-zea-chat.png',
+      '/assets/zealix/zealix-zea-mobile.jpg',
       '/assets/zealix/zealix-brochure.png',
     ],
     campaigns: [
@@ -87,13 +87,13 @@ export const projects: Project[] = [
       },
       {
         name: 'Identidad · Producto',
-        objective: 'Aplicación de identidad visual en el producto digital — mockups construidos sobre las interfaces reales del sistema, asegurando coherencia entre la marca y cada módulo: dashboard ejecutivo, inventario IA, gestión de mesas, menú, el asistente Zea AI y la app móvil.',
+        objective: 'Aplicación de identidad visual en el producto digital — mockups construidos sobre las interfaces reales del sistema, asegurando coherencia entre la marca y cada módulo: dashboard ejecutivo, inventario IA, gestión de mesas, menú (modo claro y oscuro), asistente Zea AI y la app móvil.',
         formats: ['Dashboard', 'Inventario IA', 'Gestión de Mesas', 'Menú', 'Asistente Zea AI', 'App Móvil'],
         gallery: [],
         sections: [
           {
             groups: [
-              { items: ['/assets/zealix/zealix-dashboard.png', '/assets/zealix/zealix-zea-chat.png', '/assets/zealix/zealix-ipad-mesas.png', '/assets/zealix/zealix-mac-inventario.png', '/assets/zealix/zealix-ipad-menu.png', '/assets/zealix/zealix-zea-mobile.jpg'], carousel: true, contain: true, wide: true },
+              { items: ['/assets/zealix/zealix-dashboard.png', '/assets/zealix/zealix-zea-chat.png', '/assets/zealix/zealix-ipad-mesas.png', '/assets/zealix/zealix-mac-inventario.png', '/assets/zealix/zealix-ipad-menu.png', '/assets/zealix/zealix-mac-menu.png', '/assets/zealix/zealix-zea-mobile.jpg'], carousel: true, contain: true, wide: true },
             ],
           },
         ],
@@ -127,12 +127,13 @@ export const projects: Project[] = [
       {
         name: 'Social Media',
         objective: 'Sistema de contenido creado desde cero: estrategia editorial con 4 pilares, formatos definidos y directrices de ejecución que hoy opera un equipo de diseño bajo dirección creativa. Posts de fotografía editorial, copy y composición para conectar con dueños de restaurantes, bares y cafeterías.',
-        formats: ['Post · Instagram'],
+        formats: ['Post · Instagram', 'Post · Facebook', 'Post · LinkedIn'],
         gallery: [],
         sections: [
           {
             groups: [
               { items: ['/assets/zealix/zealix-post-08-1.png', '/assets/zealix/zealix-post-08-2.png', '/assets/zealix/zealix-post-08-3.png', '/assets/zealix/zealix-post-08-4.png', '/assets/zealix/zealix-post-08-5.png', '/assets/zealix/zealix-post-08-6.png', '/assets/zealix/zealix-post-08-7.png'], carousel: true },
+              { items: ['/assets/zealix/zealix-post-11.png'] },
               { items: ['/assets/zealix/zealix-post-04.png'] },
               { items: ['/assets/zealix/zealix-post-09.png'] },
               { items: ['/assets/zealix/zealix-post-12.png'] },
