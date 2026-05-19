@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-bg: #f5f3ee;
+  --color-bg: #fafaf8;
   --color-dark: #0d0d0d;
   --color-muted: #55504a;
   --color-muted2: #948e84;
@@ -18,7 +18,7 @@
 }
 
 body {
-  background-color: #f5f3ee;
+  background-color: #fafaf8;
   color: #0d0d0d;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;

@@ -40,7 +40,7 @@ export default function MediaCell(props: Props) {
   return (
     <>
       <div
-        className={`${cellClass} overflow-hidden rounded-sm bg-[#f5f3ee] relative group cursor-zoom-in`}
+        className={`${cellClass} overflow-hidden rounded-sm bg-[#fafaf8] relative group cursor-zoom-in`}
         onClick={() => setOpen(true)}
       >
         <Thumbnail {...props} />

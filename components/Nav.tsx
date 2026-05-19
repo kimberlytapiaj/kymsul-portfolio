@@ -19,7 +19,7 @@ export default function Nav() {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 h-16 bg-[rgba(245,243,238,0.92)] backdrop-blur-sm border-b border-[rgba(13,13,13,0.08)]">
+      <nav className="sticky top-0 z-50 h-16 bg-[rgba(250,250,248,0.92)] backdrop-blur-sm border-b border-[rgba(13,13,13,0.08)]">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-14 h-full flex items-center justify-between">
 
           {/* Logo */}
@@ -76,7 +76,7 @@ export default function Nav() {
 
       {/* Mobile menu overlay */}
       {open && (
-        <div className="lg:hidden fixed inset-0 z-40 bg-[rgba(245,243,238,0.98)] backdrop-blur-sm flex flex-col px-6 pt-24 pb-12">
+        <div className="lg:hidden fixed inset-0 z-40 bg-[rgba(250,250,248,0.98)] backdrop-blur-sm flex flex-col px-6 pt-24 pb-12">
           <ul className="space-y-2 flex-1">
             {links.map(({ label, href }) => {
               const active = pathname === href
