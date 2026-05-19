@@ -6,10 +6,10 @@ const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 
 const capacidades = [
   { cat: 'BRANDING', items: ['Brand strategy', 'Identity systems', 'Naming', 'Art direction', 'Typography', 'Brand guidelines'] },
-  { cat: 'IA',       items: ['Producción IA-native', 'Remotion', 'Gemini', 'Veo', 'Imagen 2', 'Higgsfield'] },
+  { cat: 'IA',       items: ['Producción IA-native', 'Claude · Claude Code', 'Claude Design', 'Codex', 'Remotion', 'Gemini', 'Veo', 'Imagen 2', 'Higgsfield'] },
   { cat: 'MOTION',   items: ['Reels · Templates', 'Motion graphics', 'Animación 2D', 'Kinetic typography', 'Color grading'] },
   { cat: 'CONTENT',  items: ['Content strategy', 'Content design', 'Social media visuals', 'Campaign visuals', 'Visual storytelling'] },
-  { cat: 'SOFTWARE', items: ['Adobe Suite', 'Figma', 'Canva', 'CapCut', 'Scripts AE · PS'] },
+  { cat: 'SOFTWARE', items: ['Adobe Suite', 'Figma', 'Canva', 'CapCut', 'Obsidian', 'Scripts AE · PS'] },
 ]
 
 const trayectoria = [
