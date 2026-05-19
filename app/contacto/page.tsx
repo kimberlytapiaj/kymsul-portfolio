@@ -217,7 +217,7 @@ export default function ContactoPage() {
                       rel={s.href !== '#' ? 'noopener noreferrer' : undefined}
                       className="block font-sans text-[15px] text-muted hover:text-dark transition-colors"
                     >
-                      {s.label} →
+                      {s.label}
                     </a>
                   ))}
                 </div>
