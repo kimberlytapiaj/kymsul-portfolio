@@ -207,8 +207,8 @@ export default function ContactoPage() {
                 <div className="space-y-3">
                   {[
                     { label: 'Instagram', href: 'https://www.instagram.com/kymsul/' },
-                    { label: 'Behance',   href: '#' },
-                    { label: 'LinkedIn',  href: '#' },
+                    { label: 'Behance',   href: 'https://www.behance.net/kimberlytapia2' },
+                    { label: 'LinkedIn',  href: 'https://www.linkedin.com/in/kimberly-tapia-rubio-39a35828a/' },
                   ].map((s) => (
                     <a
                       key={s.label}
