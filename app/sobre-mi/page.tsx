@@ -5,7 +5,7 @@ import Image from 'next/image'
 const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 
 const capacidades = [
-  { cat: 'BRANDING', items: ['Brand strategy', 'Naming', 'Identity systems', 'Art direction', 'Papelería · Print', 'Brand guidelines'] },
+  { cat: 'BRANDING', items: ['Brand strategy', 'Naming', 'Identity systems', 'Art direction', 'Character design', 'Papelería · Print', 'Brand guidelines'] },
   { cat: 'MOTION',   items: ['Reels · Templates', 'Motion graphics', 'Animación 2D', 'Video editing', 'Kinetic typography', 'Color grading'] },
   { cat: 'CONTENT',  items: ['Content strategy', 'Content design', 'Paid media', 'Social media visuals', 'Calendarios editoriales', 'Visual storytelling'] },
   { cat: 'IA',       items: ['Producción IA-native', 'Vibe coding · Frontend', 'Claude Code · Codex', 'Claude Design', 'Remotion', 'Gemini · Imagen 2', 'Veo · Higgsfield'] },
