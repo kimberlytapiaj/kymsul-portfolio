@@ -177,9 +177,9 @@ export const projects: Project[] = [
       'Brand book completo: construcción de logotipo, sistema de reducciones, paleta Pantone documentada, tipografía y personaje Bud. Identidad aplicada en mockup digital de la plataforma.',
     gallery: [
       '/assets/brainy/brainy-12.png',
-      '/assets/brainy/brainy-09.png',
-      '/assets/brainy/brainy-07.png',
-      '/assets/brainy/brainy-11.png',
+      '/assets/brainy/brainy-01.png',
+      '/assets/brainy/brainy-02.png',
+      '/assets/brainy/brainy-03.png',
     ],
     campaigns: [
       {
