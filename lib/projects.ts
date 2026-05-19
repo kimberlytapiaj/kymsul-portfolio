@@ -87,13 +87,26 @@ export const projects: Project[] = [
       },
       {
         name: 'Identidad · Producto',
-        objective: 'Aplicación de identidad visual en el producto digital — mockups construidos sobre las interfaces reales del sistema, asegurando coherencia entre la marca y cada módulo: dashboard ejecutivo, inventario IA, gestión de mesas, menú y el asistente Zea AI.',
-        formats: ['Dashboard', 'Inventario IA', 'Gestión de Mesas', 'Menú', 'Asistente Zea AI'],
+        objective: 'Aplicación de identidad visual en el producto digital — mockups construidos sobre las interfaces reales del sistema, asegurando coherencia entre la marca y cada módulo: dashboard ejecutivo, inventario IA, gestión de mesas, menú, el asistente Zea AI y la app móvil.',
+        formats: ['Dashboard', 'Inventario IA', 'Gestión de Mesas', 'Menú', 'Asistente Zea AI', 'App Móvil'],
         gallery: [],
         sections: [
           {
             groups: [
-              { items: ['/assets/zealix/zealix-dashboard.png', '/assets/zealix/zealix-zea-chat.png', '/assets/zealix/zealix-ipad-mesas.png', '/assets/zealix/zealix-mac-inventario.png', '/assets/zealix/zealix-ipad-menu.png'], carousel: true, contain: true, wide: true },
+              { items: ['/assets/zealix/zealix-dashboard.png', '/assets/zealix/zealix-zea-chat.png', '/assets/zealix/zealix-ipad-mesas.png', '/assets/zealix/zealix-mac-inventario.png', '/assets/zealix/zealix-ipad-menu.png', '/assets/zealix/zealix-zea-mobile.jpg'], carousel: true, contain: true, wide: true },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'POS · Punto de Venta',
+        objective: 'Identidad aplicada al hardware — el sistema Zealix en el punto de venta físico del restaurante. Mockups sobre terminal POS real: asistente Zea, gestión de menú y dashboard de ventas operando en el entorno donde trabaja el equipo todos los días.',
+        formats: ['Terminal POS', 'Asistente Zea AI', 'Menú', 'Dashboard'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/zealix/zealix-pos-01.jpg', '/assets/zealix/zealix-pos-02.jpg', '/assets/zealix/zealix-pos-03.jpg'], carousel: true, wide: true },
             ],
           },
         ],
