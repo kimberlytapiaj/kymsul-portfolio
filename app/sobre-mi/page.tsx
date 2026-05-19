@@ -17,6 +17,7 @@ const trayectoria = [
   { year: '2022',    title: 'IA en el flujo',        detail: 'Primeras exploraciones · Midjourney' },
   { year: '2023',    title: 'Kymsul',                detail: 'Marca propia · Brand & Motion' },
   { year: '2024–25', title: 'Brand Lead, Zealix',    detail: 'Identidad visual · SaaS' },
+  { year: '2026 →',  title: 'NexLaunch',             detail: 'Brand & Content Designer · Producción creativa multimarca' },
 ]
 
 const formacion = [
