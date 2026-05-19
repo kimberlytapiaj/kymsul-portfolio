@@ -13,13 +13,13 @@ export default function CTABand() {
             className="font-fraunces font-light text-white leading-[0.9] text-[clamp(36px,4.5vw,56px)]"
             style={WONK}
           >
-            ¿Tu marca tiene
+            Las marcas con esencia
           </p>
           <p
             className="font-fraunces italic text-lav leading-[0.9] text-[clamp(36px,4.5vw,56px)]"
             style={WONK}
           >
-            algo que decir?
+            no se construyen solas.
           </p>
         </div>
 
