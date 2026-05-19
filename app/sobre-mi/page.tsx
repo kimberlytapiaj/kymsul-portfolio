@@ -13,12 +13,12 @@ const capacidades = [
 ]
 
 const trayectoria = [
-  { year: '2020',    title: 'Primeros proyectos',    detail: 'Proyectos propios · Puebla' },
-  { year: '2021',    title: 'Sistemas de contenido', detail: 'Motion + Brand + Social Media' },
-  { year: '2022',    title: 'IA en el flujo',        detail: 'Primeras exploraciones · Midjourney' },
-  { year: '2023',    title: 'Kymsul',                detail: 'Marca propia · Brand & Motion' },
+  { year: '2020',    title: 'Motion para streamers',      detail: 'Overlays · Emotes · Starting screens · Puebla' },
+  { year: '2021',    title: 'Primeras comisiones',        detail: 'Clientes reales · Motion + Diseño de marca' },
+  { year: '2022',    title: 'IA en el flujo',             detail: 'Primeras exploraciones · Midjourney' },
+  { year: '2023',    title: 'Kymsul',                     detail: 'Lanzamiento · Pivote a branding · Primeros clientes de marca' },
   { year: '2024–25', title: 'Directora de Arte · Zealix', detail: 'Naming · Identidad visual · SaaS' },
-  { year: '2026 →',  title: 'NexLaunch',             detail: 'Brand & Content Designer · Producción creativa multimarca' },
+  { year: '2026 →',  title: 'NexLaunch',                  detail: 'Brand & Content Designer · Producción creativa multimarca' },
 ]
 
 const formacion = [
