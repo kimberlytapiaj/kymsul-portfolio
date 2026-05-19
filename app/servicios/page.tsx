@@ -23,8 +23,8 @@ const services = [
     num: '02',
     light: 'Producción',
     bold: 'IA‑native',
-    tagline: 'La IA no reemplaza el criterio — lo multiplica.',
-    desc: 'La uso en cada etapa: para investigar y documentar sin perder contexto entre proyectos, para generar e iterar referencias visuales en horas, para auditar consistencia de marca antes de que cualquier pieza llegue al cliente, y para automatizar lo repetitivo — y liberar tiempo para lo que importa: pensar bien la marca.',
+    tagline: 'La IA no reemplaza el criterio. Lo multiplica.',
+    desc: 'La uso en cada etapa: para investigar y documentar sin perder contexto entre proyectos, para generar e iterar referencias visuales en horas, para auditar consistencia de marca antes de que cualquier pieza llegue al cliente, y para automatizar lo repetitivo y liberar tiempo para lo que importa: pensar bien la marca.',
     deliverables: [
       'Conceptos visuales iterados con dirección de arte',
       'Assets de imagen y video listos para producción',

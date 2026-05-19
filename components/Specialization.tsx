@@ -13,7 +13,7 @@ const specs = [
     num: '02',
     light: 'Producción',
     bold: 'IA‑native',
-    desc: 'Generación de imagen y video, flujos automatizados y sistemas de conocimiento integrados al proceso creativo. IA como ventaja de producción — sin perder el criterio.',
+    desc: 'Generación de imagen y video, flujos automatizados y sistemas de conocimiento integrados al proceso creativo. IA como ventaja de producción, sin perder el criterio.',
   },
   {
     num: '03',
