@@ -207,15 +207,15 @@ export const projects: Project[] = [
     tagline: 'Contenido que se mueve tan fuerte como el entreno.',
     tags: ['Motion', 'Social media', 'Dirección de arte'],
     overview:
-      'Beatness es un fitness studio en Puebla con múltiples disciplinas — Cycling, Box, Bootcamp, Funcional y más. Necesitaban transformar sus redes en un sistema visual que reflejara intensidad, progreso y pertenencia de comunidad.',
-    role: 'Dirección de arte y producción de contenido: levantamiento en eventos de la marca, templates para feed, reels, stories y carruseles, y motion para activaciones digitales.',
+      'Beatness es un fitness studio en Puebla con múltiples disciplinas — Cycling, Box, Bootcamp y Funcional. El proyecto: producir contenido que comunicara intensidad, pertenencia y progreso de comunidad en redes.',
+    role: 'Dirección de arte y producción de contenido: reels, stories, carruseles, activaciones de evento y levantamiento de contenido en la collab Beatness × Kinabela.',
     agency: 'Mensaje Clave',
     challenge:
-      'El cliente tenía contenido inconsistente — fotos de buena calidad sin sistema visual. El reto fue crear una identidad de contenido que funcionara con material de producción variable, no siempre en condiciones ideales.',
+      'Mantener coherencia de marca con material de producción variable — sin estudio controlado, con distintos equipos y contextos de rodaje.',
     process:
-      'Produje contenido dentro del sistema visual de Beatness: paid media para las disciplinas del club, reels, activaciones de evento y contenido orgánico. La paleta oscura con acentos neón —cian y magenta— conecta con la estética de gym premium, con un estilo de corte rápido y textos cinéticos. En la collab Beatness × Kinabela hice los reels de invitación y el levantamiento de contenido en el evento.',
+      'Trabajé dentro del sistema visual de Beatness: paleta oscura con acentos neón, tipografía de impacto, corte rápido. Paid media para las disciplinas del club, contenido orgánico para feed e historias, y activaciones de evento. En la collab con Kinabela Derma: reels de invitación y levantamiento en el evento.',
     result:
-      'Campaña de paid media para las disciplinas del club en múltiples formatos, más reels, piezas de activación y contenido orgánico para feed e historias. Collab Beatness × Kinabela: 2 reels de invitación y levantamiento de contenido en el evento.',
+      'Paid media, reels, stories y carruseles orgánicos para el club. Collab Beatness × Kinabela: 2 clases de cycling llenas en el rooftop — ~40 personas.',
     gallery: [
       '/assets/beatness/beatness-01.jpg',
       '/assets/beatness/beatness-reel-cycling-web.mp4',
