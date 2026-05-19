@@ -37,8 +37,11 @@ export default function Hero() {
       {/* Footer: sub izquierda, CTA derecha */}
       <div className="border-t border-[rgba(13,13,13,0.1)] pt-6 lg:pt-8 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5">
         <div>
+          <p className="font-mono text-[10px] lg:text-[11px] text-muted2 tracking-[1.76px] mb-2">
+            DESDE UNA SOLA DIRECCIÓN CREATIVA
+          </p>
           <p className="font-sans text-[15px] lg:text-[17px] text-muted leading-[1.5] max-w-[540px]">
-            No diseño piezas. Diseño el sistema que hace que las piezas funcionen juntas.
+            Construyo marcas con esencia, que se sienten, se recuerdan y escalan con sistema.
           </p>
         </div>
         <a
