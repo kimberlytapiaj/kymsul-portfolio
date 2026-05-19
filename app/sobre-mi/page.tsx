@@ -5,10 +5,11 @@ import Image from 'next/image'
 const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 
 const capacidades = [
-  { cat: 'SOFTWARE', items: ['After Effects', 'Premiere Pro', 'Illustrator', 'Photoshop', 'InDesign', 'Figma · Canva', 'Remotion · CapCut', 'Gemini · Veo · Higgsfield'] },
+  { cat: 'SOFTWARE', items: ['After Effects', 'Premiere Pro', 'Illustrator', 'Photoshop', 'InDesign', 'Figma · Canva', 'Remotion · CapCut'] },
   { cat: 'MOTION',   items: ['Motion graphics', 'Storyboarding', 'Animación 2D/3D', 'Color grading', 'Kinetic typography'] },
   { cat: 'BRANDING', items: ['Identity systems', 'Typography', 'Art direction', 'Brand strategy', 'Guidelines'] },
   { cat: 'CONTENT',  items: ['Content design', 'Campaign visuals', 'Social media visuals', 'Visual storytelling', 'Content strategy'] },
+  { cat: 'IA',       items: ['Gemini', 'Imagen 2', 'Veo', 'Higgsfield', 'Flujos automatizados', 'Scripts AE · PS'] },
 ]
 
 const trayectoria = [
@@ -121,7 +122,7 @@ export default function SobreMiPage() {
           <p className="font-sans text-[clamp(28px,5vw,48px)] text-dark leading-[1.1] mb-12 lg:mb-16 max-w-[600px]">
             La herramienta sigue a la <strong>intención.</strong>
           </p>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-5 gap-6">
             {capacidades.map(({ cat, items }) => (
               <div key={cat} className="border-t border-[rgba(13,13,13,0.12)] pt-6 lg:pt-8">
                 <p className="font-mono text-[10px] text-muted2 tracking-[1.4px] mb-5 lg:mb-6">
