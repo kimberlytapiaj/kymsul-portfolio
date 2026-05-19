@@ -213,9 +213,9 @@ export const projects: Project[] = [
     challenge:
       'El cliente tenía contenido inconsistente — fotos de buena calidad sin sistema visual. El reto fue crear una identidad de contenido que funcionara con material de producción variable, no siempre en condiciones ideales.',
     process:
-      'Diseñé un sistema modular de templates que parte de la fotografía existente y le da coherencia a través de tipografía, color y composición. La paleta es oscura con acentos neón —cian y magenta— que conecta con la estética de gym premium. Los reels tienen un estilo de corte rápido con textos cinéticos.',
+      'Produje contenido dentro del sistema visual de Beatness: paid media para las disciplinas del club, reels, activaciones de evento y contenido orgánico. La paleta oscura con acentos neón —cian y magenta— conecta con la estética de gym premium, con un estilo de corte rápido y textos cinéticos. En la collab Beatness × Kinabela hice los reels de invitación y el levantamiento de contenido en el evento.',
     result:
-      'Pack de más de 15 templates editables, 4 reels de campaña producidos, y una guía visual para que el equipo interno pueda generar contenido sin romper el sistema.',
+      'Campaña de paid media para las disciplinas del club en múltiples formatos, más reels, piezas de activación y contenido orgánico para feed e historias. Collab Beatness × Kinabela: 2 reels de invitación y levantamiento de contenido en el evento.',
     gallery: [
       '/assets/beatness/beatness-01.jpg',
       '/assets/beatness/beatness-reel-cycling-web.mp4',
