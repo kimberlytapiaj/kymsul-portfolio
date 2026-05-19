@@ -59,7 +59,7 @@ export const projects: Project[] = [
     process:
       'El proyecto arranca en naming: Zealix viene de "la raíz del maíz", un nombre que ancla la identidad en lo mexicano y comunica la idea de ser la base desde la que crecen los negocios. Zea, el asistente IA, se desprende del mismo origen. El logo traduce ese concepto: bocetos a mano explorando crecimiento y conexión, construcción sobre retícula y sistema documentado en tres versiones. De ahí, la identidad se extiende al movimiento con el logo animado y a las redes sociales con dirección creativa de la producción visual.',
     result:
-      'Sistema de identidad en uso activo con restaurantes reales operando bajo la marca. Entregables: logotipo en múltiples versiones, manual de marca, tarjetas personalizadas para 6 integrantes, folleto corporativo y documentos legales con identidad aplicada. La marca sostiene la producción editorial mensual para IG · FB · LinkedIn: 13 piezas publicadas a la fecha.',
+      'Sistema de identidad en uso activo con restaurantes reales operando bajo la marca. Entregables: logotipo en múltiples versiones, manual de marca, tarjetas personalizadas para 6 integrantes, folleto corporativo y documentos legales con identidad aplicada. La marca vive hoy en IG · FB · LinkedIn: 27 piezas publicadas a la fecha.',
     campaignsLabel: 'TRABAJO',
     gallery: [
       '/assets/zealix/zealix-manual-mockup.jpg',
