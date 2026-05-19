@@ -9,7 +9,7 @@ const capacidades = [
   { cat: 'IA',       items: ['Producción IA-native', 'Gemini', 'Veo', 'Imagen 2', 'Higgsfield'] },
   { cat: 'MOTION',   items: ['Reels · Templates', 'Motion graphics', 'Animación 2D', 'Kinetic typography', 'Color grading'] },
   { cat: 'CONTENT',  items: ['Content strategy', 'Content design', 'Social media visuals', 'Campaign visuals', 'Visual storytelling'] },
-  { cat: 'SOFTWARE', items: ['After Effects', 'Premiere Pro', 'Illustrator', 'Photoshop', 'Figma · Canva', 'InDesign', 'Remotion · CapCut', 'Scripts AE · PS'] },
+  { cat: 'SOFTWARE', items: ['Adobe Suite', 'Figma', 'Canva', 'Remotion', 'CapCut', 'Scripts AE · PS'] },
 ]
 
 const trayectoria = [
