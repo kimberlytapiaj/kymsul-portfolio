@@ -11,15 +11,15 @@ const specs = [
   },
   {
     num: '02',
-    light: 'Contenido &',
-    bold: 'motion visual',
-    desc: 'Sistemas de contenido para redes con motion como herramienta: reels, templates y piezas que comunican con coherencia de marca en cada formato.',
+    light: 'Producción',
+    bold: 'IA‑native',
+    desc: 'Generación de imagen y video, flujos automatizados y sistemas de conocimiento integrados al proceso creativo. IA como ventaja de producción — sin perder el criterio.',
   },
   {
     num: '03',
-    light: 'Producción',
-    bold: 'IA‑native',
-    desc: 'Flujos creativos con Imagen 2, Veo y Claude, generación de video, imagen y concepto integrados al proceso de marca desde el inicio.',
+    light: 'Contenido &',
+    bold: 'motion visual',
+    desc: 'Sistemas de contenido para redes con motion como herramienta: reels, templates y piezas que comunican con coherencia de marca en cada formato.',
   },
 ]
 
