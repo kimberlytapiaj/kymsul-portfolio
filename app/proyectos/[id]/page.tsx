@@ -108,19 +108,19 @@ export default async function CasoPage({ params }: Props) {
             <div className="space-y-14">
               <div>
                 <p className="font-mono text-[10px] text-muted2 tracking-[1.6px] mb-4">CONTEXTO</p>
-                <p className="font-sans text-[18px] text-dark leading-[1.7]">{project.overview}</p>
+                <p className="font-sans text-[15px] lg:text-[18px] text-dark leading-[1.7]">{project.overview}</p>
               </div>
               <div>
                 <p className="font-mono text-[10px] text-muted2 tracking-[1.6px] mb-4">EL RETO</p>
-                <p className="font-sans text-[16px] text-muted leading-[1.7]">{project.challenge}</p>
+                <p className="font-sans text-[14px] lg:text-[16px] text-muted leading-[1.7]">{project.challenge}</p>
               </div>
               <div>
                 <p className="font-mono text-[10px] text-muted2 tracking-[1.6px] mb-4">PROCESO</p>
-                <p className="font-sans text-[16px] text-muted leading-[1.7]">{project.process}</p>
+                <p className="font-sans text-[14px] lg:text-[16px] text-muted leading-[1.7]">{project.process}</p>
               </div>
               <div>
                 <p className="font-mono text-[10px] text-muted2 tracking-[1.6px] mb-4">RESULTADO</p>
-                <p className="font-sans text-[16px] text-muted leading-[1.7]">{project.result}</p>
+                <p className="font-sans text-[14px] lg:text-[16px] text-muted leading-[1.7]">{project.result}</p>
               </div>
             </div>
 
@@ -257,16 +257,16 @@ function CampaignBlock({ campaign }: { campaign: SubProject }) {
 
   return (
     <div>
-      <div className="flex items-start justify-between mb-8 pb-6 border-b border-[rgba(13,13,13,0.08)]">
+      <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-8 pb-6 border-b border-[rgba(13,13,13,0.08)] gap-4 lg:gap-0">
         <div>
-          <p className="text-[32px] text-dark leading-[1] mb-3" style={{ fontFamily: 'var(--font-franklin-cond)' }}>
+          <p className="text-[24px] lg:text-[32px] text-dark leading-[1] mb-3" style={{ fontFamily: 'var(--font-franklin-cond)' }}>
             {campaign.name}
           </p>
-          <p className="font-sans text-[14px] text-muted leading-[1.6] max-w-[560px]">
+          <p className="font-sans text-[13px] lg:text-[14px] text-muted leading-[1.6] max-w-[560px]">
             {campaign.objective}
           </p>
         </div>
-        <div className="flex flex-wrap gap-2 justify-end max-w-[280px]">
+        <div className="flex flex-wrap gap-2 lg:justify-end lg:max-w-[280px]">
           {campaign.formats.map((f) => (
             <span key={f} className="bg-[rgba(13,13,13,0.06)] rounded-full px-3 py-1 font-mono text-[10px] text-muted2 tracking-[1.2px]">
               {f}
