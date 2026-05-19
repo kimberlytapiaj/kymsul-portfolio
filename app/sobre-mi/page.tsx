@@ -5,11 +5,11 @@ import Image from 'next/image'
 const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 
 const capacidades = [
-  { cat: 'SOFTWARE', items: ['After Effects', 'Premiere Pro', 'Illustrator', 'Photoshop', 'InDesign', 'Figma · Canva', 'Remotion · CapCut'] },
-  { cat: 'MOTION',   items: ['Motion graphics', 'Storyboarding', 'Animación 2D/3D', 'Color grading', 'Kinetic typography'] },
-  { cat: 'BRANDING', items: ['Identity systems', 'Typography', 'Art direction', 'Brand strategy', 'Guidelines'] },
+  { cat: 'SOFTWARE', items: ['After Effects', 'Premiere Pro', 'Illustrator', 'Photoshop', 'InDesign', 'Figma · Canva', 'Remotion · CapCut', 'Scripts AE · PS'] },
+  { cat: 'MOTION',   items: ['Motion graphics', 'Reels · Templates', 'Animación 2D', 'Storyboarding', 'Color grading', 'Kinetic typography'] },
+  { cat: 'BRANDING', items: ['Naming', 'Identity systems', 'Typography', 'Art direction', 'Brand strategy', 'Brand guidelines'] },
   { cat: 'CONTENT',  items: ['Content design', 'Campaign visuals', 'Social media visuals', 'Visual storytelling', 'Content strategy'] },
-  { cat: 'IA',       items: ['Gemini', 'Imagen 2', 'Veo', 'Higgsfield', 'Flujos automatizados', 'Scripts AE · PS'] },
+  { cat: 'IA',       items: ['Gemini', 'Imagen 2', 'Veo', 'Higgsfield', 'Producción IA-native'] },
 ]
 
 const trayectoria = [
