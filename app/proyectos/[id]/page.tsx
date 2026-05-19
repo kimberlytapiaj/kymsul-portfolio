@@ -184,6 +184,32 @@ type BentoItem =
 
 const isVideo = (s: string) => s.endsWith('.mp4') || s.endsWith('.webm')
 
+function extractSectionItems(section: Section): BentoItem[] {
+  const out: BentoItem[] = []
+  if (section.groups) {
+    for (const group of section.groups) {
+      if (group.carousel) {
+        const hasVideo = group.items.some(isVideo)
+        out.push({ kind: hasVideo ? 'video-carousel' : 'image-carousel', sources: group.items, contain: group.contain, wide: group.wide })
+      } else {
+        for (const src of group.items) {
+          out.push(isVideo(src)
+            ? { kind: 'video', src, wide: group.wide, contain: group.contain }
+            : { kind: 'image', src, wide: group.wide, contain: group.contain })
+        }
+      }
+    }
+  } else if (section.type === 'carousel') {
+    const hasVideo = section.items!.some(isVideo)
+    out.push({ kind: hasVideo ? 'video-carousel' : 'image-carousel', sources: section.items! })
+  } else {
+    for (const src of (section.items ?? [])) {
+      out.push(isVideo(src) ? { kind: 'video', src } : { kind: 'image', src })
+    }
+  }
+  return out
+}
+
 function extractBentoItems(campaign: SubProject): BentoItem[] {
   const out: BentoItem[] = []
   const sections = campaign.sections ?? []
@@ -243,10 +269,63 @@ function CampaignBlock({ campaign }: { campaign: SubProject }) {
     )
   }
 
-  // Regular campaign: existing layout
+  const isPaidMedia = campaign.formats.some(f => f.toLowerCase().includes('paid'))
+  const sections = campaign.sections ?? []
+
+  const campaignHeader = (
+    <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-8 pb-6 border-b border-[rgba(13,13,13,0.08)] gap-4 lg:gap-0">
+      <div>
+        <p className="text-[24px] lg:text-[32px] text-dark leading-[1] mb-3" style={{ fontFamily: 'var(--font-franklin-cond)' }}>
+          {campaign.name}
+        </p>
+        <p className="font-sans text-[13px] lg:text-[14px] text-muted leading-[1.6] max-w-[560px]">
+          {campaign.objective}
+        </p>
+      </div>
+      <div className="flex flex-wrap gap-2 lg:justify-end lg:max-w-[280px]">
+        {campaign.formats.map((f) => (
+          <span key={f} className="bg-[rgba(13,13,13,0.06)] rounded-full px-3 py-1 font-mono text-[10px] text-muted2 tracking-[1.2px]">
+            {f}
+          </span>
+        ))}
+      </div>
+    </div>
+  )
+
+  // Multi-section: each section renders as its own independent grid
+  if (sections.length > 1) {
+    return (
+      <div>
+        {campaignHeader}
+        <div className="space-y-6">
+          {sections.map((section, si) => {
+            const sectionItems = extractSectionItems(section)
+            const sn = sectionItems.length
+            const sHasWide = sectionItems.some(it => it.wide)
+            const sGridStyle: React.CSSProperties = (() => {
+              if (sHasWide) return { gridTemplateColumns: 'repeat(3, 1fr)' }
+              if (sn === 1) return { maxWidth: '560px', margin: '0 auto' }
+              if (sn === 2) return { gridTemplateColumns: 'repeat(2, 1fr)', maxWidth: '760px', margin: '0 auto' }
+              return { gridTemplateColumns: 'repeat(3, 1fr)' }
+            })()
+            return (
+              <div key={si} className="grid gap-3 items-start" style={sGridStyle}>
+                {sectionItems.map((item, i) => (
+                  <div key={i} className={item.wide ? 'col-span-3' : ''}>
+                    <MediaCell {...item} name={campaign.name} index={i} isPaidMedia={isPaidMedia} />
+                  </div>
+                ))}
+              </div>
+            )
+          })}
+        </div>
+      </div>
+    )
+  }
+
+  // Single-section: existing flat grid layout
   const items = extractBentoItems(campaign)
   const n = items.length
-  const isPaidMedia = campaign.formats.some(f => f.toLowerCase().includes('paid'))
   const hasWide = items.some(it => it.wide)
   const gridStyle: React.CSSProperties = (() => {
     if (hasWide) return { gridTemplateColumns: 'repeat(3, 1fr)' }
@@ -257,23 +336,7 @@ function CampaignBlock({ campaign }: { campaign: SubProject }) {
 
   return (
     <div>
-      <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-8 pb-6 border-b border-[rgba(13,13,13,0.08)] gap-4 lg:gap-0">
-        <div>
-          <p className="text-[24px] lg:text-[32px] text-dark leading-[1] mb-3" style={{ fontFamily: 'var(--font-franklin-cond)' }}>
-            {campaign.name}
-          </p>
-          <p className="font-sans text-[13px] lg:text-[14px] text-muted leading-[1.6] max-w-[560px]">
-            {campaign.objective}
-          </p>
-        </div>
-        <div className="flex flex-wrap gap-2 lg:justify-end lg:max-w-[280px]">
-          {campaign.formats.map((f) => (
-            <span key={f} className="bg-[rgba(13,13,13,0.06)] rounded-full px-3 py-1 font-mono text-[10px] text-muted2 tracking-[1.2px]">
-              {f}
-            </span>
-          ))}
-        </div>
-      </div>
+      {campaignHeader}
       <div className="grid gap-3 items-start" style={gridStyle}>
         {items.map((item, i) => (
           <div key={i} className={item.wide ? 'col-span-3' : ''}>

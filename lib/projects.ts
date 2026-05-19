@@ -207,8 +207,9 @@ export const projects: Project[] = [
     tagline: 'Contenido que se mueve tan fuerte como el entreno.',
     tags: ['Motion', 'Social media', 'Dirección de arte'],
     overview:
-      'Beatness es una marca de fitness enfocada en entrenamiento funcional e identidad de comunidad. Necesitaban transformar sus redes en un sistema visual que reflejara intensidad, progreso y pertenencia.',
-    role: 'Dirección de arte, producción de contenido y motion: templates para feed, reels, stories y carruseles. Estrategia visual para Instagram y TikTok.',
+      'Beatness es un fitness studio en Puebla con múltiples disciplinas — Cycling, Box, Bootcamp, Funcional y más. Necesitaban transformar sus redes en un sistema visual que reflejara intensidad, progreso y pertenencia de comunidad.',
+    role: 'Dirección de arte y producción de contenido: levantamiento en eventos de la marca, templates para feed, reels, stories y carruseles, y motion para activaciones digitales.',
+    agency: 'Mensaje Clave',
     challenge:
       'El cliente tenía contenido inconsistente — fotos de buena calidad sin sistema visual. El reto fue crear una identidad de contenido que funcionara con material de producción variable, no siempre en condiciones ideales.',
     process:
