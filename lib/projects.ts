@@ -48,17 +48,17 @@ export const projects: Project[] = [
     year: '2025',
     image: '/assets/thumbnail-zealix.jpg',
     accentColor: 'white',
-    tagline: 'Marca completa para un software que transforma restaurantes.',
-    tags: ['Identidad visual', 'Brand guidelines', 'Manual de marca', 'Social media'],
+    tagline: 'Sistema de marca para el software que digitaliza la gestión de cualquier negocio con IA.',
+    tags: ['Identidad visual', 'Brand guidelines', 'Manual de marca', 'Papelería', 'Social media'],
     overview:
-      'Zealix es un software de gestión inteligente para restaurantes, bares y cafeterías — desde inventario y ventas hasta automatización con IA. El proyecto fue end-to-end: construí la identidad de marca desde cero, desde el naming y el logotipo hasta el sistema tipográfico, paleta y papelería.',
-    role: 'Branding completo: naming, logotipo, paleta cromática, sistema tipográfico, papelería y brand guidelines. Producción de contenido editorial para redes sociales aplicando la identidad en contextos reales.',
+      'Zealix es una plataforma de soluciones digitales con IA como motor central, diseñada para optimizar y automatizar la gestión de negocios de cualquier tamaño — desde locales independientes hasta grandes cadenas. El proyecto fue end-to-end: identidad visual completa desde la construcción del logotipo hasta el manual de uso, papelería corporativa para todo el equipo y sistema de contenido para redes sociales.',
+    role: 'Identidad visual completa: construcción del logotipo (isotipo, logotipo e imagotipo), sistema tipográfico en tres niveles (SUSE · Rubik · Inter), paleta cromática con degradado de marca en modo claro y oscuro, manual de identidad con retícula y usos correctos, tarjetas de presentación personalizadas para 6 integrantes del equipo, folleto corporativo, documentos legales con identidad aplicada y lineamientos de redes sociales. Producción de 14+ posts editoriales para Instagram.',
     challenge:
-      'Diseñar una marca que comunicara tecnología de punta sin alienar a dueños de negocio que no son nativos digitales. La identidad tenía que funcionar tanto en materiales impresos —manual, tarjeta, brochure— como en redes sociales con coherencia visual consistente.',
+      'Construir una marca tecnológica que se sintiera accesible para dueños de negocio de cualquier perfil, sin perder la solidez y credibilidad que un software B2B requiere. El sistema tenía que funcionar en modo claro y oscuro, en pantalla y en impresión, con coherencia visual en todas sus aplicaciones.',
     process:
-      'Definí el territorio visual desde el posicionamiento: moderno, claro, con personalidad. El logotipo parte de una forma geométrica que sugiere conectividad y movimiento. La paleta —negro profundo, blanco y acento violeta— distingue sin distanciar. El manual documenta cada decisión para que el sistema escale con coherencia.',
+      'El sistema parte del isotipo: un símbolo de nodos y diamantes que evoca conexión, flujo de datos y precisión — construido sobre retícula y documentado con área de seguridad. La paleta combina azul, violeta y magenta en un degradado de tres colores que opera en ambos modos de color. La tipografía tiene tres niveles con función definida: SUSE para títulos, Rubik para destacados e Inter para cuerpo de texto. El manual documenta construcción, versiones a color, usos incorrectos y adaptaciones — para que el sistema funcione sin fricción en manos de cualquier equipo.',
     result:
-      'Sistema de identidad listo para escalar: logotipo en múltiples versiones, paleta documentada, tipografía, papelería completa y manual de uso. La marca está activa y en uso mientras el cliente avanza hacia su lanzamiento comercial — señal de que el sistema fue adoptado sin fricción desde el primer día.',
+      'Sistema de identidad en uso activo: logotipo en múltiples versiones y paletas (claro y oscuro), manual de marca completo, tarjetas de presentación personalizadas para 6 integrantes del equipo, folleto corporativo, política de privacidad y términos y condiciones con identidad aplicada, lineamientos de redes sociales y 14+ posts editoriales para Instagram. Marca adoptada desde el primer día sin iteraciones de corrección.',
     gallery: [
       '/assets/zealix/zealix-manual-mockup.jpg',
       '/assets/zealix/zealix-tarjeta.jpg',
