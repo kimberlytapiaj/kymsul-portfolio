@@ -55,11 +55,11 @@ export const projects: Project[] = [
       'Zealix es una plataforma mexicana con IA como motor central, diseñada para automatizar la gestión de restaurantes, cafeterías y negocios de comida: desde el inventario y las órdenes hasta el análisis de rentabilidad con el asistente Zea AI. El proyecto fue end-to-end: naming de Zealix y Zea, identidad visual completa desde boceto, aplicación de identidad en el producto digital y papelería corporativa. Dirección creativa de la producción visual para redes sociales.',
     role: 'Directora de Arte y Diseñadora de Marca. Naming, identidad visual completa, manual de marca y papelería corporativa para 6 integrantes. Dirección creativa de la producción visual para IG · FB · LinkedIn.',
     challenge:
-      'Construir una marca tecnológica mexicana que se sintiera accesible para dueños de restaurante sin experiencia en software, sin perder la credibilidad que un producto B2B requiere. La identidad tenía que anclar lo mexicano sin caer en lo folclórico. El sistema tenía que funcionar en modo claro y oscuro, en pantalla y en impresión, con contenido tan claro que cualquier operador de negocio lo entendiera sin tecnicismos.',
+      'Construir una marca tecnológica mexicana que se sintiera accesible para dueños de restaurante sin experiencia en software, sin perder la credibilidad que un producto B2B requiere. La identidad tenía que anclar lo mexicano sin caer en lo folclórico. El sistema tenía que funcionar en modo claro y oscuro, en pantalla y en impresión, con un sistema visual tan claro que cualquier operador de negocio lo entendiera sin tecnicismos.',
     process:
-      'El proyecto arranca en naming: Zealix viene de "la raíz del maíz", un nombre que ancla la identidad en lo mexicano y comunica la idea de ser la base desde la que crecen los negocios. Zea, el asistente IA, se desprende del mismo origen. El logo traduce ese concepto visualmente: un isotipo de nodos que se expanden como raíces, evocando crecimiento y conexión, construido desde bocetos a mano hasta su forma final sobre retícula con área de seguridad documentada. La paleta combina azul, violeta y magenta en un degradado de tres colores que opera en modo claro y oscuro. La tipografía tiene tres niveles con función definida: SUSE para títulos, Rubik para destacados e Inter para cuerpo de texto.',
+      'El proyecto arranca en naming: Zealix viene de "la raíz del maíz", un nombre que ancla la identidad en lo mexicano y comunica la idea de ser la base desde la que crecen los negocios. Zea, el asistente IA, se desprende del mismo origen. El logo traduce ese concepto: bocetos a mano explorando crecimiento y conexión, construcción sobre retícula y sistema documentado en tres versiones. De ahí, la identidad se extiende al movimiento con el logo animado y a las redes sociales con dirección creativa de la producción visual.',
     result:
-      'Sistema de identidad en uso activo con restaurantes reales operando bajo la marca. Entregables: logotipo en múltiples versiones, manual de marca, tarjetas personalizadas para 6 integrantes, folleto corporativo y documentos legales con identidad aplicada. Producción editorial mensual activa bajo dirección creativa para IG · FB · LinkedIn.',
+      'Sistema de identidad en uso activo con restaurantes reales operando bajo la marca. Entregables: logotipo en múltiples versiones, manual de marca, tarjetas personalizadas para 6 integrantes, folleto corporativo y documentos legales con identidad aplicada. La marca sostiene hoy la producción editorial mensual para IG · FB · LinkedIn.',
     campaignsLabel: 'TRABAJO',
     gallery: [
       '/assets/zealix/zealix-manual-mockup.jpg',
@@ -88,14 +88,22 @@ export const projects: Project[] = [
       {
         name: 'Marca en el Producto',
         objective: 'El sistema de marca aplicado al producto digital. Revisión de consistencia sobre las interfaces reales: dashboard, inventario IA, gestión de mesas, menú, asistente Zea AI y app móvil.',
-        formats: ['Dashboard', 'Inventario IA', 'Gestión de Mesas', 'Menú', 'Asistente Zea AI', 'App Móvil'],
+        formats: ['Mac · Desktop', 'iPad · Tablet', 'Móvil'],
         gallery: [],
         sections: [
           {
             groups: [
-              { items: ['/assets/zealix/zealix-dashboard.png', '/assets/zealix/zealix-zea-chat.png', '/assets/zealix/zealix-ipad-mesas.png', '/assets/zealix/zealix-mac-inventario.png', '/assets/zealix/zealix-ipad-menu.png'], carousel: true, contain: true, wide: true },
-              { items: ['/assets/zealix/zealix-mac-menu.png'], contain: true },
-              { items: ['/assets/zealix/zealix-zea-mobile.jpg'] },
+              { items: ['/assets/zealix/zealix-dashboard.png', '/assets/zealix/zealix-mac-inventario.png', '/assets/zealix/zealix-mac-menu.png'], carousel: true, contain: true, wide: true },
+            ],
+          },
+          {
+            groups: [
+              { items: ['/assets/zealix/zealix-ipad-mesas.png', '/assets/zealix/zealix-ipad-menu.png'], carousel: true, contain: true, wide: true },
+            ],
+          },
+          {
+            groups: [
+              { items: ['/assets/zealix/zealix-zea-chat.png', '/assets/zealix/zealix-zea-mobile.jpg'], carousel: true, contain: true, wide: true },
             ],
           },
         ],
