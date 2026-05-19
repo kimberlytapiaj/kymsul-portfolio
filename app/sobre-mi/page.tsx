@@ -5,7 +5,7 @@ import Image from 'next/image'
 const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 
 const capacidades = [
-  { cat: 'SOFTWARE', items: ['After Effects', 'Premiere Pro', 'Illustrator', 'Photoshop', 'Figma · Canva', 'Gemini · Veo · Runway'] },
+  { cat: 'SOFTWARE', items: ['After Effects', 'Premiere Pro', 'Illustrator', 'Photoshop', 'InDesign', 'Figma · Canva', 'Remotion · CapCut', 'Gemini · Veo · Higgsfield'] },
   { cat: 'MOTION',   items: ['Motion graphics', 'Storyboarding', 'Animación 2D/3D', 'Color grading', 'Kinetic typography'] },
   { cat: 'BRANDING', items: ['Identity systems', 'Typography', 'Art direction', 'Brand strategy', 'Guidelines'] },
   { cat: 'CONTENT',  items: ['Content design', 'Campaign visuals', 'Social media visuals', 'Visual storytelling', 'Content strategy'] },
@@ -16,13 +16,14 @@ const trayectoria = [
   { year: '2021',    title: 'Sistemas de contenido', detail: 'Motion + Brand + Social Media' },
   { year: '2022',    title: 'IA en el flujo',        detail: 'Primeras exploraciones · Midjourney' },
   { year: '2023',    title: 'Kymsul',                detail: 'Marca propia · Brand & Motion' },
-  { year: '2024–25', title: 'Brand Lead, Zealix',    detail: 'Identidad visual · SaaS' },
+  { year: '2024–25', title: 'Directora de Arte · Zealix', detail: 'Naming · Identidad visual · SaaS' },
   { year: '2026 →',  title: 'NexLaunch',             detail: 'Brand & Content Designer · Producción creativa multimarca' },
 ]
 
 const formacion = [
-  { inst: 'Universidad del Valle de México', degree: 'Licenciatura en Diseño Digital',    period: '2023 – 2026', note: 'En curso' },
-  { inst: 'Universidad Anáhuac México',      degree: 'Diplomado en Diseño Multimedia',    period: '2023 – 2024', note: '' },
+  { inst: 'Universidad del Valle de México', degree: 'Licenciatura en Diseño Digital',                period: '2023 – 2026', note: 'En curso' },
+  { inst: 'Universidad Anáhuac México',      degree: 'Diplomado en Diseño Multimedia',                period: '2023 – 2024', note: '' },
+  { inst: 'Amerike, Puebla',                 degree: 'Lic. Comunicación y Producción Audiovisual',    period: '2026 →',      note: 'Próximamente' },
 ]
 
 export default function SobreMiPage() {
