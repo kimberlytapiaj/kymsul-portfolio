@@ -5,11 +5,11 @@ import Image from 'next/image'
 const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 
 const capacidades = [
-  { cat: 'SOFTWARE', items: ['After Effects', 'Premiere Pro', 'Illustrator', 'Photoshop', 'InDesign', 'Figma · Canva', 'Remotion · CapCut', 'Scripts AE · PS'] },
-  { cat: 'MOTION',   items: ['Motion graphics', 'Reels · Templates', 'Animación 2D', 'Storyboarding', 'Color grading', 'Kinetic typography'] },
-  { cat: 'BRANDING', items: ['Naming', 'Identity systems', 'Typography', 'Art direction', 'Brand strategy', 'Brand guidelines'] },
-  { cat: 'CONTENT',  items: ['Content design', 'Campaign visuals', 'Social media visuals', 'Visual storytelling', 'Content strategy'] },
-  { cat: 'IA',       items: ['Gemini', 'Imagen 2', 'Veo', 'Higgsfield', 'Producción IA-native'] },
+  { cat: 'BRANDING', items: ['Brand strategy', 'Identity systems', 'Naming', 'Art direction', 'Typography', 'Brand guidelines'] },
+  { cat: 'IA',       items: ['Producción IA-native', 'Gemini', 'Veo', 'Imagen 2', 'Higgsfield'] },
+  { cat: 'MOTION',   items: ['Reels · Templates', 'Motion graphics', 'Animación 2D', 'Kinetic typography', 'Color grading'] },
+  { cat: 'CONTENT',  items: ['Content strategy', 'Content design', 'Social media visuals', 'Campaign visuals', 'Visual storytelling'] },
+  { cat: 'SOFTWARE', items: ['After Effects', 'Premiere Pro', 'Illustrator', 'Photoshop', 'Figma · Canva', 'InDesign', 'Remotion · CapCut', 'Scripts AE · PS'] },
 ]
 
 const trayectoria = [
