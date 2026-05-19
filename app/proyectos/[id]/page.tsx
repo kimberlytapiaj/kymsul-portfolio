@@ -143,7 +143,7 @@ export default async function CasoPage({ params }: Props) {
       {project.campaigns && project.campaigns.length > 0 && (
         <section className="border-t border-[rgba(13,13,13,0.08)] px-6 lg:px-24 py-12 lg:py-20 bg-[rgba(13,13,13,0.02)]">
           <div className="max-w-[1440px] mx-auto">
-            <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-16">CAMPAÑAS</p>
+            <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-16">{project.campaignsLabel ?? 'CAMPAÑAS'}</p>
             <div className="space-y-20">
               {project.campaigns.map((campaign, i) => (
                 <CampaignBlock key={i} campaign={campaign} />

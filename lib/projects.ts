@@ -38,6 +38,7 @@ export type Project = {
   result: string
   gallery: string[]
   campaigns?: SubProject[]
+  campaignsLabel?: string
 }
 
 export const projects: Project[] = [
@@ -45,25 +46,27 @@ export const projects: Project[] = [
     id: 'zealix',
     name: 'Zealix',
     category: 'BRANDING · SOCIAL MEDIA',
-    year: '2025',
+    year: '2025–26',
     image: '/assets/thumbnail-zealix.jpg',
     accentColor: 'white',
     tagline: 'Automatiza. Optimiza. Evoluciona.',
-    tags: ['Identidad visual', 'Brand guidelines', 'Manual de marca', 'Papelería', 'Social media', 'Estrategia de contenido'],
+    tags: ['Naming', 'Identidad visual', 'Brand guidelines', 'Manual de marca', 'Papelería', 'Social media', 'Estrategia de contenido'],
     overview:
-      'Zealix es una plataforma mexicana con IA como motor central, diseñada para simplificar y automatizar la gestión de restaurantes, cafeterías y negocios de comida — desde el inventario y las órdenes hasta el análisis de rentabilidad. El proyecto fue end-to-end: identidad visual completa, papelería corporativa para todo el equipo y estrategia de contenido para redes sociales.',
-    role: 'Identidad visual completa: construcción del logotipo (isotipo, logotipo e imagotipo), sistema tipográfico en tres niveles (SUSE · Rubik · Inter), paleta cromática con degradado de marca en modo claro y oscuro, manual de identidad con retícula y usos correctos, tarjetas de presentación para 6 integrantes del equipo, folleto corporativo y documentos legales con identidad aplicada. Estrategia de contenido RRSS con 4 pilares editoriales (Educativo · Inspiracional · Ventas · Interactivo) para Instagram, Facebook y LinkedIn. Producción de 14+ posts editoriales.',
+      'Zealix es una plataforma mexicana con IA como motor central, diseñada para automatizar la gestión de restaurantes, cafeterías y negocios de comida — desde el inventario y las órdenes hasta el análisis de rentabilidad con el asistente Zea AI. El proyecto fue end-to-end: naming de Zealix y Zea, identidad visual completa desde boceto, aplicación de identidad en el producto digital, papelería corporativa y estrategia de contenido para redes sociales.',
+    role: 'Naming de Zealix y Zea (asistente IA). Identidad visual desde cero: bocetos, construcción del logotipo (isotipo · logotipo · imagotipo), sistema tipográfico en tres niveles (SUSE · Rubik · Inter), paleta cromática en modo claro y oscuro, manual de identidad, papelería corporativa para 6 integrantes. Mockups de identidad aplicada al producto: POS y app Zea Mobile. Estrategia de contenido y dirección creativa del equipo de social media para IG · FB · LinkedIn.',
     challenge:
-      'Construir una marca tecnológica que se sintiera accesible para dueños de restaurante sin experiencia en software, sin perder la credibilidad que un producto B2B requiere. El sistema tenía que funcionar en modo claro y oscuro, en pantalla y en impresión — y el contenido de redes debía ser tan claro que cualquier operador de negocio lo entendiera sin tecnicismos.',
+      'Construir una marca tecnológica mexicana que se sintiera accesible para dueños de restaurante sin experiencia en software, sin perder la credibilidad que un producto B2B requiere. La identidad tenía que anclar lo mexicano sin caer en lo folclórico. El sistema tenía que funcionar en modo claro y oscuro, en pantalla y en impresión, con contenido tan claro que cualquier operador de negocio lo entendiera sin tecnicismos.',
     process:
-      'El sistema parte del isotipo: un símbolo de nodos y diamantes que evoca conexión, flujo de datos y precisión — construido sobre retícula y documentado con área de seguridad. La paleta combina azul, violeta y magenta en un degradado de tres colores que opera en ambos modos de color. La tipografía tiene tres niveles con función definida: SUSE para títulos, Rubik para destacados e Inter para cuerpo de texto. El manual documenta construcción, versiones a color, usos incorrectos y adaptaciones. La estrategia de contenido define pilares, formatos, hashtags propios y calendario editorial 2026.',
+      'El proyecto arranca en naming: Zealix viene de "la raíz del maíz" — un nombre que ancla la identidad en lo mexicano y comunica la idea de ser la base desde la que crecen los negocios. Zea, el asistente IA, se desprende del mismo origen. El logo traduce ese concepto visualmente: un isotipo de nodos que se expanden como raíces, evocando crecimiento y conexión, construido desde bocetos a mano hasta su forma final sobre retícula con área de seguridad documentada. La paleta combina azul, violeta y magenta en un degradado de tres colores que opera en modo claro y oscuro. La tipografía tiene tres niveles con función definida: SUSE para títulos, Rubik para destacados e Inter para cuerpo de texto. La estrategia de contenido define pilares editoriales, formatos, hashtags propios y directrices de ejecución para el equipo.',
     result:
-      'Sistema de identidad en uso activo con clientes reales operando bajo la marca: logotipo en múltiples versiones, manual de marca, tarjetas personalizadas para 6 integrantes del equipo, folleto corporativo, política de privacidad y términos con identidad aplicada. Estrategia de contenido RRSS documentada para IG · FB · LinkedIn con calendario 2026 y 14+ posts editoriales producidos.',
+      'Sistema de identidad en uso activo con restaurantes reales operando bajo la marca — Carola Cafeteria, La Cabaña, El Secreto y México Lindo y Querido. Entregables: logotipo en múltiples versiones, manual de marca, tarjetas personalizadas para 6 integrantes, folleto corporativo y documentos legales con identidad aplicada. Estrategia de contenido documentada y producción editorial mensual activa para IG · FB · LinkedIn.',
+    campaignsLabel: 'TRABAJO',
     gallery: [
       '/assets/zealix/zealix-manual-mockup.jpg',
+      '/assets/zealix/zealix-dashboard.png',
       '/assets/zealix/zealix-tarjeta.jpg',
+      '/assets/zealix/zealix-zea-chat.png',
       '/assets/zealix/zealix-brochure.png',
-      '/assets/zealix/zealix-post-11.png',
     ],
     campaigns: [
       {
@@ -83,31 +86,46 @@ export const projects: Project[] = [
         ],
       },
       {
-        name: 'UX UI · Dirección',
-        objective: 'Dirección visual del producto digital — lineamientos de interfaz para el sistema POS y el asistente IA móvil, asegurando coherencia entre la identidad de marca y cada pantalla del software.',
-        formats: ['POS · Asistente Zea AI', 'App · Zea Mobile'],
+        name: 'Identidad · Producto',
+        objective: 'Aplicación de identidad visual en el producto digital — mockups construidos sobre las interfaces reales del sistema, asegurando coherencia entre la marca y cada módulo: dashboard ejecutivo, inventario IA, gestión de mesas, menú y el asistente Zea AI.',
+        formats: ['Dashboard', 'Inventario IA', 'Gestión de Mesas', 'Menú', 'Asistente Zea AI'],
         gallery: [],
         sections: [
           {
             groups: [
-              { items: ['/assets/zealix/zealix-pos-01.jpg'], contain: true },
-              { items: ['/assets/zealix/zealix-zea-mobile.jpg'], contain: true },
+              { items: ['/assets/zealix/zealix-dashboard.png', '/assets/zealix/zealix-zea-chat.png', '/assets/zealix/zealix-ipad-mesas.png', '/assets/zealix/zealix-mac-inventario.png', '/assets/zealix/zealix-ipad-menu.png'], carousel: true, contain: true, wide: true },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Motion · Logo Animado',
+        objective: 'Logo animado de Zealix — identidad en movimiento para uso digital, presentaciones y activaciones de marca.',
+        formats: ['Logo animado · MP4'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/zealix/zealix-logo-animated.mp4'], contain: true },
             ],
           },
         ],
       },
       {
         name: 'Social Media',
-        objective: 'Contenido editorial para Instagram aplicando la identidad de marca en contextos reales — fotografía, copy y composición para conectar con dueños de restaurantes, bares y cafeterías.',
+        objective: 'Sistema de contenido creado desde cero: estrategia editorial con 4 pilares, formatos definidos y directrices de ejecución que hoy opera un equipo de diseño bajo dirección creativa. Posts de fotografía editorial, copy y composición para conectar con dueños de restaurantes, bares y cafeterías.',
         formats: ['Post · Instagram'],
         gallery: [],
         sections: [
           {
             groups: [
               { items: ['/assets/zealix/zealix-post-08-1.png', '/assets/zealix/zealix-post-08-2.png', '/assets/zealix/zealix-post-08-3.png', '/assets/zealix/zealix-post-08-4.png', '/assets/zealix/zealix-post-08-5.png', '/assets/zealix/zealix-post-08-6.png', '/assets/zealix/zealix-post-08-7.png'], carousel: true },
+              { items: ['/assets/zealix/zealix-post-04.png'] },
               { items: ['/assets/zealix/zealix-post-09.png'] },
+              { items: ['/assets/zealix/zealix-post-12.png'] },
               { items: ['/assets/zealix/zealix-post-14.png'] },
               { items: ['/assets/zealix/zealix-post-10.png'] },
+              { items: ['/assets/zealix/zealix-post-03.png'] },
               { items: ['/assets/zealix/zealix-post-01.png'] },
               { items: ['/assets/zealix/zealix-post-05.png'] },
             ],
