@@ -431,10 +431,10 @@ export const projects: Project[] = [
     year: '2025',
     image: '/assets/bwl/bwl-01.png',
     accentColor: 'white',
-    tagline: 'Una marca china que habla dos idiomas sin perder su voz.',
+    tagline: 'Una marca global que habla dos idiomas sin perder su voz.',
     tags: ['Social media', 'Motion', 'Paid media', 'RedNote · 小红书', 'IA Generativa'],
     overview:
-      'BWL es una marca china de wellness con múltiples líneas de producto. El trabajo abarca producción de contenido para Instagram y paid media en inglés, más adaptación de reels al chino para RedNote (小红书) — cada pieza traducida y reformateada para el contexto cultural y el algoritmo de cada plataforma.',
+      'BWL (Best World) es una marca de wellness de origen singapurense con distribución global y múltiples líneas de producto. El trabajo abarca producción de contenido para Instagram y paid media en inglés, más adaptación de reels al chino para RedNote (小红书) — cada pieza traducida y reformateada para el contexto cultural y el algoritmo de cada plataforma.',
     role: 'Dirección de arte, edición de video y producción de contenido. Adaptación bilingüe chino-inglés para Instagram y RedNote.',
     agency: 'NexLaunch',
     challenge:
