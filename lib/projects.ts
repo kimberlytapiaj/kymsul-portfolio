@@ -766,7 +766,7 @@ export const projects: Project[] = [
     tagline: 'La herencia del buen queso, en cada pieza de contenido.',
     tags: ['Social media', 'Dirección de arte', 'Fotografía editorial', 'Carruseles', 'Print', 'IA Generativa'],
     overview:
-      'Corazón Mixteco es una marca de quesos artesanales oaxaqueños con 60 años de historia. El trabajo abarca la dirección de arte y producción de contenido mensual para redes sociales: parrillas editoriales de producto, carruseles educativos, reels y materiales de punto de venta.',
+      'Corazón Mixteco es una marca de quesos artesanales mexicanos — quesillo, panela, manchego y más. El trabajo abarca la dirección de arte y producción de contenido mensual para redes sociales: parrillas editoriales de producto, carruseles educativos, reels y materiales de punto de venta.',
     role: 'Dirección de arte y producción de contenido: parrillas mensuales de Febrero y Marzo 2026, carruseles educativos de producto, reels y diseño de banner roll-up para exhibición.',
     challenge:
       'Comunicar autenticidad artesanal y tradición oaxaqueña en un feed de Instagram sin caer en lo folclórico ni en lo genérico. El queso tiene que verse como lo que es: un producto premium de origen.',
