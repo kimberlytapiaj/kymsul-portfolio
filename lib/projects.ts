@@ -307,7 +307,7 @@ export const projects: Project[] = [
     process:
       'Creé un sistema visual de dos velocidades: posts editoriales de alto impacto para KOP —negro, blanco y verde energético— y una línea más cálida y atmosférica para Kings Tavern que convive sin romper el feed. Las piezas de paid media combinan imagen generativa con Gemini y un script de After Effects que monta el reel completo —timeline, texto, end card— en un solo clic.',
     result:
-      '30+ piezas entre editoriales, carruseles y reels para KOP, más contenido diferenciado para Kings Tavern. El reel de apertura de Sin Yolanda alcanzó 26.3K views y 212 likes en 6 semanas de forma orgánica. Reel de paid media de 22 segundos producido con flujo IA + script. Sistema con templates replicables entregados al equipo interno.',
+      '30+ piezas entre editoriales, carruseles y reels para KOP, más contenido diferenciado para Kings Tavern. El reel de apertura de Sin Yolanda alcanzó 26.3K views y 212 likes en 6 semanas de forma orgánica. Reel de paid media de 22 segundos producido con flujo IA + script.',
     gallery: [
       '/assets/kop/kop-paidmedia-01.mp4',
       '/assets/kop/kop-01.png',
