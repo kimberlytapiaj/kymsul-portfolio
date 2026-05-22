@@ -457,7 +457,6 @@ export const projects: Project[] = [
       '/assets/bwl/bwl-mothers-day-web.mp4',
       '/assets/bwl/bwl-post-82-1.png',
       '/assets/bwl/bwl-pm-06-1.png',
-      '/assets/bwl/bwl-post-87.png',
       '/assets/bwl/bwl-pm-09-1.png',
     ],
     campaigns: [
@@ -533,10 +532,8 @@ export const projects: Project[] = [
               { items: ['/assets/bwl/bwl-post-66-web.mp4', '/assets/bwl/bwl-post-66-zh-web.mp4'], carousel: true },
               { items: ['/assets/bwl/bwl-post-77-web.mp4'] },
               { items: ['/assets/bwl/bwl-reel-83-web.mp4'] },
-              { items: ['/assets/bwl/bwl-post-87.png'] },
             ],
           },
-          { items: ['/assets/bwl/bwl-06.png', '/assets/bwl/bwl-07.png', '/assets/bwl/bwl-08.png', '/assets/bwl/bwl-16.png', '/assets/bwl/bwl-17.png'], type: 'carousel' },
         ],
       },
       {
@@ -553,30 +550,67 @@ export const projects: Project[] = [
         objective: 'Piezas de pauta para múltiples marcas BWL: videos de activación de producto y sets de estáticos para feed y display.',
         formats: ['Video · Paid Media', 'Statics · Paid Media'],
         gallery: [],
-        sections: [
+        sections: [],
+        subCampaigns: [
           {
-            groups: [
-              { items: ['/assets/bwl/bwl-pm-03-web.mp4'] },
-              { items: ['/assets/bwl/bwl-pm-11-web.mp4'] },
-            ],
-          },
-          {
-            groups: [
-              { items: ['/assets/bwl/bwl-01.png', '/assets/bwl/bwl-02.png', '/assets/bwl/bwl-03.png', '/assets/bwl/bwl-04.png', '/assets/bwl/bwl-05.png'], carousel: true },
-              { items: ['/assets/bwl/bwl-pm-12.png', '/assets/bwl/bwl-pm-13.png'] },
-            ],
-          },
-          {
-            groups: [
+            name: 'Avance',
+            objective: 'Carrusel educativo de pauta para Avance LB-30, orientado a síntomas.',
+            formats: ['Statics · Paid Media'],
+            gallery: [],
+            sections: [
               {
-                items: [
-                  '/assets/bwl/bwl-pm-09-1.png',
-                  '/assets/bwl/bwl-pm-09-2.png',
-                  '/assets/bwl/bwl-pm-09-3.png',
-                  '/assets/bwl/bwl-pm-09-4.png',
-                  '/assets/bwl/bwl-pm-09-5.png',
+                groups: [
+                  {
+                    items: [
+                      '/assets/bwl/bwl-pm-09-1.png',
+                      '/assets/bwl/bwl-pm-09-2.png',
+                      '/assets/bwl/bwl-pm-09-3.png',
+                      '/assets/bwl/bwl-pm-09-4.png',
+                      '/assets/bwl/bwl-pm-09-5.png',
+                    ],
+                    carousel: true,
+                  },
                 ],
-                carousel: true,
+              },
+            ],
+          },
+          {
+            name: 'Optrimax',
+            objective: 'Estáticos de pauta para Juiced! de Optrimax: sets de feed para activación de producto.',
+            formats: ['Statics · Paid Media'],
+            gallery: [],
+            sections: [
+              {
+                groups: [
+                  { items: ['/assets/bwl/bwl-pm-12.png', '/assets/bwl/bwl-pm-13.png'] },
+                ],
+              },
+            ],
+          },
+          {
+            name: "DR's Secret",
+            objective: 'Video de activación y carrusel educativo de skincare para pauta en feed.',
+            formats: ['Video · Paid Media', 'Statics · Paid Media'],
+            gallery: [],
+            sections: [
+              {
+                groups: [
+                  { items: ['/assets/bwl/bwl-pm-03-web.mp4'] },
+                  { items: ['/assets/bwl/bwl-01.png', '/assets/bwl/bwl-02.png', '/assets/bwl/bwl-03.png', '/assets/bwl/bwl-04.png', '/assets/bwl/bwl-05.png'], carousel: true },
+                ],
+              },
+            ],
+          },
+          {
+            name: 'Pentalab',
+            objective: 'Video de activación de producto para pauta.',
+            formats: ['Video · Paid Media'],
+            gallery: [],
+            sections: [
+              {
+                groups: [
+                  { items: ['/assets/bwl/bwl-pm-11-web.mp4'] },
+                ],
               },
             ],
           },
