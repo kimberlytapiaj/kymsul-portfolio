@@ -10,12 +10,62 @@ import LazyVideo from '@/components/LazyVideo'
 import { projects, type Project, type SubProject, type Section, type SectionGroup } from '@/lib/projects'
 import { useLang } from '@/lib/lang-context'
 import { tr } from '@/lib/translations'
+import { projectTranslationsEN } from '@/lib/project-translations'
+
+// Deep-merge EN translations into the project object when lang === 'en'
+function applyTranslation(project: Project, lang: 'es' | 'en'): Project {
+  if (lang === 'es') return project
+  const t = projectTranslationsEN[project.id]
+  if (!t) return project
+
+  const p: Project = {
+    ...project,
+    ...(t.name       && { name: t.name }),
+    ...(t.tagline    && { tagline: t.tagline }),
+    ...(t.tags       && { tags: t.tags }),
+    ...(t.overview   && { overview: t.overview }),
+    ...(t.role       && { role: t.role }),
+    ...(t.challenge  && { challenge: t.challenge }),
+    ...(t.process    && { process: t.process }),
+    ...(t.result     && { result: t.result }),
+    ...(t.campaignsLabel !== undefined && { campaignsLabel: t.campaignsLabel }),
+  }
+
+  if (t.campaigns && project.campaigns) {
+    p.campaigns = project.campaigns.map((campaign, i) => {
+      const tc = t.campaigns![i]
+      if (!tc) return campaign
+      const c: SubProject = {
+        ...campaign,
+        ...(tc.name      && { name: tc.name }),
+        ...(tc.objective && { objective: tc.objective }),
+        ...(tc.formats   && { formats: tc.formats }),
+      }
+      if (tc.subCampaigns && campaign.subCampaigns) {
+        c.subCampaigns = campaign.subCampaigns.map((sub, j) => {
+          const ts = tc.subCampaigns![j]
+          if (!ts) return sub
+          return {
+            ...sub,
+            ...(ts.name      && { name: ts.name }),
+            ...(ts.objective && { objective: ts.objective }),
+            ...(ts.formats   && { formats: ts.formats }),
+          }
+        })
+      }
+      return c
+    })
+  }
+
+  return p
+}
 
 const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 
 export default function ProjectDetailView({ project }: { project: Project }) {
   const { lang } = useLang()
   const c = tr.caso
+  const p = applyTranslation(project, lang)
 
   return (
     <PageLayout>
@@ -31,23 +81,23 @@ export default function ProjectDetailView({ project }: { project: Project }) {
           <div className="mt-8 lg:mt-10 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
             <div>
               <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-4">
-                {project.category} · {project.year}
+                {p.category} · {p.year}
               </p>
               <h1
                 className="text-[clamp(40px,7vw,80px)] text-dark leading-[0.9]"
                 style={{ fontFamily: 'var(--font-franklin-cond)' }}
               >
-                {project.name}
+                {p.name}
               </h1>
               <p
                 className="font-fraunces font-light italic text-[clamp(24px,4vw,48px)] text-muted leading-[1.1] mt-2"
                 style={WONK}
               >
-                {project.tagline}
+                {p.tagline}
               </p>
             </div>
             <div className="flex flex-wrap gap-2 lg:max-w-[320px] lg:justify-end pb-2">
-              {project.tags.map((tag) => (
+              {p.tags.map((tag) => (
                 <span
                   key={tag}
                   className="border border-[rgba(13,13,13,0.12)] rounded-full px-3 py-1 font-mono text-[10px] text-muted2 tracking-[1.2px]"
@@ -63,8 +113,8 @@ export default function ProjectDetailView({ project }: { project: Project }) {
       {/* Cover image */}
       <div className="relative w-full aspect-[16/7] overflow-hidden">
         <Image
-          src={project.image}
-          alt={project.name}
+          src={p.image}
+          alt={p.name}
           fill
           priority
           quality={90}
@@ -82,20 +132,20 @@ export default function ProjectDetailView({ project }: { project: Project }) {
             <div className="space-y-10">
               <div>
                 <p className="font-mono text-[10px] text-muted2 tracking-[1.6px] mb-3">{c.rol[lang]}</p>
-                <p className="font-sans text-[14px] text-muted leading-[1.7]">{project.role}</p>
+                <p className="font-sans text-[14px] text-muted leading-[1.7]">{p.role}</p>
               </div>
               <div>
                 <p className="font-mono text-[10px] text-muted2 tracking-[1.6px] mb-3">{c.año[lang]}</p>
-                <p className="font-sans text-[14px] text-muted">{project.year}</p>
+                <p className="font-sans text-[14px] text-muted">{p.year}</p>
               </div>
               <div>
                 <p className="font-mono text-[10px] text-muted2 tracking-[1.6px] mb-3">{c.disciplina[lang]}</p>
-                <p className="font-sans text-[14px] text-muted">{project.category}</p>
+                <p className="font-sans text-[14px] text-muted">{p.category}</p>
               </div>
-              {project.agency && (
+              {p.agency && (
                 <div>
                   <p className="font-mono text-[10px] text-muted2 tracking-[1.6px] mb-3">{c.agencia[lang]}</p>
-                  <p className="font-sans text-[14px] text-muted">{project.agency}</p>
+                  <p className="font-sans text-[14px] text-muted">{p.agency}</p>
                 </div>
               )}
             </div>
@@ -104,30 +154,30 @@ export default function ProjectDetailView({ project }: { project: Project }) {
             <div className="space-y-14">
               <div>
                 <p className="font-mono text-[10px] text-muted2 tracking-[1.6px] mb-4">{c.contexto[lang]}</p>
-                <p className="font-sans text-[15px] lg:text-[18px] text-dark leading-[1.7]">{project.overview}</p>
+                <p className="font-sans text-[15px] lg:text-[18px] text-dark leading-[1.7]">{p.overview}</p>
               </div>
               <div>
                 <p className="font-mono text-[10px] text-muted2 tracking-[1.6px] mb-4">{c.reto[lang]}</p>
-                <p className="font-sans text-[14px] lg:text-[16px] text-muted leading-[1.7]">{project.challenge}</p>
+                <p className="font-sans text-[14px] lg:text-[16px] text-muted leading-[1.7]">{p.challenge}</p>
               </div>
               <div>
                 <p className="font-mono text-[10px] text-muted2 tracking-[1.6px] mb-4">{c.proceso[lang]}</p>
-                <p className="font-sans text-[14px] lg:text-[16px] text-muted leading-[1.7]">{project.process}</p>
+                <p className="font-sans text-[14px] lg:text-[16px] text-muted leading-[1.7]">{p.process}</p>
               </div>
               <div>
                 <p className="font-mono text-[10px] text-muted2 tracking-[1.6px] mb-4">{c.resultado[lang]}</p>
-                <p className="font-sans text-[14px] lg:text-[16px] text-muted leading-[1.7]">{project.result}</p>
+                <p className="font-sans text-[14px] lg:text-[16px] text-muted leading-[1.7]">{p.result}</p>
               </div>
             </div>
 
           </div>
 
           {/* Main gallery */}
-          {project.gallery.length > 1 && (
+          {p.gallery.length > 1 && (
             <div className="mt-12 lg:mt-24 columns-1 lg:columns-2 gap-4">
-              {project.gallery.map((src, i) => (
+              {p.gallery.map((src, i) => (
                 <div key={i} className="break-inside-avoid mb-4">
-                  <GalleryItem src={src} alt={`${project.name} ${i + 1}`} />
+                  <GalleryItem src={src} alt={`${p.name} ${i + 1}`} />
                 </div>
               ))}
             </div>
@@ -136,14 +186,14 @@ export default function ProjectDetailView({ project }: { project: Project }) {
       </section>
 
       {/* Campaigns / Sub-projects */}
-      {project.campaigns && project.campaigns.length > 0 && (
+      {p.campaigns && p.campaigns.length > 0 && (
         <section className="border-t border-[rgba(13,13,13,0.08)] px-6 lg:px-24 py-12 lg:py-20 bg-[rgba(13,13,13,0.02)]">
           <div className="max-w-[1440px] mx-auto">
             <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-16">
-              {project.campaignsLabel ?? c.campanas[lang]}
+              {p.campaignsLabel ?? c.campanas[lang]}
             </p>
             <div className="space-y-20">
-              {project.campaigns.map((campaign, i) => (
+              {p.campaigns.map((campaign, i) => (
                 <CampaignBlock key={i} campaign={campaign} />
               ))}
             </div>
