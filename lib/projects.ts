@@ -541,39 +541,31 @@ export const projects: Project[] = [
       },
       {
         name: 'Optrimax',
-        objective: 'Adaptación bilingüe de reel de producto: versión en inglés para Instagram y versión en chino para RedNote (小红书). Mismo concepto visual, copy nativo en cada idioma. Complementado con set de estáticos de paid media.',
-        formats: ['Reel EN · Instagram', 'Reel 中文 · 小红书', 'Statics · Paid Media'],
+        objective: 'Adaptación bilingüe de reel de producto: versión en inglés para Instagram y versión en chino para RedNote (小红书). Mismo concepto visual, copy nativo en cada idioma.',
+        formats: ['Reel EN · Instagram', 'Reel 中文 · 小红书'],
         gallery: [],
         sections: [
           { items: ['/assets/bwl/bwl-post-71-en-web.mp4', '/assets/bwl/bwl-post-71-zh-web.mp4'], type: 'carousel' },
-          { items: ['/assets/bwl/bwl-pm-12.png', '/assets/bwl/bwl-pm-13.png'] },
         ],
       },
       {
-        name: 'Drs Secret',
-        objective: 'Campaña de paid media con video y set de estáticos. El video activa la marca en pauta dinámica; los estáticos cubren formatos de display y feed con composición limpia orientada a conversión.',
+        name: 'Paid Media',
+        objective: 'Piezas de pauta para múltiples marcas BWL: videos de activación de producto y sets de estáticos para feed y display.',
         formats: ['Video · Paid Media', 'Statics · Paid Media'],
         gallery: [],
         sections: [
-          { items: ['/assets/bwl/bwl-pm-03-web.mp4'] },
-          { items: ['/assets/bwl/bwl-01.png', '/assets/bwl/bwl-02.png', '/assets/bwl/bwl-03.png', '/assets/bwl/bwl-04.png', '/assets/bwl/bwl-05.png'], type: 'carousel' },
-        ],
-      },
-      {
-        name: 'Pentalab',
-        objective: 'Pieza de paid media en video para activación de marca. Edición de producto con cierre de marca y empaque — diseñado para captar atención en el primer segundo de pauta.',
-        formats: ['Video · Paid Media'],
-        gallery: [],
-        sections: [
-          { items: ['/assets/bwl/bwl-pm-11-web.mp4'] },
-        ],
-      },
-      {
-        name: 'Paid Media · Set 06',
-        objective: 'Set de cinco estáticos de paid media — composición limpia y premium para pauta en feed.',
-        formats: ['5 estáticos · Paid Media'],
-        gallery: [],
-        sections: [
+          {
+            groups: [
+              { items: ['/assets/bwl/bwl-pm-03-web.mp4'] },
+              { items: ['/assets/bwl/bwl-pm-11-web.mp4'] },
+            ],
+          },
+          {
+            groups: [
+              { items: ['/assets/bwl/bwl-01.png', '/assets/bwl/bwl-02.png', '/assets/bwl/bwl-03.png', '/assets/bwl/bwl-04.png', '/assets/bwl/bwl-05.png'], carousel: true },
+              { items: ['/assets/bwl/bwl-pm-12.png', '/assets/bwl/bwl-pm-13.png'] },
+            ],
+          },
           {
             groups: [
               {
@@ -586,18 +578,6 @@ export const projects: Project[] = [
                 ],
                 carousel: true,
               },
-            ],
-          },
-        ],
-      },
-      {
-        name: 'Paid Media · Set 09',
-        objective: 'Set de cinco estáticos de paid media Avance — versiones de producto en composición editorial para pauta.',
-        formats: ['5 estáticos · Paid Media'],
-        gallery: [],
-        sections: [
-          {
-            groups: [
               {
                 items: [
                   '/assets/bwl/bwl-pm-09-1.png',

@@ -240,30 +240,14 @@ export const projectTranslationsEN: Record<string, ProjectTranslation> = {
       {
         name: 'Optrimax',
         objective:
-          'Bilingual product reel adaptation: English version for Instagram and Chinese version for RedNote (小红书). Same visual concept, native copy in each language. Complemented with a static paid media set.',
-        formats: ['Reel EN · Instagram', 'Reel 中文 · 小红书', 'Statics · Paid Media'],
+          'Bilingual product reel adaptation: English version for Instagram and Chinese version for RedNote (小红书). Same visual concept, native copy in each language.',
+        formats: ['Reel EN · Instagram', 'Reel 中文 · 小红书'],
       },
       {
-        name: "Dr's Secret",
+        name: 'Paid Media',
         objective:
-          'Paid media campaign with video and static set. The video activates the brand in dynamic ads; the statics cover display and feed formats with clean, conversion-oriented composition.',
+          'Ad pieces across multiple BWL brands — activation videos and static sets for feed and display.',
         formats: ['Video · Paid Media', 'Statics · Paid Media'],
-      },
-      {
-        name: 'Pentalab',
-        objective:
-          'Video paid media for brand activation. Product edit with brand close and packaging — designed to capture attention in the first second of an ad.',
-        formats: ['Video · Paid Media'],
-      },
-      {
-        name: 'Paid Media · Set 06',
-        objective: 'Set of five static paid media pieces — clean, premium composition for feed ads.',
-        formats: ['5 statics · Paid Media'],
-      },
-      {
-        name: 'Paid Media · Set 09',
-        objective: 'Set of five static paid media pieces for Avance — editorial product compositions for ads.',
-        formats: ['5 statics · Paid Media'],
       },
     ],
   },
