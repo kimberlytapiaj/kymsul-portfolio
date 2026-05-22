@@ -60,6 +60,7 @@ export default function CampaignCarousel({ gallery, name, className, compact, fi
                   alt={`${name} ${i + 1}`}
                   fill
                   sizes="100vw"
+                  priority={i === 0}
                   className={contain ? 'object-contain' : 'object-cover'}
                 />
               )}
