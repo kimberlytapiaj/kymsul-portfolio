@@ -456,9 +456,9 @@ export const projects: Project[] = [
     gallery: [
       '/assets/bwl/bwl-mothers-day-web.mp4',
       '/assets/bwl/bwl-post-82-1.png',
-      '/assets/bwl/bwl-pm-06-1.png',
+      '/assets/bwl/bwl-09.png',
       '/assets/bwl/bwl-post-87.png',
-      '/assets/bwl/bwl-pm-09-1.png',
+      '/assets/bwl/bwl-10.png',
     ],
     campaigns: [
       {
