@@ -458,7 +458,6 @@ export const projects: Project[] = [
       '/assets/bwl/bwl-post-82-1.png',
       '/assets/bwl/bwl-pm-06-1.png',
       '/assets/bwl/bwl-post-87.png',
-      '/assets/bwl/bwl-pm-09-1.png',
     ],
     campaigns: [
       {
