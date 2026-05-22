@@ -3,6 +3,7 @@ export type SectionGroup = {
   carousel?: boolean
   contain?: boolean
   wide?: boolean
+  span?: number   // column span in a 3-col grid (1 | 2 | 3)
 }
 
 export type Section = {
@@ -94,17 +95,13 @@ export const projects: Project[] = [
         sections: [
           {
             groups: [
-              { items: ['/assets/zealix/zealix-dashboard.png', '/assets/zealix/zealix-mac-inventario.png', '/assets/zealix/zealix-mac-menu.png'], carousel: true, contain: true, wide: true },
-            ],
-          },
-          {
-            groups: [
-              { items: ['/assets/zealix/zealix-ipad-mesas.png', '/assets/zealix/zealix-ipad-menu.png'], carousel: true, contain: true },
-            ],
-          },
-          {
-            groups: [
-              { items: ['/assets/zealix/zealix-zea-chat.png', '/assets/zealix/zealix-zea-mobile.jpg'], carousel: true, contain: true },
+              { items: ['/assets/zealix/zealix-dashboard.png'],       span: 2, contain: true },
+              { items: ['/assets/zealix/zealix-ipad-mesas.png'],      span: 1, contain: true },
+              { items: ['/assets/zealix/zealix-mac-inventario.png'],  span: 1, contain: true },
+              { items: ['/assets/zealix/zealix-mac-menu.png'],        span: 1, contain: true },
+              { items: ['/assets/zealix/zealix-ipad-menu.png'],       span: 1, contain: true },
+              { items: ['/assets/zealix/zealix-zea-chat.png'],        span: 1, contain: true },
+              { items: ['/assets/zealix/zealix-zea-mobile.jpg'],      span: 1, contain: true },
             ],
           },
         ],

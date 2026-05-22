@@ -175,10 +175,10 @@ function GalleryItem({ src, alt }: { src: string; alt: string }) {
 }
 
 type BentoItem =
-  | { kind: 'video-carousel'; sources: string[]; contain?: boolean; wide?: boolean }
-  | { kind: 'image-carousel'; sources: string[]; contain?: boolean; wide?: boolean }
-  | { kind: 'video'; src: string; contain?: boolean; wide?: boolean }
-  | { kind: 'image'; src: string; contain?: boolean; wide?: boolean }
+  | { kind: 'video-carousel'; sources: string[]; contain?: boolean; wide?: boolean; span?: number }
+  | { kind: 'image-carousel'; sources: string[]; contain?: boolean; wide?: boolean; span?: number }
+  | { kind: 'video'; src: string; contain?: boolean; wide?: boolean; span?: number }
+  | { kind: 'image'; src: string; contain?: boolean; wide?: boolean; span?: number }
 
 const isVideo = (s: string) => s.endsWith('.mp4') || s.endsWith('.webm')
 
@@ -188,12 +188,12 @@ function extractSectionItems(section: Section): BentoItem[] {
     for (const group of section.groups) {
       if (group.carousel) {
         const hasVideo = group.items.some(isVideo)
-        out.push({ kind: hasVideo ? 'video-carousel' : 'image-carousel', sources: group.items, contain: group.contain, wide: group.wide })
+        out.push({ kind: hasVideo ? 'video-carousel' : 'image-carousel', sources: group.items, contain: group.contain, wide: group.wide, span: group.span })
       } else {
         for (const src of group.items) {
           out.push(isVideo(src)
-            ? { kind: 'video', src, wide: group.wide, contain: group.contain }
-            : { kind: 'image', src, wide: group.wide, contain: group.contain })
+            ? { kind: 'video', src, wide: group.wide, contain: group.contain, span: group.span }
+            : { kind: 'image', src, wide: group.wide, contain: group.contain, span: group.span })
         }
       }
     }
@@ -224,12 +224,12 @@ function extractBentoItems(campaign: SubProject): BentoItem[] {
       for (const group of section.groups) {
         if (group.carousel) {
           const hasVideo = group.items.some(isVideo)
-          out.push({ kind: hasVideo ? 'video-carousel' : 'image-carousel', sources: group.items, contain: group.contain, wide: group.wide })
+          out.push({ kind: hasVideo ? 'video-carousel' : 'image-carousel', sources: group.items, contain: group.contain, wide: group.wide, span: group.span })
         } else {
           for (const src of group.items) {
             out.push(isVideo(src)
-              ? { kind: 'video', src, wide: group.wide, contain: group.contain }
-              : { kind: 'image', src, wide: group.wide, contain: group.contain })
+              ? { kind: 'video', src, wide: group.wide, contain: group.contain, span: group.span }
+              : { kind: 'image', src, wide: group.wide, contain: group.contain, span: group.span })
           }
         }
       }
@@ -299,17 +299,22 @@ function CampaignBlock({ campaign }: { campaign: SubProject }) {
           {sections.map((section, si) => {
             const sectionItems = extractSectionItems(section)
             const sn = sectionItems.length
-            const sHasWide = sectionItems.some(it => it.wide)
+            const sHasWide = sectionItems.some(it => it.wide || (it.span && it.span > 1))
             const sGridStyle: React.CSSProperties = (() => {
               if (sHasWide) return { gridTemplateColumns: 'repeat(3, 1fr)' }
               if (sn === 1) return { maxWidth: '560px', margin: '0 auto' }
               if (sn === 2) return { gridTemplateColumns: 'repeat(2, 1fr)', maxWidth: '760px', margin: '0 auto' }
               return { gridTemplateColumns: 'repeat(3, 1fr)' }
             })()
+            const sSpanClass = (item: BentoItem) => {
+              if (item.wide) return 'col-span-3'
+              if (item.span === 2) return 'col-span-2'
+              return ''
+            }
             return (
               <div key={si} className="grid gap-3 items-start" style={sGridStyle}>
                 {sectionItems.map((item, i) => (
-                  <div key={i} className={item.wide ? 'col-span-3' : ''}>
+                  <div key={i} className={sSpanClass(item)}>
                     <MediaCell {...item} name={campaign.name} index={i} isPaidMedia={isPaidMedia} />
                   </div>
                 ))}
@@ -324,7 +329,7 @@ function CampaignBlock({ campaign }: { campaign: SubProject }) {
   // Single-section: existing flat grid layout
   const items = extractBentoItems(campaign)
   const n = items.length
-  const hasWide = items.some(it => it.wide)
+  const hasWide = items.some(it => it.wide || (it.span && it.span > 1))
   const gridStyle: React.CSSProperties = (() => {
     if (hasWide) return { gridTemplateColumns: 'repeat(3, 1fr)' }
     if (n === 1) return { maxWidth: '380px', margin: '0 auto' }
@@ -332,12 +337,18 @@ function CampaignBlock({ campaign }: { campaign: SubProject }) {
     return { gridTemplateColumns: 'repeat(3, 1fr)' }
   })()
 
+  const spanClass = (item: BentoItem) => {
+    if (item.wide) return 'col-span-3'
+    if (item.span === 2) return 'col-span-2'
+    return ''
+  }
+
   return (
     <div>
       {campaignHeader}
       <div className="grid gap-3 items-start" style={gridStyle}>
         {items.map((item, i) => (
-          <div key={i} className={item.wide ? 'col-span-3' : ''}>
+          <div key={i} className={spanClass(item)}>
             <MediaCell {...item} name={campaign.name} index={i} isPaidMedia={isPaidMedia} />
           </div>
         ))}
