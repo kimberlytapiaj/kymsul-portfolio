@@ -118,7 +118,6 @@ export const projects: Project[] = [
           {
             groups: [
               { items: ['/assets/zealix/zealix-pos-system-01.jpg', '/assets/zealix/zealix-pos-system-02.jpg', '/assets/zealix/zealix-pos-system-03.jpg'], carousel: true, wide: true },
-              { items: ['/assets/zealix/zealix-pos-01.jpg', '/assets/zealix/zealix-pos-02.jpg', '/assets/zealix/zealix-pos-03.jpg'], carousel: true, wide: true },
             ],
           },
         ],
@@ -144,7 +143,6 @@ export const projects: Project[] = [
         sections: [
           {
             groups: [
-              { items: ['/assets/zealix/zealix-post-13feb-1.png', '/assets/zealix/zealix-post-13feb-2.png', '/assets/zealix/zealix-post-13feb-3.png', '/assets/zealix/zealix-post-13feb-4.png', '/assets/zealix/zealix-post-13feb-5.png'], carousel: true },
               { items: ['/assets/zealix/zealix-post-08-1.png', '/assets/zealix/zealix-post-08-2.png', '/assets/zealix/zealix-post-08-3.png', '/assets/zealix/zealix-post-08-4.png', '/assets/zealix/zealix-post-08-5.png', '/assets/zealix/zealix-post-08-6.png', '/assets/zealix/zealix-post-08-7.png'], carousel: true },
               { items: ['/assets/zealix/zealix-post-01.png'] },
               { items: ['/assets/zealix/zealix-post-11.png'] },
@@ -154,7 +152,6 @@ export const projects: Project[] = [
               { items: ['/assets/zealix/zealix-post-14.png'] },
               { items: ['/assets/zealix/zealix-post-10.png'] },
               { items: ['/assets/zealix/zealix-post-03.png'] },
-              { items: ['/assets/zealix/zealix-post-05.png'] },
             ],
           },
         ],
