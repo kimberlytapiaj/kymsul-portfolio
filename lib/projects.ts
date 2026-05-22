@@ -367,6 +367,12 @@ export const projects: Project[] = [
               '/assets/kop/kop-hl-30-secs-volley-web.mp4',
             ],
           },
+          {
+            name: 'SPURS Watch Party',
+            objective: 'Reel de activación para la Watch Party de los San Antonio Spurs en el club — evento deportivo de temporada para miembros y comunidad del club.',
+            formats: ['Reel · Evento'],
+            gallery: ['/assets/kop/kop-spurs-web.mp4'],
+          },
         ],
       },
       {
@@ -408,13 +414,19 @@ export const projects: Project[] = [
           {
             groups: [
               { items: ['/assets/kop/kop-reel-174-web.mp4'] },
+              { items: ['/assets/kop/kop-reel-182-web.mp4'] },
+              { items: ['/assets/kop/kop-reel-176-web.mp4'] },
               { items: ['/assets/kop/kop-c143-1.png', '/assets/kop/kop-c143-2.png', '/assets/kop/kop-c143-3.png', '/assets/kop/kop-c143-4.png'], carousel: true },
               { items: ['/assets/kop/kop-post-140.png'] },
+              { items: ['/assets/kop/kop-post-141.png'] },
               { items: ['/assets/kop/kop-reel-147-web.mp4'] },
               { items: ['/assets/kop/kop-c146-1.png', '/assets/kop/kop-c146-2.png', '/assets/kop/kop-c146-3.png', '/assets/kop/kop-c146-4.png'], carousel: true },
               { items: ['/assets/kop/kop-reel-150-web.mp4'] },
               { items: ['/assets/kop/kop-c154-1.png', '/assets/kop/kop-c154-2.png', '/assets/kop/kop-c154-3.png'], carousel: true },
+              { items: ['/assets/kop/kop-post-149.png'] },
+              { items: ['/assets/kop/kop-post-160.png'] },
               { items: ['/assets/kop/kop-c168-1.png', '/assets/kop/kop-c168-2.png', '/assets/kop/kop-c168-3.png'], carousel: true },
+              { items: ['/assets/kop/kop-post-169.png'] },
               { items: ['/assets/kop/kop-post-172.png'] },
             ],
           },

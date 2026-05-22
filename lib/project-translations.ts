@@ -178,6 +178,12 @@ export const projectTranslationsEN: Record<string, ProjectTranslation> = {
               '30-second videos per sport at the club — Padel, Soccer and Volleyball — for activation on venue screens and social media.',
             formats: ['Reel 30s · Padel', 'Reel 30s · Soccer', 'Reel 30s · Volleyball'],
           },
+          {
+            name: 'SPURS Watch Party',
+            objective:
+              'Activation reel for the San Antonio Spurs Watch Party at the club — seasonal sports event for members and the community.',
+            formats: ['Reel · Event'],
+          },
         ],
       },
       {
@@ -195,7 +201,7 @@ export const projectTranslationsEN: Record<string, ProjectTranslation> = {
       {
         name: 'Organic Content',
         objective:
-          "Editorial posts, educational carousels and reels for KOP's Instagram feed — pieces that build brand identity week by week.",
+          "Editorial posts, educational carousels and reels for KOP's Instagram feed — 15+ pieces building brand identity week by week.",
         formats: ['Post', 'Carousel', 'Reel'],
       },
     ],
