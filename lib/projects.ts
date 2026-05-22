@@ -63,7 +63,8 @@ export const projects: Project[] = [
     campaignsLabel: 'TRABAJO',
     gallery: [
       '/assets/zealix/zealix-manual-mockup.jpg',
-      '/assets/zealix/zealix-pos-01.jpg',
+      '/assets/zealix/zealix-pos-system-01.jpg',
+      '/assets/zealix/zealix-pos-system-03.jpg',
       '/assets/zealix/zealix-01.png',
       '/assets/zealix/zealix-zea-mobile.jpg',
       '/assets/zealix/zealix-06.png',
@@ -110,12 +111,13 @@ export const projects: Project[] = [
       },
       {
         name: 'POS · Punto de Venta',
-        objective: 'Identidad aplicada al hardware: el sistema Zealix en el punto de venta físico. Asistente Zea, gestión de menú y dashboard en terminal POS real.',
-        formats: ['Terminal POS', 'Asistente Zea AI', 'Menú', 'Dashboard'],
+        objective: 'Identidad aplicada al hardware: el sistema Zealix en el punto de venta físico. Asistente Zea, gestión de menú y dashboard de ventas en terminal POS real.',
+        formats: ['Terminal POS', 'Asistente Zea AI', 'Gestión de Menú', 'Dashboard de Ventas'],
         gallery: [],
         sections: [
           {
             groups: [
+              { items: ['/assets/zealix/zealix-pos-system-01.jpg', '/assets/zealix/zealix-pos-system-02.jpg', '/assets/zealix/zealix-pos-system-03.jpg'], carousel: true, wide: true },
               { items: ['/assets/zealix/zealix-pos-01.jpg', '/assets/zealix/zealix-pos-02.jpg', '/assets/zealix/zealix-pos-03.jpg'], carousel: true, wide: true },
             ],
           },
@@ -137,12 +139,14 @@ export const projects: Project[] = [
       {
         name: 'Social Media',
         objective: 'Dirección creativa de la producción visual: lineamientos, revisión y consistencia de marca. Fotografía editorial para dueños de restaurantes en IG · FB · LinkedIn.',
-        formats: ['Post · Instagram', 'Post · Facebook', 'Post · LinkedIn'],
+        formats: ['Post · Instagram', 'Post · Facebook', 'Post · LinkedIn', 'Carrusel'],
         gallery: [],
         sections: [
           {
             groups: [
+              { items: ['/assets/zealix/zealix-post-13feb-1.png', '/assets/zealix/zealix-post-13feb-2.png', '/assets/zealix/zealix-post-13feb-3.png', '/assets/zealix/zealix-post-13feb-4.png', '/assets/zealix/zealix-post-13feb-5.png'], carousel: true },
               { items: ['/assets/zealix/zealix-post-08-1.png', '/assets/zealix/zealix-post-08-2.png', '/assets/zealix/zealix-post-08-3.png', '/assets/zealix/zealix-post-08-4.png', '/assets/zealix/zealix-post-08-5.png', '/assets/zealix/zealix-post-08-6.png', '/assets/zealix/zealix-post-08-7.png'], carousel: true },
+              { items: ['/assets/zealix/zealix-post-01.png'] },
               { items: ['/assets/zealix/zealix-post-11.png'] },
               { items: ['/assets/zealix/zealix-post-04.png'] },
               { items: ['/assets/zealix/zealix-post-09.png'] },
