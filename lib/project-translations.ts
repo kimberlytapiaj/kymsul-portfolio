@@ -227,10 +227,15 @@ export const projectTranslationsEN: Record<string, ProjectTranslation> = {
         formats: ['Carousel EN · Instagram', 'Carousel 中文 · 小红书'],
       },
       {
+        name: 'BWL · Organic Content',
+        objective: 'Editorial reels, product carousel and static posts for the main BWL brand channel.',
+        formats: ['Reel', 'Carousel', 'Post'],
+      },
+      {
         name: 'Avance',
         objective:
-          'Product content for Instagram and RedNote: bilingual platform-adapted reels, educational carousels and editorial posts designed for retention and saves.',
-        formats: ['Reel EN', 'Reel 中文', 'Carousel', 'Post'],
+          'Product content for Instagram and RedNote: bilingual platform-adapted reels and educational carousel designed for retention and saves.',
+        formats: ['Reel EN', 'Reel 中文', 'Carousel'],
       },
       {
         name: 'Optrimax',

@@ -494,18 +494,11 @@ export const projects: Project[] = [
         ],
       },
       {
-        name: 'Avance',
-        objective: 'Contenido de producto para Instagram y RedNote: reels bilingües adaptados por plataforma, carruseles educativos y posts editoriales pensados para retención y guardados.',
-        formats: ['Reel EN', 'Reel 中文', 'Carrusel', 'Post'],
+        name: 'BWL · Contenido Orgánico',
+        objective: 'Reels editoriales, carrusel de producto y posts estáticos para el canal principal de BWL.',
+        formats: ['Reel', 'Carrusel', 'Post'],
         gallery: [],
         sections: [
-          {
-            groups: [
-              { items: ['/assets/bwl/bwl-post-66-web.mp4', '/assets/bwl/bwl-post-66-zh-web.mp4'], carousel: true },
-              { items: ['/assets/bwl/bwl-post-77-web.mp4'] },
-              { items: ['/assets/bwl/bwl-post-76.png'] },
-            ],
-          },
           {
             groups: [
               { items: ['/assets/bwl/bwl-reel-80-web.mp4'] },
@@ -525,7 +518,22 @@ export const projects: Project[] = [
                 ],
                 carousel: true,
               },
+              { items: ['/assets/bwl/bwl-post-76.png'] },
               { items: ['/assets/bwl/bwl-post-87.png'] },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Avance',
+        objective: 'Contenido de producto para Instagram y RedNote: reels bilingües adaptados por plataforma y carrusel educativo pensado para retención y guardados.',
+        formats: ['Reel EN', 'Reel 中文', 'Carrusel'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/bwl/bwl-post-66-web.mp4', '/assets/bwl/bwl-post-66-zh-web.mp4'], carousel: true },
+              { items: ['/assets/bwl/bwl-post-77-web.mp4'] },
             ],
           },
           { items: ['/assets/bwl/bwl-06.png', '/assets/bwl/bwl-07.png', '/assets/bwl/bwl-08.png', '/assets/bwl/bwl-16.png', '/assets/bwl/bwl-17.png'], type: 'carousel' },
