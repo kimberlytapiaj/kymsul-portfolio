@@ -95,13 +95,13 @@ export const projects: Project[] = [
         sections: [
           {
             groups: [
-              { items: ['/assets/zealix/zealix-dashboard.png'],       span: 2 },
-              { items: ['/assets/zealix/zealix-ipad-mesas.png'],      span: 1 },
-              { items: ['/assets/zealix/zealix-mac-inventario.png'],  span: 1 },
-              { items: ['/assets/zealix/zealix-mac-menu.png'],        span: 1 },
-              { items: ['/assets/zealix/zealix-ipad-menu.png'],       span: 1 },
-              { items: ['/assets/zealix/zealix-zea-chat.png'],        span: 1 },
-              { items: ['/assets/zealix/zealix-zea-mobile.jpg'],      span: 1 },
+              { items: ['/assets/zealix/zealix-dashboard.png'],      wide: true },
+              { items: ['/assets/zealix/zealix-ipad-mesas.png'] },
+              { items: ['/assets/zealix/zealix-mac-inventario.png'] },
+              { items: ['/assets/zealix/zealix-mac-menu.png'] },
+              { items: ['/assets/zealix/zealix-ipad-menu.png'] },
+              { items: ['/assets/zealix/zealix-zea-chat.png'] },
+              { items: ['/assets/zealix/zealix-zea-mobile.jpg'] },
             ],
           },
         ],
