@@ -566,30 +566,6 @@ export const projects: Project[] = [
               { items: ['/assets/bwl/bwl-pm-12.png', '/assets/bwl/bwl-pm-13.png'] },
             ],
           },
-          {
-            groups: [
-              {
-                items: [
-                  '/assets/bwl/bwl-pm-06-1.png',
-                  '/assets/bwl/bwl-pm-06-2.png',
-                  '/assets/bwl/bwl-pm-06-3.png',
-                  '/assets/bwl/bwl-pm-06-4.png',
-                  '/assets/bwl/bwl-pm-06-5.png',
-                ],
-                carousel: true,
-              },
-              {
-                items: [
-                  '/assets/bwl/bwl-pm-09-1.png',
-                  '/assets/bwl/bwl-pm-09-2.png',
-                  '/assets/bwl/bwl-pm-09-3.png',
-                  '/assets/bwl/bwl-pm-09-4.png',
-                  '/assets/bwl/bwl-pm-09-5.png',
-                ],
-                carousel: true,
-              },
-            ],
-          },
         ],
       },
     ],
