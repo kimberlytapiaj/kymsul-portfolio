@@ -533,6 +533,7 @@ export const projects: Project[] = [
               { items: ['/assets/bwl/bwl-post-66-web.mp4', '/assets/bwl/bwl-post-66-zh-web.mp4'], carousel: true },
               { items: ['/assets/bwl/bwl-post-77-web.mp4'] },
               { items: ['/assets/bwl/bwl-reel-83-web.mp4'] },
+              { items: ['/assets/bwl/bwl-post-87.png'] },
             ],
           },
           { items: ['/assets/bwl/bwl-06.png', '/assets/bwl/bwl-07.png', '/assets/bwl/bwl-08.png', '/assets/bwl/bwl-16.png', '/assets/bwl/bwl-17.png'], type: 'carousel' },
@@ -562,7 +563,21 @@ export const projects: Project[] = [
           {
             groups: [
               { items: ['/assets/bwl/bwl-01.png', '/assets/bwl/bwl-02.png', '/assets/bwl/bwl-03.png', '/assets/bwl/bwl-04.png', '/assets/bwl/bwl-05.png'], carousel: true },
-              { items: ['/assets/bwl/bwl-pm-12.png', '/assets/bwl/bwl-pm-13.png', '/assets/bwl/bwl-post-87.png'] },
+              { items: ['/assets/bwl/bwl-pm-12.png', '/assets/bwl/bwl-pm-13.png'] },
+            ],
+          },
+          {
+            groups: [
+              {
+                items: [
+                  '/assets/bwl/bwl-pm-09-1.png',
+                  '/assets/bwl/bwl-pm-09-2.png',
+                  '/assets/bwl/bwl-pm-09-3.png',
+                  '/assets/bwl/bwl-pm-09-4.png',
+                  '/assets/bwl/bwl-pm-09-5.png',
+                ],
+                carousel: true,
+              },
             ],
           },
         ],
