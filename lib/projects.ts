@@ -518,7 +518,6 @@ export const projects: Project[] = [
                 carousel: true,
               },
               { items: ['/assets/bwl/bwl-post-76.png'] },
-              { items: ['/assets/bwl/bwl-post-87.png'] },
             ],
           },
         ],
@@ -534,6 +533,7 @@ export const projects: Project[] = [
               { items: ['/assets/bwl/bwl-post-66-web.mp4', '/assets/bwl/bwl-post-66-zh-web.mp4'], carousel: true },
               { items: ['/assets/bwl/bwl-post-77-web.mp4'] },
               { items: ['/assets/bwl/bwl-reel-83-web.mp4'] },
+              { items: ['/assets/bwl/bwl-post-87.png'] },
             ],
           },
           { items: ['/assets/bwl/bwl-06.png', '/assets/bwl/bwl-07.png', '/assets/bwl/bwl-08.png', '/assets/bwl/bwl-16.png', '/assets/bwl/bwl-17.png'], type: 'carousel' },
@@ -541,8 +541,8 @@ export const projects: Project[] = [
       },
       {
         name: 'Optrimax',
-        objective: 'Adaptación bilingüe de reel de producto: versión en inglés para Instagram y versión en chino para RedNote (小红书). Mismo concepto visual, copy nativo en cada idioma.',
-        formats: ['Reel EN · Instagram', 'Reel 中文 · 小红书'],
+        objective: 'Adaptación bilingüe de reel de producto: versión en inglés para Instagram y versión en chino para RedNote (小红书). Mismo concepto visual, copy nativo en cada idioma. Complementado con set de estáticos de paid media.',
+        formats: ['Reel EN · Instagram', 'Reel 中文 · 小红书', 'Statics · Paid Media'],
         gallery: [],
         sections: [
           { items: ['/assets/bwl/bwl-post-71-en-web.mp4', '/assets/bwl/bwl-post-71-zh-web.mp4'], type: 'carousel' },
@@ -592,7 +592,7 @@ export const projects: Project[] = [
       },
       {
         name: 'Paid Media · Set 09',
-        objective: 'Set de cinco estáticos de paid media — versiones de producto en composición editorial para pauta.',
+        objective: 'Set de cinco estáticos de paid media Avance — versiones de producto en composición editorial para pauta.',
         formats: ['5 estáticos · Paid Media'],
         gallery: [],
         sections: [

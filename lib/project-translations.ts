@@ -240,8 +240,8 @@ export const projectTranslationsEN: Record<string, ProjectTranslation> = {
       {
         name: 'Optrimax',
         objective:
-          'Bilingual product reel adaptation: English version for Instagram and Chinese version for RedNote (小红书). Same visual concept, native copy in each language.',
-        formats: ['Reel EN · Instagram', 'Reel 中文 · 小红书'],
+          'Bilingual product reel adaptation: English version for Instagram and Chinese version for RedNote (小红书). Same visual concept, native copy in each language. Complemented with a static paid media set.',
+        formats: ['Reel EN · Instagram', 'Reel 中文 · 小红书', 'Statics · Paid Media'],
       },
       {
         name: "Dr's Secret",
@@ -262,7 +262,7 @@ export const projectTranslationsEN: Record<string, ProjectTranslation> = {
       },
       {
         name: 'Paid Media · Set 09',
-        objective: 'Set of five static paid media pieces — editorial product compositions for ads.',
+        objective: 'Set of five static paid media pieces for Avance — editorial product compositions for ads.',
         formats: ['5 statics · Paid Media'],
       },
     ],
