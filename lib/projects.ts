@@ -47,7 +47,7 @@ export const projects: Project[] = [
     id: 'zealix',
     name: 'Zealix',
     category: 'BRANDING · SOCIAL MEDIA',
-    year: '2025–26',
+    year: '2024–26',
     image: '/assets/thumbnail-zealix.jpg',
     accentColor: 'white',
     tagline: 'Automatiza. Optimiza. Evoluciona.',
