@@ -2,8 +2,8 @@ import Link from 'next/link'
 
 const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 
-const navLinks = ['Inicio', 'Proyectos', 'IA', 'Sobre Mí', 'Servicios', 'Contacto']
-const navHrefs = ['/', '/proyectos', '/ia', '/sobre-mi', '/servicios', '/contacto']
+const navLinks = ['Inicio', 'Proyectos', 'IA', 'Sobre Mí']
+const navHrefs = ['/', '/proyectos', '/ia', '/sobre-mi']
 const socialLinks = [
   {
     label: 'Instagram',
