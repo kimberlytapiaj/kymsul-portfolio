@@ -455,9 +455,9 @@ export const projects: Project[] = [
       'Más de 20 piezas entre paid media estático, reels bilingües y posts editoriales. Sistema de producción que permite adaptar cada pieza a dos idiomas sin perder coherencia de marca. Campaña May 1 · Global Love Your Skin Month: 53 likes y 43 sends — ratio de envíos alto para contenido editorial.',
     gallery: [
       '/assets/bwl/bwl-mothers-day-web.mp4',
-      '/assets/bwl/bwl-post-82-1.png',
+      '/assets/bwl/bwl-12.png',
       '/assets/bwl/bwl-09.png',
-      '/assets/bwl/bwl-post-87.png',
+      '/assets/bwl/bwl-13.png',
       '/assets/bwl/bwl-10.png',
     ],
     campaigns: [
