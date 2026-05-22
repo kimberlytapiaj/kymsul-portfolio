@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Fraunces, JetBrains_Mono, Inter } from 'next/font/google'
 import localFont from 'next/font/local'
 import './globals.css'
+import { LangProvider } from '@/lib/lang-context'
 
 const fraunces = Fraunces({
   subsets: ['latin'],
@@ -51,7 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="es"
       className={`${fraunces.variable} ${jetbrainsMono.variable} ${inter.variable} ${franklinCond.variable} ${franklin.variable}`}
     >
-      <body>{children}</body>
+      <body><LangProvider>{children}</LangProvider></body>
     </html>
   )
 }

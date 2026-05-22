@@ -14,6 +14,7 @@ type ProjectCardProps = {
   agency?: string
   className?: string
   sizes?: string
+  ctaLabel?: string
 }
 
 export default function ProjectCard({
@@ -27,6 +28,7 @@ export default function ProjectCard({
   agency,
   className = '',
   sizes = '(max-width: 1440px) 55vw, 728px',
+  ctaLabel = 'VER CASO',
 }: ProjectCardProps) {
   return (
     <Link href={`/proyectos/${id}`} className={`overflow-hidden flex flex-col cursor-pointer group ${className}`}>
@@ -44,7 +46,7 @@ export default function ProjectCard({
             className="font-mono text-[10px] tracking-[1.6px] flex-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
             style={{ color: accentColor }}
           >
-            VER CASO →
+            {ctaLabel} →
           </span>
           <span className="font-mono text-[10px] tracking-[1.4px] text-white/40">{year}</span>
         </div>

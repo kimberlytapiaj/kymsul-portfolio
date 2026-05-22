@@ -3,16 +3,10 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import ProjectCard from '@/components/ProjectCard'
 import { projects, getProject } from '@/lib/projects'
+import { useLang } from '@/lib/lang-context'
+import { tr } from '@/lib/translations'
 
 type Discipline = 'todos' | 'branding' | 'motion' | 'social' | 'ia'
-
-const FILTERS: { label: string; value: Discipline }[] = [
-  { label: 'TODOS',       value: 'todos' },
-  { label: 'BRANDING',    value: 'branding' },
-  { label: 'MOTION',      value: 'motion' },
-  { label: 'SOCIAL MEDIA', value: 'social' },
-  { label: 'IA',          value: 'ia' },
-]
 
 const DISCIPLINES: Record<string, Discipline[]> = {
   'zealix':          ['branding', 'social'],
@@ -53,6 +47,9 @@ function ProjectMeta({ project, wide }: ProjectMetaProps) {
 
 export default function ProyectosGrid() {
   const [active, setActive] = useState<Discipline>('todos')
+  const { lang } = useLang()
+  const FILTERS = (tr.proyectos.filters[lang] as unknown) as { label: string; value: Discipline }[]
+  const ctaLabel = tr.portfolio.verCaso[lang]
 
   const zealix         = getProject('zealix')!
   const brainy         = getProject('brainy')!
@@ -97,7 +94,7 @@ export default function ProyectosGrid() {
             <div className="flex flex-col gap-10 lg:hidden">
               {[zealix, brainy, kop, bwl, beatness, amorcito, corazonMixteco, activatedDecor, aiCreative].map(p => (
                 <div key={p.id}>
-                  <ProjectCard {...p} className="w-full h-[260px]" sizes="95vw" />
+                  <ProjectCard {...p} className="w-full h-[260px]" sizes="95vw" ctaLabel={ctaLabel} />
                   <ProjectMeta project={p} />
                 </div>
               ))}
@@ -107,49 +104,49 @@ export default function ProyectosGrid() {
             <div className="hidden lg:block">
               <div className="flex gap-6 mb-16">
                 <div className="flex-[728_1_0%]">
-                  <ProjectCard {...zealix} className="h-[460px]" />
+                  <ProjectCard {...zealix} className="h-[460px]" ctaLabel={ctaLabel} />
                   <ProjectMeta project={zealix} />
                 </div>
                 <div className="flex-[496_1_0%]">
-                  <ProjectCard {...brainy} className="h-[460px]" />
+                  <ProjectCard {...brainy} className="h-[460px]" ctaLabel={ctaLabel} />
                   <ProjectMeta project={brainy} />
                 </div>
               </div>
 
               <div className="flex gap-6 mb-16">
                 <div className="flex-[496_1_0%]">
-                  <ProjectCard {...kop} className="h-[460px]" />
+                  <ProjectCard {...kop} className="h-[460px]" ctaLabel={ctaLabel} />
                   <ProjectMeta project={kop} />
                 </div>
                 <div className="flex-[728_1_0%]">
-                  <ProjectCard {...bwl} className="h-[460px]" />
+                  <ProjectCard {...bwl} className="h-[460px]" ctaLabel={ctaLabel} />
                   <ProjectMeta project={bwl} />
                 </div>
               </div>
 
               <div className="mb-16">
-                <ProjectCard {...beatness} className="w-full h-[500px]" />
+                <ProjectCard {...beatness} className="w-full h-[500px]" ctaLabel={ctaLabel} />
                 <ProjectMeta project={beatness} wide />
               </div>
 
               <div className="flex gap-6 mb-16">
                 <div className="flex-[728_1_0%]">
-                  <ProjectCard {...amorcito} className="h-[460px]" />
+                  <ProjectCard {...amorcito} className="h-[460px]" ctaLabel={ctaLabel} />
                   <ProjectMeta project={amorcito} />
                 </div>
                 <div className="flex-[496_1_0%]">
-                  <ProjectCard {...corazonMixteco} className="h-[460px]" />
+                  <ProjectCard {...corazonMixteco} className="h-[460px]" ctaLabel={ctaLabel} />
                   <ProjectMeta project={corazonMixteco} />
                 </div>
               </div>
 
               <div className="mb-16">
-                <ProjectCard {...activatedDecor} className="w-full h-[500px]" />
+                <ProjectCard {...activatedDecor} className="w-full h-[500px]" ctaLabel={ctaLabel} />
                 <ProjectMeta project={activatedDecor} wide />
               </div>
 
               <div>
-                <ProjectCard {...aiCreative} className="w-full h-[500px]" />
+                <ProjectCard {...aiCreative} className="w-full h-[500px]" ctaLabel={ctaLabel} />
                 <ProjectMeta project={aiCreative} wide />
               </div>
             </div>
@@ -177,13 +174,14 @@ export default function ProyectosGrid() {
                   {...project}
                   className="h-[260px] sm:h-[320px] lg:h-[420px]"
                   sizes="(max-width: 640px) 95vw, (max-width: 1024px) 45vw, 30vw"
+                  ctaLabel={ctaLabel}
                 />
                 <ProjectMeta project={project} />
               </motion.div>
             ))}
             {filtered.length === 0 && (
               <p className="col-span-full text-center font-mono text-[11px] text-muted2 tracking-[1.76px] py-24">
-                SIN PROYECTOS
+                {tr.proyectos.noProjects[lang]}
               </p>
             )}
           </motion.div>

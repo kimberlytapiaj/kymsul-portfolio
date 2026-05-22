@@ -1,20 +1,20 @@
+'use client'
+
 import Image from 'next/image'
 import PageLayout from '@/components/PageLayout'
 import LazyVideo from '@/components/LazyVideo'
 import CTABand from '@/components/CTABand'
+import { useLang } from '@/lib/lang-context'
+import { tr } from '@/lib/translations'
 
 const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 
-const STATS = [
-  { num: '10+', desc: 'proyectos documentados en código' },
-  { num: '307', desc: 'líneas de JSX generadas en un prompt' },
-  { num: '22s', desc: 'reel de paid media producido con script' },
-  { num: '5',   desc: 'formatos desde un solo brief' },
-  { num: '0',   desc: 'sesiones fotográficas para posts IA' },
-  { num: '48h', desc: 'tiempo de respuesta garantizado' },
-]
-
 export default function IAPage() {
+  const { lang } = useLang()
+  const ia = tr.ia
+
+  const STATS = ia.stats[lang]
+
   return (
     <PageLayout>
 
@@ -22,35 +22,34 @@ export default function IAPage() {
       <section className="px-6 lg:px-24 pt-12 lg:pt-20 pb-12 lg:pb-20 border-b border-[rgba(13,13,13,0.08)]">
         <div className="max-w-[1440px] mx-auto">
           <p className="font-mono text-[10px] lg:text-[11px] text-muted2 tracking-[1.76px] mb-6">
-            SISTEMA CREATIVO IA
+            {ia.hero.eyebrow[lang]}
           </p>
           <div className="mb-8 lg:mb-12">
             <p
               className="text-[clamp(40px,7.5vw,108px)] text-dark leading-[0.88]"
               style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 700 }}
             >
-              Del prompt
+              {ia.hero.line1[lang]}
             </p>
             <p
               className="font-fraunces font-light italic text-[clamp(36px,7.5vw,100px)] text-dark leading-[0.88]"
               style={WONK}
             >
-              al entregable.
+              {ia.hero.line2[lang]}
             </p>
             <p
               className="text-[clamp(36px,7.5vw,100px)] text-lav leading-[0.88]"
               style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 700 }}
             >
-              Sin fricción.
+              {ia.hero.line3[lang]}
             </p>
           </div>
           <div className="border-t border-[rgba(13,13,13,0.1)] pt-6 lg:pt-8 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5">
             <p className="font-sans text-[15px] lg:text-[17px] text-muted leading-[1.6] max-w-[580px]">
-              Un pipeline de producción creativa donde la documentación, la imagen generativa,
-              los scripts de automatización y el código operan como un solo sistema.
+              {ia.hero.sub[lang]}
             </p>
             <p className="font-mono text-[10px] text-muted2 tracking-[1.4px] shrink-0">
-              Gemini · Runway · Claude Code · AE · PS
+              {ia.hero.tools[lang]}
             </p>
           </div>
         </div>
@@ -60,15 +59,10 @@ export default function IAPage() {
       <section className="bg-dark px-6 lg:px-24 py-14 lg:py-20">
         <div className="max-w-[1440px] mx-auto">
           <p className="font-mono text-[10px] text-[rgba(255,255,255,0.3)] tracking-[1.76px] mb-10 lg:mb-14">
-            EL FLUJO
+            {ia.flujo.eyebrow[lang]}
           </p>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-0">
-            {[
-              { num: '01', label: 'Documentación',    sub: 'Obsidian · Claude Code' },
-              { num: '02', label: 'Imagen generativa', sub: 'Gemini · Runway · Higgsfield' },
-              { num: '03', label: 'Scripts',           sub: 'After Effects · Photoshop' },
-              { num: '04', label: 'Diseño & frontend', sub: 'Next.js · Tailwind · Vercel' },
-            ].map((step) => (
+            {ia.flujo.steps[lang].map((step) => (
               <div
                 key={step.num}
                 className="lg:border-r lg:border-[rgba(255,255,255,0.08)] lg:last:border-r-0 lg:pr-10 lg:mr-10 lg:last:pr-0 lg:last:mr-0"
@@ -94,30 +88,21 @@ export default function IAPage() {
 
           {/* Left */}
           <div className="lg:w-[400px] shrink-0">
-            <p className="font-mono text-[10px] text-muted2 tracking-[1.76px] mb-6">— 01 · DOCUMENTACIÓN</p>
+            <p className="font-mono text-[10px] text-muted2 tracking-[1.76px] mb-6">{ia.doc.eyebrow[lang]}</p>
             <p
               className="text-dark leading-[1.05] mb-6"
               style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 700, fontSize: 'clamp(28px,3.5vw,42px)' }}
             >
-              El sistema sabe quién es la marca.
+              {ia.doc.h[lang]}
             </p>
             <p className="font-sans text-[15px] text-muted leading-[1.7] mb-8">
-              Los brand guidelines de cada cliente viven en Obsidian — tipografía, paleta, tono,
-              reglas visuales. Antes de generar una sola imagen o escribir una línea de código,
-              Claude Code lee ese contexto. El output no es genérico: está calibrado a la marca
-              desde el primer prompt.
+              {ia.doc.p1[lang]}
             </p>
             <p className="font-sans text-[15px] text-muted leading-[1.7] mb-8">
-              La misma documentación que alimenta la producción también se entrega al cliente
-              como activo — un sistema vivo que escala con la marca.
+              {ia.doc.p2[lang]}
             </p>
             <ul className="space-y-3 mb-8">
-              {[
-                'Obsidian como base de conocimiento de marca',
-                'Claude Code lee guidelines antes de ejecutar',
-                'Coherencia garantizada desde el origen',
-                'Documentación entregada como activo al cliente',
-              ].map((b) => (
+              {ia.doc.bullets[lang].map((b) => (
                 <li key={b} className="flex items-start gap-3 font-sans text-[13px] text-muted">
                   <span className="w-1 h-1 rounded-full bg-lav mt-[7px] shrink-0" />
                   {b}
@@ -136,52 +121,52 @@ export default function IAPage() {
           {/* Right: terminal visual */}
           <div className="flex-1 bg-dark rounded-sm p-7 lg:p-10 font-mono text-[12px] leading-[1.9] overflow-hidden">
             <p className="text-[rgba(255,255,255,0.25)] tracking-[1.4px] text-[9px] mb-5">
-              BRAND FILE · OBSIDIAN
+              {ia.doc.terminalLabel1[lang]}
             </p>
             <p className="text-lav">## Colores</p>
             <p className="text-[rgba(255,255,255,0.55)]">
-              Primario: <span className="text-bg">#4945e9</span>
+              {ia.doc.terminalPrimary[lang]}: <span className="text-bg">#4945e9</span>
             </p>
             <p className="text-[rgba(255,255,255,0.55)]">
-              Secundario: <span className="text-bg">#9a15e9</span>
+              {ia.doc.terminalSecondary[lang]}: <span className="text-bg">#9a15e9</span>
             </p>
             <p className="text-[rgba(255,255,255,0.55)]">
-              Tipografía: <span className="text-bg">Ivypresto · LibreFranklin</span>
+              {ia.doc.terminalTypo[lang]}: <span className="text-bg">Ivypresto · LibreFranklin</span>
             </p>
             <p className="text-[rgba(255,255,255,0.55)]">
-              Tono: <span className="text-bg">Estratégico · Directo · Editorial</span>
+              {ia.doc.terminalTone[lang]}: <span className="text-bg">Estratégico · Directo · Editorial</span>
             </p>
             <p className="text-[rgba(255,255,255,0.55)]">
-              Nunca: <span className="text-bg">freelancer energy · genérico · trend-chasing</span>
+              {ia.doc.terminalNever[lang]}: <span className="text-bg">freelancer energy · genérico · trend-chasing</span>
             </p>
 
             <div className="my-6 border-t border-[rgba(255,255,255,0.08)]" />
 
             <p className="text-[rgba(255,255,255,0.25)] tracking-[1.4px] text-[9px] mb-5">
-              CLAUDE CODE · LEE EL CONTEXTO
+              {ia.doc.terminalLabel2[lang]}
             </p>
             <p className="text-[rgba(255,255,255,0.45)]">
-              {'>'} Leyendo{' '}
+              {ia.doc.terminalRead[lang]}{' '}
               <span className="text-lav">Axomy Studio — Brand Guidelines.md</span>
             </p>
             <p className="text-[rgba(255,255,255,0.45)]">
-              {'>'} Cargando paleta · tipografía · reglas visuales...
+              {ia.doc.terminalLoading[lang]}
             </p>
             <p className="text-[rgba(255,255,255,0.45)]">
-              {'>'} Generando script calibrado a la marca
+              {ia.doc.terminalGen[lang]}
             </p>
 
             <div className="my-6 border-t border-[rgba(255,255,255,0.08)]" />
 
             <p className="text-[rgba(255,255,255,0.25)] tracking-[1.4px] text-[9px] mb-3">
-              OUTPUT
+              {ia.doc.terminalOutput[lang]}
             </p>
             <p className="text-[rgba(255,255,255,0.45)]">
-              Script AE · <span className="text-bg">307 líneas</span>
+              {ia.doc.terminalOutputLine1[lang]} <span className="text-bg">{ia.doc.terminalOutputLine1val[lang]}</span>
             </p>
             <p className="text-[rgba(255,255,255,0.45)]">
-              Coherente con marca →{' '}
-              <span className="text-lav">aprobado en primera revisión</span>
+              {ia.doc.terminalOutputLine2[lang]}{' '}
+              <span className="text-lav">{ia.doc.terminalOutputLine2val[lang]}</span>
             </p>
           </div>
 
@@ -192,7 +177,7 @@ export default function IAPage() {
       <section className="px-6 lg:px-24 py-16 lg:py-24 border-b border-[rgba(13,13,13,0.08)]">
         <div className="max-w-[1440px] mx-auto">
           <p className="font-mono text-[10px] text-muted2 tracking-[1.76px] mb-10 lg:mb-16">
-            — 02 · IMAGEN GENERATIVA
+            {ia.imagen.eyebrow[lang]}
           </p>
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
 
@@ -202,16 +187,13 @@ export default function IAPage() {
                 className="text-dark leading-[1.05] mb-6"
                 style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 700, fontSize: 'clamp(28px,3.5vw,42px)' }}
               >
-                Fotografía de escena sin sesión.
+                {ia.imagen.h[lang]}
               </p>
               <p className="font-sans text-[15px] text-muted leading-[1.7] mb-6">
-                Imagen de producto, lifestyle y composiciones generadas con IA — calibradas con
-                prompt engineering para que el resultado no rompa la identidad visual del cliente.
-                Lo que antes requería locación, modelos y horas de edición ahora es iteración de
-                prompts con dirección de arte.
+                {ia.imagen.p[lang]}
               </p>
               <p className="font-mono text-[10px] text-muted2 tracking-[1.4px] mb-3">
-                PROMPT REAL · KOP KINGS TAVERN
+                {ia.imagen.promptLabel[lang]}
               </p>
               <div className="bg-[rgba(13,13,13,0.04)] border border-[rgba(13,13,13,0.06)] rounded-sm p-5 font-mono text-[11px] text-muted leading-[1.7] mb-8">
                 "Top-down view of the food on a soccer field. Artificial grass, white field lines,
@@ -231,7 +213,7 @@ export default function IAPage() {
               <div className="grid grid-cols-2 gap-3">
                 <div>
                   <p className="font-mono text-[9px] text-muted2 tracking-[1.2px] mb-2">
-                    FOTO ORIGINAL · IPHONE
+                    {ia.imagen.beforeLabel[lang]}
                   </p>
                   <div className="relative aspect-square overflow-hidden rounded-sm bg-[rgba(13,13,13,0.04)]">
                     <Image
@@ -245,7 +227,7 @@ export default function IAPage() {
                 </div>
                 <div>
                   <p className="font-mono text-[9px] text-muted2 tracking-[1.2px] mb-2">
-                    RESULTADO · GEMINI
+                    {ia.imagen.afterLabel[lang]}
                   </p>
                   <div className="relative aspect-square overflow-hidden rounded-sm bg-[rgba(13,13,13,0.04)]">
                     <Image
@@ -260,7 +242,7 @@ export default function IAPage() {
               </div>
               <div>
                 <p className="font-mono text-[9px] text-muted2 tracking-[1.2px] mb-2">
-                  CLIPS GENERADOS → REEL FINAL · BWL
+                  {ia.imagen.clipsLabel[lang]}
                 </p>
                 <div className="grid grid-cols-2 gap-3">
                   <LazyVideo
@@ -283,7 +265,7 @@ export default function IAPage() {
       <section className="px-6 lg:px-24 py-16 lg:py-24 border-b border-[rgba(13,13,13,0.08)]">
         <div className="max-w-[1440px] mx-auto">
           <p className="font-mono text-[10px] text-muted2 tracking-[1.76px] mb-10 lg:mb-16">
-            — 03 · SCRIPTS DE PRODUCCIÓN
+            {ia.scripts.eyebrow[lang]}
           </p>
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
 
@@ -293,31 +275,26 @@ export default function IAPage() {
                 className="text-dark leading-[1.05] mb-6"
                 style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 700, fontSize: 'clamp(28px,3.5vw,42px)' }}
               >
-                Un reel completo en un clic.
+                {ia.scripts.h[lang]}
               </p>
               <p className="font-sans text-[15px] text-muted leading-[1.7] mb-8">
-                Scripts de After Effects y Photoshop generados con Claude Code que automatizan
-                el montaje: timeline, textos, escalado, end card, redimensiones. El director de
-                arte interviene para seleccionar cortes y afinar detalles — no para hacer
-                trabajo mecánico.
+                {ia.scripts.p[lang]}
               </p>
               <div className="space-y-5 mb-8">
                 <div className="border-t border-[rgba(13,13,13,0.08)] pt-5">
                   <p className="font-mono text-[10px] text-muted2 tracking-[1.4px] mb-2">
-                    SCRIPT AE · KOP PAID MEDIA
+                    {ia.scripts.case1label[lang]}
                   </p>
                   <p className="font-sans text-[14px] text-muted leading-[1.6]">
-                    Brief + carpeta de clips → Claude Code lee el brand file y genera 307 líneas
-                    de JSX → reel de 22s listo para renderizar en After Effects.
+                    {ia.scripts.case1[lang]}
                   </p>
                 </div>
                 <div className="border-t border-[rgba(13,13,13,0.08)] pt-5">
                   <p className="font-mono text-[10px] text-muted2 tracking-[1.4px] mb-2">
-                    SCRIPT PS · WORLD CUP 2026
+                    {ia.scripts.case2label[lang]}
                   </p>
                   <p className="font-sans text-[14px] text-muted leading-[1.6]">
-                    Flyer aprobado → script de Photoshop lo redimensiona a 5 formatos (post,
-                    story, TV, banner, flyer imprimible) sin intervención manual.
+                    {ia.scripts.case2[lang]}
                   </p>
                 </div>
               </div>
@@ -334,7 +311,7 @@ export default function IAPage() {
             <div className="flex-1 space-y-6">
               <div>
                 <p className="font-mono text-[9px] text-muted2 tracking-[1.2px] mb-2">
-                  REEL 22S · PAID MEDIA · KOP
+                  {ia.scripts.reelLabel[lang]}
                 </p>
                 <LazyVideo
                   src="/assets/kop/kop-paidmedia-01.mp4"
@@ -343,7 +320,7 @@ export default function IAPage() {
               </div>
               <div>
                 <p className="font-mono text-[9px] text-muted2 tracking-[1.2px] mb-3">
-                  5 FORMATOS DESDE 1 BRIEF · WORLD CUP 2026
+                  {ia.scripts.formatsLabel[lang]}
                 </p>
                 <div className="flex gap-3 overflow-x-auto pb-1">
                   {[
@@ -372,7 +349,7 @@ export default function IAPage() {
       <section className="bg-dark px-6 lg:px-24 py-16 lg:py-24">
         <div className="max-w-[1440px] mx-auto">
           <p className="font-mono text-[10px] text-[rgba(255,255,255,0.3)] tracking-[1.76px] mb-10 lg:mb-16">
-            — 04 · DISEÑO & FRONTEND
+            {ia.frontend.eyebrow[lang]}
           </p>
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
 
@@ -382,28 +359,19 @@ export default function IAPage() {
                 className="text-bg leading-[0.95] mb-2"
                 style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 700, fontSize: 'clamp(32px,4vw,52px)' }}
               >
-                Este portafolio,
+                {ia.frontend.h1[lang]}
               </p>
               <p
                 className="font-fraunces font-light italic text-lav leading-[0.95] mb-8"
                 style={{ ...WONK, fontSize: 'clamp(32px,4vw,52px)' }}
               >
-                construido con el mismo sistema.
+                {ia.frontend.h2[lang]}
               </p>
               <p className="font-sans text-[15px] text-[rgba(255,255,255,0.65)] leading-[1.7] mb-10">
-                Diseñado en conversación con Claude Code: sistema tipográfico, paleta, estructura
-                de información, componentes React, animaciones, responsive. Sin boilerplate manual,
-                sin horas en un editor de código. El diseñador dirige la visión — la IA ejecuta.
-                Lo que estás viendo es el resultado.
+                {ia.frontend.p[lang]}
               </p>
               <div className="space-y-4 mb-10">
-                {[
-                  { label: 'DISEÑO',      val: 'Sistema tipográfico, paleta, layout, spacing' },
-                  { label: 'COMPONENTES', val: 'React + Tailwind CSS generados por conversación' },
-                  { label: 'DATOS',       val: 'projects.ts — caso de estudio estructurado en código' },
-                  { label: 'ANIMACIÓN',   val: 'Framer Motion · transiciones de página' },
-                  { label: 'DEPLOY',      val: 'Vercel · CI/CD automático desde GitHub' },
-                ].map(({ label, val }) => (
+                {ia.frontend.details[lang].map(({ label, val }) => (
                   <div key={label} className="border-t border-[rgba(255,255,255,0.06)] pt-4">
                     <p className="font-mono text-[9px] text-[rgba(255,255,255,0.25)] tracking-[1.4px] mb-1">
                       {label}

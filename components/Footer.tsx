@@ -1,9 +1,13 @@
+'use client'
+
 import Link from 'next/link'
+import { useLang } from '@/lib/lang-context'
+import { tr } from '@/lib/translations'
 
 const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 
-const navLinks = ['Inicio', 'Proyectos', 'IA', 'Sobre Mí']
 const navHrefs = ['/', '/proyectos', '/ia', '/sobre-mi']
+
 const socialLinks = [
   {
     label: 'Instagram',
@@ -38,6 +42,10 @@ const socialLinks = [
 ]
 
 export default function Footer() {
+  const { lang } = useLang()
+  const f = tr.footer
+  const navLinks = f.links[lang]
+
   return (
     <footer className="bg-bg border-t border-[rgba(13,13,13,0.08)]">
       <div className="max-w-[1440px] mx-auto px-6 lg:px-24 pt-8 lg:pt-14 pb-0">
@@ -62,7 +70,7 @@ export default function Footer() {
               className="font-fraunces font-light italic text-[clamp(40px,7vw,68px)] text-dark leading-[0.92]"
               style={WONK}
             >
-              Sistema.
+              {f.sistema[lang]}
             </p>
           </div>
 
@@ -71,7 +79,7 @@ export default function Footer() {
 
             {/* Navegación */}
             <div>
-              <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-6">NAVEGACIÓN</p>
+              <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-6">{f.navLabel[lang]}</p>
               <ul className="space-y-[18px] lg:space-y-[22px]">
                 {navLinks.map((link, i) => (
                   <li key={link}>
@@ -88,7 +96,7 @@ export default function Footer() {
 
               {/* Social */}
               <div className="hidden lg:block">
-                <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-6">SOCIAL</p>
+                <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-6">{f.socialLabel[lang]}</p>
                 <ul className="space-y-[18px] lg:space-y-[22px]">
                   {socialLinks.map(({ label, href }) => (
                     <li key={label}>
@@ -102,7 +110,7 @@ export default function Footer() {
 
               {/* Contacto */}
               <div>
-                <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-6">CONTACTO</p>
+                <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-6">{f.contactLabel[lang]}</p>
                 <ul className="space-y-[18px] lg:space-y-[22px]">
                   <li>
                     <a href="mailto:contacto@kymsul.art" className="font-sans text-[13px] text-muted hover:text-dark transition-colors">

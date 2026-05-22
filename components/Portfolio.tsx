@@ -3,16 +3,10 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import ProjectCard from './ProjectCard'
 import { projects, getProject } from '@/lib/projects'
+import { useLang } from '@/lib/lang-context'
+import { tr } from '@/lib/translations'
 
 type Discipline = 'todos' | 'branding' | 'motion' | 'social' | 'ia'
-
-const FILTERS: { label: string; value: Discipline }[] = [
-  { label: 'TODOS',       value: 'todos' },
-  { label: 'BRANDING',    value: 'branding' },
-  { label: 'MOTION',      value: 'motion' },
-  { label: 'SOCIAL MEDIA', value: 'social' },
-  { label: 'IA',          value: 'ia' },
-]
 
 const DISCIPLINES: Record<string, Discipline[]> = {
   'ai-creative':     ['ia', 'motion', 'social'],
@@ -28,6 +22,8 @@ const DISCIPLINES: Record<string, Discipline[]> = {
 
 export default function Portfolio() {
   const [active, setActive] = useState<Discipline>('todos')
+  const { lang } = useLang()
+  const FILTERS = (tr.portfolio.filters[lang] as unknown) as { label: string; value: Discipline }[]
 
   const aiCreative = getProject('ai-creative')!
   const zealix     = getProject('zealix')!
@@ -39,13 +35,15 @@ export default function Portfolio() {
     active === 'todos' || (DISCIPLINES[p.id] ?? []).includes(active)
   )
 
+  const ctaLabel = tr.portfolio.verCaso[lang]
+
   return (
     <section id="portafolio" className="max-w-[1440px] mx-auto px-6 lg:px-24 pt-12 lg:pt-16 pb-0">
 
       {/* Header + filtros */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
         <p className="font-mono text-[10px] lg:text-[11px] text-muted2 tracking-[1.76px]">
-          PORTAFOLIO
+          {tr.portfolio.label[lang]}
         </p>
         <div className="flex items-center gap-2 overflow-x-auto flex-nowrap pb-1 sm:flex-wrap sm:overflow-visible">
           {FILTERS.map(({ label, value }) => (
@@ -71,22 +69,22 @@ export default function Portfolio() {
           {/* Mobile: columna única */}
           <div className="flex flex-col gap-4 lg:hidden">
             {[zealix, kop, bwl, amorcito, aiCreative].map(p => (
-              <ProjectCard key={p.id} {...p} className="w-full h-[260px]" sizes="95vw" />
+              <ProjectCard key={p.id} {...p} className="w-full h-[260px]" sizes="95vw" ctaLabel={ctaLabel} />
             ))}
           </div>
 
           {/* Desktop: bento */}
           <div className="hidden lg:block">
             <div className="flex gap-6 mb-6">
-              <ProjectCard {...zealix}     className="flex-[728_1_0%] h-[524px]" sizes="(max-width: 1440px) 57vw, 742px" />
-              <ProjectCard {...kop}        className="flex-[496_1_0%] h-[524px]" sizes="(max-width: 1440px) 39vw, 505px" />
+              <ProjectCard {...zealix}     className="flex-[728_1_0%] h-[524px]" sizes="(max-width: 1440px) 57vw, 742px" ctaLabel={ctaLabel} />
+              <ProjectCard {...kop}        className="flex-[496_1_0%] h-[524px]" sizes="(max-width: 1440px) 39vw, 505px" ctaLabel={ctaLabel} />
             </div>
             <div className="mb-6">
-              <ProjectCard {...bwl}        className="w-full h-[604px]" sizes="(max-width: 1440px) 87vw, 1248px" />
+              <ProjectCard {...bwl}        className="w-full h-[604px]" sizes="(max-width: 1440px) 87vw, 1248px" ctaLabel={ctaLabel} />
             </div>
             <div className="flex gap-6 mb-6">
-              <ProjectCard {...amorcito}   className="flex-[496_1_0%] h-[524px]" sizes="(max-width: 1440px) 39vw, 505px" />
-              <ProjectCard {...aiCreative} className="flex-[728_1_0%] h-[524px]" sizes="(max-width: 1440px) 57vw, 742px" />
+              <ProjectCard {...amorcito}   className="flex-[496_1_0%] h-[524px]" sizes="(max-width: 1440px) 39vw, 505px" ctaLabel={ctaLabel} />
+              <ProjectCard {...aiCreative} className="flex-[728_1_0%] h-[524px]" sizes="(max-width: 1440px) 57vw, 742px" ctaLabel={ctaLabel} />
             </div>
           </div>
 
@@ -113,12 +111,13 @@ export default function Portfolio() {
                 {...project}
                 className="h-[260px] sm:h-[320px] lg:h-[420px]"
                 sizes="(max-width: 640px) 95vw, (max-width: 1024px) 45vw, 30vw"
+                ctaLabel={ctaLabel}
               />
             </motion.div>
           ))}
           {filtered.length === 0 && (
             <p className="col-span-full text-center font-mono text-[11px] text-muted2 tracking-[1.76px] py-24">
-              SIN PROYECTOS
+              {tr.portfolio.noProjects[lang]}
             </p>
           )}
         </motion.div>

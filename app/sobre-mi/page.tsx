@@ -1,29 +1,12 @@
+'use client'
+
 import PageLayout from '@/components/PageLayout'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useLang } from '@/lib/lang-context'
+import { tr } from '@/lib/translations'
 
 const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
-
-const capacidades = [
-  { cat: 'BRANDING', items: ['Brand strategy', 'Naming', 'Identity systems', 'Art direction', 'Character design', 'Packaging design', 'Papelería · Print', 'Brand guidelines'] },
-  { cat: 'MOTION',   items: ['Reels · Templates', 'Motion graphics', 'Animación 2D', 'Video editing', 'Kinetic typography', 'Color grading'] },
-  { cat: 'CONTENT',  items: ['Content strategy', 'Content design', 'Paid media', 'Social media visuals', 'Calendarios editoriales', 'Visual storytelling'] },
-  { cat: 'IA',       items: ['Producción IA-native', 'Vibe coding · Frontend', 'Claude Code · Codex', 'Claude Design', 'Remotion', 'Gemini · Imagen 2', 'Veo · Higgsfield', 'Adobe Firefly'] },
-  { cat: 'SOFTWARE', items: ['Adobe Suite', 'Figma · Canva', 'CapCut', 'Obsidian', 'ClickUp · Notion · Asana', 'Vercel · GitHub'] },
-]
-
-const trayectoria = [
-  { year: '2023',    title: 'Kymsul',                     detail: 'Comisiones streaming · +80 clientes · Assets animados' },
-  { year: '2023–24', title: 'Brand design freelance',     detail: 'Branding end-to-end · Identidades de marca · Múltiples industrias' },
-  { year: '2024 →',  title: 'Directora de Arte · Zealix', detail: 'Naming · Identidad visual · Dirección creativa · SaaS' },
-  { year: '2026 →',  title: 'NexLaunch',                  detail: 'Brand & Content Designer · Producción IA-native · Multimarca', current: true },
-]
-
-const formacion = [
-  { inst: 'Universidad del Valle de México', degree: 'Licenciatura en Diseño Digital',                period: '2023 – 2026', note: 'En curso' },
-  { inst: 'Universidad Anáhuac México',      degree: 'Diplomado en Diseño Multimedia',                period: '2023 – 2024', note: '' },
-  { inst: 'Amerike, Puebla',                 degree: 'Lic. Comunicación y Producción Audiovisual',    period: '2026 →',      note: 'Próximamente' },
-]
 
 const certificaciones = [
   { course: 'Storytelling and Influencing: Communicate with Impact', inst: 'Macquarie University · Coursera', year: '2025' },
@@ -35,6 +18,13 @@ const certificaciones = [
 ]
 
 export default function SobreMiPage() {
+  const { lang } = useLang()
+  const s = tr.sobreMi
+
+  const capacidades = s.capacidades.cats[lang]
+  const trayectoria = (s.trayectoria.entries[lang] as unknown) as { year: string; title: string; detail: string; current?: boolean }[]
+  const formacion = s.formacion.entries[lang]
+
   return (
     <PageLayout>
 
@@ -57,7 +47,7 @@ export default function SobreMiPage() {
           {/* Nombre + datos */}
           <div className="flex-1 pt-0 lg:pt-2">
             <p className="font-mono text-[10px] text-[rgba(255,255,255,0.35)] tracking-[2px] mb-8 lg:mb-10">
-              BRAND & CONTENT DESIGNER
+              {s.eyebrow[lang]}
             </p>
 
             <div className="mb-8 lg:mb-10 leading-[0.88]">
@@ -73,21 +63,21 @@ export default function SobreMiPage() {
             </div>
 
             <p className="font-sans text-[15px] lg:text-[16px] text-[rgba(255,255,255,0.6)] leading-[1.7] max-w-[460px] mb-10 lg:mb-12">
-              Diseñadora digital enfocada en la construcción de sistemas visuales. Integro branding, motion y contenido digital para desarrollar identidades con intención.
+              {s.bio[lang]}
             </p>
 
             <div className="flex flex-wrap gap-10 lg:gap-14 border-t border-[rgba(255,255,255,0.08)] pt-6 lg:pt-8">
               <div>
-                <p className="font-mono text-[10px] text-[rgba(255,255,255,0.3)] tracking-[1.6px] mb-2">ROL</p>
-                <p className="font-sans text-[14px] text-bg">Brand & Content Designer</p>
+                <p className="font-mono text-[10px] text-[rgba(255,255,255,0.3)] tracking-[1.6px] mb-2">{s.rolLabel[lang]}</p>
+                <p className="font-sans text-[14px] text-bg">{s.rolValue[lang]}</p>
               </div>
               <div>
-                <p className="font-mono text-[10px] text-[rgba(255,255,255,0.3)] tracking-[1.6px] mb-2">BASE</p>
-                <p className="font-sans text-[14px] text-bg">Puebla, MX</p>
+                <p className="font-mono text-[10px] text-[rgba(255,255,255,0.3)] tracking-[1.6px] mb-2">{s.baseLabel[lang]}</p>
+                <p className="font-sans text-[14px] text-bg">{s.baseValue[lang]}</p>
               </div>
               <div>
-                <p className="font-mono text-[10px] text-[rgba(255,255,255,0.3)] tracking-[1.6px] mb-2">DESDE</p>
-                <p className="font-sans text-[14px] text-bg">2020</p>
+                <p className="font-mono text-[10px] text-[rgba(255,255,255,0.3)] tracking-[1.6px] mb-2">{s.desdeLabel[lang]}</p>
+                <p className="font-sans text-[14px] text-bg">{s.desdeValue[lang]}</p>
               </div>
             </div>
           </div>
@@ -100,25 +90,25 @@ export default function SobreMiPage() {
         <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row gap-10 lg:gap-24 items-start">
           <div className="flex-[1_1_0%]">
             <p className="font-mono text-[11px] text-[rgba(255,255,255,0.35)] tracking-[1.76px] mb-8">
-              PRÁCTICA
+              {s.practica.eyebrow[lang]}
             </p>
             <p className="text-bg leading-[1]" style={{ fontFamily: 'var(--font-franklin-cond)', fontSize: 'clamp(36px,6vw,56px)', fontWeight: 700 }}>
-              Diseño desde{' '}
-              <span className="text-lav">sistema,</span>
+              {s.practica.h1[lang]}{' '}
+              <span className="text-lav">{s.practica.h1span[lang]}</span>
             </p>
             <p className="text-bg leading-[1]" style={{ fontFamily: 'var(--font-franklin-cond)', fontSize: 'clamp(36px,6vw,56px)', fontWeight: 700 }}>
-              no desde piezas.
+              {s.practica.h2[lang]}
             </p>
           </div>
           <div className="flex-[1_1_0%] space-y-5 pt-0 lg:pt-2">
             <p className="font-sans text-[15px] text-[rgba(255,255,255,0.65)] leading-[1.7]">
-              Mi enfoque parte de entender el diseño como un sistema que conecta identidad, comunicación y experiencia.
+              {s.practica.p1[lang]}
             </p>
             <p className="font-sans text-[15px] text-[rgba(255,255,255,0.65)] leading-[1.7]">
-              Trabajo desde lo visual, pero también desde la estructura: narrativa, movimiento y lógica detrás de cada decisión.
+              {s.practica.p2[lang]}
             </p>
             <p className="font-sans text-[15px] text-[rgba(255,255,255,0.65)] leading-[1.7]">
-              Busco colaborar con marcas y creadores que entienden el valor de construir con intención, no solo de verse bien.
+              {s.practica.p3[lang]}
             </p>
           </div>
         </div>
@@ -128,10 +118,10 @@ export default function SobreMiPage() {
       <section className="px-6 lg:px-24 py-16 lg:py-24 border-b border-[rgba(13,13,13,0.08)]">
         <div className="max-w-[1440px] mx-auto">
           <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-6">
-            CAPACIDADES
+            {s.capacidades.eyebrow[lang]}
           </p>
           <p className="font-sans text-[clamp(28px,5vw,48px)] text-dark leading-[1.1] mb-12 lg:mb-16 max-w-[600px]">
-            La herramienta sigue a la <strong>intención.</strong>
+            {s.capacidades.headline[lang]} <strong>{s.capacidades.headlineBold[lang]}</strong>
           </p>
           <div className="grid grid-cols-2 lg:grid-cols-5 gap-6">
             {capacidades.map(({ cat, items }) => (
@@ -156,7 +146,7 @@ export default function SobreMiPage() {
       <section className="bg-dark px-6 lg:px-24 py-16 lg:py-24">
         <div className="max-w-[1440px] mx-auto">
           <p className="font-mono text-[11px] text-[rgba(255,255,255,0.35)] tracking-[1.76px] mb-10 lg:mb-16">
-            TRAYECTORIA
+            {s.trayectoria.eyebrow[lang]}
           </p>
           <div>
             {trayectoria.map(({ year, title, detail, current }, i) => (
@@ -183,7 +173,7 @@ export default function SobreMiPage() {
       <section className="px-6 lg:px-24 py-16 lg:py-24 border-b border-[rgba(13,13,13,0.08)]">
         <div className="max-w-[1440px] mx-auto">
           <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-10 lg:mb-16">
-            FORMACIÓN
+            {s.formacion.eyebrow[lang]}
           </p>
           <div>
             {formacion.map(({ inst, degree, period, note }, i) => (
@@ -213,7 +203,7 @@ export default function SobreMiPage() {
       <section className="px-6 lg:px-24 py-16 lg:py-24 border-b border-[rgba(13,13,13,0.08)]">
         <div className="max-w-[1440px] mx-auto">
           <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-10 lg:mb-16">
-            CERTIFICACIONES
+            {s.certEyebrow[lang]}
           </p>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16">
             {certificaciones.map(({ course, inst, year }) => (
@@ -240,28 +230,28 @@ export default function SobreMiPage() {
               className="text-bg leading-[0.9]"
               style={{ fontFamily: 'var(--font-franklin-cond)', fontSize: 'clamp(48px,8vw,72px)', fontWeight: 700 }}
             >
-              ¿Tienes una
+              {s.cta.h[lang]}
             </p>
             <p className="font-fraunces font-light italic text-lav leading-[0.9]" style={{ ...WONK, fontSize: 'clamp(48px,8vw,72px)' }}>
-              idea?
+              {s.cta.hItalic[lang]}
             </p>
           </div>
           <div className="lg:max-w-[320px]">
             <p className="font-sans text-[15px] text-[rgba(255,255,255,0.65)] leading-[1.65] mb-8">
-              Cuéntame qué estás construyendo. Reviso cada solicitud personalmente y respondo en menos de 48 horas.
+              {s.cta.desc[lang]}
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/contacto"
                 className="inline-flex items-center bg-lav text-dark font-sans text-[13px] rounded-full px-6 py-[14px] hover:opacity-90 transition-opacity"
               >
-                Trabajemos juntos →
+                {s.cta.primary[lang]}
               </Link>
               <Link
                 href="/proyectos"
                 className="inline-flex items-center border border-[rgba(255,255,255,0.2)] text-bg font-sans text-[13px] rounded-full px-6 py-[14px] hover:border-[rgba(255,255,255,0.5)] transition-colors"
               >
-                Ver proyectos
+                {s.cta.secondary[lang]}
               </Link>
             </div>
           </div>

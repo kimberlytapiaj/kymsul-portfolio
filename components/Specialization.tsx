@@ -1,49 +1,36 @@
+'use client'
+
 import FadeIn from './FadeIn'
+import { useLang } from '@/lib/lang-context'
+import { tr } from '@/lib/translations'
 
 const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 
-const specs = [
-  {
-    num: '01',
-    light: 'Branding',
-    bold: 'estratégico',
-    desc: 'Identidad visual completa: posicionamiento, sistema visual, guidelines y aplicaciones. La marca como base de todo lo demás.',
-  },
-  {
-    num: '02',
-    light: 'Producción',
-    bold: 'IA‑native',
-    desc: 'Generación de imagen y video, flujos automatizados y sistemas de conocimiento integrados al proceso creativo. IA como ventaja de producción, sin perder el criterio.',
-  },
-  {
-    num: '03',
-    light: 'Contenido &',
-    bold: 'motion visual',
-    desc: 'Sistemas de contenido para redes con motion como herramienta: reels, templates y piezas que comunican con coherencia de marca en cada plataforma.',
-  },
-]
-
 export default function Specialization() {
+  const { lang } = useLang()
+  const s = tr.spec
+  const specs = s.cards[lang]
+
   return (
     <section className="max-w-[1440px] mx-auto px-6 lg:px-24 pt-16 lg:pt-24 pb-16 lg:pb-24">
 
-      {/* Header — título izquierda, contexto derecha */}
+      {/* Header */}
       <FadeIn>
         <div className="mb-16 lg:mb-24">
           <p className="font-mono text-[10px] lg:text-[11px] text-muted2 tracking-[1.76px] mb-5">
-            ESPECIALIZACIÓN
+            {s.eyebrow[lang]}
           </p>
           <p
             className="font-fraunces font-light text-[clamp(40px,5.5vw,72px)] text-dark leading-[1.0]"
             style={WONK}
           >
-            Tres servicios.
+            {s.h1[lang]}
           </p>
           <p
             className="font-fraunces font-light text-[clamp(40px,5.5vw,72px)] text-dark leading-[1.0]"
             style={WONK}
           >
-            Un sistema.
+            {s.h2[lang]}
           </p>
         </div>
       </FadeIn>

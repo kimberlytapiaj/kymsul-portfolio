@@ -3,17 +3,15 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
-
-const links = [
-  { label: 'Inicio',    href: '/' },
-  { label: 'Proyectos', href: '/proyectos' },
-  { label: 'IA',        href: '/ia' },
-  { label: 'Sobre Mí', href: '/sobre-mi' },
-]
+import { useLang } from '@/lib/lang-context'
+import { tr } from '@/lib/translations'
 
 export default function Nav() {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
+  const { lang, setLang } = useLang()
+
+  const links = tr.nav.links[lang].map((label, i) => ({ label, href: tr.nav.hrefs[i] }))
 
   return (
     <>
@@ -47,14 +45,24 @@ export default function Nav() {
 
           {/* Right side */}
           <div className="flex items-center gap-4">
-            {/* Lang toggle — EN pendiente de traducción */}
+            {/* Lang toggle */}
             <div className="border border-[rgba(13,13,13,0.15)] rounded-full p-[3px] flex items-center">
-              <span className="bg-dark text-bg font-mono text-[10px] rounded-full w-9 h-[26px] flex items-center justify-center">
+              <button
+                onClick={() => setLang('es')}
+                className={`font-mono text-[10px] rounded-full w-9 h-[26px] flex items-center justify-center transition-colors cursor-pointer ${
+                  lang === 'es' ? 'bg-dark text-bg' : 'text-muted2/60 hover:text-muted2'
+                }`}
+              >
                 ES
-              </span>
-              <span className="text-muted2/40 font-mono text-[10px] rounded-full w-9 h-[26px] flex items-center justify-center cursor-not-allowed">
+              </button>
+              <button
+                onClick={() => setLang('en')}
+                className={`font-mono text-[10px] rounded-full w-9 h-[26px] flex items-center justify-center transition-colors cursor-pointer ${
+                  lang === 'en' ? 'bg-dark text-bg' : 'text-muted2/60 hover:text-muted2'
+                }`}
+              >
                 EN
-              </span>
+              </button>
             </div>
 
             {/* Hamburger — mobile only */}
