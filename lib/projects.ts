@@ -495,14 +495,37 @@ export const projects: Project[] = [
       },
       {
         name: 'Avance',
-        objective: 'Contenido de producto para Instagram y RedNote: reels bilingües adaptados por plataforma y carrusel educativo pensado para retención y guardados.',
-        formats: ['Reel EN', 'Reel 中文', 'Carrusel'],
+        objective: 'Contenido de producto para Instagram y RedNote: reels bilingües adaptados por plataforma, carruseles educativos y posts editoriales pensados para retención y guardados.',
+        formats: ['Reel EN', 'Reel 中文', 'Carrusel', 'Post'],
         gallery: [],
         sections: [
           {
             groups: [
               { items: ['/assets/bwl/bwl-post-66-web.mp4', '/assets/bwl/bwl-post-66-zh-web.mp4'], carousel: true },
               { items: ['/assets/bwl/bwl-post-77-web.mp4'] },
+              { items: ['/assets/bwl/bwl-post-76.png'] },
+            ],
+          },
+          {
+            groups: [
+              { items: ['/assets/bwl/bwl-reel-80-web.mp4'] },
+              { items: ['/assets/bwl/bwl-reel-83-web.mp4'] },
+            ],
+          },
+          {
+            groups: [
+              {
+                items: [
+                  '/assets/bwl/bwl-post-82-1.png',
+                  '/assets/bwl/bwl-post-82-2.png',
+                  '/assets/bwl/bwl-post-82-3.png',
+                  '/assets/bwl/bwl-post-82-4.png',
+                  '/assets/bwl/bwl-post-82-5.png',
+                  '/assets/bwl/bwl-post-82-6.png',
+                ],
+                carousel: true,
+              },
+              { items: ['/assets/bwl/bwl-post-87.png'] },
             ],
           },
           { items: ['/assets/bwl/bwl-06.png', '/assets/bwl/bwl-07.png', '/assets/bwl/bwl-08.png', '/assets/bwl/bwl-16.png', '/assets/bwl/bwl-17.png'], type: 'carousel' },
@@ -535,6 +558,50 @@ export const projects: Project[] = [
         gallery: [],
         sections: [
           { items: ['/assets/bwl/bwl-pm-11-web.mp4'] },
+        ],
+      },
+      {
+        name: 'Paid Media · Set 06',
+        objective: 'Set de cinco estáticos de paid media — composición limpia y premium para pauta en feed.',
+        formats: ['5 estáticos · Paid Media'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              {
+                items: [
+                  '/assets/bwl/bwl-pm-06-1.png',
+                  '/assets/bwl/bwl-pm-06-2.png',
+                  '/assets/bwl/bwl-pm-06-3.png',
+                  '/assets/bwl/bwl-pm-06-4.png',
+                  '/assets/bwl/bwl-pm-06-5.png',
+                ],
+                carousel: true,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Paid Media · Set 09',
+        objective: 'Set de cinco estáticos de paid media — versiones de producto en composición editorial para pauta.',
+        formats: ['5 estáticos · Paid Media'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              {
+                items: [
+                  '/assets/bwl/bwl-pm-09-1.png',
+                  '/assets/bwl/bwl-pm-09-2.png',
+                  '/assets/bwl/bwl-pm-09-3.png',
+                  '/assets/bwl/bwl-pm-09-4.png',
+                  '/assets/bwl/bwl-pm-09-5.png',
+                ],
+                carousel: true,
+              },
+            ],
+          },
         ],
       },
     ],

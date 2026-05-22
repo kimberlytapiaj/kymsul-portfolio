@@ -229,8 +229,8 @@ export const projectTranslationsEN: Record<string, ProjectTranslation> = {
       {
         name: 'Avance',
         objective:
-          'Product content for Instagram and RedNote: bilingual platform-adapted reels and educational carousel designed for retention and saves.',
-        formats: ['Reel EN', 'Reel 中文', 'Carousel'],
+          'Product content for Instagram and RedNote: bilingual platform-adapted reels, educational carousels and editorial posts designed for retention and saves.',
+        formats: ['Reel EN', 'Reel 中文', 'Carousel', 'Post'],
       },
       {
         name: 'Optrimax',
@@ -249,6 +249,16 @@ export const projectTranslationsEN: Record<string, ProjectTranslation> = {
         objective:
           'Video paid media for brand activation. Product edit with brand close and packaging — designed to capture attention in the first second of an ad.',
         formats: ['Video · Paid Media'],
+      },
+      {
+        name: 'Paid Media · Set 06',
+        objective: 'Set of five static paid media pieces — clean, premium composition for feed ads.',
+        formats: ['5 statics · Paid Media'],
+      },
+      {
+        name: 'Paid Media · Set 09',
+        objective: 'Set of five static paid media pieces — editorial product compositions for ads.',
+        formats: ['5 statics · Paid Media'],
       },
     ],
   },
