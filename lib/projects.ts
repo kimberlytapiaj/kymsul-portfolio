@@ -502,7 +502,6 @@ export const projects: Project[] = [
           {
             groups: [
               { items: ['/assets/bwl/bwl-reel-80-web.mp4'] },
-              { items: ['/assets/bwl/bwl-reel-83-web.mp4'] },
             ],
           },
           {
@@ -534,6 +533,7 @@ export const projects: Project[] = [
             groups: [
               { items: ['/assets/bwl/bwl-post-66-web.mp4', '/assets/bwl/bwl-post-66-zh-web.mp4'], carousel: true },
               { items: ['/assets/bwl/bwl-post-77-web.mp4'] },
+              { items: ['/assets/bwl/bwl-reel-83-web.mp4'] },
             ],
           },
           { items: ['/assets/bwl/bwl-06.png', '/assets/bwl/bwl-07.png', '/assets/bwl/bwl-08.png', '/assets/bwl/bwl-16.png', '/assets/bwl/bwl-17.png'], type: 'carousel' },
