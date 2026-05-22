@@ -5,6 +5,9 @@ import ProjectCard from '@/components/ProjectCard'
 import { projects, getProject } from '@/lib/projects'
 import { useLang } from '@/lib/lang-context'
 import { tr } from '@/lib/translations'
+import { projectTranslationsEN } from '@/lib/project-translations'
+
+const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 
 type Discipline = 'todos' | 'branding' | 'motion' | 'social' | 'ia'
 
@@ -22,26 +25,19 @@ const DISCIPLINES: Record<string, Discipline[]> = {
 
 type ProjectMetaProps = {
   project: (typeof projects)[number]
-  wide?: boolean
+  lang: 'es' | 'en'
 }
 
-function ProjectMeta({ project, wide }: ProjectMetaProps) {
+function ProjectMeta({ project, lang }: ProjectMetaProps) {
+  const t = projectTranslationsEN[project.id]
+  const tagline = (lang === 'en' && t?.tagline) ? t.tagline : project.tagline
   return (
-    <div className={`mt-5 lg:mt-6 ${wide ? 'lg:grid lg:grid-cols-2 lg:gap-12' : ''}`}>
-      <p className="font-sans text-[13px] lg:text-[14px] text-muted leading-[1.6] max-w-[480px]">
-        {project.overview}
-      </p>
-      <div className={`flex flex-wrap gap-2 mt-3 ${wide ? 'lg:mt-0 lg:items-start lg:content-start' : ''}`}>
-        {project.tags.map((tag) => (
-          <span
-            key={tag}
-            className="border border-[rgba(13,13,13,0.12)] rounded-full px-3 py-1 font-mono text-[10px] text-muted2 tracking-[1.2px]"
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
-    </div>
+    <p
+      className="mt-3 lg:mt-4 font-fraunces font-light italic text-[14px] lg:text-[15px] text-muted leading-[1.5] max-w-[520px]"
+      style={WONK}
+    >
+      {tagline}
+    </p>
   )
 }
 
@@ -95,7 +91,7 @@ export default function ProyectosGrid() {
               {[zealix, brainy, kop, bwl, beatness, amorcito, corazonMixteco, activatedDecor, aiCreative].map(p => (
                 <div key={p.id}>
                   <ProjectCard {...p} className="w-full h-[260px]" sizes="95vw" ctaLabel={ctaLabel} />
-                  <ProjectMeta project={p} />
+                  <ProjectMeta project={p} lang={lang} />
                 </div>
               ))}
             </div>
@@ -105,49 +101,49 @@ export default function ProyectosGrid() {
               <div className="flex gap-6 mb-16">
                 <div className="flex-[728_1_0%]">
                   <ProjectCard {...zealix} className="h-[460px]" ctaLabel={ctaLabel} />
-                  <ProjectMeta project={zealix} />
+                  <ProjectMeta project={zealix} lang={lang} />
                 </div>
                 <div className="flex-[496_1_0%]">
                   <ProjectCard {...brainy} className="h-[460px]" ctaLabel={ctaLabel} />
-                  <ProjectMeta project={brainy} />
+                  <ProjectMeta project={brainy} lang={lang} />
                 </div>
               </div>
 
               <div className="flex gap-6 mb-16">
                 <div className="flex-[496_1_0%]">
                   <ProjectCard {...kop} className="h-[460px]" ctaLabel={ctaLabel} />
-                  <ProjectMeta project={kop} />
+                  <ProjectMeta project={kop} lang={lang} />
                 </div>
                 <div className="flex-[728_1_0%]">
                   <ProjectCard {...bwl} className="h-[460px]" ctaLabel={ctaLabel} />
-                  <ProjectMeta project={bwl} />
+                  <ProjectMeta project={bwl} lang={lang} />
                 </div>
               </div>
 
               <div className="mb-16">
                 <ProjectCard {...beatness} className="w-full h-[500px]" ctaLabel={ctaLabel} />
-                <ProjectMeta project={beatness} wide />
+                <ProjectMeta project={beatness} lang={lang} />
               </div>
 
               <div className="flex gap-6 mb-16">
                 <div className="flex-[728_1_0%]">
                   <ProjectCard {...amorcito} className="h-[460px]" ctaLabel={ctaLabel} />
-                  <ProjectMeta project={amorcito} />
+                  <ProjectMeta project={amorcito} lang={lang} />
                 </div>
                 <div className="flex-[496_1_0%]">
                   <ProjectCard {...corazonMixteco} className="h-[460px]" ctaLabel={ctaLabel} />
-                  <ProjectMeta project={corazonMixteco} />
+                  <ProjectMeta project={corazonMixteco} lang={lang} />
                 </div>
               </div>
 
               <div className="mb-16">
                 <ProjectCard {...activatedDecor} className="w-full h-[500px]" ctaLabel={ctaLabel} />
-                <ProjectMeta project={activatedDecor} wide />
+                <ProjectMeta project={activatedDecor} lang={lang} />
               </div>
 
               <div>
                 <ProjectCard {...aiCreative} className="w-full h-[500px]" ctaLabel={ctaLabel} />
-                <ProjectMeta project={aiCreative} wide />
+                <ProjectMeta project={aiCreative} lang={lang} />
               </div>
             </div>
 
@@ -176,7 +172,7 @@ export default function ProyectosGrid() {
                   sizes="(max-width: 640px) 95vw, (max-width: 1024px) 45vw, 30vw"
                   ctaLabel={ctaLabel}
                 />
-                <ProjectMeta project={project} />
+                <ProjectMeta project={project} lang={lang} />
               </motion.div>
             ))}
             {filtered.length === 0 && (

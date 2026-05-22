@@ -58,10 +58,7 @@ export default function ProjectCard({
           <p className="font-fraunces text-[22px] text-dark" style={WONK}>
             {name}
           </p>
-          <div className="shrink-0 flex items-baseline gap-4">
-            <p className="font-mono text-[10px] text-muted2 tracking-[1.4px]">{category}</p>
-            <p className="font-mono text-[10px] text-muted2">{year}</p>
-          </div>
+          <p className="font-mono text-[10px] text-muted2 tracking-[1.4px] shrink-0">{category}</p>
         </div>
       </div>
     </Link>
