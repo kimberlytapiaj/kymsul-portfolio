@@ -804,7 +804,7 @@ export const projects: Project[] = [
     name: 'Sistema Creativo IA',
     category: 'IA GENERATIVA',
     year: '2026',
-    image: '/assets/kop/kop-kt-184.png',
+    image: '/assets/kop/kop-wc-post.png',
     accentColor: '#0D0D0D',
     tagline: 'Del prompt al entregable. Sin fricción.',
     tags: ['IA Generativa', 'Gemini', 'Script AE', 'Script PS', 'Automatización', 'Codex'],
@@ -817,7 +817,18 @@ export const projects: Project[] = [
       'Tres capas: (1) Imagen generativa: prompt engineering para crear fotografía de escena sin sesión fotográfica. (2) Script AE: automatización que monta el reel completo con motion type, escalado de clips y end card en minutos; el director de arte interviene solo para seleccionar los cortes y ajustar detalles finales. (3) Script PS: Claude Code investiga la marca, genera componentes por separado con IA e itera versiones hasta producir el PSD editable final.',
     result:
       'Lo que antes tomaba horas de edición ahora toma minutos de script + revisión creativa. Un reel de 22 segundos producido por script con intervención humana solo en selección de cortes. Un flyer en 5 formatos generado desde brief hasta PSD. Posts editoriales de producto sin sesión fotográfica. Sistema documentado y replicable por cliente.',
-    gallery: [],
+    gallery: [
+      '/assets/kop/kop-wc-post.png',
+      '/assets/kop/kop-kt-184.png',
+      '/assets/kop/kop-paidmedia-01.mp4',
+      '/assets/kop/kop-post-140.png',
+      '/assets/kop/kop-post-172.png',
+      '/assets/bwl/bwl-pm-12.png',
+      '/assets/bwl/bwl-pm-11-web.mp4',
+      '/assets/bwl/bwl-post-71-en-web.mp4',
+      '/assets/bwl/bwl-post-77-web.mp4',
+      '/assets/bwl/bwl-post-79-web.mp4',
+    ],
     campaigns: [
       {
         name: 'KOP · Antes / Después',
