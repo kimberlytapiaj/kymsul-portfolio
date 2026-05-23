@@ -665,7 +665,14 @@ export const projects: Project[] = [
       'Desarrollé el monograma "ad" como base del sistema: geométrico, limpio, con personalidad. La paleta negro profundo y burdeos comunica lujo técnico sin caer en lo corporativo genérico. El manual de identidad documenta construcción del logotipo, usos correctos en distintos fondos, tipografía y variantes de aplicación. Los logos animados se produjeron en tres versiones (icono, logotipo completo, versión corta) y dos paletas de color.',
     result:
       'Sistema de identidad completo con brand guidelines, logotipo en tres versiones estáticas y animadas entregadas en GIF y MOV. El logotipo animado está en uso activo en su sitio web, una marca a la altura de los venues de lujo donde viven sus productos.',
-    gallery: [],
+    gallery: [
+      '/assets/activated-decor/ad-cover.png',
+      '/assets/activated-decor/ad-guideline-cover.png',
+      '/assets/activated-decor/ad-logo-use.png',
+      '/assets/activated-decor/ad-typography.png',
+      '/assets/activated-decor/ad-logo-animated.mp4',
+      '/assets/activated-decor/ad-mockup.png',
+    ],
     campaigns: [
       {
         name: 'Brand Identity',
@@ -677,13 +684,11 @@ export const projects: Project[] = [
             groups: [
               {
                 items: [
-                  '/assets/activated-decor/ad-03.png',
-                  '/assets/activated-decor/ad-07.png',
-                  '/assets/activated-decor/ad-08.png',
-                  '/assets/activated-decor/ad-04.png',
-                  '/assets/activated-decor/ad-05.png',
-                  '/assets/activated-decor/ad-09.png',
-                  '/assets/activated-decor/ad-10.png',
+                  '/assets/activated-decor/ad-cover.png',
+                  '/assets/activated-decor/ad-guideline-cover.png',
+                  '/assets/activated-decor/ad-logo-use.png',
+                  '/assets/activated-decor/ad-typography.png',
+                  '/assets/activated-decor/ad-mockup.png',
                 ],
                 carousel: true,
                 contain: true,
