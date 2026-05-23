@@ -716,6 +716,90 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: 'procyon',
+    name: 'Procyon',
+    category: 'BRANDING · ESPORTS',
+    year: '2025',
+    image: '/assets/procyon/procyon-post-match.jpg',
+    accentColor: '#6B21A8',
+    tagline: 'Nuestro poder es cósmico, nuestra victoria inevitable.',
+    tags: ['Branding', 'Esports', 'Social media', 'Identidad visual', 'Merch', 'Streaming'],
+    overview:
+      'Procyon es una organización esports mexicana competidora en Valorant Challengers LATAM Norte. El trabajo abarca la identidad visual completa: logo system, plantillas de contenido para redes, headers de plataforma y diseño del jersey oficial del equipo.',
+    role: 'Identidad visual completa y producción de contenido: sistema de logo en tres variantes, plantillas de match day en tres estados (Gameday, Winners, Defeat), headers para Twitch, YouTube, Twitter y Facebook, posts de jugadores y diseño de jersey oficial.',
+    challenge:
+      'Construir una identidad que funcionara en el contexto competitivo de Valorant Challengers sin perder personalidad propia. El nombre Procyon (la estrella más brillante del Can Menor) definió la dirección: cósmico, preciso, con algo de misterio.',
+    process:
+      'El sistema parte del monograma de cuatro puntas como ícono central: geométrico, simétrico, con referencias a una estrella. La paleta negro/púrpura refuerza la dimensión espacial del nombre. Las plantillas de partido operan en dos modos: fondo oscuro y personaje intenso para el match day, fondo claro con tipografía expansiva para los resultados ganadores. El jersey replica el ícono en el pecho con textura topográfica para el acabado premium.',
+    result:
+      'Sistema completo publicado en @ProcyonGaming_: logo en tres versiones (horizontal, vertical, ícono) en positivo, negativo y digital. Seis plantillas de resultado, headers en cuatro plataformas, posts de jugadores y jersey oficial del equipo.',
+    gallery: [
+      '/assets/procyon/procyon-post-match.jpg',
+      '/assets/procyon/procyon-post-winner.jpg',
+      '/assets/procyon/procyon-post-defeat.jpg',
+      '/assets/procyon/procyon-banner-yt.png',
+      '/assets/procyon/procyon-post-merch.jpg',
+      '/assets/procyon/procyon-banner-twitch.jpg',
+      '/assets/procyon/procyon-post-jugadores.jpg',
+    ],
+    campaigns: [
+      {
+        name: 'Identidad Visual',
+        objective: 'Sistema de logo completo en tres variantes (horizontal, vertical, ícono) y dos paletas (positivo y negativo) para uso en todos los contextos digitales y físicos.',
+        formats: ['Logo horizontal', 'Logo vertical', 'Ícono', 'Positivo · Negativo'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              {
+                items: [
+                  '/assets/procyon/procyon-logo-h.png',
+                  '/assets/procyon/procyon-logo-v-orig.png',
+                  '/assets/procyon/procyon-icon.png',
+                ],
+                carousel: true,
+                contain: true,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Plantillas de Partido',
+        objective: 'Tres plantillas para los resultados de cada partida: Gameday (anuncio de enfrentamiento), Winners (resultado positivo) y Defeat (resultado negativo), cada una con personaje de Valorant y composición diferenciada.',
+        formats: ['Gameday · 1080×1080', 'Winners · 1080×1080', 'Defeat · 1080×1080'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              {
+                items: [
+                  '/assets/procyon/procyon-post-match.jpg',
+                  '/assets/procyon/procyon-post-winner.jpg',
+                  '/assets/procyon/procyon-post-defeat.jpg',
+                ],
+                carousel: true,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Merch · Jersey Oficial',
+        objective: 'Diseño del jersey oficial del equipo con textura topográfica, ícono de Procyon en el pecho y wordmark en la parte delantera. Producido en versión blanca.',
+        formats: ['Jersey · Blanco', 'Diseño sublimado'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/procyon/procyon-post-merch.jpg'] },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: 'ai-creative',
     name: 'Sistema Creativo IA',
     category: 'IA GENERATIVA',

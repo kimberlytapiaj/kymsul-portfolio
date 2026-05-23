@@ -252,6 +252,37 @@ export const projectTranslationsEN: Record<string, ProjectTranslation> = {
     ],
   },
 
+  procyon: {
+    tagline: 'Our power is cosmic, our victory inevitable.',
+    tags: ['Branding', 'Esports', 'Social Media', 'Visual Identity', 'Merch', 'Streaming'],
+    overview:
+      'Procyon is a Mexican esports organization competing in Valorant Challengers LATAM Norte. The work covers the complete visual identity: logo system, social media content templates, platform headers and the design of the official team jersey.',
+    role: 'Complete visual identity and content production: logo system in three variants, match day templates in three states (Gameday, Winners, Defeat), headers for Twitch, YouTube, Twitter and Facebook, player posts and official jersey design.',
+    challenge:
+      'Building an identity that worked in the competitive Valorant Challengers context without losing its own personality. The name Procyon — the brightest star in Canis Minor — defined the direction: cosmic, precise, with an edge of mystery.',
+    process:
+      'The system is built around a four-pointed star monogram as the central icon: geometric, symmetrical, with stellar references. The black/purple palette reinforces the spatial dimension of the name. The match templates operate in two modes: dark background with an intense character for match day, light background with expansive typography for winning results. The jersey reproduces the icon on the chest with topographic texture for the premium finish.',
+    result:
+      'Complete system published on @ProcyonGaming_: logo in three versions (horizontal, vertical, icon) in positive, negative and digital. Six result templates, headers on four platforms, player posts and official team jersey.',
+    campaigns: [
+      {
+        name: 'Visual Identity',
+        objective: 'Complete logo system in three variants (horizontal, vertical, icon) and two palettes (positive and negative) for use across all digital and physical contexts.',
+        formats: ['Horizontal Logo', 'Vertical Logo', 'Icon', 'Positive · Negative'],
+      },
+      {
+        name: 'Match Templates',
+        objective: 'Three templates for match results: Gameday (match announcement), Winners (positive result) and Defeat (negative result), each featuring a different Valorant character and distinct composition.',
+        formats: ['Gameday · 1080×1080', 'Winners · 1080×1080', 'Defeat · 1080×1080'],
+      },
+      {
+        name: 'Merch · Official Jersey',
+        objective: 'Official team jersey design with topographic texture, Procyon icon on the chest and wordmark on the front. Produced in white version.',
+        formats: ['Jersey · White', 'Sublimated Design'],
+      },
+    ],
+  },
+
   'activated-decor': {
     tagline: 'Rebranding for the brand behind Disney+, Four Seasons and Ritz-Carlton TV lifts.',
     tags: ['Rebranding', 'Visual Identity', 'Animated Logo', 'Brand Guidelines', 'Motion'],
