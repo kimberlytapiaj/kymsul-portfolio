@@ -976,6 +976,7 @@ export const projects: Project[] = [
         name: 'Video Generativo',
         objective: 'Dirección de arte con herramientas de video generativo: prompt inicial, correcciones de naturalidad y dirección de actuación. Los clips generados se montan en After Effects para el entregable final.',
         formats: ['Gemini Flow · Runway', 'Clips IA · Fuente', 'Reel Final · AE'],
+        collapsible: true,
         gallery: [],
         subCampaigns: [
           {
