@@ -814,11 +814,11 @@ export const projects: Project[] = [
     tags: ['IA Generativa', 'Gemini', 'Remotion', 'Claude Code', 'Automatización', 'Codex'],
     overview:
       'Cuatro flujos de producción con IA aplicados a clientes reales: una skill en Claude Code que convierte el brief en una composición Remotion completa, imagen generativa para editorial de producto sin sesión fotográfica, video generativo con dirección de actuación, y automatización de diseño con scripts. No como experimento; como infraestructura de producción.',
-    role: 'Dirección creativa y automatización: skill /reel (Claude Code + Remotion + After Effects) para reels de paid media; prompt engineering con Gemini y ChatGPT para imagen generativa; dirección de arte en Gemini Flow y Runway para video generativo; scripts de Photoshop y Codex para generación y adaptación de piezas.',
+    role: 'Dirección creativa y automatización: skill /reel (Claude Code + Remotion + After Effects) para reels de paid media; prompt engineering con Gemini y ChatGPT para imagen generativa; dirección de arte en Gemini Flow y Higgsfield para video generativo; scripts de Photoshop y Codex para generación y adaptación de piezas.',
     challenge:
       'El reto no es usar IA; es que el output siga comunicando la identidad del cliente. Cada flujo tiene un punto de intervención humana: selección de cortes en el reel, dirección de actuación en el video generativo, retoque de personas e iluminación en el carrusel. La IA acelera; el criterio creativo sigue siendo humano.',
     process:
-      'Cuatro capas: (1) Skill /reel: el brief entra a Claude Code y sale una composición Remotion con timing, motion type y estructura de edición. El humano selecciona cortes y renderiza el final en After Effects. (2) Imagen generativa: prompt engineering en Gemini y ChatGPT para fotografía de escena y editorial de producto sin locación. (3) Video generativo: dirección de arte en Gemini Flow y Runway — prompt inicial, correcciones de naturalidad, dirección de actuación — y montaje final en AE. (4) Scripts + Codex: Claude Code genera los componentes de un carrusel desde el brief; un script de Photoshop adapta el flyer aprobado a 5 formatos en un clic.',
+      'Cuatro capas: (1) Skill /reel: el brief entra a Claude Code y sale una composición Remotion con timing, motion type y estructura de edición. El humano selecciona cortes y renderiza el final en After Effects. (2) Imagen generativa: prompt engineering en Gemini y ChatGPT para fotografía de escena y editorial de producto sin locación. (3) Video generativo: dirección de arte en Gemini Flow y Higgsfield — prompt inicial, correcciones de naturalidad, dirección de actuación — y montaje final en AE. (4) Scripts + Codex: Claude Code genera los componentes de un carrusel desde el brief; un script de Photoshop adapta el flyer aprobado a 5 formatos en un clic.',
     result:
       'Cinco reels de paid media producidos con la skill /reel: dos para AseguraMax, uno para KOP y dos para BWL. Cuatro piezas de video generativo para BWL con dirección de actuación aplicada en Gemini Flow. Posts editoriales de producto para KOP y BWL sin sesión fotográfica. Carrusel de 8 slides para AseguraMax generado con Codex. Flyer World Cup 2026 para KOP adaptado a 5 formatos con script de Photoshop.',
     gallery: [],
@@ -975,7 +975,7 @@ export const projects: Project[] = [
       {
         name: 'Video Generativo',
         objective: 'Dirección de arte con herramientas de video generativo: prompt inicial, correcciones de naturalidad y dirección de actuación. Los clips generados se montan en After Effects para el entregable final.',
-        formats: ['Gemini Flow · Runway', 'Clips IA · Fuente', 'Reel Final · AE'],
+        formats: ['Gemini Flow · Higgsfield', 'Clips IA · Fuente', 'Reel Final · AE'],
         collapsible: true,
         gallery: [],
         subCampaigns: [
@@ -1004,7 +1004,7 @@ export const projects: Project[] = [
           {
             name: 'BWL · Paid Media',
             objective: 'Reel de paid media generado con IA para BWL: video de producto sin locación ni modelos.',
-            formats: ['Paid Media · Video', 'Gemini · Runway'],
+            formats: ['Paid Media · Video', 'Gemini · Higgsfield'],
             gallery: [],
             sections: [
               { groups: [{ items: ['/assets/bwl/bwl-pm-11-web.mp4'] }] },
@@ -1013,7 +1013,7 @@ export const projects: Project[] = [
           {
             name: 'BWL · Avance',
             objective: 'Cinco clips de video de producto generados con IA, usados como material base para el reel final montado en After Effects.',
-            formats: ['Clips IA · Fuente', 'Reel Final · AE', 'Runway · Gemini'],
+            formats: ['Clips IA · Fuente', 'Reel Final · AE', 'Higgsfield · Gemini'],
             gallery: [],
             sections: [
               {
@@ -1036,7 +1036,7 @@ export const projects: Project[] = [
           {
             name: 'BWL · DR\'s Secret',
             objective: 'Los clips generados con IA que se usaron como material base del reel (sunbeam, cinemagraph y animaciones de producto), montados luego en After Effects.',
-            formats: ['Clips IA · Fuente', 'Reel Final · AE', 'Gemini · Runway'],
+            formats: ['Clips IA · Fuente', 'Reel Final · AE', 'Gemini · Higgsfield'],
             gallery: [],
             sections: [
               {
