@@ -965,8 +965,9 @@ export const projects: Project[] = [
             ],
           },
           {
-            label: 'BWL · Paid Media Estático',
+            label: 'BWL · Imagen Generativa',
             groups: [
+              { items: ['/assets/bwl/bwl-post-87.png'] },
               { items: ['/assets/bwl/bwl-pm-12.png'] },
             ],
           },
