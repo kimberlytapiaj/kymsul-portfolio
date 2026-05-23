@@ -225,10 +225,24 @@ function GalleryItem({ src, alt }: { src: string; alt: string }) {
 }
 
 type BentoItem =
-  | { kind: 'video-carousel'; sources: string[]; contain?: boolean; wide?: boolean; span?: number }
-  | { kind: 'image-carousel'; sources: string[]; contain?: boolean; wide?: boolean; span?: number }
-  | { kind: 'video'; src: string; contain?: boolean; wide?: boolean; span?: number }
-  | { kind: 'image'; src: string; contain?: boolean; wide?: boolean; span?: number }
+  | { kind: 'video-carousel'; sources: string[]; contain?: boolean; wide?: boolean; span?: number; label?: string }
+  | { kind: 'image-carousel'; sources: string[]; contain?: boolean; wide?: boolean; span?: number; label?: string }
+  | { kind: 'video'; src: string; contain?: boolean; wide?: boolean; span?: number; label?: string }
+  | { kind: 'image'; src: string; contain?: boolean; wide?: boolean; span?: number; label?: string }
+
+function LabelChip({ label }: { label: string }) {
+  const isAfter = label.toLowerCase().includes('después') || label.toLowerCase().includes('after')
+  return (
+    <div className={`inline-flex items-center gap-1.5 mb-2.5 px-3 py-1 rounded-full font-mono text-[10px] tracking-[1.4px] uppercase ${
+      isAfter
+        ? 'bg-[rgba(13,13,13,0.82)] text-white'
+        : 'bg-[rgba(13,13,13,0.07)] text-[rgba(13,13,13,0.5)] border border-[rgba(13,13,13,0.10)]'
+    }`}>
+      <span className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${isAfter ? 'bg-white' : 'bg-[rgba(13,13,13,0.35)]'}`} />
+      {label}
+    </div>
+  )
+}
 
 const isVideo = (s: string) => s.endsWith('.mp4') || s.endsWith('.webm')
 
@@ -238,12 +252,12 @@ function extractSectionItems(section: Section): BentoItem[] {
     for (const group of section.groups) {
       if (group.carousel) {
         const hasVideo = group.items.some(isVideo)
-        out.push({ kind: hasVideo ? 'video-carousel' : 'image-carousel', sources: group.items, contain: group.contain, wide: group.wide, span: group.span })
+        out.push({ kind: hasVideo ? 'video-carousel' : 'image-carousel', sources: group.items, contain: group.contain, wide: group.wide, span: group.span, label: group.label })
       } else {
         for (const src of group.items) {
           out.push(isVideo(src)
-            ? { kind: 'video', src, wide: group.wide, contain: group.contain, span: group.span }
-            : { kind: 'image', src, wide: group.wide, contain: group.contain, span: group.span })
+            ? { kind: 'video', src, wide: group.wide, contain: group.contain, span: group.span, label: group.label }
+            : { kind: 'image', src, wide: group.wide, contain: group.contain, span: group.span, label: group.label })
         }
       }
     }
@@ -345,7 +359,7 @@ function CampaignBlock({ campaign }: { campaign: SubProject }) {
     return (
       <div>
         {campaignHeader}
-        <div className="space-y-6">
+        <div className="space-y-10">
           {sections.map((section, si) => {
             const sectionItems = extractSectionItems(section)
             const sn = sectionItems.length
@@ -361,13 +375,22 @@ function CampaignBlock({ campaign }: { campaign: SubProject }) {
               if (item.span === 2) return 'col-span-2'
               return ''
             }
+            const hasLabels = sectionItems.some(it => it.label)
             return (
-              <div key={si} className="grid gap-3 items-start" style={sGridStyle}>
-                {sectionItems.map((item, i) => (
-                  <div key={i} className={sSpanClass(item)}>
-                    <MediaCell {...item} name={campaign.name} index={i} isPaidMedia={isPaidMedia} />
-                  </div>
-                ))}
+              <div key={si}>
+                {section.label && (
+                  <p className="font-mono text-[10px] text-muted2 tracking-[1.6px] uppercase mb-4 pb-3 border-b border-[rgba(13,13,13,0.08)]">
+                    {section.label}
+                  </p>
+                )}
+                <div className="grid gap-3" style={{ ...sGridStyle, alignItems: hasLabels ? 'end' : 'start' }}>
+                  {sectionItems.map((item, i) => (
+                    <div key={i} className={sSpanClass(item)}>
+                      {item.label && <LabelChip label={item.label} />}
+                      <MediaCell {...item} name={campaign.name} index={i} isPaidMedia={isPaidMedia} />
+                    </div>
+                  ))}
+                </div>
               </div>
             )
           })}

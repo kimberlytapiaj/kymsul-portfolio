@@ -4,12 +4,14 @@ export type SectionGroup = {
   contain?: boolean
   wide?: boolean
   span?: number   // column span in a 3-col grid (1 | 2 | 3)
+  label?: string  // badge shown above the media cell (e.g. "ANTES", "DESPUÉS")
 }
 
 export type Section = {
   items?: string[]
   type?: 'carousel'
   groups?: SectionGroup[]
+  label?: string  // header shown above this section's grid row
 }
 
 export type SubProject = {
@@ -981,15 +983,17 @@ export const projects: Project[] = [
         gallery: [],
         sections: [
           {
+            label: 'Reel 11 · 17s',
             groups: [
-              { items: ['/assets/amx/amx-pm-11-antes-web.mp4'] },
-              { items: ['/assets/amx/amx-pm-11-web.mp4'] },
+              { items: ['/assets/amx/amx-pm-11-antes-web.mp4'], label: 'Antes · Output IA' },
+              { items: ['/assets/amx/amx-pm-11-web.mp4'], label: 'Después · Dirección de arte' },
             ],
           },
           {
+            label: 'Reel 13 · 15s',
             groups: [
-              { items: ['/assets/amx/amx-pm-13-antes-web.mp4'] },
-              { items: ['/assets/amx/amx-pm-13-web.mp4'] },
+              { items: ['/assets/amx/amx-pm-13-antes-web.mp4'], label: 'Antes · Output IA' },
+              { items: ['/assets/amx/amx-pm-13-web.mp4'], label: 'Después · Dirección de arte' },
             ],
           },
         ],
