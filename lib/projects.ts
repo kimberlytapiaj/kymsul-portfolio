@@ -977,6 +977,19 @@ export const projects: Project[] = [
               { items: ['/assets/amorcito/ac-feb-03.png'] },
             ],
           },
+          {
+            label: 'Beatness · Editorial',
+            groups: [
+              { items: ['/assets/beatness/beatness-feb-05-v2.png'] },
+            ],
+          },
+          {
+            label: 'Corazón Mixteco · Editorial',
+            groups: [
+              { items: ['/assets/corazon-mixteco/cm-post-05-v2.png'] },
+              { items: ['/assets/corazon-mixteco/cm-post-07.png'] },
+            ],
+          },
         ],
       },
       {
