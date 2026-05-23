@@ -971,6 +971,12 @@ export const projects: Project[] = [
               { items: ['/assets/bwl/bwl-pm-12.png'] },
             ],
           },
+          {
+            label: 'Amorcito Corazón · Editorial',
+            groups: [
+              { items: ['/assets/amorcito/ac-feb-03.png'] },
+            ],
+          },
         ],
       },
       {
