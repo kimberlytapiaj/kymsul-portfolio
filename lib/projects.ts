@@ -960,6 +960,8 @@ export const projects: Project[] = [
               { items: ['/assets/kop/kop-post-142.png'] },
               { items: ['/assets/kop/kop-post-170.png'] },
               { items: ['/assets/kop/kop-post-172.png'] },
+              { items: ['/assets/kop/kop-c143-1.png', '/assets/kop/kop-c143-2.png', '/assets/kop/kop-c143-3.png', '/assets/kop/kop-c143-4.png'], carousel: true },
+              { items: ['/assets/kop/kop-c171-1.png', '/assets/kop/kop-c171-2.png', '/assets/kop/kop-c171-3.png', '/assets/kop/kop-c171-4.png', '/assets/kop/kop-c171-5.png'], carousel: true },
             ],
           },
           {
