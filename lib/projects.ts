@@ -976,13 +976,19 @@ export const projects: Project[] = [
       },
       {
         name: 'AMX · Paid Media · Skill /reel',
-        objective: 'Brief de cliente → /reel skill en Claude Code → script AEP generado → render en After Effects. Dos reels de paid media para AseguraMax producidos con el flujo automatizado: el script ensambla clips, motion type, timing y end card sin intervención manual en el montaje.',
-        formats: ['Reel 18s · Paid Media', 'Reel 15s · Paid Media', 'Skill /reel · Claude Code'],
+        objective: 'Brief → /reel skill en Claude Code → composición Remotion generada → revisión humana → render final en AE. Cada par muestra el output directo de la IA (Remotion) y el entregable final después del retoques de dirección de arte.',
+        formats: ['Antes · Output Remotion', 'Después · Final AE', 'Reel 11 · 17s', 'Reel 13 · 15s'],
         gallery: [],
         sections: [
           {
             groups: [
+              { items: ['/assets/amx/amx-pm-11-antes-web.mp4'] },
               { items: ['/assets/amx/amx-pm-11-web.mp4'] },
+            ],
+          },
+          {
+            groups: [
+              { items: ['/assets/amx/amx-pm-13-antes-web.mp4'] },
               { items: ['/assets/amx/amx-pm-13-web.mp4'] },
             ],
           },

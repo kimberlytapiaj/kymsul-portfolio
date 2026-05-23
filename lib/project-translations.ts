@@ -376,8 +376,8 @@ export const projectTranslationsEN: Record<string, ProjectTranslation> = {
       {
         name: 'AMX · Paid Media · /reel Skill',
         objective:
-          'Client brief → /reel skill in Claude Code → AEP script generated → render in After Effects. Two paid media reels for AseguraMax produced with the automated workflow: the script assembles clips, motion type, timing and end card with no manual intervention in the edit.',
-        formats: ['Reel 18s · Paid Media', 'Reel 15s · Paid Media', '/reel Skill · Claude Code'],
+          'Brief → /reel skill in Claude Code → Remotion composition generated → human art direction review → final AE render. Each pair shows the direct AI output (Remotion) and the final deliverable after art direction retouching.',
+        formats: ['Before · Remotion Output', 'After · Final AE', 'Reel 11 · 17s', 'Reel 13 · 15s'],
       },
       {
         name: 'AMX · Carousel · Codex',
