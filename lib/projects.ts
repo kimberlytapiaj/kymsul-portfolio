@@ -855,7 +855,7 @@ export const projects: Project[] = [
             ],
           },
           {
-            label: 'BWL · Post 80 · 16s',
+            label: 'BWL · DR\'s Secret · 16s',
             split: true,
             groups: [
               { items: ['/assets/bwl/bwl-post-80-antes-web.mp4'], label: 'Antes · Output Remotion' },
@@ -863,7 +863,7 @@ export const projects: Project[] = [
             ],
           },
           {
-            label: 'BWL · Post 83 · 27s',
+            label: 'BWL · Avance · 27s',
             split: true,
             groups: [
               { items: ['/assets/bwl/bwl-post-83-antes-web.mp4'], label: 'Antes · Output Remotion' },
