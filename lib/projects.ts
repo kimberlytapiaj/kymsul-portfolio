@@ -855,7 +855,7 @@ export const projects: Project[] = [
             ],
           },
           {
-            label: 'BWL · DR\'s Secret · 16s',
+            label: 'BWL · Post 80 · 16s',
             split: true,
             groups: [
               { items: ['/assets/bwl/bwl-post-80-antes-web.mp4'], label: 'Antes · Output Remotion' },
@@ -863,7 +863,7 @@ export const projects: Project[] = [
             ],
           },
           {
-            label: 'BWL · Avance · 27s',
+            label: 'BWL · Post 83 · 27s',
             split: true,
             groups: [
               { items: ['/assets/bwl/bwl-post-83-antes-web.mp4'], label: 'Antes · Output Remotion' },
@@ -980,7 +980,7 @@ export const projects: Project[] = [
         gallery: [],
         subCampaigns: [
           {
-            name: 'BWL · Post 71',
+            name: 'BWL · Optrimax',
             objective: 'Dirección de arte en Gemini Flow: prompt inicial con constraint de marca ("no modifiques ningún elemento, solo adapta al video"), seguido de correcciones de naturalidad ("arregla las manos, no es una pose natural para abrir el jugo") y dirección de actuación ("persona joven rejuvenecida, natural y fresh, que tome el vaso y sonría"). Los clips generados se montaron luego en After Effects.',
             formats: ['Prompt · Gemini Flow', 'Clips IA · Fuente', 'Reel Final EN · AE', 'Reel Final 中文 · AE'],
             gallery: [],
@@ -1011,7 +1011,7 @@ export const projects: Project[] = [
             ],
           },
           {
-            name: 'BWL · Post 77',
+            name: 'BWL · Avance',
             objective: 'Cinco clips de video de producto generados con IA, usados como material base para el reel final montado en After Effects.',
             formats: ['Clips IA · Fuente', 'Reel Final · AE', 'Runway · Gemini'],
             gallery: [],
@@ -1034,7 +1034,7 @@ export const projects: Project[] = [
             ],
           },
           {
-            name: 'BWL · Post 79',
+            name: 'BWL · DR\'s Secret',
             objective: 'Los clips generados con IA que se usaron como material base del reel (sunbeam, cinemagraph y animaciones de producto), montados luego en After Effects.',
             formats: ['Clips IA · Fuente', 'Reel Final · AE', 'Gemini · Runway'],
             gallery: [],
