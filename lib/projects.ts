@@ -811,16 +811,16 @@ export const projects: Project[] = [
     image: '/assets/kop/kop-wc-post.png',
     accentColor: '#0D0D0D',
     tagline: 'Del prompt al entregable. Sin fricción.',
-    tags: ['IA Generativa', 'Gemini', 'Script AE', 'Script PS', 'Automatización', 'Codex'],
+    tags: ['IA Generativa', 'Gemini', 'Remotion', 'Claude Code', 'Automatización', 'Codex'],
     overview:
-      'Flujo de producción creativa con inteligencia artificial aplicado a clientes reales: imagen generativa, automatización de edición y generación de componentes de diseño mediante scripts. No como experimento; como método de trabajo.',
-    role: 'Dirección creativa, prompt engineering, generación de imagen con Gemini y ChatGPT, y automatización de montaje en After Effects y Photoshop con scripts escritos con Codex.',
+      'Cuatro flujos de producción con IA aplicados a clientes reales: una skill en Claude Code que convierte el brief en una composición Remotion completa, imagen generativa para editorial de producto sin sesión fotográfica, video generativo con dirección de actuación, y automatización de diseño con scripts. No como experimento; como infraestructura de producción.',
+    role: 'Dirección creativa y automatización: skill /reel (Claude Code + Remotion + After Effects) para reels de paid media; prompt engineering con Gemini y ChatGPT para imagen generativa; dirección de arte en Gemini Flow y Runway para video generativo; scripts de Photoshop y Codex para generación y adaptación de piezas.',
     challenge:
-      'El reto no es usar IA; es usarla de forma que el resultado no se vea genérico y siga comunicando la identidad del cliente. Integrar estas herramientas sin que el cliente note la diferencia en calidad, solo en velocidad.',
+      'El reto no es usar IA; es que el output siga comunicando la identidad del cliente. Cada flujo tiene un punto de intervención humana: selección de cortes en el reel, dirección de actuación en el video generativo, retoque de personas e iluminación en el carrusel. La IA acelera; el criterio creativo sigue siendo humano.',
     process:
-      'Tres capas: (1) Imagen generativa: prompt engineering para crear fotografía de escena sin sesión fotográfica. (2) Script AE: automatización que monta el reel completo con motion type, escalado de clips y end card en minutos; el director de arte interviene solo para seleccionar los cortes y ajustar detalles finales. (3) Script PS: Claude Code investiga la marca, genera componentes por separado con IA e itera versiones hasta producir el PSD editable final.',
+      'Cuatro capas: (1) Skill /reel: el brief entra a Claude Code y sale una composición Remotion con timing, motion type y estructura de edición. El humano selecciona cortes y renderiza el final en After Effects. (2) Imagen generativa: prompt engineering en Gemini y ChatGPT para fotografía de escena y editorial de producto sin locación. (3) Video generativo: dirección de arte en Gemini Flow y Runway — prompt inicial, correcciones de naturalidad, dirección de actuación — y montaje final en AE. (4) Scripts + Codex: Claude Code genera los componentes de un carrusel desde el brief; un script de Photoshop adapta el flyer aprobado a 5 formatos en un clic.',
     result:
-      'Lo que antes tomaba horas de edición ahora toma minutos de script + revisión creativa. Un reel de 22 segundos producido por script con intervención humana solo en selección de cortes. Un flyer en 5 formatos generado desde brief hasta PSD. Posts editoriales de producto sin sesión fotográfica. Sistema documentado y replicable por cliente.',
+      'Cinco reels de paid media producidos con la skill /reel: dos para AseguraMax, uno para KOP y dos para BWL. Cuatro piezas de video generativo para BWL con dirección de actuación aplicada en Gemini Flow. Posts editoriales de producto para KOP y BWL sin sesión fotográfica. Carrusel de 8 slides para AseguraMax generado con Codex. Flyer World Cup 2026 para KOP adaptado a 5 formatos con script de Photoshop.',
     gallery: [],
     campaigns: [
       {
