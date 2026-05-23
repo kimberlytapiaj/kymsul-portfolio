@@ -246,6 +246,22 @@ function LabelChip({ label }: { label: string }) {
 
 const isVideo = (s: string) => s.endsWith('.mp4') || s.endsWith('.webm')
 
+function SplitGroupContent({ group, name, isPaidMedia }: { group: SectionGroup; name: string; isPaidMedia: boolean }) {
+  if (group.carousel) {
+    const hasVideo = group.items.some(isVideo)
+    const it: BentoItem = { kind: hasVideo ? 'video-carousel' : 'image-carousel', sources: group.items }
+    return <MediaCell {...it} name={name} index={0} isPaidMedia={isPaidMedia} />
+  }
+  return (
+    <div className="space-y-3">
+      {group.items.map((src, ii) => {
+        const it: BentoItem = isVideo(src) ? { kind: 'video', src } : { kind: 'image', src }
+        return <MediaCell key={ii} {...it} name={name} index={ii} isPaidMedia={isPaidMedia} />
+      })}
+    </div>
+  )
+}
+
 function extractSectionItems(section: Section): BentoItem[] {
   const out: BentoItem[] = []
   if (section.groups) {
@@ -312,6 +328,38 @@ function extractBentoItems(campaign: SubProject): BentoItem[] {
 function CampaignBlock({ campaign }: { campaign: SubProject }) {
   // Parent campaign with sub-campaigns: accordion layout
   if (campaign.subCampaigns && campaign.subCampaigns.length > 0) {
+    const subList = (
+      <div className="divide-y divide-[rgba(13,13,13,0.08)]">
+        {campaign.subCampaigns.map((sub, i) => (
+          <SubCampaignItem key={i} campaign={sub} />
+        ))}
+      </div>
+    )
+    if (campaign.collapsible) {
+      return (
+        <details className="group">
+          <summary className="flex items-center justify-between pb-6 border-b border-[rgba(13,13,13,0.08)] cursor-pointer list-none select-none">
+            <div>
+              <p className="text-[24px] lg:text-[32px] text-dark leading-[1] mb-3" style={{ fontFamily: 'var(--font-franklin-cond)' }}>
+                {campaign.name}
+              </p>
+              <p className="font-sans text-[13px] lg:text-[14px] text-muted leading-[1.6] max-w-[560px]">
+                {campaign.objective}
+              </p>
+            </div>
+            <div className="flex items-center gap-4 shrink-0 ml-8">
+              <div className="flex flex-wrap gap-2 lg:justify-end lg:max-w-[280px]">
+                {campaign.formats.map((f) => (
+                  <span key={f} className="bg-[rgba(13,13,13,0.06)] rounded-full px-3 py-1 font-mono text-[10px] text-muted2 tracking-[1.2px]">{f}</span>
+                ))}
+              </div>
+              <span className="font-mono text-[12px] text-muted2 inline-block transition-transform duration-200 group-open:rotate-180">↓</span>
+            </div>
+          </summary>
+          <div className="pt-8">{subList}</div>
+        </details>
+      )
+    }
     return (
       <div>
         <div className="mb-6 pb-6 border-b border-[rgba(13,13,13,0.08)]">
@@ -322,11 +370,7 @@ function CampaignBlock({ campaign }: { campaign: SubProject }) {
             {campaign.objective}
           </p>
         </div>
-        <div className="divide-y divide-[rgba(13,13,13,0.08)]">
-          {campaign.subCampaigns.map((sub, i) => (
-            <SubCampaignItem key={i} campaign={sub} />
-          ))}
-        </div>
+        {subList}
       </div>
     )
   }
@@ -354,99 +398,41 @@ function CampaignBlock({ campaign }: { campaign: SubProject }) {
     </div>
   )
 
-  // Multi-section: each section renders as its own independent grid
-  if (sections.length > 1) {
+  // Multi-section or single split section: renders with per-section layout logic
+  if (sections.length > 1 || (sections.length === 1 && sections[0].split)) {
+    if (campaign.collapsible) {
+      return (
+        <details className="group">
+          <summary className="flex items-center justify-between pb-6 border-b border-[rgba(13,13,13,0.08)] cursor-pointer list-none select-none">
+            <div>
+              <p className="text-[24px] lg:text-[32px] text-dark leading-[1] mb-3" style={{ fontFamily: 'var(--font-franklin-cond)' }}>
+                {campaign.name}
+              </p>
+              <p className="font-sans text-[13px] lg:text-[14px] text-muted leading-[1.6] max-w-[560px]">
+                {campaign.objective}
+              </p>
+            </div>
+            <div className="flex items-center gap-4 shrink-0 ml-8">
+              <div className="flex flex-wrap gap-2 lg:justify-end lg:max-w-[280px]">
+                {campaign.formats.map((f) => (
+                  <span key={f} className="bg-[rgba(13,13,13,0.06)] rounded-full px-3 py-1 font-mono text-[10px] text-muted2 tracking-[1.2px]">
+                    {f}
+                  </span>
+                ))}
+              </div>
+              <span className="font-mono text-[12px] text-muted2 inline-block transition-transform duration-200 group-open:rotate-180">↓</span>
+            </div>
+          </summary>
+          <div className="pt-8">
+            <SectionsContent sections={sections} name={campaign.name} isPaidMedia={isPaidMedia} />
+          </div>
+        </details>
+      )
+    }
     return (
       <div>
         {campaignHeader}
-        <div className="space-y-10">
-          {sections.map((section, si) => {
-            // ── Split / before-after layout ──────────────────────────────
-            if (section.split && section.groups && section.groups.length >= 2) {
-              const [leftGroup, rightGroup] = section.groups
-              const isAfter = (lbl?: string) =>
-                lbl?.toLowerCase().includes('después') || lbl?.toLowerCase().includes('after')
-              const ColHeader = ({ group }: { group: typeof leftGroup }) => {
-                const after = isAfter(group.label)
-                return (
-                  <div className={`flex items-center gap-2 pb-3 mb-4 ${after ? 'border-b-2 border-[rgba(13,13,13,0.75)]' : 'border-b border-[rgba(13,13,13,0.10)]'}`}>
-                    <span className={`w-2 h-2 rounded-full flex-shrink-0 ${after ? 'bg-[rgba(13,13,13,0.8)]' : 'border border-[rgba(13,13,13,0.35)] bg-transparent'}`} />
-                    <span className={`font-mono text-[10px] tracking-[1.5px] uppercase ${after ? 'text-dark font-semibold' : 'text-muted2'}`}>
-                      {group.label}
-                    </span>
-                  </div>
-                )
-              }
-              return (
-                <div key={si}>
-                  {section.label && (
-                    <p className="font-mono text-[10px] text-muted2 tracking-[1.6px] uppercase mb-5">
-                      {section.label}
-                    </p>
-                  )}
-                  <div className="relative grid grid-cols-2">
-                    {/* center divider */}
-                    <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-px bg-[rgba(13,13,13,0.12)] pointer-events-none" />
-                    {/* left */}
-                    <div className="pr-6">
-                      {leftGroup.label && <ColHeader group={leftGroup} />}
-                      <div className="space-y-3">
-                        {leftGroup.items.map((src, ii) => {
-                          const it: BentoItem = isVideo(src) ? { kind: 'video', src } : { kind: 'image', src }
-                          return <MediaCell key={ii} {...it} name={campaign.name} index={ii} isPaidMedia={isPaidMedia} />
-                        })}
-                      </div>
-                    </div>
-                    {/* right */}
-                    <div className="pl-6">
-                      {rightGroup.label && <ColHeader group={rightGroup} />}
-                      <div className="space-y-3">
-                        {rightGroup.items.map((src, ii) => {
-                          const it: BentoItem = isVideo(src) ? { kind: 'video', src } : { kind: 'image', src }
-                          return <MediaCell key={ii} {...it} name={campaign.name} index={ii} isPaidMedia={isPaidMedia} />
-                        })}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )
-            }
-
-            // ── Standard grid layout ──────────────────────────────────────
-            const sectionItems = extractSectionItems(section)
-            const sn = sectionItems.length
-            const sHasWide = sectionItems.some(it => it.wide || (it.span && it.span > 1))
-            const sGridStyle: React.CSSProperties = (() => {
-              if (sHasWide) return { gridTemplateColumns: 'repeat(3, 1fr)' }
-              if (sn === 1) return { maxWidth: '560px', margin: '0 auto' }
-              if (sn === 2) return { gridTemplateColumns: 'repeat(2, 1fr)', maxWidth: '760px', margin: '0 auto' }
-              return { gridTemplateColumns: 'repeat(3, 1fr)' }
-            })()
-            const sSpanClass = (item: BentoItem) => {
-              if (item.wide) return 'col-span-3'
-              if (item.span === 2) return 'col-span-2'
-              return ''
-            }
-            const hasLabels = sectionItems.some(it => it.label)
-            return (
-              <div key={si}>
-                {section.label && (
-                  <p className="font-mono text-[10px] text-muted2 tracking-[1.6px] uppercase mb-4 pb-3 border-b border-[rgba(13,13,13,0.08)]">
-                    {section.label}
-                  </p>
-                )}
-                <div className="grid gap-3" style={{ ...sGridStyle, alignItems: hasLabels ? 'end' : 'start' }}>
-                  {sectionItems.map((item, i) => (
-                    <div key={i} className={sSpanClass(item)}>
-                      {item.label && <LabelChip label={item.label} />}
-                      <MediaCell {...item} name={campaign.name} index={i} isPaidMedia={isPaidMedia} />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )
-          })}
-        </div>
+        <SectionsContent sections={sections} name={campaign.name} isPaidMedia={isPaidMedia} />
       </div>
     )
   }
@@ -482,10 +468,85 @@ function CampaignBlock({ campaign }: { campaign: SubProject }) {
   )
 }
 
+function SectionsContent({ sections, name, isPaidMedia }: { sections: Section[]; name: string; isPaidMedia: boolean }) {
+  return (
+    <div className="space-y-10">
+      {sections.map((section, si) => {
+        if (section.split && section.groups && section.groups.length >= 2) {
+          const [leftGroup, rightGroup] = section.groups
+          const isAfterLabel = (lbl?: string) =>
+            lbl?.toLowerCase().includes('después') || lbl?.toLowerCase().includes('after')
+          const ColHeader = ({ group }: { group: typeof leftGroup }) => {
+            const after = isAfterLabel(group.label)
+            return (
+              <div className={`flex items-center gap-2 pb-3 mb-4 ${after ? 'border-b-2 border-[rgba(13,13,13,0.75)]' : 'border-b border-[rgba(13,13,13,0.10)]'}`}>
+                <span className={`w-2 h-2 rounded-full flex-shrink-0 ${after ? 'bg-[rgba(13,13,13,0.8)]' : 'border border-[rgba(13,13,13,0.35)] bg-transparent'}`} />
+                <span className={`font-mono text-[10px] tracking-[1.5px] uppercase ${after ? 'text-dark font-semibold' : 'text-muted2'}`}>
+                  {group.label}
+                </span>
+              </div>
+            )
+          }
+          return (
+            <div key={si}>
+              {section.label && (
+                <p className="font-mono text-[10px] text-muted2 tracking-[1.6px] uppercase mb-5">
+                  {section.label}
+                </p>
+              )}
+              <div className="relative grid grid-cols-2">
+                <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-px bg-[rgba(13,13,13,0.12)] pointer-events-none" />
+                <div className="pr-6">
+                  {leftGroup.label && <ColHeader group={leftGroup} />}
+                  <SplitGroupContent group={leftGroup} name={name} isPaidMedia={isPaidMedia} />
+                </div>
+                <div className="pl-6">
+                  {rightGroup.label && <ColHeader group={rightGroup} />}
+                  <SplitGroupContent group={rightGroup} name={name} isPaidMedia={isPaidMedia} />
+                </div>
+              </div>
+            </div>
+          )
+        }
+        const sectionItems = extractSectionItems(section)
+        const sn = sectionItems.length
+        const sHasWide = sectionItems.some(it => it.wide || (it.span && it.span > 1))
+        const sGridStyle: React.CSSProperties = (() => {
+          if (sHasWide) return { gridTemplateColumns: 'repeat(3, 1fr)' }
+          if (sn === 1) return { maxWidth: '560px', margin: '0 auto' }
+          if (sn === 2) return { gridTemplateColumns: 'repeat(2, 1fr)', maxWidth: '760px', margin: '0 auto' }
+          return { gridTemplateColumns: 'repeat(3, 1fr)' }
+        })()
+        const sSpanClass = (item: BentoItem) => item.wide ? 'col-span-3' : item.span === 2 ? 'col-span-2' : ''
+        const hasLabels = sectionItems.some(it => it.label)
+        return (
+          <div key={si}>
+            {section.label && (
+              <p className="font-mono text-[10px] text-muted2 tracking-[1.6px] uppercase mb-4 pb-3 border-b border-[rgba(13,13,13,0.08)]">
+                {section.label}
+              </p>
+            )}
+            <div className="grid gap-3" style={{ ...sGridStyle, alignItems: hasLabels ? 'end' : 'start' }}>
+              {sectionItems.map((item, i) => (
+                <div key={i} className={sSpanClass(item)}>
+                  {item.label && <LabelChip label={item.label} />}
+                  <MediaCell {...item} name={name} index={i} isPaidMedia={isPaidMedia} />
+                </div>
+              ))}
+            </div>
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
 function SubCampaignItem({ campaign }: { campaign: SubProject }) {
-  const items = extractBentoItems(campaign)
-  const n = items.length
   const isPaidMedia = campaign.formats.some(f => f.toLowerCase().includes('paid'))
+  const sections = campaign.sections ?? []
+  const hasSections = sections.length > 0
+
+  const items = hasSections ? [] : extractBentoItems(campaign)
   const hasImages = items.some(it => it.kind === 'image')
 
   return (
@@ -511,7 +572,10 @@ function SubCampaignItem({ campaign }: { campaign: SubProject }) {
         </div>
       </summary>
       <div className="pb-8 pt-2">
-        <BentoGrid items={items} name={campaign.name} isPaidMedia={isPaidMedia} contain={hasImages} />
+        {hasSections
+          ? <SectionsContent sections={sections} name={campaign.name} isPaidMedia={isPaidMedia} />
+          : <BentoGrid items={items} name={campaign.name} isPaidMedia={isPaidMedia} contain={hasImages} />
+        }
       </div>
     </details>
   )

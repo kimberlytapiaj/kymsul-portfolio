@@ -876,6 +876,7 @@ export const projects: Project[] = [
         name: 'Scripts + Codex',
         objective: 'Generación de piezas de diseño con IA: script de Photoshop que adapta un flyer a 5 formatos en un clic, y carrusel construido con Codex donde la IA genera los componentes visuales desde el brief.',
         formats: ['Script PS · Claude Code', 'Codex · Claude Code'],
+        collapsible: true,
         gallery: [],
         subCampaigns: [
           {
