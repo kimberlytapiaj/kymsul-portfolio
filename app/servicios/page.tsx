@@ -1,5 +1,12 @@
+import type { Metadata } from 'next'
 import PageLayout from '@/components/PageLayout'
 import CTABand from '@/components/CTABand'
+
+export const metadata: Metadata = {
+  title: 'Servicios',
+  description: 'Branding estratégico, motion visual y producción IA-native. Tres disciplinas integradas en un sistema de diseño coherente.',
+  alternates: { canonical: '/servicios' },
+}
 
 const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 

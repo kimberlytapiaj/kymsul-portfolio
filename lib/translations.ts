@@ -118,7 +118,7 @@ export const tr = {
 
   proyectos: {
     eyebrow:    { es: 'PROYECTOS', en: 'PROJECTS' },
-    h1:         { es: 'Todo el', en: 'All the' },
+    h1:         { es: 'Todo mi', en: 'All my' },
     h2:         { es: 'trabajo.', en: 'work.' },
     count:      { es: 'PROYECTOS', en: 'PROJECTS' },
     noProjects: { es: 'SIN PROYECTOS', en: 'NO PROJECTS' },
@@ -330,12 +330,12 @@ export const tr = {
         en: 'The system knows who the brand is.',
       },
       p1: {
-        es: 'Los brand guidelines de cada cliente viven en Obsidian — tipografía, paleta, tono, reglas visuales. Antes de generar una sola imagen o escribir una línea de código, Claude Code lee ese contexto. El output no es genérico: está calibrado a la marca desde el primer prompt.',
-        en: 'Every client\'s brand guidelines live in Obsidian — typography, palette, tone, visual rules. Before generating a single image or writing a line of code, Claude Code reads that context. The output isn\'t generic: it\'s calibrated to the brand from the very first prompt.',
+        es: 'Los brand guidelines de cada cliente viven en Obsidian: tipografía, paleta, tono, reglas visuales. Antes de generar una sola imagen o escribir una línea de código, Claude Code lee ese contexto. El output no es genérico: está calibrado a la marca desde el primer prompt.',
+        en: 'Every client\'s brand guidelines live in Obsidian: typography, palette, tone, visual rules. Before generating a single image or writing a line of code, Claude Code reads that context. The output isn\'t generic: it\'s calibrated to the brand from the very first prompt.',
       },
       p2: {
-        es: 'La misma documentación que alimenta la producción también se entrega al cliente como activo — un sistema vivo que escala con la marca.',
-        en: 'The same documentation that fuels production is also delivered to the client as an asset — a living system that scales with the brand.',
+        es: 'La misma documentación que alimenta la producción también se entrega al cliente como activo, un sistema vivo que escala con la marca.',
+        en: 'The same documentation that fuels production is also delivered to the client as an asset, a living system that scales with the brand.',
       },
       bullets: {
         es: [
@@ -384,8 +384,8 @@ export const tr = {
         en: 'Scene photography without a shoot.',
       },
       p: {
-        es: 'Imagen de producto, lifestyle y composiciones generadas con IA — calibradas con prompt engineering para que el resultado no rompa la identidad visual del cliente. Lo que antes requería locación, modelos y horas de edición ahora es iteración de prompts con dirección de arte.',
-        en: 'Product imagery, lifestyle and compositions generated with AI — calibrated with prompt engineering so the result doesn\'t break the client\'s visual identity. What once required location, models and hours of editing is now prompt iteration with art direction.',
+        es: 'Imagen de producto, lifestyle y composiciones generadas con IA, calibradas con prompt engineering para que el resultado no rompa la identidad visual del cliente. Lo que antes requería locación, modelos y horas de edición ahora es iteración de prompts con dirección de arte.',
+        en: 'Product imagery, lifestyle and compositions generated with AI, calibrated with prompt engineering so the result doesn\'t break the client\'s visual identity. What once required location, models and hours of editing is now prompt iteration with art direction.',
       },
       promptLabel: { es: 'PROMPT REAL · KOP KINGS TAVERN', en: 'REAL PROMPT · KOP KINGS TAVERN' },
       beforeLabel:  { es: 'FOTO ORIGINAL · IPHONE', en: 'ORIGINAL PHOTO · IPHONE' },
@@ -400,8 +400,8 @@ export const tr = {
         en: 'A full reel in one click.',
       },
       p: {
-        es: 'Scripts de After Effects y Photoshop generados con Claude Code que automatizan el montaje: timeline, textos, escalado, end card, redimensiones. El director de arte interviene para seleccionar cortes y afinar detalles — no para hacer trabajo mecánico.',
-        en: 'After Effects and Photoshop scripts generated with Claude Code that automate the assembly: timeline, text, scaling, end card, resizing. The art director steps in to select cuts and refine details — not to do mechanical work.',
+        es: 'Scripts de After Effects y Photoshop generados con Claude Code que automatizan el montaje: timeline, textos, escalado, end card, redimensiones. El director de arte interviene para seleccionar cortes y afinar detalles, no para hacer trabajo mecánico.',
+        en: 'After Effects and Photoshop scripts generated with Claude Code that automate the assembly: timeline, text, scaling, end card, resizing. The art director steps in to select cuts and refine details, not to do mechanical work.',
       },
       case1label: { es: 'SCRIPT AE · KOP PAID MEDIA', en: 'AE SCRIPT · KOP PAID MEDIA' },
       case1: {
@@ -422,21 +422,21 @@ export const tr = {
       h1: { es: 'Este portafolio,', en: 'This portfolio,' },
       h2: { es: 'construido con el mismo sistema.', en: 'built with the same system.' },
       p: {
-        es: 'Diseñado en conversación con Claude Code: sistema tipográfico, paleta, estructura de información, componentes React, animaciones, responsive. Sin boilerplate manual, sin horas en un editor de código. El diseñador dirige la visión — la IA ejecuta. Lo que estás viendo es el resultado.',
-        en: 'Designed in conversation with Claude Code: typographic system, palette, information structure, React components, animations, responsive. No manual boilerplate, no hours in a code editor. The designer directs the vision — AI executes. What you\'re seeing is the result.',
+        es: 'Diseñado en conversación con Claude Code: sistema tipográfico, paleta, estructura de información, componentes React, animaciones, responsive. Sin boilerplate manual, sin horas en un editor de código. El diseñador dirige la visión; la IA ejecuta. Lo que estás viendo es el resultado.',
+        en: 'Designed in conversation with Claude Code: typographic system, palette, information structure, React components, animations, responsive. No manual boilerplate, no hours in a code editor. The designer directs the vision; AI executes. What you\'re seeing is the result.',
       },
       details: {
         es: [
           { label: 'DISEÑO',      val: 'Sistema tipográfico, paleta, layout, spacing' },
           { label: 'COMPONENTES', val: 'React + Tailwind CSS generados por conversación' },
-          { label: 'DATOS',       val: 'projects.ts — caso de estudio estructurado en código' },
+          { label: 'DATOS',       val: 'projects.ts, caso de estudio estructurado en código' },
           { label: 'ANIMACIÓN',   val: 'Framer Motion · transiciones de página' },
           { label: 'DEPLOY',      val: 'Vercel · CI/CD automático desde GitHub' },
         ],
         en: [
           { label: 'DESIGN',      val: 'Typographic system, palette, layout, spacing' },
           { label: 'COMPONENTS',  val: 'React + Tailwind CSS generated by conversation' },
-          { label: 'DATA',        val: 'projects.ts — case study structured in code' },
+          { label: 'DATA',        val: 'projects.ts, case study structured in code' },
           { label: 'ANIMATION',   val: 'Framer Motion · page transitions' },
           { label: 'DEPLOY',      val: 'Vercel · automatic CI/CD from GitHub' },
         ],

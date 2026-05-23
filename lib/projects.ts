@@ -159,10 +159,10 @@ export const projects: Project[] = [
     id: 'brainy',
     name: 'BrainyBudzz',
     category: 'BRANDING',
-    year: '2025',
+    year: '2023',
     image: '/assets/brainy/brainy-12.png',
     accentColor: 'white',
-    tagline: 'Aprendizaje que se ve, se siente y se recuerda.',
+    tagline: 'Identidad que los niños quieren y los padres aprueban.',
     tags: ['Branding', 'Identidad visual', 'Mascota', 'Brand book'],
     overview:
       'BrainyBudzz es una plataforma EdTech gamificada dirigida a niños en etapa primaria. El reto fue crear una identidad que compitiera en atención contra redes sociales sin caer en el caos visual típico del segmento infantil: energética, pero con sistema.',
@@ -175,20 +175,20 @@ export const projects: Project[] = [
       'Brand book completo: construcción de logotipo, sistema de reducciones, paleta Pantone documentada, tipografía y personaje Bud. Identidad aplicada en mockup digital de la plataforma.',
     gallery: [
       '/assets/brainy/brainy-12.png',
-      '/assets/brainy/brainy-01.png',
-      '/assets/brainy/brainy-02.png',
-      '/assets/brainy/brainy-03.png',
+      '/assets/brainy/brainy-09.png',
+      '/assets/brainy/brainy-11.png',
+      '/assets/brainy/brainy-07.png',
     ],
     campaigns: [
       {
         name: 'Branding',
-        objective: 'Identidad visual completa para BrainyBudzz — construcción del logotipo y mascota Bud, sistema de variantes de color, paleta Pantone, tipografía y aplicación en plataforma digital.',
+        objective: 'Identidad visual completa para BrainyBudzz: construcción del logotipo y mascota Bud, sistema de variantes de color, paleta Pantone, tipografía y aplicación en plataforma digital.',
         formats: ['Logotipo', 'Mascota · Bud', 'Paleta de color', 'Tipografía', 'Reducciones', 'Aplicación digital'],
         gallery: [],
         sections: [
           {
             groups: [
-              { items: ['/assets/brainy/brainy-09.png', '/assets/brainy/brainy-10.png', '/assets/brainy/brainy-07.png', '/assets/brainy/brainy-06.png', '/assets/brainy/brainy-05.png', '/assets/brainy/brainy-08.png', '/assets/brainy/brainy-11.png'], carousel: true, contain: true, wide: true },
+              { items: ['/assets/brainy/brainy-09.png', '/assets/brainy/brainy-10.png', '/assets/brainy/brainy-07.png', '/assets/brainy/brainy-06.png', '/assets/brainy/brainy-05.png', '/assets/brainy/brainy-04.png', '/assets/brainy/brainy-08.png', '/assets/brainy/brainy-11.png'], carousel: true, contain: true, wide: true },
             ],
           },
         ],
@@ -199,21 +199,20 @@ export const projects: Project[] = [
     id: 'beatness',
     name: 'Beatness',
     category: 'SOCIAL MEDIA',
-    year: '2024',
+    year: '2026',
     image: '/assets/beatness/beatness-01.jpg',
     accentColor: 'white',
     tagline: 'Contenido que se mueve tan fuerte como el entreno.',
     tags: ['Motion', 'Social media', 'Dirección de arte'],
     overview:
-      'Beatness es un fitness studio en Puebla con múltiples disciplinas — Cycling, Box, Bootcamp y Funcional. El proyecto: producir contenido que comunicara intensidad, pertenencia y progreso de comunidad en redes.',
-    role: 'Dirección de arte y producción de contenido: reels, stories, carruseles, activaciones de evento y levantamiento de contenido en la collab Beatness × Kinabela.',
-    agency: 'Mensaje Clave',
+      'Beatness es un fitness studio en Puebla con cuatro disciplinas: Cycling, Box, Bootcamp y Funcional. Durante dos meses fui la responsable de ejecutar todo el contenido para redes: diseño, levantamiento y producción bajo la revisión de una project manager.',
+    role: 'Producción y diseño de contenido: reels, stories, carruseles, paid media y activaciones de evento. Coordinación con videógrafa externa en el 10K Beatdown y con operador de dron en la collab Beatness × Kinabela.',
     challenge:
-      'Mantener coherencia de marca con material de producción variable — sin estudio controlado, con distintos equipos y contextos de rodaje.',
+      'Producir contenido coherente con el sistema visual del club (paleta oscura, acentos neón, tipografía de impacto) con material de producción variable: levantamiento propio con celular, distintos contextos de rodaje y coordinación de talento externo en dos eventos.',
     process:
-      'Trabajé dentro del sistema visual de Beatness: paleta oscura con acentos neón, tipografía de impacto, corte rápido. Paid media para las disciplinas del club, contenido orgánico para feed e historias, y activaciones de evento. En la collab con Kinabela Derma: reels de invitación y levantamiento en el evento.',
+      'Ejecuté la parrilla dentro del sistema visual de Beatness: paid media por disciplina, contenido orgánico para feed e historias, y activaciones para eventos especiales. En el 10K Beatdown (evento tipo Hyrox del club), coordiné a la videógrafa contratada. En la collab con Kinabela Derma trabajé junto a un operador de dron para el levantamiento en el rooftop.',
     result:
-      'Paid media, reels, stories y carruseles orgánicos para el club. Collab Beatness × Kinabela: 2 clases de cycling llenas en el rooftop — ~40 personas.',
+      'Dos meses de sistema de contenido activo: paid media, parrilla orgánica y activaciones de evento. Collab Beatness × Kinabela: dos clases de cycling con cupo lleno en el rooftop, ~40 personas por sesión.',
     gallery: [
       '/assets/beatness/beatness-01.jpg',
       '/assets/beatness/beatness-reel-04feb-web.mp4',
@@ -224,11 +223,12 @@ export const projects: Project[] = [
       '/assets/beatness/beatness-06.png',
       '/assets/beatness/beatness-09.png',
       '/assets/beatness/beatness-10.jpg',
+      '/assets/beatness/beatness-pared.png',
     ],
     campaigns: [
       {
         name: 'Pauta · Diferentes Disciplinas',
-        objective: 'Campaña de paid media en 4 variaciones fotográficas y 2 formatos — post cuadrado y banner HD — para activación de marca en pauta digital.',
+        objective: 'Campaña de paid media en 4 variaciones fotográficas y 2 formatos (post cuadrado y banner HD) para activación de marca en pauta digital.',
         formats: ['Post · 4 variaciones', 'Banner HD · 2 variaciones'],
         gallery: [],
         sections: [
@@ -242,7 +242,7 @@ export const projects: Project[] = [
       },
       {
         name: 'Eventos',
-        objective: 'Piezas de activación para eventos especiales del club — desde inauguraciones y colaboraciones externas hasta clases temáticas y programas inclusivos.',
+        objective: 'Piezas de activación para eventos especiales del club, desde inauguraciones y colaboraciones externas hasta clases temáticas y programas inclusivos.',
         formats: ['Story · Instagram', 'Post · Instagram'],
         gallery: [],
         sections: [
@@ -261,26 +261,54 @@ export const projects: Project[] = [
       },
       {
         name: 'Collab · Beatness × Kinabela',
-        objective: 'Clase de cycling en el rooftop de Kinabela Derma — collab entre el fitness studio y la clínica de estética. Reel de invitación y levantamiento de contenido en el evento.',
-        formats: ['Reel · Invitación'],
+        objective: 'Clase de cycling en el rooftop de Kinabela Derma, collab entre el fitness studio y la clínica de estética. Reel de invitación y levantamiento de contenido en el evento.',
+        formats: ['Reel · Invitación', 'Reel · Evento'],
         gallery: [],
         sections: [
           {
             groups: [
               { items: ['/assets/beatness/beatness-reel-cycling-web.mp4'] },
+              { items: ['/assets/beatness/beatness-reel-kinabela-roof-web.mp4'] },
             ],
           },
         ],
       },
       {
         name: 'The ___ Beat',
-        objective: 'Serie editorial por disciplina — cada deporte con su propio acento de color y fotografía real en el gym. Box, Funcional, Bootcamp y Cycling en un solo sistema visual.',
+        objective: 'Serie editorial por disciplina: cada deporte con su propio acento de color y fotografía real en el gym. Box, Funcional, Bootcamp y Cycling en un solo sistema visual.',
         formats: ['Post · Instagram · 4 disciplinas'],
         gallery: [],
         sections: [
           {
             groups: [
               { items: ['/assets/beatness/beatness-beat-box.jpg', '/assets/beatness/beatness-beat-funcional.jpg', '/assets/beatness/beatness-beat-bootcamp.jpg', '/assets/beatness/beatness-beat-cycling.jpg'], carousel: true },
+            ],
+          },
+        ],
+      },
+      {
+        name: '10K Beatdown',
+        objective: 'Activación para el 10K Beatdown, evento tipo Hyrox organizado por el club. Stories de promoción dentro del sistema visual de Beatness.',
+        formats: ['Story · Instagram · 6 slides'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/beatness/beatness-10k-1.png', '/assets/beatness/beatness-10k-2.png', '/assets/beatness/beatness-10k-3.png'], carousel: true },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Parrilla Orgánica · Feb 2026',
+        objective: 'Contenido orgánico para el feed de Instagram: posts y portada de reel dentro del sistema visual del club.',
+        formats: ['Post · Instagram', 'Portada de reel'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/beatness/beatness-feb-portada.png'] },
+              { items: ['/assets/beatness/beatness-feb-1.png', '/assets/beatness/beatness-feb-2.png', '/assets/beatness/beatness-feb-3.png', '/assets/beatness/beatness-feb-4.png'], carousel: true },
             ],
           },
         ],
@@ -297,13 +325,13 @@ export const projects: Project[] = [
     tagline: 'Donde el deporte se convierte en estilo de vida.',
     tags: ['Social media', 'Dirección de arte', 'Reels', 'Sub-marca', 'Paid Media', 'IA Generativa'],
     overview:
-      'KOP es un club de pádel y tenis en San Antonio, TX. El proyecto incluyó tanto la marca principal —contenido deportivo para el club— como Kings Tavern, su restaurante interno, con una línea editorial propia dentro del mismo ecosistema.',
+      'KOP es un club de pádel y tenis en San Antonio, TX. El proyecto incluyó tanto la marca principal (contenido deportivo para el club) como Kings Tavern, su restaurante interno, con una línea editorial propia dentro del mismo ecosistema.',
     role: 'Dirección de arte, producción de contenido y motion: editorial deportivo, carruseles educativos, reels, contenido diferenciado para Kings Tavern y paid media producido con imagen generativa IA y script de automatización en After Effects.',
     agency: 'NexLaunch',
     challenge:
       'Manejar dos voces dentro de una misma cuenta sin que el contenido del restaurante opacara la identidad deportiva del club, ni viceversa. Cada sub-marca tenía que sentirse cohesionada pero distinguible.',
     process:
-      'Creé un sistema visual de dos velocidades: posts editoriales de alto impacto para KOP —negro, blanco y verde energético— y una línea más cálida y atmosférica para Kings Tavern que convive sin romper el feed. Las piezas de paid media combinan imagen generativa con Gemini y un script de After Effects que monta el reel completo —timeline, texto, end card— en un solo clic.',
+      'Creé un sistema visual de dos velocidades: posts editoriales de alto impacto para KOP (negro, blanco y verde energético) y una línea más cálida y atmosférica para Kings Tavern que convive sin romper el feed. Las piezas de paid media combinan imagen generativa con Gemini y un script de After Effects que monta el reel completo (timeline, texto, end card) en un solo clic.',
     result:
       '30+ piezas entre editoriales, carruseles y reels para KOP, más contenido diferenciado para Kings Tavern. El reel de apertura de Sin Yolanda alcanzó 26.3K views y 212 likes en 6 semanas de forma orgánica. Reel de paid media de 22 segundos producido con flujo IA + script.',
     gallery: [
@@ -317,13 +345,13 @@ export const projects: Project[] = [
     campaigns: [
       {
         name: 'Campañas',
-        objective: 'Sistema de comunicación para eventos, activaciones y operación del club — cada pieza adaptada a los formatos y pantallas necesarios.',
+        objective: 'Sistema de comunicación para eventos, activaciones y operación del club, cada pieza adaptada a los formatos y pantallas necesarios.',
         formats: [],
         gallery: [],
         subCampaigns: [
           {
             name: 'Soccer Tournament · Maestro Dobel',
-            objective: 'Campaña integral para torneo de soccer patrocinado. Un mismo diseño adaptado a 5 formatos y pantallas distintas — desde el flyer imprimible hasta el banner de app.',
+            objective: 'Campaña integral para torneo de soccer patrocinado. Un mismo diseño adaptado a 5 formatos y pantallas distintas, desde el flyer imprimible hasta el banner de app.',
             formats: ['Flyer', 'Post', 'Story', 'TV Screen', 'Banner App'],
             gallery: [
               '/assets/kop/kop-soccer-flyer.png',
@@ -359,7 +387,7 @@ export const projects: Project[] = [
           },
           {
             name: 'Highlights per Sport',
-            objective: 'Videos de 30 segundos por deporte practicado en el club — Pádel, Soccer y Voleibol — para activación en pantallas del venue y redes sociales.',
+            objective: 'Videos de 30 segundos por deporte practicado en el club (Pádel, Soccer y Voleibol) para activación en pantallas del venue y redes sociales.',
             formats: ['Reel 30s · Pádel', 'Reel 30s · Soccer', 'Reel 30s · Voleibol'],
             gallery: [
               '/assets/kop/kop-hl-30-secs-padel-web.mp4',
@@ -369,7 +397,7 @@ export const projects: Project[] = [
           },
           {
             name: 'SPURS Watch Party',
-            objective: 'Reel de activación para la Watch Party de los San Antonio Spurs en el club — evento deportivo de temporada para miembros y comunidad del club.',
+            objective: 'Reel de activación para la Watch Party de los San Antonio Spurs en el club, evento deportivo de temporada para miembros y comunidad del club.',
             formats: ['Reel · Evento'],
             gallery: ['/assets/kop/kop-spurs-web.mp4'],
           },
@@ -392,7 +420,7 @@ export const projects: Project[] = [
       },
       {
         name: 'Sin Yolanda',
-        objective: 'Serie de reels para la apertura de Sin Yolanda — tres piezas distintas con dos versiones del opening principal para distribución en redes sociales. El opening principal acumuló 26.3K views y 212 likes en 6 semanas de forma orgánica.',
+        objective: 'Serie de reels para la apertura de Sin Yolanda: tres piezas distintas con dos versiones del opening principal para distribución en redes sociales. El opening principal acumuló 26.3K views y 212 likes en 6 semanas de forma orgánica.',
         formats: ['Reel · Opening v1', 'Reel · Opening v2', 'Reel · Part 2', 'Reel · Part 3'],
         gallery: [],
         sections: [
@@ -407,7 +435,7 @@ export const projects: Project[] = [
       },
       {
         name: 'Contenido Orgánico',
-        objective: 'Posts editoriales, carruseles educativos y reels para el feed de Instagram de KOP — piezas que construyen identidad de marca semana a semana.',
+        objective: 'Posts editoriales, carruseles educativos y reels para el feed de Instagram de KOP, piezas que construyen identidad de marca semana a semana.',
         formats: ['Post', 'Carrusel', 'Reel'],
         gallery: [],
         sections: [
@@ -444,7 +472,7 @@ export const projects: Project[] = [
     tagline: 'Una marca global que habla dos idiomas sin perder su voz.',
     tags: ['Social media', 'Motion', 'Paid media', 'RedNote · 小红书', 'IA Generativa'],
     overview:
-      'BWL (Best World) es una marca de wellness de origen singapurense con distribución global y múltiples líneas de producto. El trabajo abarca producción de contenido para Instagram y paid media en inglés, más adaptación de reels al chino para RedNote (小红书) — cada pieza traducida y reformateada para el contexto cultural y el algoritmo de cada plataforma.',
+      'BWL (Best World) es una marca de wellness de origen singapurense con distribución global y múltiples líneas de producto. El trabajo abarca producción de contenido para Instagram y paid media en inglés, más adaptación de reels al chino para RedNote (小红书), cada pieza traducida y reformateada para el contexto cultural y el algoritmo de cada plataforma.',
     role: 'Dirección de arte, edición de video y producción de contenido. Adaptación bilingüe chino-inglés para Instagram y RedNote.',
     agency: 'NexLaunch',
     challenge:
@@ -452,7 +480,7 @@ export const projects: Project[] = [
     process:
       'Para cada reel: primero la versión en inglés con stock premium, motion type y ritmo occidental; luego la adaptación al chino con tipografía ajustada, copy nativo y referencias visuales que conectan con la audiencia de RedNote. Los estáticos de paid media siguen una línea limpia y premium que funciona en ambos mercados.',
     result:
-      'Más de 20 piezas entre paid media estático, reels bilingües y posts editoriales. Sistema de producción que permite adaptar cada pieza a dos idiomas sin perder coherencia de marca. Campaña May 1 · Global Love Your Skin Month: 53 likes y 43 sends — ratio de envíos alto para contenido editorial.',
+      'Más de 20 piezas entre paid media estático, reels bilingües y posts editoriales. Sistema de producción que permite adaptar cada pieza a dos idiomas sin perder coherencia de marca. Campaña May 1 · Global Love Your Skin Month: 53 likes y 43 sends, ratio de envíos alto para contenido editorial.',
     gallery: [
       '/assets/bwl/bwl-mothers-day-web.mp4',
       '/assets/bwl/bwl-post-82-1.png',
@@ -463,7 +491,7 @@ export const projects: Project[] = [
     campaigns: [
       {
         name: 'May 1 · Global Love Your Skin Month',
-        objective: 'Campaña editorial para el Día Mundial del Amor por tu Piel — carrusel con fotografía de pieles diversas y copy inclusivo, adaptado en versión inglés para Instagram y chino para RedNote. 53 likes · 43 sends orgánicos.',
+        objective: 'Campaña editorial para el Día Mundial del Amor por tu Piel: carrusel con fotografía de pieles diversas y copy inclusivo, adaptado en versión inglés para Instagram y chino para RedNote. 53 likes · 43 sends orgánicos.',
         formats: ['Carrusel EN · Instagram', 'Carrusel 中文 · 小红书'],
         gallery: [],
         sections: [
@@ -630,18 +658,18 @@ export const projects: Project[] = [
     tags: ['Rebranding', 'Identidad visual', 'Logotipo animado', 'Brand guidelines', 'Motion'],
     overview:
       'Activated Decor es una empresa canadiense que diseña y fabrica sistemas motorizados de elevación y ocultamiento de televisores para arquitectura de lujo. Sus instalaciones están en Disney+, Four Seasons, Hilton, Marriott y Ritz-Carlton. El proyecto fue un rebranding completo: sistema de identidad visual, brand guidelines y logotipo animado en múltiples versiones para uso digital.',
-    role: 'Rebranding completo: construcción del logotipo y sistema de marca, brand guidelines, paleta cromática, tipografía y producción de identidad en movimiento — logotipo animado en tres versiones y dos combinaciones de color.',
+    role: 'Rebranding completo: construcción del logotipo y sistema de marca, brand guidelines, paleta cromática, tipografía y producción de identidad en movimiento: logotipo animado en tres versiones y dos combinaciones de color.',
     challenge:
-      'Su propio producto tiene como objetivo desaparecer — "Quiet. Precise. Invisible." es su posicionamiento. El reto fue construir una marca que fuera recordable y premium para el B2B, sin contradecir la filosofía de invisibilidad que venden a sus clientes de lujo.',
+      'Su propio producto tiene como objetivo desaparecer: "Quiet. Precise. Invisible." es su posicionamiento. El reto fue construir una marca que fuera recordable y premium para el B2B, sin contradecir la filosofía de invisibilidad que venden a sus clientes de lujo.',
     process:
-      'Desarrollé el monograma "ad" como base del sistema — geométrico, limpio, con personalidad. La paleta negro profundo y burdeos comunica lujo técnico sin caer en lo corporativo genérico. El manual de identidad documenta construcción del logotipo, usos correctos en distintos fondos, tipografía y variantes de aplicación. Los logos animados se produjeron en tres versiones —icono, logotipo completo, versión corta— y dos paletas de color.',
+      'Desarrollé el monograma "ad" como base del sistema: geométrico, limpio, con personalidad. La paleta negro profundo y burdeos comunica lujo técnico sin caer en lo corporativo genérico. El manual de identidad documenta construcción del logotipo, usos correctos en distintos fondos, tipografía y variantes de aplicación. Los logos animados se produjeron en tres versiones (icono, logotipo completo, versión corta) y dos paletas de color.',
     result:
-      'Sistema de identidad completo con brand guidelines, logotipo en tres versiones estáticas y animadas entregadas en GIF y MOV. El logotipo animado está en uso activo en su sitio web — una marca a la altura de los venues de lujo donde viven sus productos.',
+      'Sistema de identidad completo con brand guidelines, logotipo en tres versiones estáticas y animadas entregadas en GIF y MOV. El logotipo animado está en uso activo en su sitio web, una marca a la altura de los venues de lujo donde viven sus productos.',
     gallery: [],
     campaigns: [
       {
         name: 'Brand Identity',
-        objective: 'Sistema de identidad visual completo para Activated Decor — logotipo y monograma, paleta cromática, tipografía, construcción del sistema y guía de usos correctos e incorrectos.',
+        objective: 'Sistema de identidad visual completo para Activated Decor: logotipo y monograma, paleta cromática, tipografía, construcción del sistema y guía de usos correctos e incorrectos.',
         formats: ['Logotipo · 3 versiones', 'Paleta cromática', 'Tipografía', 'Brand guidelines'],
         gallery: [],
         sections: [
@@ -667,7 +695,7 @@ export const projects: Project[] = [
       },
       {
         name: 'Motion · Logotipo Animado',
-        objective: 'Logotipo animado en tres versiones — icono, logotipo completo y versión corta — producidos en dos combinaciones de color: negro/rojo y blanco/rojo.',
+        objective: 'Logotipo animado en tres versiones (icono, logotipo completo y versión corta), producidos en dos combinaciones de color: negro/rojo y blanco/rojo.',
         formats: ['Logotipo animado · Negro/Rojo', 'Logotipo animado · Blanco/Rojo', 'GIF · MOV'],
         gallery: [],
         sections: [
@@ -692,12 +720,12 @@ export const projects: Project[] = [
     tagline: 'Del prompt al entregable. Sin fricción.',
     tags: ['IA Generativa', 'Gemini', 'Script AE', 'Script PS', 'Automatización', 'Codex'],
     overview:
-      'Flujo de producción creativa con inteligencia artificial aplicado a clientes reales: imagen generativa, automatización de edición y generación de componentes de diseño mediante scripts. No como experimento — como método de trabajo.',
+      'Flujo de producción creativa con inteligencia artificial aplicado a clientes reales: imagen generativa, automatización de edición y generación de componentes de diseño mediante scripts. No como experimento; como método de trabajo.',
     role: 'Dirección creativa, prompt engineering, generación de imagen con Gemini y ChatGPT, y automatización de montaje en After Effects y Photoshop con scripts escritos con Codex.',
     challenge:
-      'El reto no es usar IA — es usarla de forma que el resultado no se vea genérico y siga comunicando la identidad del cliente. Integrar estas herramientas sin que el cliente note la diferencia en calidad, solo en velocidad.',
+      'El reto no es usar IA; es usarla de forma que el resultado no se vea genérico y siga comunicando la identidad del cliente. Integrar estas herramientas sin que el cliente note la diferencia en calidad, solo en velocidad.',
     process:
-      'Tres capas: (1) Imagen generativa — prompt engineering para crear fotografía de escena sin sesión fotográfica. (2) Script AE — automatización que monta el reel completo con motion type, escalado de clips y end card en minutos; el director de arte interviene solo para seleccionar los cortes y ajustar detalles finales. (3) Script PS — Claude Code investiga la marca, genera componentes por separado con IA e itera versiones hasta producir el PSD editable final.',
+      'Tres capas: (1) Imagen generativa: prompt engineering para crear fotografía de escena sin sesión fotográfica. (2) Script AE: automatización que monta el reel completo con motion type, escalado de clips y end card en minutos; el director de arte interviene solo para seleccionar los cortes y ajustar detalles finales. (3) Script PS: Claude Code investiga la marca, genera componentes por separado con IA e itera versiones hasta producir el PSD editable final.',
     result:
       'Lo que antes tomaba horas de edición ahora toma minutos de script + revisión creativa. Un reel de 22 segundos producido por script con intervención humana solo en selección de cortes. Un flyer en 5 formatos generado desde brief hasta PSD. Posts editoriales de producto sin sesión fotográfica. Sistema documentado y replicable por cliente.',
     gallery: [],
@@ -718,7 +746,7 @@ export const projects: Project[] = [
       },
       {
         name: 'KOP · Imagen Generativa',
-        objective: 'Posts editoriales para KOP y King\'s Tavern generados con Gemini y ChatGPT — fotografía de escena, composiciones de marca y flats de producto sin sesión fotográfica.',
+        objective: 'Posts editoriales para KOP y King\'s Tavern generados con Gemini y ChatGPT: fotografía de escena, composiciones de marca y flats de producto sin sesión fotográfica.',
         formats: ['Post · Instagram', 'Carrusel · Instagram', 'Gemini · ChatGPT'],
         gallery: [],
         sections: [
@@ -766,7 +794,7 @@ export const projects: Project[] = [
       },
       {
         name: 'BWL · Paid Media IA',
-        objective: 'Reel de paid media y estático de producto generados con IA para BWL — imagen de lifestyle sin producción fotográfica, video de producto sin locación ni modelos.',
+        objective: 'Reel de paid media y estático de producto generados con IA para BWL: imagen de lifestyle sin producción fotográfica, video de producto sin locación ni modelos.',
         formats: ['Paid Media · Video', 'Paid Media · Estático', 'Gemini · Runway'],
         gallery: [],
         sections: [
@@ -801,7 +829,7 @@ export const projects: Project[] = [
       },
       {
         name: 'BWL · Post 77 · Proceso',
-        objective: 'Imagen generada con Gemini y cinco clips de video de producto generados con IA — usados como material base para el reel final montado en After Effects.',
+        objective: 'Imagen generada con Gemini y cinco clips de video de producto generados con IA, usados como material base para el reel final montado en After Effects.',
         formats: ['Imagen · Gemini', 'Clips IA · Fuente', 'Reel Final · AE', 'Runway · Gemini'],
         gallery: [],
         sections: [
@@ -824,7 +852,7 @@ export const projects: Project[] = [
       },
       {
         name: 'BWL · Post 79 · Proceso',
-        objective: 'Los clips generados con IA que se usaron como material base del reel — sunbeam, cinemagraph y animaciones de producto — montados luego en After Effects para el entregable final.',
+        objective: 'Los clips generados con IA que se usaron como material base del reel (sunbeam, cinemagraph y animaciones de producto), montados luego en After Effects para el entregable final.',
         formats: ['Clips IA · Fuente', 'Reel Final · AE', 'Gemini · Runway'],
         gallery: [],
         sections: [
@@ -856,41 +884,32 @@ export const projects: Project[] = [
     tagline: 'La herencia del buen queso, en cada pieza de contenido.',
     tags: ['Social media', 'Dirección de arte', 'Fotografía editorial', 'Carruseles', 'Print', 'IA Generativa'],
     overview:
-      'Corazón Mixteco es una marca de quesos artesanales mexicanos — quesillo, panela, manchego y más. El trabajo abarca la dirección de arte y producción de contenido mensual para redes sociales: parrillas editoriales de producto, carruseles educativos, reels y materiales de punto de venta.',
+      'Corazón Mixteco es una marca de quesos artesanales mexicanos: quesillo, panela, manchego y más. El trabajo abarca la dirección de arte y producción de contenido mensual para redes sociales: parrillas editoriales de producto, carruseles educativos, reels y materiales de punto de venta.',
     role: 'Dirección de arte y producción de contenido: parrillas mensuales de Febrero y Marzo 2026, carruseles educativos de producto, reels y diseño de banner roll-up para exhibición.',
     challenge:
       'Comunicar autenticidad artesanal y tradición oaxaqueña en un feed de Instagram sin caer en lo folclórico ni en lo genérico. El queso tiene que verse como lo que es: un producto premium de origen.',
     process:
-      'Cada parrilla parte del producto como protagonista — fotografía de food con luz natural, props de madera, barro y textiles oaxaqueños. Los carruseles educativos complementan el editorial explicando procesos y tips de cuidado. Los copies juegan con el lenguaje coloquial mexicano sin perder el tono premium.',
+      'Cada parrilla parte del producto como protagonista: fotografía de food con luz natural, props de madera, barro y textiles oaxaqueños. Los carruseles educativos complementan el editorial explicando procesos y tips de cuidado. Los copies juegan con el lenguaje coloquial mexicano sin perder el tono premium.',
     result:
-      'Producción continua: parrillas editoriales de Febrero y Marzo 2026, dos carruseles educativos, cuatro reels de Marzo y banner roll-up para punto de venta.',
+      'Producción continua: parrillas editoriales de Febrero y Marzo 2026, dos carruseles educativos, siete reels (tres de Febrero y cuatro de Marzo) y banner roll-up para punto de venta.',
     gallery: [
       '/assets/corazon-mixteco/cm-post-01.png',
-      '/assets/corazon-mixteco/cm-mar-01.jpg',
-      '/assets/corazon-mixteco/cm-post-02.png',
-      '/assets/corazon-mixteco/cm-mar-12.jpg',
-      '/assets/corazon-mixteco/cm-post-06.png',
-      '/assets/corazon-mixteco/cm-mar-02.jpg',
-      '/assets/corazon-mixteco/cm-post-07.png',
-      '/assets/corazon-mixteco/cm-post-09.png',
-      '/assets/corazon-mixteco/cm-post-10.png',
-      '/assets/corazon-mixteco/cm-mar-03.jpg',
-      '/assets/corazon-mixteco/cm-mar-04.jpg',
-      '/assets/corazon-mixteco/cm-mar-05.jpg',
-      '/assets/corazon-mixteco/cm-mar-06.jpg',
-      '/assets/corazon-mixteco/cm-mar-07.jpg',
-      '/assets/corazon-mixteco/cm-mar-09.jpg',
-      '/assets/corazon-mixteco/cm-mar-10.jpg',
-      '/assets/corazon-mixteco/cm-reel-mar-01.mp4',
-      '/assets/corazon-mixteco/cm-reel-mar-02.mp4',
-      '/assets/corazon-mixteco/cm-reel-mar-03.mp4',
-      '/assets/corazon-mixteco/cm-reel-mar-04.mp4',
       '/assets/corazon-mixteco/cm-reel-feb-01.mp4',
+      '/assets/corazon-mixteco/cm-post-04.png',
+      '/assets/corazon-mixteco/cm-mar-01.jpg',
+      '/assets/corazon-mixteco/cm-post-06.png',
+      '/assets/corazon-mixteco/cm-reel-mar-01.mp4',
+      '/assets/corazon-mixteco/cm-post-07.png',
+      '/assets/corazon-mixteco/cm-mar-04.jpg',
+      '/assets/corazon-mixteco/cm-post-09.png',
+      '/assets/corazon-mixteco/cm-reel-mar-03.mp4',
+      '/assets/corazon-mixteco/cm-mar-07.jpg',
+      '/assets/corazon-mixteco/cm-mar-10.jpg',
     ],
     campaigns: [
       {
         name: 'Carruseles Educativos',
-        objective: 'Carruseles de producto que educan al consumidor sobre autenticidad y cuidado del queso artesanal — dos formatos: identificación de queso artesanal y tips de conservación.',
+        objective: 'Carruseles de producto que educan al consumidor sobre autenticidad y cuidado del queso artesanal, en dos formatos: identificación de queso artesanal y tips de conservación.',
         formats: ['Carrusel · Instagram', 'Educativo · Producto'],
         gallery: [],
         sections: [
@@ -921,13 +940,13 @@ export const projects: Project[] = [
       },
       {
         name: 'Material Print',
-        objective: 'Banner roll-up para punto de venta y exhibiciones — comunica las dos líneas principales de producto (Quesillo y Panela) con identidad de marca clara y datos de contacto.',
+        objective: 'Banner roll-up para punto de venta y exhibiciones: comunica las dos líneas principales de producto (Quesillo y Panela) con identidad de marca clara y datos de contacto.',
         formats: ['Banner roll-up · Punto de venta', 'Print'],
         gallery: [],
         sections: [
           {
             groups: [
-              { items: ['/assets/corazon-mixteco/cm-banner.png'], contain: true },
+              { items: ['/assets/corazon-mixteco/cm-banner-mockup.png'], contain: true },
             ],
           },
         ],
@@ -937,34 +956,35 @@ export const projects: Project[] = [
   {
     id: 'amorcito',
     name: 'Amorcito Corazón',
-    category: 'SOCIAL MEDIA',
+    category: 'SOCIAL MEDIA · MOTION',
     year: '2026',
     image: '/assets/amorcito/ac-cover.png',
     accentColor: '#C9871A',
     tagline: 'El sushi más chingón de México, en cinco sucursales.',
-    tags: ['Social media', 'Dirección de arte', 'Campañas', 'Print', 'Punto de venta', 'IA Generativa'],
+    tags: ['Social media', 'Motion', 'Dirección de arte', 'Campañas', 'Print', 'Punto de venta', 'IA Generativa'],
     overview:
-      'Amorcito Corazón es una cadena de restaurantes japonés-mexicano con cinco sucursales en Puebla. El trabajo abarca la dirección de arte y producción de contenido para redes sociales — desde la parrilla mensual de fotografía editorial hasta campañas de activación, kit de sucursales y materiales de punto de venta.',
-    role: 'Dirección de arte y producción de contenido: parrilla mensual, campañas de activación, adaptación a múltiples formatos (feed, stories, HD, print) y diseño de materiales POS.',
+      'Amorcito Corazón es una cadena de restaurantes japonés-mexicano con cinco sucursales en Puebla. El trabajo abarca la dirección de arte y producción de contenido para redes sociales, desde la parrilla mensual de fotografía editorial hasta campañas de activación, kit de sucursales y materiales de punto de venta.',
+    role: 'Dirección de arte y producción de contenido: parrilla mensual de reels y posts, campañas de activación, adaptación a múltiples formatos (feed, stories, HD, print) y materiales POS. Producción del llamado y codirección del levantamiento fotográfico de mixología en locación.',
     challenge:
-      'Mantener coherencia visual en una cadena con cinco locaciones y un posicionamiento que mezcla lo japonés y lo mexicano — dos mundos visuales distintos — sin caer en la obviedad de ninguno de los dos.',
+      'Mantener coherencia visual en una cadena con cinco locaciones y un posicionamiento que mezcla lo japonés y lo mexicano (dos mundos visuales distintos) sin caer en la obviedad de ninguno de los dos.',
     process:
-      'La dirección de arte parte del espacio: iluminación cálida, neón amarillo, madera y piezas de cerámica. La fotografía editorial ancla cada parrilla mensual, y desde ahí se construyen las piezas de campaña, el material impreso y los kits de activación adaptados a cada formato y sucursal.',
+      'El trabajo tuvo dos frentes. Producción de contenido: reels, posts y piezas de campaña armadas desde la estética del restaurante (iluminación cálida, neón amarillo, madera). Shooting de mixología: preparé el llamado junto con la copy, coordiné con la encargada del restaurante y codirigí el levantamiento en locación con la fotógrafa. Las imágenes generadas alimentan el banco visual de la marca para coctelería.',
     result:
-      'Producción continua: parrillas mensuales de Feb y Marzo 2026, campaña San Valentín con adaptación a digital y print, kit de cinco sucursales en post + story, tent card de coctelería y encuesta de expansión.',
+      'Parrillas mensuales de Feb y Marzo 2026, campaña San Valentín en digital y print, kit de cinco sucursales en cuatro formatos, tent card de coctelería, encuesta de expansión y banco de imágenes de mixología producido en locación.',
     gallery: [
       '/assets/amorcito/ac-cover.png',
+      '/assets/amorcito/ac-reel-01.mp4',
       '/assets/amorcito/ac-feb-02.png',
       '/assets/amorcito/ac-feb-03.png',
       '/assets/amorcito/ac-feb-04.png',
       '/assets/amorcito/ac-feb-05.png',
       '/assets/amorcito/ac-feb-06.png',
+      '/assets/amorcito/ac-feb-07.png',
       '/assets/amorcito/ac-mar-02.jpg',
       '/assets/amorcito/ac-mar-03.jpg',
       '/assets/amorcito/ac-mar-05.jpg',
       '/assets/amorcito/ac-mar-07.jpg',
       '/assets/amorcito/ac-mar-09.jpg',
-      '/assets/amorcito/ac-reel-01.mp4',
       '/assets/amorcito/ac-reel-02.mp4',
       '/assets/amorcito/ac-reel-tiktok.mp4',
       '/assets/amorcito/ac-pantallas.mp4',
@@ -972,7 +992,7 @@ export const projects: Project[] = [
     campaigns: [
       {
         name: 'Campaña San Valentín',
-        objective: 'Campaña de activación para el 14 de febrero — mini campaña UGC "¿Tienes una historia con tu amorcito?" en tres stories para Instagram: convocatoria, mecánica y cierre.',
+        objective: 'Campaña de activación para el 14 de febrero: mini campaña UGC "¿Tienes una historia con tu amorcito?" en tres stories para Instagram: convocatoria, mecánica y cierre.',
         formats: ['Stories · Instagram', 'UGC · Activación'],
         gallery: [],
         sections: [
@@ -987,7 +1007,7 @@ export const projects: Project[] = [
       },
       {
         name: 'Kit de Sucursales',
-        objective: 'Kit de contenido para las cinco sucursales en Puebla — post cuadrado y story con las ubicaciones, adaptado en dos versiones de fotografía para rotar en el feed.',
+        objective: 'Kit de contenido para las cinco sucursales en Puebla: post cuadrado y story con las ubicaciones, adaptado en dos versiones de fotografía para rotar en el feed.',
         formats: ['Post · Instagram', '5 sucursales'],
         gallery: [],
         sections: [
@@ -1000,8 +1020,21 @@ export const projects: Project[] = [
         ],
       },
       {
+        name: 'Pantalla TV · Promos',
+        objective: 'Video de promociones para pantallas en venue: animación de las ofertas y promos del restaurante adaptada al formato TV screen HD.',
+        formats: ['Video · Pantalla HD', 'TV Screen'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/amorcito/ac-pantallas.mp4'], wide: true },
+            ],
+          },
+        ],
+      },
+      {
         name: 'Materiales de Punto de Venta',
-        objective: 'Diseño de materiales físicos para las mesas — tent card de coctelería con QR y encuesta de expansión para identificar demanda de nueva sucursal.',
+        objective: 'Diseño de materiales físicos para las mesas: tent card de coctelería con QR y encuesta de expansión para identificar demanda de nueva sucursal.',
         formats: ['Tent card · Coctelería', 'Encuesta · Nueva sucursal', 'Print'],
         gallery: [],
         sections: [

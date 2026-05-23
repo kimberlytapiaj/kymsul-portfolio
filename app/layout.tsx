@@ -34,15 +34,31 @@ const franklin = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'kymsul — Motion · Brand · IA',
-  description: 'Diseño como sistema. Motion como lenguaje. IA como expansión creativa.',
+  metadataBase: new URL('https://kymsul.art'),
+  title: {
+    default: 'kymsul — Brand & Motion Designer',
+    template: '%s — kymsul',
+  },
+  description: 'Kimberly Tapia Rubio — Brand & Content Designer especializada en sistemas visuales de marca, motion graphics e IA aplicada. Puebla, México.',
+  keywords: [
+    'Brand Designer', 'Motion Designer', 'Content Designer', 'Diseñadora de marca',
+    'identidad visual', 'motion graphics', 'branding', 'social media',
+    'IA creativa', 'After Effects', 'Puebla', 'México', 'Kimberly Tapia', 'kymsul',
+  ],
+  authors: [{ name: 'Kimberly Tapia Rubio', url: 'https://kymsul.art' }],
+  robots: { index: true, follow: true },
   openGraph: {
-    title: 'kymsul — Motion · Brand · IA',
-    description: 'Diseño como sistema. Motion como lenguaje. IA como expansión creativa.',
+    title: 'kymsul — Brand & Motion Designer',
+    description: 'Kimberly Tapia Rubio — Brand & Content Designer en Puebla, México. Sistemas visuales, motion graphics e IA aplicada al diseño.',
     url: 'https://kymsul.art',
     siteName: 'kymsul',
     locale: 'es_MX',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'kymsul — Brand & Motion Designer',
+    description: 'Brand & Content Designer en Puebla, México. Sistemas visuales, motion graphics e IA aplicada al diseño.',
   },
 }
 
