@@ -23,6 +23,7 @@ export type SubProject = {
   type?: 'carousel'
   sections?: Section[]
   subCampaigns?: SubProject[]
+  collapsible?: boolean
 }
 
 export type Project = {
@@ -820,42 +821,139 @@ export const projects: Project[] = [
       'Tres capas: (1) Imagen generativa: prompt engineering para crear fotografía de escena sin sesión fotográfica. (2) Script AE: automatización que monta el reel completo con motion type, escalado de clips y end card en minutos; el director de arte interviene solo para seleccionar los cortes y ajustar detalles finales. (3) Script PS: Claude Code investiga la marca, genera componentes por separado con IA e itera versiones hasta producir el PSD editable final.',
     result:
       'Lo que antes tomaba horas de edición ahora toma minutos de script + revisión creativa. Un reel de 22 segundos producido por script con intervención humana solo en selección de cortes. Un flyer en 5 formatos generado desde brief hasta PSD. Posts editoriales de producto sin sesión fotográfica. Sistema documentado y replicable por cliente.',
-    gallery: [
-      '/assets/kop/kop-wc-post.png',
-      '/assets/kop/kop-kt-184.png',
-      '/assets/kop/kop-paidmedia-01.mp4',
-      '/assets/kop/kop-post-140.png',
-      '/assets/kop/kop-post-172.png',
-      '/assets/bwl/bwl-pm-12.png',
-      '/assets/bwl/bwl-pm-11-web.mp4',
-      '/assets/bwl/bwl-post-71-en-web.mp4',
-      '/assets/bwl/bwl-post-77-web.mp4',
-      '/assets/bwl/bwl-post-79-web.mp4',
-      '/assets/amx/amx-pm-11-web.mp4',
-      '/assets/amx/amx-c61-1.png',
-    ],
+    gallery: [],
     campaigns: [
       {
-        name: 'KOP · Antes / Después',
-        objective: 'Foto real del restaurante subida a Gemini. Tres iteraciones: prompt simple rechazado → constraint de marca ("don\'t change any beverage or meal, just add a soccer court") → exploración de dos conceptos con objetivo de engagement → prompt técnico final especificando ángulo top-down, pasto artificial, líneas blancas y atmósfera post-partido. Resultado: la misma comida del restaurante recompuesta sobre cancha de soccer, sin sesión fotográfica.',
-        formats: ['Foto original · iPhone', 'Prompt · Gemini', 'King\'s Tavern · Post'],
+        name: 'Skill /reel · De Brief a Video',
+        objective: 'Skill propia construida en Claude Code: el brief entra, sale una composición Remotion completa. El humano revisa, ajusta y renderiza el final en AE. Cada par muestra el output directo de Remotion y el entregable después de dirección de arte.',
+        formats: ['Claude Code · Skill /reel', 'Remotion', 'After Effects', 'Antes / Después'],
+        collapsible: true,
         gallery: [],
         sections: [
           {
+            label: 'AMX · Paid Media · 17s',
+            split: true,
             groups: [
-              { items: ['/assets/kop/kop-kt-original-01.jpg', '/assets/kop/kop-kt-original-02.jpg'], carousel: true },
-              { items: ['/assets/kop/kop-kt-184.png'] },
+              { items: ['/assets/amx/amx-pm-11-antes-web.mp4'], label: 'Antes · Output Remotion' },
+              { items: ['/assets/amx/amx-pm-11-web.mp4'], label: 'Después · Dirección de arte' },
+            ],
+          },
+          {
+            label: 'AMX · Paid Media · 15s',
+            split: true,
+            groups: [
+              { items: ['/assets/amx/amx-pm-13-antes-web.mp4'], label: 'Antes · Output Remotion' },
+              { items: ['/assets/amx/amx-pm-13-web.mp4'], label: 'Después · Dirección de arte' },
+            ],
+          },
+          {
+            label: 'KOP · Paid Media · 22s',
+            split: true,
+            groups: [
+              { items: ['/assets/kop/kop-pm01-antes-web.mp4'], label: 'Antes · Output Remotion' },
+              { items: ['/assets/kop/kop-paidmedia-01.mp4'], label: 'Después · Dirección de arte' },
+            ],
+          },
+          {
+            label: 'BWL · Post 80 · 16s',
+            split: true,
+            groups: [
+              { items: ['/assets/bwl/bwl-post-80-antes-web.mp4'], label: 'Antes · Output Remotion' },
+              { items: ['/assets/bwl/bwl-post-80-web.mp4'], label: 'Después · Dirección de arte' },
+            ],
+          },
+          {
+            label: 'BWL · Post 83 · 27s',
+            split: true,
+            groups: [
+              { items: ['/assets/bwl/bwl-post-83-antes-web.mp4'], label: 'Antes · Output Remotion' },
+              { items: ['/assets/bwl/bwl-post-83-web.mp4'], label: 'Después · Dirección de arte' },
             ],
           },
         ],
       },
       {
-        name: 'KOP · Imagen Generativa',
-        objective: 'Posts editoriales para KOP y King\'s Tavern generados con Gemini y ChatGPT: fotografía de escena, composiciones de marca y flats de producto sin sesión fotográfica.',
-        formats: ['Post · Instagram', 'Carrusel · Instagram', 'Gemini · ChatGPT'],
+        name: 'Scripts + Codex',
+        objective: 'Generación de piezas de diseño con IA: script de Photoshop que adapta un flyer a 5 formatos en un clic, y carrusel construido con Codex donde la IA genera los componentes visuales desde el brief.',
+        formats: ['Script PS · Claude Code', 'Codex · Claude Code'],
+        gallery: [],
+        subCampaigns: [
+          {
+            name: 'KOP · Script PS + World Cup 2026',
+            objective: 'Claude investigó la marca en web + carpeta de lineamientos antes de diseñar. Primera versión rechazada por estética ("KOP no suele tener una estética tan marcada") → pivote al look real del feed. Dos versiones de exploración con vibe World Cup 2026. Criterio clave de dirección: "usa stock en vez de fondos IA para que se vea menos IA". Jerarquía del flyer consultada como director de arte (5 niveles para tamaño carta). Versión aprobada adaptada a 5 formatos con script de Photoshop.',
+            formats: ['01 · Componentes IA', '02 · Ensamblado', '03 · Exploración · No aprobadas', '04 · Final · 5 formatos', 'Script PS · Claude Code'],
+            gallery: [],
+            sections: [
+              {
+                groups: [
+                  { items: ['/assets/kop/kop-ai-component-headline.png', '/assets/kop/kop-ai-component-family.png', '/assets/kop/kop-ai-component-badge.png', '/assets/kop/kop-ai-component-strip.png'], carousel: true, contain: true },
+                  { items: ['/assets/kop/kop-ai-assembled.png'], contain: true },
+                  { items: ['/assets/kop/kop-ai-iter-v2.png', '/assets/kop/kop-ai-iter-v3.png'], carousel: true, contain: true },
+                  { items: ['/assets/kop/kop-wc-post.png', '/assets/kop/kop-wc-story.png', '/assets/kop/kop-wc-flyer.png', '/assets/kop/kop-wc-tv.png', '/assets/kop/kop-wc-banner.png'], carousel: true },
+                ],
+              },
+            ],
+          },
+          {
+            name: 'AMX · Carrusel · Codex',
+            objective: 'Brief → Codex genera los paneles base con IA (tipografía, composición, paleta) → retoque humano de personas e iluminación → texto y copy final superpuesto. 8 slides listos a publicar sin construir ninguno manualmente.',
+            formats: ['Carrusel 8 slides · Instagram', 'Codex · Claude Code', 'Gemini · Imagen generativa'],
+            gallery: [],
+            sections: [
+              {
+                label: 'Carrusel · 8 slides',
+                split: true,
+                groups: [
+                  {
+                    label: 'Antes · Output IA',
+                    items: [
+                      '/assets/amx/amx-raster-slide-01.png',
+                      '/assets/amx/amx-raster-slide-02.png',
+                      '/assets/amx/amx-raster-slide-03.png',
+                      '/assets/amx/amx-raster-slide-04.png',
+                      '/assets/amx/amx-raster-slide-05.png',
+                      '/assets/amx/amx-raster-slide-06.png',
+                      '/assets/amx/amx-raster-slide-07.png',
+                      '/assets/amx/amx-raster-slide-08.png',
+                    ],
+                    carousel: true,
+                  },
+                  {
+                    label: 'Después · Dirección de arte',
+                    items: [
+                      '/assets/amx/amx-c61-final-01.png',
+                      '/assets/amx/amx-c61-final-02.png',
+                      '/assets/amx/amx-c61-final-03.png',
+                      '/assets/amx/amx-c61-final-04.png',
+                      '/assets/amx/amx-c61-final-05.png',
+                      '/assets/amx/amx-c61-final-06.png',
+                      '/assets/amx/amx-c61-final-07.png',
+                      '/assets/amx/amx-c61-final-08.png',
+                    ],
+                    carousel: true,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Imagen Generativa',
+        objective: 'Fotografía de escena, composiciones de marca y flats de producto generados con IA para clientes reales. Prompt engineering como herramienta de producción — sin sesión fotográfica, sin locación.',
+        formats: ['Gemini · ChatGPT', 'Prompt Engineering', 'Post · Instagram', 'Carrusel · Instagram'],
+        collapsible: true,
         gallery: [],
         sections: [
           {
+            label: 'KOP · Antes / Después',
+            groups: [
+              { items: ['/assets/kop/kop-kt-original-01.jpg', '/assets/kop/kop-kt-original-02.jpg'], carousel: true },
+              { items: ['/assets/kop/kop-kt-184.png'] },
+            ],
+          },
+          {
+            label: 'KOP · Posts Editoriales',
             groups: [
               { items: ['/assets/kop/kop-post-140.png'] },
               { items: ['/assets/kop/kop-post-142.png'] },
@@ -865,162 +963,93 @@ export const projects: Project[] = [
               { items: ['/assets/kop/kop-c171-1.png', '/assets/kop/kop-c171-2.png', '/assets/kop/kop-c171-3.png', '/assets/kop/kop-c171-4.png', '/assets/kop/kop-c171-5.png'], carousel: true },
             ],
           },
-        ],
-      },
-      {
-        name: 'KOP · Script AE + Paid Media',
-        objective: 'Brief + carpeta de recursos → Claude Code leyó el brand file, generó el script AE (307 líneas) y el componente Remotion en paralelo. Refinamiento por prompts: timing ajustado de 0.83s a 2s por deporte ("haz que dure más para apreciarlos"), verificación de 8 clips con momento exacto de cada corte. Resultado: reel de 22s listo para renderizar en AE en un solo clic.',
-        formats: ['Reel 22s · Paid Media', 'Script AE · Claude Code', 'Remotion · Preview', '1080×1920 · 30fps'],
-        gallery: [],
-        sections: [
           {
+            label: 'BWL · Paid Media Estático',
             groups: [
-              { items: ['/assets/kop/kop-paidmedia-01.mp4'] },
-              { items: ['/assets/kop/kop-post-206-web.mp4'] },
+              { items: ['/assets/bwl/bwl-pm-12.png'] },
             ],
           },
         ],
       },
       {
-        name: 'KOP · Script PS + World Cup 2026',
-        objective: 'Claude investigó la marca en web + carpeta de lineamientos antes de diseñar. Primera versión rechazada por estética ("KOP no suele tener una estética tan marcada") → pivote al look real del feed. Dos versiones de exploración con vibe World Cup 2026. Criterio clave de dirección: "usa stock en vez de fondos IA para que se vea menos IA". Jerarquía del flyer consultada como director de arte (5 niveles para tamaño carta). Versión aprobada adaptada a 5 formatos con script de Photoshop.',
-        formats: ['01 · Componentes IA', '02 · Ensamblado', '03 · Exploración · No aprobadas', '04 · Final · 5 formatos', 'Script PS · Claude Code'],
+        name: 'Video Generativo',
+        objective: 'Dirección de arte con herramientas de video generativo: prompt inicial, correcciones de naturalidad y dirección de actuación. Los clips generados se montan en After Effects para el entregable final.',
+        formats: ['Gemini Flow · Runway', 'Clips IA · Fuente', 'Reel Final · AE'],
         gallery: [],
-        sections: [
+        subCampaigns: [
           {
-            groups: [
-              { items: ['/assets/kop/kop-ai-component-headline.png', '/assets/kop/kop-ai-component-family.png', '/assets/kop/kop-ai-component-badge.png', '/assets/kop/kop-ai-component-strip.png'], carousel: true, contain: true },
-              { items: ['/assets/kop/kop-ai-assembled.png'], contain: true },
-              { items: ['/assets/kop/kop-ai-iter-v2.png', '/assets/kop/kop-ai-iter-v3.png'], carousel: true, contain: true },
-              { items: ['/assets/kop/kop-wc-post.png', '/assets/kop/kop-wc-story.png', '/assets/kop/kop-wc-flyer.png', '/assets/kop/kop-wc-tv.png', '/assets/kop/kop-wc-banner.png'], carousel: true },
-            ],
-          },
-        ],
-      },
-      {
-        name: 'BWL · Paid Media IA',
-        objective: 'Reel de paid media y estático de producto generados con IA para BWL: imagen de lifestyle sin producción fotográfica, video de producto sin locación ni modelos.',
-        formats: ['Paid Media · Video', 'Paid Media · Estático', 'Gemini · Runway'],
-        gallery: [],
-        sections: [
-          {
-            groups: [
-              { items: ['/assets/bwl/bwl-pm-11-web.mp4', '/assets/bwl/bwl-pm-12.png'] },
-            ],
-          },
-        ],
-      },
-      {
-        name: 'BWL · Post 71 · Proceso',
-        objective: 'Dirección de arte en Gemini Flow: prompt inicial con constraint de marca ("no modifiques ningún elemento, solo adapta al video"), seguido de correcciones de naturalidad ("arregla las manos, no es una pose natural para abrir el jugo") y dirección de actuación ("persona joven rejuvenecida, natural y fresh, que tome el vaso y sonría"). Los clips generados se montaron luego en After Effects.',
-        formats: ['Prompt · Gemini Flow', 'Clips IA · Fuente', 'Reel Final EN · AE', 'Reel Final 中文 · AE'],
-        gallery: [],
-        sections: [
-          {
-            groups: [
+            name: 'BWL · Post 71',
+            objective: 'Dirección de arte en Gemini Flow: prompt inicial con constraint de marca ("no modifiques ningún elemento, solo adapta al video"), seguido de correcciones de naturalidad ("arregla las manos, no es una pose natural para abrir el jugo") y dirección de actuación ("persona joven rejuvenecida, natural y fresh, que tome el vaso y sonría"). Los clips generados se montaron luego en After Effects.',
+            formats: ['Prompt · Gemini Flow', 'Clips IA · Fuente', 'Reel Final EN · AE', 'Reel Final 中文 · AE'],
+            gallery: [],
+            sections: [
               {
-                items: [
-                  '/assets/bwl/bwl-71-ai-sobre-web.mp4',
-                  '/assets/bwl/bwl-71-ai-juice-web.mp4',
-                  '/assets/bwl/bwl-71-ai-mod-web.mp4',
-                  '/assets/bwl/bwl-71-ai-gen-web.mp4',
+                groups: [
+                  {
+                    items: [
+                      '/assets/bwl/bwl-71-ai-sobre-web.mp4',
+                      '/assets/bwl/bwl-71-ai-juice-web.mp4',
+                      '/assets/bwl/bwl-71-ai-mod-web.mp4',
+                      '/assets/bwl/bwl-71-ai-gen-web.mp4',
+                    ],
+                    carousel: true,
+                  },
+                  { items: ['/assets/bwl/bwl-post-71-en-web.mp4', '/assets/bwl/bwl-post-71-zh-web.mp4'] },
                 ],
-                carousel: true,
               },
-              { items: ['/assets/bwl/bwl-post-71-en-web.mp4', '/assets/bwl/bwl-post-71-zh-web.mp4'] },
             ],
           },
-        ],
-      },
-      {
-        name: 'BWL · Post 77 · Proceso',
-        objective: 'Imagen generada con Gemini y cinco clips de video de producto generados con IA, usados como material base para el reel final montado en After Effects.',
-        formats: ['Imagen · Gemini', 'Clips IA · Fuente', 'Reel Final · AE', 'Runway · Gemini'],
-        gallery: [],
-        sections: [
           {
-            groups: [
+            name: 'BWL · Paid Media',
+            objective: 'Reel de paid media generado con IA para BWL: video de producto sin locación ni modelos.',
+            formats: ['Paid Media · Video', 'Gemini · Runway'],
+            gallery: [],
+            sections: [
+              { groups: [{ items: ['/assets/bwl/bwl-pm-11-web.mp4'] }] },
+            ],
+          },
+          {
+            name: 'BWL · Post 77',
+            objective: 'Cinco clips de video de producto generados con IA, usados como material base para el reel final montado en After Effects.',
+            formats: ['Clips IA · Fuente', 'Reel Final · AE', 'Runway · Gemini'],
+            gallery: [],
+            sections: [
               {
-                items: [
-                  '/assets/bwl/bwl-77-ai-product-reel-web.mp4',
-                  '/assets/bwl/bwl-77-ai-cup-web.mp4',
-                  '/assets/bwl/bwl-77-ai-reel-de-web.mp4',
-                  '/assets/bwl/bwl-77-ai-reel-para-web.mp4',
-                  '/assets/bwl/bwl-77-ai-collagen-web.mp4',
+                groups: [
+                  {
+                    items: [
+                      '/assets/bwl/bwl-77-ai-product-reel-web.mp4',
+                      '/assets/bwl/bwl-77-ai-cup-web.mp4',
+                      '/assets/bwl/bwl-77-ai-reel-de-web.mp4',
+                      '/assets/bwl/bwl-77-ai-reel-para-web.mp4',
+                      '/assets/bwl/bwl-77-ai-collagen-web.mp4',
+                    ],
+                    carousel: true,
+                  },
+                  { items: ['/assets/bwl/bwl-post-77-web.mp4'] },
                 ],
-                carousel: true,
               },
-              { items: ['/assets/bwl/bwl-post-77-web.mp4'] },
             ],
           },
-        ],
-      },
-      {
-        name: 'BWL · Post 79 · Proceso',
-        objective: 'Los clips generados con IA que se usaron como material base del reel (sunbeam, cinemagraph y animaciones de producto), montados luego en After Effects para el entregable final.',
-        formats: ['Clips IA · Fuente', 'Reel Final · AE', 'Gemini · Runway'],
-        gallery: [],
-        sections: [
           {
-            groups: [
+            name: 'BWL · Post 79',
+            objective: 'Los clips generados con IA que se usaron como material base del reel (sunbeam, cinemagraph y animaciones de producto), montados luego en After Effects.',
+            formats: ['Clips IA · Fuente', 'Reel Final · AE', 'Gemini · Runway'],
+            gallery: [],
+            sections: [
               {
-                items: [
-                  '/assets/bwl/bwl-79-ai-sunbeam-web.mp4',
-                  '/assets/bwl/bwl-79-ai-cinemagraph-web.mp4',
-                  '/assets/bwl/bwl-79-ai-reel-web.mp4',
-                  '/assets/bwl/bwl-79-ai-video-web.mp4',
+                groups: [
+                  {
+                    items: [
+                      '/assets/bwl/bwl-79-ai-sunbeam-web.mp4',
+                      '/assets/bwl/bwl-79-ai-cinemagraph-web.mp4',
+                      '/assets/bwl/bwl-79-ai-reel-web.mp4',
+                      '/assets/bwl/bwl-79-ai-video-web.mp4',
+                    ],
+                    carousel: true,
+                  },
+                  { items: ['/assets/bwl/bwl-post-79-web.mp4'] },
                 ],
-                carousel: true,
-              },
-              { items: ['/assets/bwl/bwl-post-79-web.mp4'] },
-            ],
-          },
-        ],
-      },
-      {
-        name: 'AMX · Paid Media · Skill /reel',
-        objective: 'Brief → /reel skill en Claude Code → composición Remotion generada → revisión humana → render final en AE. Cada par muestra el output directo de la IA (Remotion) y el entregable final después del retoques de dirección de arte.',
-        formats: ['Antes · Output Remotion', 'Después · Final AE', 'Reel 11 · 17s', 'Reel 13 · 15s'],
-        gallery: [],
-        sections: [
-          {
-            label: 'Reel 11 · 17s',
-            split: true,
-            groups: [
-              { items: ['/assets/amx/amx-pm-11-antes-web.mp4'], label: 'Antes · Output IA' },
-              { items: ['/assets/amx/amx-pm-11-web.mp4'], label: 'Después · Dirección de arte' },
-            ],
-          },
-          {
-            label: 'Reel 13 · 15s',
-            split: true,
-            groups: [
-              { items: ['/assets/amx/amx-pm-13-antes-web.mp4'], label: 'Antes · Output IA' },
-              { items: ['/assets/amx/amx-pm-13-web.mp4'], label: 'Después · Dirección de arte' },
-            ],
-          },
-        ],
-      },
-      {
-        name: 'AMX · Carrusel · Codex',
-        objective: 'Carrusel de 8 slides para AseguraMax generado con Codex: brief de cliente → prompt engineering → Codex genera los componentes de diseño (headline, body, fondos) → iteración directa sobre el PSD. Entregable listo a publicación sin construcción manual de cada slide.',
-        formats: ['Carrusel 8 slides · Instagram', 'Codex · Claude Code'],
-        gallery: [],
-        sections: [
-          {
-            groups: [
-              {
-                items: [
-                  '/assets/amx/amx-c61-1.png',
-                  '/assets/amx/amx-c61-2.png',
-                  '/assets/amx/amx-c61-3.png',
-                  '/assets/amx/amx-c61-4.png',
-                  '/assets/amx/amx-c61-5.png',
-                  '/assets/amx/amx-c61-6.png',
-                  '/assets/amx/amx-c61-7.png',
-                  '/assets/amx/amx-c61-8.png',
-                ],
-                carousel: true,
               },
             ],
           },
