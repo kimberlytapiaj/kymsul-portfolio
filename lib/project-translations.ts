@@ -373,6 +373,18 @@ export const projectTranslationsEN: Record<string, ProjectTranslation> = {
           'AI-generated clips used as base material for the reel (sunbeam, cinemagraph and product animations), then assembled in After Effects for the final deliverable.',
         formats: ['AI Clips · Source', 'Final Reel · AE', 'Gemini · Runway'],
       },
+      {
+        name: 'AMX · Paid Media · /reel Skill',
+        objective:
+          'Client brief → /reel skill in Claude Code → AEP script generated → render in After Effects. Two paid media reels for AseguraMax produced with the automated workflow: the script assembles clips, motion type, timing and end card with no manual intervention in the edit.',
+        formats: ['Reel 18s · Paid Media', 'Reel 15s · Paid Media', '/reel Skill · Claude Code'],
+      },
+      {
+        name: 'AMX · Carousel · Codex',
+        objective:
+          'Eight-slide carousel for AseguraMax generated with Codex: client brief → prompt engineering → Codex generates design components (headline, body, backgrounds) → direct iteration on the PSD. Final deliverable ready to publish without manually building each slide.',
+        formats: ['Carousel 8 slides · Instagram', 'Codex · Claude Code'],
+      },
     ],
   },
 

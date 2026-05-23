@@ -828,6 +828,8 @@ export const projects: Project[] = [
       '/assets/bwl/bwl-post-71-en-web.mp4',
       '/assets/bwl/bwl-post-77-web.mp4',
       '/assets/bwl/bwl-post-79-web.mp4',
+      '/assets/amx/amx-pm-11-web.mp4',
+      '/assets/amx/amx-c61-1.png',
     ],
     campaigns: [
       {
@@ -968,6 +970,45 @@ export const projects: Project[] = [
                 carousel: true,
               },
               { items: ['/assets/bwl/bwl-post-79-web.mp4'] },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'AMX · Paid Media · Skill /reel',
+        objective: 'Brief de cliente → /reel skill en Claude Code → script AEP generado → render en After Effects. Dos reels de paid media para AseguraMax producidos con el flujo automatizado: el script ensambla clips, motion type, timing y end card sin intervención manual en el montaje.',
+        formats: ['Reel 18s · Paid Media', 'Reel 15s · Paid Media', 'Skill /reel · Claude Code'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              { items: ['/assets/amx/amx-pm-11-web.mp4'] },
+              { items: ['/assets/amx/amx-pm-13-web.mp4'] },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'AMX · Carrusel · Codex',
+        objective: 'Carrusel de 8 slides para AseguraMax generado con Codex: brief de cliente → prompt engineering → Codex genera los componentes de diseño (headline, body, fondos) → iteración directa sobre el PSD. Entregable listo a publicación sin construcción manual de cada slide.',
+        formats: ['Carrusel 8 slides · Instagram', 'Codex · Claude Code'],
+        gallery: [],
+        sections: [
+          {
+            groups: [
+              {
+                items: [
+                  '/assets/amx/amx-c61-1.png',
+                  '/assets/amx/amx-c61-2.png',
+                  '/assets/amx/amx-c61-3.png',
+                  '/assets/amx/amx-c61-4.png',
+                  '/assets/amx/amx-c61-5.png',
+                  '/assets/amx/amx-c61-6.png',
+                  '/assets/amx/amx-c61-7.png',
+                  '/assets/amx/amx-c61-8.png',
+                ],
+                carousel: true,
+              },
             ],
           },
         ],
