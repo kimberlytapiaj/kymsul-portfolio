@@ -302,23 +302,23 @@ export const tr = {
         es: 'Un pipeline de producción creativa donde la documentación, la imagen generativa, los scripts de automatización y el código operan como un solo sistema.',
         en: 'A creative production pipeline where documentation, generative imagery, automation scripts and code operate as one single system.',
       },
-      tools: { es: 'Gemini · Runway · Claude Code · AE · PS', en: 'Gemini · Runway · Claude Code · AE · PS' },
+      tools: { es: 'Gemini · Higgsfield · Claude Code · Remotion · AE', en: 'Gemini · Higgsfield · Claude Code · Remotion · AE' },
     },
 
     flujo: {
       eyebrow: { es: 'EL FLUJO', en: 'THE FLOW' },
       steps: {
         es: [
-          { num: '01', label: 'Documentación',     sub: 'Obsidian · Claude Code' },
-          { num: '02', label: 'Imagen generativa', sub: 'Gemini · Runway · Higgsfield' },
-          { num: '03', label: 'Scripts',            sub: 'After Effects · Photoshop' },
-          { num: '04', label: 'Diseño & frontend', sub: 'Next.js · Tailwind · Vercel' },
+          { num: '01', label: 'Skill /reel',       sub: 'Claude Code · Remotion · AE' },
+          { num: '02', label: 'Imagen generativa', sub: 'Gemini Image 2 · Codex' },
+          { num: '03', label: 'Video generativo',  sub: 'Gemini Flow · Higgsfield · AE' },
+          { num: '04', label: 'Scripts + Codex',   sub: 'Photoshop · After Effects' },
         ],
         en: [
-          { num: '01', label: 'Documentation',     sub: 'Obsidian · Claude Code' },
-          { num: '02', label: 'Generative imagery', sub: 'Gemini · Runway · Higgsfield' },
-          { num: '03', label: 'Scripts',            sub: 'After Effects · Photoshop' },
-          { num: '04', label: 'Design & frontend', sub: 'Next.js · Tailwind · Vercel' },
+          { num: '01', label: 'Skill /reel',        sub: 'Claude Code · Remotion · AE' },
+          { num: '02', label: 'Generative imagery', sub: 'Gemini Image 2 · Codex' },
+          { num: '03', label: 'Generative video',   sub: 'Gemini Flow · Higgsfield · AE' },
+          { num: '04', label: 'Scripts + Codex',    sub: 'Photoshop · After Effects' },
         ],
       },
     },
@@ -377,8 +377,22 @@ export const tr = {
       terminalOutputLine2val: { es: 'aprobado en primera revisión', en: 'approved on first review' },
     },
 
+    reel: {
+      eyebrow: { es: '— 02 · SKILL /REEL', en: '— 02 · SKILL /REEL' },
+      h: {
+        es: 'Del brief al reel en un prompt.',
+        en: 'From brief to reel in one prompt.',
+      },
+      p: {
+        es: 'La skill /reel convierte un brief en una composición Remotion con timing, tipo de motion y estructura de cortes. El humano selecciona; el reel final se renderiza en After Effects. Cinco reels de paid media producidos con el mismo flujo: dos para AseguraMax, uno para KOP y dos para BWL.',
+        en: 'The /reel skill turns a brief into a Remotion composition with timing, motion type and cut structure. The human selects; the final reel renders in After Effects. Five paid media reels produced with the same flow: two for AseguraMax, one for KOP and two for BWL.',
+      },
+      beforeLabel: { es: 'COMPOSICIÓN REMOTION · KOP', en: 'REMOTION COMPOSITION · KOP' },
+      afterLabel:  { es: 'REEL FINAL · KOP PAID MEDIA · 22S', en: 'FINAL REEL · KOP PAID MEDIA · 22S' },
+    },
+
     imagen: {
-      eyebrow: { es: '— 02 · IMAGEN GENERATIVA', en: '— 02 · GENERATIVE IMAGERY' },
+      eyebrow: { es: '— 03 · IMAGEN GENERATIVA', en: '— 03 · GENERATIVE IMAGERY' },
       h: {
         es: 'Fotografía de escena sin sesión.',
         en: 'Scene photography without a shoot.',
@@ -390,35 +404,48 @@ export const tr = {
       promptLabel: { es: 'PROMPT REAL · KOP KINGS TAVERN', en: 'REAL PROMPT · KOP KINGS TAVERN' },
       beforeLabel:  { es: 'FOTO ORIGINAL · IPHONE', en: 'ORIGINAL PHOTO · IPHONE' },
       afterLabel:   { es: 'RESULTADO · GEMINI', en: 'RESULT · GEMINI' },
-      clipsLabel:   { es: 'CLIPS GENERADOS → REEL FINAL · BWL', en: 'GENERATED CLIPS → FINAL REEL · BWL' },
+    },
+
+    videoGen: {
+      eyebrow: { es: '— 04 · VIDEO GENERATIVO', en: '— 04 · GENERATIVE VIDEO' },
+      h: {
+        es: 'Actuación dirigida. Sin cámara.',
+        en: 'Directed performance. No camera.',
+      },
+      p: {
+        es: 'Dirección de arte en Gemini Flow e Higgsfield: prompt inicial, correcciones de actuación, ajustes de luz y ambiente. Los clips generados se montan en After Effects para el reel final. Cuatro piezas de video generativo para BWL con dirección aplicada en cada corte.',
+        en: 'Art direction in Gemini Flow and Higgsfield: initial prompt, performance corrections, light and mood adjustments. Generated clips are assembled in After Effects for the final reel. Four generative video pieces for BWL with applied direction on every cut.',
+      },
+      clipLabel: { es: 'CLIP GENERADO · BWL OPTRIMAX', en: 'GENERATED CLIP · BWL OPTRIMAX' },
+      reelLabel: { es: 'REEL FINAL · BWL OPTRIMAX', en: 'FINAL REEL · BWL OPTRIMAX' },
     },
 
     scripts: {
-      eyebrow: { es: '— 03 · SCRIPTS DE PRODUCCIÓN', en: '— 03 · PRODUCTION SCRIPTS' },
+      eyebrow: { es: '— 05 · SCRIPTS + CODEX', en: '— 05 · SCRIPTS + CODEX' },
       h: {
-        es: 'Un reel completo en un clic.',
-        en: 'A full reel in one click.',
+        es: 'Codex genera. El script escala.',
+        en: 'Codex generates. The script scales.',
       },
       p: {
-        es: 'Scripts de After Effects y Photoshop generados con Claude Code que automatizan el montaje: timeline, textos, escalado, end card, redimensiones. El director de arte interviene para seleccionar cortes y afinar detalles, no para hacer trabajo mecánico.',
-        en: 'After Effects and Photoshop scripts generated with Claude Code that automate the assembly: timeline, text, scaling, end card, resizing. The art director steps in to select cuts and refine details, not to do mechanical work.',
+        es: 'Dos herramientas, dos dominios del mismo ecosistema: Codex con Gemini Image 2 construye carruseles, editorial de producto y piezas de campaña sin tocar un archivo manualmente; Claude Code genera los scripts de Photoshop que toman un diseño aprobado y lo redimensionan a todos los formatos en un clic.',
+        en: 'Two tools, two domains of the same ecosystem: Codex with Gemini Image 2 builds carousels, product editorial and campaign pieces without touching a file manually; Claude Code generates the Photoshop scripts that take an approved design and resize it to all formats in one click.',
       },
-      case1label: { es: 'SCRIPT AE · KOP PAID MEDIA', en: 'AE SCRIPT · KOP PAID MEDIA' },
+      case1label: { es: 'CODEX + GEMINI IMAGE 2 · AMX', en: 'CODEX + GEMINI IMAGE 2 · AMX' },
       case1: {
-        es: 'Brief + carpeta de clips → Claude Code lee el brand file y genera 307 líneas de JSX → reel de 22s listo para renderizar en After Effects.',
-        en: 'Brief + clip folder → Claude Code reads the brand file and generates 307 lines of JSX → 22s reel ready to render in After Effects.',
+        es: 'Carrusel de 8 slides para AseguraMax generado con Codex: paleta, tipografía, composición y copy definidos por el brief, sin construir ninguna pieza manualmente.',
+        en: '8-slide carousel for AseguraMax generated with Codex: palette, typography, composition and copy defined by the brief, without building any piece manually.',
       },
       case2label: { es: 'SCRIPT PS · WORLD CUP 2026', en: 'PS SCRIPT · WORLD CUP 2026' },
       case2: {
         es: 'Flyer aprobado → script de Photoshop lo redimensiona a 5 formatos (post, story, TV, banner, flyer imprimible) sin intervención manual.',
         en: 'Approved flyer → Photoshop script resizes it to 5 formats (post, story, TV, banner, printable flyer) without manual intervention.',
       },
-      reelLabel:    { es: 'REEL 22S · PAID MEDIA · KOP', en: 'REEL 22S · PAID MEDIA · KOP' },
+      codexLabel:   { es: 'CARRUSEL CODEX · AMX · 8 SLIDES', en: 'CODEX CAROUSEL · AMX · 8 SLIDES' },
       formatsLabel: { es: '5 FORMATOS DESDE 1 BRIEF · WORLD CUP 2026', en: '5 FORMATS FROM 1 BRIEF · WORLD CUP 2026' },
     },
 
     frontend: {
-      eyebrow: { es: '— 04 · DISEÑO & FRONTEND', en: '— 04 · DESIGN & FRONTEND' },
+      eyebrow: { es: '— 06 · DISEÑO & FRONTEND', en: '— 06 · DESIGN & FRONTEND' },
       h1: { es: 'Este portafolio,', en: 'This portfolio,' },
       h2: { es: 'construido con el mismo sistema.', en: 'built with the same system.' },
       p: {

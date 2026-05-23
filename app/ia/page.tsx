@@ -173,7 +173,61 @@ export default function IAPage() {
         </div>
       </section>
 
-      {/* ── 02 · Imagen generativa ──────────── */}
+      {/* ── 02 · Skill /reel ───────────────── */}
+      <section className="px-6 lg:px-24 py-16 lg:py-24 border-b border-[rgba(13,13,13,0.08)]">
+        <div className="max-w-[1440px] mx-auto">
+          <p className="font-mono text-[10px] text-muted2 tracking-[1.76px] mb-10 lg:mb-16">
+            {ia.reel.eyebrow[lang]}
+          </p>
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
+
+            {/* Left */}
+            <div className="lg:w-[400px] shrink-0">
+              <p
+                className="text-dark leading-[1.05] mb-6"
+                style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 700, fontSize: 'clamp(28px,3.5vw,42px)' }}
+              >
+                {ia.reel.h[lang]}
+              </p>
+              <p className="font-sans text-[15px] text-muted leading-[1.7] mb-8">
+                {ia.reel.p[lang]}
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {['Claude Code', 'Remotion', 'After Effects'].map((t) => (
+                  <span key={t} className="border border-[rgba(13,13,13,0.12)] rounded-full px-3 py-1 font-mono text-[10px] text-muted">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Right: antes/después */}
+            <div className="flex-1 grid grid-cols-2 gap-3">
+              <div>
+                <p className="font-mono text-[9px] text-muted2 tracking-[1.2px] mb-2">
+                  {ia.reel.beforeLabel[lang]}
+                </p>
+                <LazyVideo
+                  src="/assets/kop/kop-pm01-antes-web.mp4"
+                  className="w-full rounded-sm aspect-[4/5] object-cover bg-[rgba(13,13,13,0.04)]"
+                />
+              </div>
+              <div>
+                <p className="font-mono text-[9px] text-muted2 tracking-[1.2px] mb-2">
+                  {ia.reel.afterLabel[lang]}
+                </p>
+                <LazyVideo
+                  src="/assets/kop/kop-paidmedia-01.mp4"
+                  className="w-full rounded-sm aspect-[4/5] object-cover bg-[rgba(13,13,13,0.04)]"
+                />
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── 03 · Imagen generativa ──────────── */}
       <section className="px-6 lg:px-24 py-16 lg:py-24 border-b border-[rgba(13,13,13,0.08)]">
         <div className="max-w-[1440px] mx-auto">
           <p className="font-mono text-[10px] text-muted2 tracking-[1.76px] mb-10 lg:mb-16">
@@ -200,7 +254,7 @@ export default function IAPage() {
                 post-match atmosphere. Don't change any beverage or meal, just add the soccer court."
               </div>
               <div className="flex flex-wrap gap-2">
-                {['Gemini', 'Runway', 'Higgsfield', 'ChatGPT'].map((t) => (
+                {['Gemini Image 2', 'Codex', 'ChatGPT'].map((t) => (
                   <span key={t} className="border border-[rgba(13,13,13,0.12)] rounded-full px-3 py-1 font-mono text-[10px] text-muted">
                     {t}
                   </span>
@@ -240,20 +294,59 @@ export default function IAPage() {
                   </div>
                 </div>
               </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── 04 · Video generativo ───────────── */}
+      <section className="px-6 lg:px-24 py-16 lg:py-24 border-b border-[rgba(13,13,13,0.08)]">
+        <div className="max-w-[1440px] mx-auto">
+          <p className="font-mono text-[10px] text-muted2 tracking-[1.76px] mb-10 lg:mb-16">
+            {ia.videoGen.eyebrow[lang]}
+          </p>
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
+
+            {/* Left */}
+            <div className="lg:w-[400px] shrink-0">
+              <p
+                className="text-dark leading-[1.05] mb-6"
+                style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 700, fontSize: 'clamp(28px,3.5vw,42px)' }}
+              >
+                {ia.videoGen.h[lang]}
+              </p>
+              <p className="font-sans text-[15px] text-muted leading-[1.7] mb-8">
+                {ia.videoGen.p[lang]}
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {['Gemini Flow', 'Higgsfield', 'After Effects'].map((t) => (
+                  <span key={t} className="border border-[rgba(13,13,13,0.12)] rounded-full px-3 py-1 font-mono text-[10px] text-muted">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Right: clips */}
+            <div className="flex-1 grid grid-cols-2 gap-3">
               <div>
                 <p className="font-mono text-[9px] text-muted2 tracking-[1.2px] mb-2">
-                  {ia.imagen.clipsLabel[lang]}
+                  {ia.videoGen.clipLabel[lang]}
                 </p>
-                <div className="grid grid-cols-2 gap-3">
-                  <LazyVideo
-                    src="/assets/bwl/bwl-71-ai-mod-web.mp4"
-                    className="w-full rounded-sm aspect-[4/5] object-cover bg-[rgba(13,13,13,0.04)]"
-                  />
-                  <LazyVideo
-                    src="/assets/bwl/bwl-post-71-en-web.mp4"
-                    className="w-full rounded-sm aspect-[4/5] object-cover bg-[rgba(13,13,13,0.04)]"
-                  />
-                </div>
+                <LazyVideo
+                  src="/assets/bwl/bwl-71-ai-mod-web.mp4"
+                  className="w-full rounded-sm aspect-[4/5] object-cover bg-[rgba(13,13,13,0.04)]"
+                />
+              </div>
+              <div>
+                <p className="font-mono text-[9px] text-muted2 tracking-[1.2px] mb-2">
+                  {ia.videoGen.reelLabel[lang]}
+                </p>
+                <LazyVideo
+                  src="/assets/bwl/bwl-post-71-en-web.mp4"
+                  className="w-full rounded-sm aspect-[4/5] object-cover bg-[rgba(13,13,13,0.04)]"
+                />
               </div>
             </div>
 
@@ -261,7 +354,7 @@ export default function IAPage() {
         </div>
       </section>
 
-      {/* ── 03 · Scripts de producción ──────── */}
+      {/* ── 05 · Scripts + Codex ────────────── */}
       <section className="px-6 lg:px-24 py-16 lg:py-24 border-b border-[rgba(13,13,13,0.08)]">
         <div className="max-w-[1440px] mx-auto">
           <p className="font-mono text-[10px] text-muted2 tracking-[1.76px] mb-10 lg:mb-16">
@@ -299,7 +392,7 @@ export default function IAPage() {
                 </div>
               </div>
               <div className="flex flex-wrap gap-2">
-                {['After Effects', 'Photoshop', 'Claude Code', 'Remotion'].map((t) => (
+                {['Codex', 'Gemini Image 2', 'Claude Code', 'Photoshop'].map((t) => (
                   <span key={t} className="border border-[rgba(13,13,13,0.12)] rounded-full px-3 py-1 font-mono text-[10px] text-muted">
                     {t}
                   </span>
@@ -310,13 +403,24 @@ export default function IAPage() {
             {/* Right */}
             <div className="flex-1 space-y-6">
               <div>
-                <p className="font-mono text-[9px] text-muted2 tracking-[1.2px] mb-2">
-                  {ia.scripts.reelLabel[lang]}
+                <p className="font-mono text-[9px] text-muted2 tracking-[1.2px] mb-3">
+                  {ia.scripts.codexLabel[lang]}
                 </p>
-                <LazyVideo
-                  src="/assets/kop/kop-paidmedia-01.mp4"
-                  className="rounded-sm max-w-[280px] w-full"
-                />
+                <div className="flex gap-3 overflow-x-auto pb-1">
+                  {[1, 2, 3, 4].map((n) => (
+                    <div key={n} className="shrink-0">
+                      <div className="relative w-[140px] h-[140px] rounded-sm overflow-hidden bg-[rgba(13,13,13,0.04)]">
+                        <Image
+                          src={`/assets/amx/amx-c61-final-0${n}.png`}
+                          alt={`AMX slide ${n}`}
+                          fill
+                          className="object-cover"
+                          sizes="140px"
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
               <div>
                 <p className="font-mono text-[9px] text-muted2 tracking-[1.2px] mb-3">
