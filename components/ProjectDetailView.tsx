@@ -361,6 +361,58 @@ function CampaignBlock({ campaign }: { campaign: SubProject }) {
         {campaignHeader}
         <div className="space-y-10">
           {sections.map((section, si) => {
+            // ── Split / before-after layout ──────────────────────────────
+            if (section.split && section.groups && section.groups.length >= 2) {
+              const [leftGroup, rightGroup] = section.groups
+              const isAfter = (lbl?: string) =>
+                lbl?.toLowerCase().includes('después') || lbl?.toLowerCase().includes('after')
+              const ColHeader = ({ group }: { group: typeof leftGroup }) => {
+                const after = isAfter(group.label)
+                return (
+                  <div className={`flex items-center gap-2 pb-3 mb-4 ${after ? 'border-b-2 border-[rgba(13,13,13,0.75)]' : 'border-b border-[rgba(13,13,13,0.10)]'}`}>
+                    <span className={`w-2 h-2 rounded-full flex-shrink-0 ${after ? 'bg-[rgba(13,13,13,0.8)]' : 'border border-[rgba(13,13,13,0.35)] bg-transparent'}`} />
+                    <span className={`font-mono text-[10px] tracking-[1.5px] uppercase ${after ? 'text-dark font-semibold' : 'text-muted2'}`}>
+                      {group.label}
+                    </span>
+                  </div>
+                )
+              }
+              return (
+                <div key={si}>
+                  {section.label && (
+                    <p className="font-mono text-[10px] text-muted2 tracking-[1.6px] uppercase mb-5">
+                      {section.label}
+                    </p>
+                  )}
+                  <div className="relative grid grid-cols-2">
+                    {/* center divider */}
+                    <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-px bg-[rgba(13,13,13,0.12)] pointer-events-none" />
+                    {/* left */}
+                    <div className="pr-6">
+                      {leftGroup.label && <ColHeader group={leftGroup} />}
+                      <div className="space-y-3">
+                        {leftGroup.items.map((src, ii) => {
+                          const it: BentoItem = isVideo(src) ? { kind: 'video', src } : { kind: 'image', src }
+                          return <MediaCell key={ii} {...it} name={campaign.name} index={ii} isPaidMedia={isPaidMedia} />
+                        })}
+                      </div>
+                    </div>
+                    {/* right */}
+                    <div className="pl-6">
+                      {rightGroup.label && <ColHeader group={rightGroup} />}
+                      <div className="space-y-3">
+                        {rightGroup.items.map((src, ii) => {
+                          const it: BentoItem = isVideo(src) ? { kind: 'video', src } : { kind: 'image', src }
+                          return <MediaCell key={ii} {...it} name={campaign.name} index={ii} isPaidMedia={isPaidMedia} />
+                        })}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )
+            }
+
+            // ── Standard grid layout ──────────────────────────────────────
             const sectionItems = extractSectionItems(section)
             const sn = sectionItems.length
             const sHasWide = sectionItems.some(it => it.wide || (it.span && it.span > 1))

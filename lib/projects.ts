@@ -12,6 +12,7 @@ export type Section = {
   type?: 'carousel'
   groups?: SectionGroup[]
   label?: string  // header shown above this section's grid row
+  split?: boolean // renders group[0] vs group[1] as a full-width before/after comparison
 }
 
 export type SubProject = {
@@ -984,6 +985,7 @@ export const projects: Project[] = [
         sections: [
           {
             label: 'Reel 11 · 17s',
+            split: true,
             groups: [
               { items: ['/assets/amx/amx-pm-11-antes-web.mp4'], label: 'Antes · Output IA' },
               { items: ['/assets/amx/amx-pm-11-web.mp4'], label: 'Después · Dirección de arte' },
@@ -991,6 +993,7 @@ export const projects: Project[] = [
           },
           {
             label: 'Reel 13 · 15s',
+            split: true,
             groups: [
               { items: ['/assets/amx/amx-pm-13-antes-web.mp4'], label: 'Antes · Output IA' },
               { items: ['/assets/amx/amx-pm-13-web.mp4'], label: 'Después · Dirección de arte' },
