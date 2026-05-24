@@ -527,6 +527,29 @@ export default function IAPage() {
             </div>
 
           </div>
+
+          {/* Pages built with vibe coding */}
+          <div className="mt-14 lg:mt-20 border-t border-[rgba(255,255,255,0.06)] pt-10">
+            <p className="font-mono text-[9px] text-[rgba(255,255,255,0.25)] tracking-[1.4px] mb-6">
+              PÁGINAS CONSTRUIDAS · KYMSUL.ART
+            </p>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+              {[
+                { src: '/assets/portfolio-screen-home.png',      label: 'Inicio' },
+                { src: '/assets/portfolio-screen-proyectos.png', label: 'Proyectos' },
+                { src: '/assets/portfolio-screen-ia.png',        label: 'IA' },
+                { src: '/assets/portfolio-screen-sobre-mi.png',  label: 'Sobre Mí' },
+              ].map(({ src, label }) => (
+                <div key={label}>
+                  <div className="relative aspect-video overflow-hidden rounded-sm border border-[rgba(255,255,255,0.06)] mb-2">
+                    <Image src={src} alt={label} fill className="object-cover object-top" sizes="(max-width: 1024px) 45vw, 25vw" />
+                  </div>
+                  <p className="font-mono text-[9px] text-[rgba(255,255,255,0.3)] tracking-[1.2px]">{label.toUpperCase()}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
       </section>
 
