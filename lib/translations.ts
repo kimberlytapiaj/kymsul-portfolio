@@ -279,15 +279,15 @@ export const tr = {
 
     cta: {
       h: {
-        es: '¿Tienes una',
-        en: 'Do you have an',
+        es: '¿Es este el perfil',
+        en: 'Is this the profile',
       },
-      hItalic: { es: 'idea?', en: 'idea?' },
+      hItalic: { es: 'que buscas?', en: "you're looking for?" },
       desc: {
-        es: 'Cuéntame qué estás construyendo. Reviso cada solicitud personalmente y respondo en menos de 48 horas.',
-        en: 'Tell me what you\'re building. I review every request personally and respond within 48 hours.',
+        es: 'Si lo que ves encaja con tu equipo, escríbeme. Disponible para posiciones de tiempo completo o colaboración.',
+        en: 'If what you see fits your team, reach out. Available for full-time positions or long-term collaboration.',
       },
-      primary:   { es: 'Trabajemos juntos →', en: "Let's work together →" },
+      primary:   { es: 'Escríbeme →', en: 'Get in touch →' },
       secondary: { es: 'Ver proyectos', en: 'See projects' },
     },
   },
