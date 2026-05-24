@@ -335,7 +335,7 @@ export default function IAPage() {
                   {ia.videoGen.clipLabel[lang]}
                 </p>
                 <LazyVideo
-                  src="/assets/bwl/bwl-71-ai-mod-web.mp4"
+                  src="/assets/bwl/bwl-71-clip-web.mp4"
                   className="w-full rounded-sm aspect-[4/5] object-cover bg-[rgba(13,13,13,0.04)]"
                 />
               </div>
