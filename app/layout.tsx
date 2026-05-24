@@ -36,7 +36,7 @@ const franklin = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL('https://kymsul.art'),
   title: {
-    default: 'kymsul — Brand & Motion Designer',
+    default: 'kymsul — Brand & Content Designer',
     template: '%s — kymsul',
   },
   description: 'Kimberly Tapia Rubio — Brand & Content Designer especializada en sistemas visuales de marca, motion graphics e IA aplicada. Puebla, México.',
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'Kimberly Tapia Rubio', url: 'https://kymsul.art' }],
   robots: { index: true, follow: true },
   openGraph: {
-    title: 'kymsul — Brand & Motion Designer',
+    title: 'kymsul — Brand & Content Designer',
     description: 'Kimberly Tapia Rubio — Brand & Content Designer en Puebla, México. Sistemas visuales, motion graphics e IA aplicada al diseño.',
     url: 'https://kymsul.art',
     siteName: 'kymsul',
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'kymsul — Brand & Motion Designer',
+    title: 'kymsul — Brand & Content Designer',
     description: 'Brand & Content Designer en Puebla, México. Sistemas visuales, motion graphics e IA aplicada al diseño.',
   },
 }

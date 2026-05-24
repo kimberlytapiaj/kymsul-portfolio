@@ -10,7 +10,7 @@ export const tr = {
   },
 
   hero: {
-    eyebrow: { es: 'BRAND · MOTION · CONTENT DESIGNER', en: 'BRAND · MOTION · CONTENT DESIGNER' },
+    eyebrow: { es: 'BRAND & CONTENT DESIGNER', en: 'BRAND & CONTENT DESIGNER' },
     line1:   { es: 'Brand identity,', en: 'Brand identity,' },
     line2:   { es: 'contenido visual', en: 'visual content' },
     line3:   { es: 'producción IA‑native.', en: 'IA‑native production.' },
@@ -157,8 +157,8 @@ export const tr = {
   sobreMi: {
     eyebrow: { es: 'BRAND & CONTENT DESIGNER', en: 'BRAND & CONTENT DESIGNER' },
     bio: {
-      es: 'Diseñadora digital enfocada en la construcción de sistemas visuales. Integro branding, motion y contenido digital para desarrollar identidades con intención.',
-      en: 'Digital designer focused on building visual systems. I integrate branding, motion and digital content to develop intentional identities.',
+      es: 'Brand & Content Designer. Empecé con assets animados para streamers y terminé construyendo sistemas de marca para startups — pasando por agencia, SaaS y producción IA-native. El hilo es siempre el mismo: entender el sistema antes de diseñar la pieza.',
+      en: 'Brand & Content Designer. I started with animated assets for streamers and ended up building brand systems for startups — through agency work, SaaS, and AI-native production. The thread is always the same: understand the system before designing the piece.',
     },
     rolLabel:   { es: 'ROL', en: 'ROLE' },
     baseLabel:  { es: 'BASE', en: 'BASE' },
@@ -246,13 +246,13 @@ export const tr = {
       entries: {
         es: [
           { year: '2023',    title: 'Kymsul',                     detail: 'Comisiones streaming · +80 clientes · Assets animados' },
-          { year: '2023–24', title: 'Brand design freelance',     detail: 'Branding end-to-end · Identidades de marca · Múltiples industrias' },
+          { year: '2023–24', title: 'Proyectos independientes',     detail: 'Branding end-to-end · Identidades de marca · Múltiples industrias' },
           { year: '2024 →',  title: 'Directora de Arte · Zealix', detail: 'Naming · Identidad visual · Dirección creativa · SaaS' },
           { year: '2026 →',  title: 'NexLaunch',                  detail: 'Brand & Content Designer · Producción IA-native · Multimarca', current: true },
         ],
         en: [
           { year: '2023',    title: 'Kymsul',                     detail: 'Streaming commissions · +80 clients · Animated assets' },
-          { year: '2023–24', title: 'Brand design freelance',     detail: 'End-to-end branding · Brand identities · Multiple industries' },
+          { year: '2023–24', title: 'Independent projects',        detail: 'End-to-end branding · Brand identities · Multiple industries' },
           { year: '2024 →',  title: 'Art Director · Zealix',      detail: 'Naming · Visual identity · Creative direction · SaaS' },
           { year: '2026 →',  title: 'NexLaunch',                  detail: 'Brand & Content Designer · AI-native production · Multi-brand', current: true },
         ],
