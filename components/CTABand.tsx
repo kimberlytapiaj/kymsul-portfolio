@@ -1,6 +1,5 @@
 'use client'
 
-import Link from 'next/link'
 import { useLang } from '@/lib/lang-context'
 import { tr } from '@/lib/translations'
 
@@ -32,12 +31,22 @@ export default function CTABand() {
 
         {/* Right content */}
         <div>
-          <Link
-            href="/contacto"
-            className="bg-lav text-dark font-sans text-[13px] rounded-full px-8 h-[50px] inline-flex items-center hover:opacity-90 transition-opacity"
-          >
-            {c.btn[lang]}
-          </Link>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="mailto:contacto@kymsul.art?subject=Proyecto"
+              className="bg-lav text-dark font-sans text-[13px] rounded-full px-8 h-[50px] inline-flex items-center hover:opacity-90 transition-opacity"
+            >
+              {c.btn[lang]}
+            </a>
+            <a
+              href="https://www.linkedin.com/in/kimberly-tapia-rubio-39a35828a/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-[rgba(255,255,255,0.2)] text-white font-sans text-[13px] rounded-full px-8 h-[50px] inline-flex items-center hover:border-[rgba(255,255,255,0.5)] transition-colors"
+            >
+              LinkedIn
+            </a>
+          </div>
         </div>
 
       </div>

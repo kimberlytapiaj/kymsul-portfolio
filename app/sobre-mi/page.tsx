@@ -241,18 +241,20 @@ export default function SobreMiPage() {
               {s.cta.desc[lang]}
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link
-                href="/contacto"
+              <a
+                href="mailto:contacto@kymsul.art?subject=Oportunidad%20laboral"
                 className="inline-flex items-center bg-lav text-dark font-sans text-[13px] rounded-full px-6 py-[14px] hover:opacity-90 transition-opacity"
               >
                 {s.cta.primary[lang]}
-              </Link>
-              <Link
-                href="/proyectos"
+              </a>
+              <a
+                href="https://www.linkedin.com/in/kimberly-tapia-rubio-39a35828a/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center border border-[rgba(255,255,255,0.2)] text-bg font-sans text-[13px] rounded-full px-6 py-[14px] hover:border-[rgba(255,255,255,0.5)] transition-colors"
               >
-                {s.cta.secondary[lang]}
-              </Link>
+                LinkedIn
+              </a>
             </div>
           </div>
         </div>

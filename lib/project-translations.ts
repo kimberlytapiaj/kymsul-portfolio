@@ -326,64 +326,73 @@ export const projectTranslationsEN: Record<string, ProjectTranslation> = {
       'What previously took hours of editing now takes minutes of scripting + creative review. A 22-second reel produced by script with human intervention only in cut selection. A flyer in 5 formats generated from brief to PSD. Editorial product posts without a photo shoot. A documented, client-replicable system.',
     campaigns: [
       {
-        name: 'KOP · Before / After',
+        name: '/reel Skill · From Brief to Video',
         objective:
-          "Real restaurant photo uploaded to Gemini. Three iterations: simple prompt rejected → brand constraint (\"don't change any beverage or meal, just add a soccer court\") → exploration of two engagement-driven concepts → final technical prompt specifying top-down angle, artificial turf, white lines and post-match atmosphere. Result: the same restaurant food recomposed on a soccer court, without a photo shoot.",
-        formats: ['Original Photo · iPhone', 'Prompt · Gemini', "King's Tavern · Post"],
+          'I built my own skill in Claude Code: a brief goes in, a complete Remotion composition comes out. Each pair shows the direct AI output and the final deliverable after art direction.',
+        formats: ['Claude Code · Skill', 'Remotion', 'After Effects', 'Before / After'],
       },
       {
-        name: 'KOP · Generative Imagery',
+        name: 'Generative Imagery',
         objective:
-          "Editorial posts for KOP and King's Tavern generated with Gemini and ChatGPT: scene photography, brand compositions and product flats without a photo shoot.",
-        formats: ['Post · Instagram', 'Carousel · Instagram', 'Gemini · ChatGPT'],
+          'Scene photography, brand compositions and product flats generated with AI for real clients. Prompt engineering as a production tool — no photo shoot, no location.',
+        formats: ['Gemini · ChatGPT', 'Prompt Engineering', 'Post · Instagram', 'Carousel · Instagram'],
       },
       {
-        name: 'KOP · AE Script + Paid Media',
+        name: 'Generative Video',
         objective:
-          'Brief + resource folder → Claude Code read the brand file, generated the AE script (307 lines) and the Remotion component in parallel. Refinement by prompts: timing adjusted from 0.83s to 2s per sport ("make them last longer to appreciate them"), verification of 8 clips with exact cut moment for each. Result: 22-second reel ready to render in AE in a single click.',
-        formats: ['Reel 22s · Paid Media', 'AE Script · Claude Code', 'Remotion · Preview', '1080×1920 · 30fps'],
+          'Art direction using generative video tools: initial prompt, naturalness corrections and acting direction. Generated clips are assembled in After Effects for the final deliverable.',
+        formats: ['Gemini Flow · Runway', 'AI Clips · Source', 'Final Reel · AE'],
+        subCampaigns: [
+          {
+            name: 'BWL · Post 71',
+            objective:
+              "Art direction in Gemini Flow: initial prompt with brand constraint (\"don't modify any elements, just adapt to video\"), followed by naturalness corrections (\"fix the hands, it's not a natural pose to open juice\") and acting direction (\"young rejuvenated person, natural and fresh, picking up the glass and smiling\"). Generated clips were then assembled in After Effects.",
+            formats: ['Prompt · Gemini Flow', 'AI Clips · Source', 'Final Reel EN · AE', 'Final Reel 中文 · AE'],
+          },
+          {
+            name: 'BWL · Paid Media',
+            objective: 'AI-generated paid media reel for BWL: product video without location or models.',
+            formats: ['Paid Media · Video', 'Gemini · Runway'],
+          },
+          {
+            name: 'BWL · Post 77',
+            objective:
+              'Five AI product video clips used as base material for the final reel assembled in After Effects.',
+            formats: ['AI Clips · Source', 'Final Reel · AE', 'Runway · Gemini'],
+          },
+          {
+            name: 'BWL · Post 79',
+            objective:
+              'AI-generated clips used as base material for the reel (sunbeam, cinemagraph and product animations), then assembled in After Effects.',
+            formats: ['AI Clips · Source', 'Final Reel · AE', 'Gemini · Runway'],
+          },
+        ],
       },
       {
-        name: 'KOP · PS Script + World Cup 2026',
+        name: 'Scripts + Codex',
         objective:
-          "Claude researched the brand on web + guidelines folder before designing. First version rejected on aesthetics (\"KOP doesn't usually have such a marked aesthetic\") → pivot to the real feed look. Two exploration versions with a World Cup 2026 vibe. Key art direction criterion: \"use stock instead of AI backgrounds so it looks less AI.\" Flyer hierarchy consulted as art director (5 levels for letter size). Approved version adapted to 5 formats with a Photoshop script.",
-        formats: ['01 · AI Components', '02 · Assembled', '03 · Exploration · Not Approved', '04 · Final · 5 Formats', 'PS Script · Claude Code'],
-      },
-      {
-        name: 'BWL · AI Paid Media',
-        objective:
-          'Paid media reel and product static generated with AI for BWL: lifestyle imagery without photo production, product video without location or models.',
-        formats: ['Paid Media · Video', 'Paid Media · Static', 'Gemini · Runway'],
-      },
-      {
-        name: 'BWL · Post 71 · Process',
-        objective:
-          "Art direction in Gemini Flow: initial prompt with brand constraint (\"don't modify any elements, just adapt to video\"), followed by naturalness corrections (\"fix the hands, it's not a natural pose to open juice\") and acting direction (\"young rejuvenated person, natural and fresh, picking up the glass and smiling\"). Generated clips were then assembled in After Effects.",
-        formats: ['Prompt · Gemini Flow', 'AI Clips · Source', 'Final Reel EN · AE', 'Final Reel 中文 · AE'],
-      },
-      {
-        name: 'BWL · Post 77 · Process',
-        objective:
-          'Image generated with Gemini and five AI product video clips, used as base material for the final reel assembled in After Effects.',
-        formats: ['Image · Gemini', 'AI Clips · Source', 'Final Reel · AE', 'Runway · Gemini'],
-      },
-      {
-        name: 'BWL · Post 79 · Process',
-        objective:
-          'AI-generated clips used as base material for the reel (sunbeam, cinemagraph and product animations), then assembled in After Effects for the final deliverable.',
-        formats: ['AI Clips · Source', 'Final Reel · AE', 'Gemini · Runway'],
-      },
-      {
-        name: 'AMX · Paid Media · /reel Skill',
-        objective:
-          'Brief → /reel skill in Claude Code → Remotion composition generated → human art direction review → final AE render. Each pair shows the direct AI output (Remotion) and the final deliverable after art direction retouching.',
-        formats: ['Before · Remotion Output', 'After · Final AE', 'Reel 11 · 17s', 'Reel 13 · 15s'],
-      },
-      {
-        name: 'AMX · Carousel · Codex',
-        objective:
-          'Eight-slide carousel for AseguraMax generated with Codex: client brief → prompt engineering → Codex generates design components (headline, body, backgrounds) → direct iteration on the PSD. Final deliverable ready to publish without manually building each slide.',
-        formats: ['Carousel 8 slides · Instagram', 'Codex · Claude Code'],
+          'From brief to deliverable using scripts generated with Claude Code and Codex: assembly automation in After Effects, format generation in Photoshop and carousel building.',
+        formats: ['AE Script · Claude Code', 'PS Script · Claude Code', 'Codex · Claude Code'],
+        subCampaigns: [
+          {
+            name: 'KOP · AE Script + Paid Media',
+            objective:
+              'Brief + resource folder → Claude Code read the brand file, generated the AE script (307 lines) and the Remotion component in parallel. Refinement by prompts: timing adjusted from 0.83s to 2s per sport ("make them last longer to appreciate them"), verification of 8 clips with exact cut moment for each. Result: 22-second reel ready to render in AE in a single click.',
+            formats: ['Reel 22s · Paid Media', 'AE Script · Claude Code', 'Remotion · Preview', '1080×1920 · 30fps'],
+          },
+          {
+            name: 'KOP · PS Script + World Cup 2026',
+            objective:
+              "Claude researched the brand on web + guidelines folder before designing. First version rejected on aesthetics (\"KOP doesn't usually have such a marked aesthetic\") → pivot to the real feed look. Two exploration versions with a World Cup 2026 vibe. Key art direction criterion: \"use stock instead of AI backgrounds so it looks less AI.\" Approved version adapted to 5 formats with a Photoshop script.",
+            formats: ['01 · AI Components', '02 · Assembled', '03 · Exploration · Not Approved', '04 · Final · 5 Formats', 'PS Script · Claude Code'],
+          },
+          {
+            name: 'AMX · Carousel · Codex',
+            objective:
+              'Brief → Codex generates base panels with AI (typography, composition, palette) → human retouching of people and lighting → final text and copy overlaid. 8 slides ready to publish without manually building each one.',
+            formats: ['Carousel 8 slides · Instagram', 'Codex · Claude Code', 'Gemini · Generative Image'],
+          },
+        ],
       },
     ],
   },
