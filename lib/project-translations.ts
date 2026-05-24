@@ -28,7 +28,7 @@ export type ProjectTranslation = {
 
 export const projectTranslationsEN: Record<string, ProjectTranslation> = {
   zealix: {
-    tagline: 'Automate. Optimize. Evolve.',
+    tagline: 'Naming, visual identity and brand system for a restaurant SaaS.',
     tags: ['Naming', 'Visual Identity', 'Brand Guidelines', 'Brand Manual', 'Stationery', 'Social Media'],
     overview:
       'Zealix is a Mexican AI-powered platform designed to automate restaurant, café and food business management, from inventory and orders to profitability analysis with the Zea AI assistant. The project was end-to-end: naming of Zealix and Zea, full visual identity from sketch, brand application to the digital product and corporate stationery, and creative direction of social media production.',
@@ -137,15 +137,15 @@ export const projectTranslationsEN: Record<string, ProjectTranslation> = {
   },
 
   kop: {
-    tagline: 'Where sport becomes a lifestyle.',
+    tagline: 'Social content, motion and campaigns for a multi-brand sports club.',
     tags: ['Social Media', 'Art Direction', 'Reels', 'Sub-brand', 'Paid Media', 'Generative AI'],
     overview:
-      'KOP is a padel and tennis club in San Antonio, TX. The project included both the main brand (sports content for the club) and Kings Tavern, its in-house restaurant, with its own editorial line within the same ecosystem.',
-    role: 'Art direction, content production and motion: sports editorial, educational carousels, reels, differentiated content for Kings Tavern and paid media produced with AI-generated imagery and an After Effects automation script.',
+      'KOP is a padel and tennis club in San Antonio, TX. The work included pieces for the main brand and Kings Tavern, its in-house restaurant, maintaining two visual lines within the same ecosystem.',
+    role: 'Art direction, visual production and motion within a multi-brand workflow: sports editorial, educational carousels, reels, differentiated content for Kings Tavern and paid media supported by generative imagery and After Effects automation.',
     challenge:
       "Managing two voices within one account without the restaurant content overshadowing the club's sports identity, or vice versa. Each sub-brand had to feel cohesive but distinguishable.",
     process:
-      'I created a two-speed visual system: high-impact editorial posts for KOP (black, white and energetic green) and a warmer, more atmospheric line for Kings Tavern that coexists without breaking the feed. The paid media pieces combine generative imagery with Gemini and an After Effects script that builds the complete reel (timeline, text, end card) in a single click.',
+      'I created a two-speed visual system: high-impact editorial posts for KOP (black, white and energetic green) and a warmer, more atmospheric line for Kings Tavern that coexists without breaking the feed. The paid media pieces combine generative imagery with Gemini and After Effects automation to speed up the editable base before final review.',
     result:
       '30+ pieces across editorials, carousels and reels for KOP, plus differentiated content for Kings Tavern. The Sin Yolanda opening reel reached 26.3K views and 212 likes in 6 weeks organically. A 22-second paid media reel produced with an AI + script workflow.',
     campaigns: [
@@ -211,8 +211,8 @@ export const projectTranslationsEN: Record<string, ProjectTranslation> = {
     tagline: 'A global brand that speaks two languages without losing its voice.',
     tags: ['Social Media', 'Motion', 'Paid Media', 'RedNote · 小红书', 'Generative AI'],
     overview:
-      'BWL (Best World) is a Singapore-origin wellness brand with global distribution and multiple product lines. The work covers content production for Instagram and paid media in English, plus reel adaptation to Chinese for RedNote (小红书), each piece translated and reformatted for the cultural context and algorithm of each platform.',
-    role: 'Art direction, video editing and content production. Bilingual Chinese-English adaptation for Instagram and RedNote.',
+      'BWL (Best World) is a Singapore-origin wellness brand with global distribution and multiple product lines. The work covers content pieces for Instagram and paid media in English, plus reel adaptation to Chinese for RedNote (小红书), each piece reformatted for the cultural and visual context of each platform.',
+    role: 'Art direction, video editing and visual production within a multi-brand workflow. Bilingual Chinese-English adaptation for Instagram and RedNote.',
     challenge:
       "Adapting the same content to two platforms with different visual cultures: what works on Instagram doesn't necessarily connect on RedNote. Each version had to feel native to its platform, not a simple translation.",
     process:
@@ -253,7 +253,7 @@ export const projectTranslationsEN: Record<string, ProjectTranslation> = {
   },
 
   procyon: {
-    tagline: 'Our power is cosmic, our victory inevitable.',
+    tagline: 'Visual identity, content and graphic system for an esports organization.',
     tags: ['Branding', 'Esports', 'Social Media', 'Visual Identity', 'Merch', 'Streaming'],
     overview:
       'Procyon is a Mexican esports organization competing in Valorant Challengers LATAM Norte. The work covers the complete visual identity: logo system, social media content templates, platform headers and the design of the official team jersey.',
@@ -313,17 +313,17 @@ export const projectTranslationsEN: Record<string, ProjectTranslation> = {
 
   'ai-creative': {
     name: 'AI Creative System',
-    tagline: 'From prompt to deliverable. No friction.',
+    tagline: 'AI-native creative workflows for producing with more control.',
     tags: ['Generative AI', 'Gemini', 'AE Script', 'PS Script', 'Automation', 'Codex'],
     overview:
-      'AI-powered creative production workflow applied to real clients: generative imagery, editing automation and design component generation through scripts. Not as an experiment; as a working method.',
+      'AI-powered creative production workflow applied to real pieces: generative imagery, editing automation and design component exploration through scripts. Not just a tool test; a working method with human direction.',
     role: 'Creative direction, prompt engineering, image generation with Gemini and ChatGPT, and assembly automation in After Effects and Photoshop with scripts written with Codex.',
     challenge:
-      "The challenge isn't using AI; it's using it in a way that the result doesn't look generic and still communicates the client's identity. Integrating these tools without the client noticing any difference in quality, only in speed.",
+      "The challenge isn't using AI; it's using it in a way that the result doesn't look generic and still communicates the brand's identity. The tools accelerate parts of the process, but the visual criteria and final decisions stay human.",
     process:
-      'Three layers: (1) Generative imagery: prompt engineering to create scene photography without a photo shoot. (2) AE Script: automation that builds the complete reel with motion type, clip scaling and end card in minutes; the art director only intervenes to select cuts and adjust final details. (3) PS Script: Claude Code researches the brand, generates components separately with AI and iterates versions until producing the final editable PSD.',
+      'Three layers: (1) Generative imagery: prompt engineering to create scene photography and product compositions. (2) AE Script: automation that builds an editable reel base with motion type, clip scaling and end card; I review cuts and adjust final details. (3) PS Script: Claude Code researches the brand, explores components with AI and iterates versions until producing an editable PSD for human review.',
     result:
-      'What previously took hours of editing now takes minutes of scripting + creative review. A 22-second reel produced by script with human intervention only in cut selection. A flyer in 5 formats generated from brief to PSD. Editorial product posts without a photo shoot. A documented, client-replicable system.',
+      'A documented workflow that reduces repetitive work and speeds up the first editable base. A 22-second reel produced with script support and human cut review. A flyer adapted into 5 formats from an approved design. Editorial product posts created with generative imagery and art direction.',
     campaigns: [
       {
         name: '/reel Skill · From Brief to Video',
@@ -334,14 +334,14 @@ export const projectTranslationsEN: Record<string, ProjectTranslation> = {
       {
         name: 'Generative Imagery',
         objective:
-          'Scene photography, brand compositions and product flats generated with AI for real clients. Prompt engineering as a production tool — no photo shoot, no location.',
+          'Scene photography, brand compositions and product flats generated with AI for real pieces. Prompt engineering as an exploration and production tool, with art direction and human judgment.',
         formats: ['Gemini · ChatGPT', 'Prompt Engineering', 'Post · Instagram', 'Carousel · Instagram'],
       },
       {
         name: 'Generative Video',
         objective:
           'Art direction using generative video tools: initial prompt, naturalness corrections and acting direction. Generated clips are assembled in After Effects for the final deliverable.',
-        formats: ['Gemini Flow · Runway', 'AI Clips · Source', 'Final Reel · AE'],
+        formats: ['Gemini Flow · Higgsfield', 'AI Clips · Source', 'Final Reel · AE'],
         subCampaigns: [
           {
             name: 'BWL · Post 71',
@@ -352,19 +352,19 @@ export const projectTranslationsEN: Record<string, ProjectTranslation> = {
           {
             name: 'BWL · Paid Media',
             objective: 'AI-generated paid media reel for BWL: product video without location or models.',
-            formats: ['Paid Media · Video', 'Gemini · Runway'],
+            formats: ['Paid Media · Video', 'Gemini · Higgsfield'],
           },
           {
             name: 'BWL · Post 77',
             objective:
               'Five AI product video clips used as base material for the final reel assembled in After Effects.',
-            formats: ['AI Clips · Source', 'Final Reel · AE', 'Runway · Gemini'],
+            formats: ['AI Clips · Source', 'Final Reel · AE', 'Higgsfield · Gemini'],
           },
           {
             name: 'BWL · Post 79',
             objective:
               'AI-generated clips used as base material for the reel (sunbeam, cinemagraph and product animations), then assembled in After Effects.',
-            formats: ['AI Clips · Source', 'Final Reel · AE', 'Gemini · Runway'],
+            formats: ['AI Clips · Source', 'Final Reel · AE', 'Gemini · Higgsfield'],
           },
         ],
       },
@@ -377,7 +377,7 @@ export const projectTranslationsEN: Record<string, ProjectTranslation> = {
           {
             name: 'KOP · AE Script + Paid Media',
             objective:
-              'Brief + resource folder → Claude Code read the brand file, generated the AE script (307 lines) and the Remotion component in parallel. Refinement by prompts: timing adjusted from 0.83s to 2s per sport ("make them last longer to appreciate them"), verification of 8 clips with exact cut moment for each. Result: 22-second reel ready to render in AE in a single click.',
+              'Brief + resource folder → Claude Code read the brand file, generated the AE script (307 lines) and the Remotion component in parallel. Refinement by prompts: timing adjusted from 0.83s to 2s per sport ("make them last longer to appreciate them"), verification of 8 clips with exact cut moment for each. Result: an editable 22-second reel base ready for final review and render in After Effects.',
             formats: ['Reel 22s · Paid Media', 'AE Script · Claude Code', 'Remotion · Preview', '1080×1920 · 30fps'],
           },
           {
@@ -389,7 +389,7 @@ export const projectTranslationsEN: Record<string, ProjectTranslation> = {
           {
             name: 'AMX · Carousel · Codex',
             objective:
-              'Brief → Codex generates base panels with AI (typography, composition, palette) → human retouching of people and lighting → final text and copy overlaid. 8 slides ready to publish without manually building each one.',
+              'Brief → Codex explores base panels with AI (typography, composition, palette) → human retouching of people and lighting → final text and copy overlaid. 8 slides prepared with less repetitive layout work.',
             formats: ['Carousel 8 slides · Instagram', 'Codex · Claude Code', 'Gemini · Generative Image'],
           },
         ],

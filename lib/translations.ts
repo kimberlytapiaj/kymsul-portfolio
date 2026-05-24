@@ -118,8 +118,8 @@ export const tr = {
 
   proyectos: {
     eyebrow:    { es: 'PROYECTOS', en: 'PROJECTS' },
-    h1:         { es: 'Todo mi', en: 'All my' },
-    h2:         { es: 'trabajo.', en: 'work.' },
+    h1:         { es: 'Trabajo', en: 'Selected' },
+    h2:         { es: 'seleccionado.', en: 'work.' },
     count:      { es: 'PROYECTOS', en: 'PROJECTS' },
     noProjects: { es: 'SIN PROYECTOS', en: 'NO PROJECTS' },
     filters: {
@@ -157,15 +157,15 @@ export const tr = {
   sobreMi: {
     eyebrow: { es: 'BRAND & CONTENT DESIGNER', en: 'BRAND & CONTENT DESIGNER' },
     bio: {
-      es: 'Brand & Content Designer. Empecé con assets animados para streamers y terminé construyendo sistemas de marca para startups — pasando por agencia, SaaS y producción IA-native. Lo que no cambia: entender antes de ejecutar.',
-      en: 'Brand & Content Designer. I started with animated assets for streamers and ended up building brand systems for startups — through agency work, SaaS, and AI-native production. What never changes: understand before executing.',
+      es: 'Brand & Content Designer. Construyo sistemas visuales de marca y los activo en contenido, motion y workflows creativos con IA. Mi base es entender antes de ejecutar; mi diferencial es producir con sistema sin perder criterio visual.',
+      en: 'Brand & Content Designer. I build visual brand systems and activate them through content, motion, and AI-native creative workflows. My base is understanding before execution; my edge is producing with system without losing visual judgment.',
     },
     rolLabel:   { es: 'ROL', en: 'ROLE' },
     baseLabel:  { es: 'BASE', en: 'BASE' },
     desdeLabel: { es: 'DESDE', en: 'SINCE' },
     rolValue:   { es: 'Brand & Content Designer', en: 'Brand & Content Designer' },
     baseValue:  { es: 'Puebla, MX', en: 'Puebla, MX' },
-    desdeValue: { es: '2020', en: '2020' },
+    desdeValue: { es: '2023', en: '2023' },
 
     practica: {
       eyebrow: { es: 'PRÁCTICA', en: 'PRACTICE' },
@@ -181,8 +181,8 @@ export const tr = {
         en: 'I work from the visual, but also from structure: narrative, movement and logic behind every decision.',
       },
       p3: {
-        es: 'Busco colaborar con marcas y creadores que entienden el valor de construir con intención, no solo de verse bien.',
-        en: 'I seek to collaborate with brands and creators who understand the value of building with intention, not just looking good.',
+        es: 'Busco crecer en equipos creativos y marcas que valoren el pensamiento estratégico tanto como la ejecución visual.',
+        en: 'I want to grow within creative teams and brands that value strategic thinking as much as visual execution.',
       },
     },
 
@@ -209,7 +209,7 @@ export const tr = {
           },
           {
             cat: 'IA',
-            items: ['Producción IA-native', 'Vibe coding · Frontend', 'Claude Code · Codex', 'Claude Design', 'Remotion', 'Gemini · Imagen 2', 'Veo · Higgsfield', 'Adobe Firefly'],
+            items: ['AI-native workflows', 'Creative automation', 'Imagen y video generativo', 'Claude Code · Codex', 'Remotion', 'Gemini · Imagen 2', 'Veo · Higgsfield', 'Adobe Firefly'],
           },
           {
             cat: 'SOFTWARE',
@@ -231,7 +231,7 @@ export const tr = {
           },
           {
             cat: 'AI',
-            items: ['AI-native production', 'Vibe coding · Frontend', 'Claude Code · Codex', 'Claude Design', 'Remotion', 'Gemini · Imagen 2', 'Veo · Higgsfield', 'Adobe Firefly'],
+            items: ['AI-native workflows', 'Creative automation', 'Generative image and video', 'Claude Code · Codex', 'Remotion', 'Gemini · Imagen 2', 'Veo · Higgsfield', 'Adobe Firefly'],
           },
           {
             cat: 'SOFTWARE',
@@ -247,14 +247,14 @@ export const tr = {
         es: [
           { year: '2023',    title: 'Kymsul',                     detail: 'Comisiones streaming · +80 clientes · Assets animados' },
           { year: '2023–24', title: 'Proyectos independientes',     detail: 'Branding end-to-end · Identidades de marca · Múltiples industrias' },
-          { year: '2024 – 2026',  title: 'Directora de Arte · Zealix', detail: 'Naming · Identidad visual · Dirección creativa · SaaS' },
-          { year: '2026 →',  title: 'NexLaunch',                  detail: 'Brand & Content Designer · Producción IA-native · Multimarca', current: true },
+          { year: '2024 →',  title: 'Diseñadora de Marca & Dirección de Arte · Zealix', detail: 'Naming · Identidad visual · Dirección creativa · SaaS' },
+          { year: '2026 →',  title: 'NexLaunch',                  detail: 'Reels · Paid media · Producción multimarca', current: true },
         ],
         en: [
           { year: '2023',    title: 'Kymsul',                     detail: 'Streaming commissions · +80 clients · Animated assets' },
           { year: '2023–24', title: 'Independent projects',        detail: 'End-to-end branding · Brand identities · Multiple industries' },
-          { year: '2024 – 2026',  title: 'Art Director · Zealix',      detail: 'Naming · Visual identity · Creative direction · SaaS' },
-          { year: '2026 →',  title: 'NexLaunch',                  detail: 'Brand & Content Designer · AI-native production · Multi-brand', current: true },
+          { year: '2024 →',  title: 'Brand Designer & Art Direction · Zealix', detail: 'Naming · Visual identity · Creative direction · SaaS' },
+          { year: '2026 →',  title: 'NexLaunch',                  detail: 'Reels · Paid media · Multi-brand production', current: true },
         ],
       },
     },
@@ -277,6 +277,20 @@ export const tr = {
 
     certEyebrow: { es: 'CERTIFICACIONES', en: 'CERTIFICATIONS' },
 
+    idiomas: {
+      eyebrow: { es: 'IDIOMAS', en: 'LANGUAGES' },
+      entries: {
+        es: [
+          { lang: 'Español', level: 'Nativo' },
+          { lang: 'Inglés', level: 'Intermedio conversacional (B1+)' },
+        ],
+        en: [
+          { lang: 'Spanish', level: 'Native' },
+          { lang: 'English', level: 'Conversational intermediate (B1+)' },
+        ],
+      },
+    },
+
     cta: {
       h: {
         es: 'Si algo aquí',
@@ -284,8 +298,8 @@ export const tr = {
       },
       hItalic: { es: 'resuena.', en: 'resonates.' },
       desc: {
-        es: 'Disponible para posiciones de tiempo completo o colaboración. Escríbeme.',
-        en: 'Available for full-time positions or long-term collaboration. Reach out.',
+        es: 'Abierta a conversaciones profesionales sobre diseño de marca, contenido visual, motion y workflows creativos con IA.',
+        en: 'Open to professional conversations around brand design, visual content, motion, and AI-native creative workflows.',
       },
       primary:   { es: 'Escríbeme', en: 'Get in touch' },
       secondary: { es: 'Ver proyectos', en: 'See projects' },
@@ -297,10 +311,10 @@ export const tr = {
       eyebrow: { es: 'SISTEMA CREATIVO IA', en: 'AI CREATIVE SYSTEM' },
       line1:   { es: 'Del prompt', en: 'From prompt' },
       line2:   { es: 'al entregable.', en: 'to deliverable.' },
-      line3:   { es: 'Sin fricción.', en: 'No friction.' },
+      line3:   { es: 'Más criterio.', en: 'More judgment.' },
       sub: {
-        es: 'Cinco flujos de producción aplicados a clientes reales: documentación de marca, reels y motion, imagen generativa sin sesión fotográfica, video generativo con dirección de arte, y piezas estáticas que escalan desde un brief.',
-        en: 'Five production workflows applied to real clients: brand documentation, reels and motion, generative imagery without a photo shoot, generative video with art direction, and static pieces that scale from a brief.',
+        es: 'Uso IA para documentar marcas, explorar visuales, automatizar formatos y producir con más control. No reemplaza el criterio creativo: lo uso para reducir fricción y dedicar más tiempo a dirección de arte.',
+        en: 'I use AI to document brands, explore visuals, automate formats, and produce with more control. It does not replace creative judgment: I use it to reduce friction and spend more time on art direction.',
       },
       tools: { es: 'Obsidian · Claude Code · Codex · Gemini · Higgsfield · Remotion · AE · Photoshop · Illustrator', en: 'Obsidian · Claude Code · Codex · Gemini · Higgsfield · Remotion · AE · Photoshop · Illustrator' },
     },
@@ -308,8 +322,8 @@ export const tr = {
     flujo: {
       eyebrow: { es: 'EL FLUJO', en: 'THE FLOW' },
       sub: {
-        es: 'Cinco flujos de producción con casos reales de cliente.',
-        en: 'Five production workflows with real client cases.',
+        es: 'Cinco flujos de producción aplicados en piezas reales.',
+        en: 'Five production workflows applied to real pieces.',
       },
       steps: {
         es: [
@@ -336,25 +350,25 @@ export const tr = {
         en: 'The system knows who the brand is.',
       },
       p1: {
-        es: 'Los brand guidelines de cada cliente viven en Obsidian: tipografía, paleta, tono, reglas visuales. Antes de generar una sola imagen o escribir una línea de código, Claude Code lee ese contexto. El output no es genérico: está calibrado a la marca desde el primer prompt.',
-        en: 'Every client\'s brand guidelines live in Obsidian: typography, palette, tone, visual rules. Before generating a single image or writing a line of code, Claude Code reads that context. The output isn\'t generic: it\'s calibrated to the brand from the very first prompt.',
+        es: 'Cuando documento una marca, el contexto vive en Obsidian: tipografía, paleta, tono y reglas visuales. Antes de generar una imagen o escribir una línea de código, el sistema puede leer ese contexto. El output no parte de cero: parte de una dirección visual definida.',
+        en: 'When I document a brand, its context lives in Obsidian: typography, palette, tone, and visual rules. Before generating an image or writing code, the system can read that context. The output does not start from zero: it starts from a defined visual direction.',
       },
       p2: {
-        es: 'La misma documentación que alimenta la producción también se entrega al cliente como activo, un sistema vivo que escala con la marca.',
-        en: 'The same documentation that fuels production is also delivered to the client as an asset, a living system that scales with the brand.',
+        es: 'La documentación funciona como memoria creativa: ayuda a mantener coherencia entre piezas, formatos y herramientas sin depender solo de recordar cada decisión manualmente.',
+        en: 'Documentation works as creative memory: it helps maintain consistency across pieces, formats, and tools without relying only on remembering every decision manually.',
       },
       bullets: {
         es: [
           'Obsidian como base de conocimiento de marca',
-          'Claude Code y Codex leen guidelines antes de ejecutar',
-          'Coherencia asegurada desde el origen',
-          'Documentación entregada como activo al cliente',
+          'Claude Code y Codex pueden trabajar desde guidelines',
+          'Coherencia visual desde el contexto',
+          'Documentación como memoria creativa',
         ],
         en: [
           'Obsidian as brand knowledge base',
-          'Claude Code and Codex read guidelines before executing',
-          'Consistency ensured from the source',
-          'Documentation delivered as a client asset',
+          'Claude Code and Codex can work from guidelines',
+          'Visual consistency from context',
+          'Documentation as creative memory',
         ],
       },
       terminalLabel1: { es: 'BRAND FILE · OBSIDIAN', en: 'BRAND FILE · OBSIDIAN' },
@@ -380,18 +394,18 @@ export const tr = {
       terminalOutputLine1: { es: 'Remotion JSX ·', en: 'Remotion JSX ·' },
       terminalOutputLine1val: { es: '307 líneas', en: '307 lines' },
       terminalOutputLine2: { es: 'Coherente con marca →', en: 'Brand-consistent →' },
-      terminalOutputLine2val: { es: 'aprobado en primera revisión', en: 'approved on first review' },
+      terminalOutputLine2val: { es: 'listo para revisión creativa', en: 'ready for creative review' },
     },
 
     reel: {
       eyebrow: { es: '— 02 · MOTION', en: '— 02 · MOTION' },
       h: {
-        es: 'Del brief al reel en un prompt.',
-        en: 'From brief to reel in one prompt.',
+        es: 'Del brief al primer sistema de reel.',
+        en: 'From brief to the first reel system.',
       },
       p: {
-        es: 'La skill /reel convierte un brief en una composición Remotion con timing, tipo de motion y estructura de cortes. El humano selecciona; el reel final se renderiza en After Effects. Cinco reels de paid media producidos con el mismo flujo: dos para AseguraMax, uno para KOP y dos para BWL.',
-        en: 'The /reel skill turns a brief into a Remotion composition with timing, motion type and cut structure. The human selects; the final reel renders in After Effects. Five paid media reels produced with the same flow: two for AseguraMax, one for KOP and two for BWL.',
+        es: 'La skill /reel convierte un brief en una composición Remotion con timing, tipo de motion y estructura de cortes. Yo reviso, selecciono y ajusto; el entregable final se termina en After Effects. El valor no está en automatizar todo, sino en llegar más rápido a una base editable con criterio.',
+        en: 'The /reel skill turns a brief into a Remotion composition with timing, motion type, and cut structure. I review, select, and adjust; the final deliverable is finished in After Effects. The value is not automating everything, but reaching an editable base faster with judgment.',
       },
       beforeLabel: { es: 'COMPOSICIÓN REMOTION · AMX', en: 'REMOTION COMPOSITION · AMX' },
       afterLabel:  { es: 'REEL FINAL · AMX PAID MEDIA · 17S', en: 'FINAL REEL · AMX PAID MEDIA · 17S' },
@@ -404,8 +418,8 @@ export const tr = {
         en: 'Scene photography without a shoot.',
       },
       p: {
-        es: 'Imagen de producto, lifestyle y composiciones generadas con IA, calibradas con prompt engineering para que el resultado no rompa la identidad visual del cliente. Lo que antes requería locación, modelos y horas de edición ahora es iteración de prompts con dirección de arte.',
-        en: 'Product imagery, lifestyle and compositions generated with AI, calibrated with prompt engineering so the result doesn\'t break the client\'s visual identity. What once required location, models and hours of editing is now prompt iteration with art direction.',
+        es: 'Imagen de producto, lifestyle y composiciones generadas con IA, calibradas con prompt engineering y dirección de arte para no romper la identidad visual. La IA propone material; el criterio decide qué sirve, qué se corrige y qué se descarta.',
+        en: 'Product imagery, lifestyle, and compositions generated with AI, calibrated through prompt engineering and art direction so they do not break the visual identity. AI proposes material; judgment decides what works, what gets corrected, and what gets rejected.',
       },
       promptLabel: { es: 'PROMPT REAL · KOP KINGS TAVERN', en: 'REAL PROMPT · KOP KINGS TAVERN' },
       beforeLabel:  { es: 'FOTO ORIGINAL · IPHONE', en: 'ORIGINAL PHOTO · IPHONE' },
@@ -419,8 +433,8 @@ export const tr = {
         en: 'Directed performance. No camera.',
       },
       p: {
-        es: 'Dirección de arte en Gemini Flow e Higgsfield: prompt inicial, correcciones de actuación, ajustes de luz y ambiente. Los clips generados se montan en After Effects para el reel final. Cuatro piezas de video generativo para BWL con dirección aplicada en cada corte.',
-        en: 'Art direction in Gemini Flow and Higgsfield: initial prompt, performance corrections, light and mood adjustments. Generated clips are assembled in After Effects for the final reel. Four generative video pieces for BWL with applied direction on every cut.',
+        es: 'Dirección de arte en Gemini Flow e Higgsfield: prompt inicial, correcciones de actuación, ajustes de luz y ambiente. Los clips generados funcionan como material base; después se seleccionan, editan y montan en After Effects para el entregable final.',
+        en: 'Art direction in Gemini Flow and Higgsfield: initial prompt, performance corrections, light, and mood adjustments. Generated clips work as base material; then they are selected, edited, and assembled in After Effects for the final deliverable.',
       },
       clipLabel: { es: 'CLIP GENERADO · BWL OPTRIMAX', en: 'GENERATED CLIP · BWL OPTRIMAX' },
       reelLabel: { es: 'REEL FINAL · BWL OPTRIMAX', en: 'FINAL REEL · BWL OPTRIMAX' },
@@ -433,18 +447,18 @@ export const tr = {
         en: 'Codex generates. The script scales.',
       },
       p: {
-        es: 'Dos herramientas, dos dominios del mismo ecosistema: Codex con Gemini Image 2 construye carruseles, editorial de producto y piezas de campaña sin tocar un archivo manualmente; Claude Code genera los scripts de Photoshop que toman un diseño aprobado y lo redimensionan a todos los formatos en un clic.',
-        en: 'Two tools, two domains of the same ecosystem: Codex with Gemini Image 2 builds carousels, product editorial and campaign pieces without touching a file manually; Claude Code generates the Photoshop scripts that take an approved design and resize it to all formats in one click.',
+        es: 'Dos dominios dentro del mismo ecosistema: Codex con Gemini Image 2 ayuda a explorar carruseles, editorial de producto y piezas de campaña desde el brief; Claude Code genera scripts de Photoshop que toman un diseño aprobado y lo adaptan a múltiples formatos con menos trabajo repetitivo.',
+        en: 'Two domains inside the same ecosystem: Codex with Gemini Image 2 helps explore carousels, product editorial, and campaign pieces from the brief; Claude Code generates Photoshop scripts that take an approved design and adapt it to multiple formats with less repetitive work.',
       },
       case1label: { es: 'CODEX + GEMINI IMAGE 2 · AMX', en: 'CODEX + GEMINI IMAGE 2 · AMX' },
       case1: {
-        es: 'Carrusel de 8 slides para AseguraMax generado con Codex: paleta, tipografía, composición y copy definidos por el brief, sin construir ninguna pieza manualmente.',
-        en: '8-slide carousel for AseguraMax generated with Codex: palette, typography, composition and copy defined by the brief, without building any piece manually.',
+        es: 'Carrusel de 8 slides para AseguraMax explorado con Codex: paleta, tipografía, composición y copy definidos por el brief, con dirección humana sobre edición, retoque y cierre visual.',
+        en: '8-slide carousel for AseguraMax explored with Codex: palette, typography, composition, and copy defined by the brief, with human direction over editing, retouching, and final visual decisions.',
       },
       case2label: { es: 'SCRIPT PS · WORLD CUP 2026', en: 'PS SCRIPT · WORLD CUP 2026' },
       case2: {
-        es: 'Flyer aprobado → script de Photoshop lo redimensiona a 5 formatos (post, story, TV, banner, flyer imprimible) sin intervención manual.',
-        en: 'Approved flyer → Photoshop script resizes it to 5 formats (post, story, TV, banner, printable flyer) without manual intervention.',
+        es: 'Flyer aprobado → script de Photoshop lo adapta a 5 formatos (post, story, TV, banner, flyer imprimible), reduciendo trabajo repetitivo y dejando la revisión final al criterio humano.',
+        en: 'Approved flyer → Photoshop script adapts it to 5 formats (post, story, TV, banner, printable flyer), reducing repetitive work while keeping final review in human hands.',
       },
       codexLabel:   { es: 'CARRUSEL CODEX · AMX · 8 SLIDES', en: 'CODEX CAROUSEL · AMX · 8 SLIDES' },
       formatsLabel: { es: '5 FORMATOS DESDE 1 BRIEF · WORLD CUP 2026', en: '5 FORMATS FROM 1 BRIEF · WORLD CUP 2026' },
@@ -455,8 +469,8 @@ export const tr = {
       h1: { es: 'Este portafolio,', en: 'This portfolio,' },
       h2: { es: 'construido con el mismo sistema.', en: 'built with the same system.' },
       p: {
-        es: 'Lo que estás viendo es el resultado. kymsul.art no se contrató a alguien más — se diseñó y construyó con el mismo sistema que se usa para los clientes: dirección creativa propia, moodboard, prototipo en Claude Design, ajuste en Figma vía plugin, código generado con Claude y Codex, deploy en Vercel.',
-        en: 'What you\'re looking at is the result. kymsul.art wasn\'t outsourced — it was designed and built with the same system used for clients: original creative direction, moodboard, prototype in Claude Design, Figma adjustments via plugin, code generated with Claude and Codex, deployed on Vercel.',
+        es: 'Lo que estás viendo es el resultado. kymsul.art se diseñó y construyó como experimento personal de workflow: dirección creativa propia, moodboard, prototipo en Claude Design, ajustes en Figma, código generado con Claude y Codex, deploy en Vercel.',
+        en: 'What you are looking at is the result. kymsul.art was designed and built as a personal workflow experiment: original creative direction, moodboard, prototype in Claude Design, Figma adjustments, code generated with Claude and Codex, deployed on Vercel.',
       },
       details: {
         es: [
@@ -478,16 +492,16 @@ export const tr = {
 
     stats: {
       es: [
-        { num: '10+', desc: 'proyectos con IA documentados' },
-        { num: '5',   desc: 'reels de paid media producidos' },
+        { num: '10+', desc: 'exploraciones IA documentadas' },
+        { num: '5',   desc: 'reels producidos con apoyo de workflow' },
         { num: '5',   desc: 'formatos desde un solo brief' },
-        { num: '0',   desc: 'sesiones fotográficas para posts IA' },
+        { num: '0',   desc: 'sesiones fotográficas para piezas generadas con IA' },
       ],
       en: [
-        { num: '10+', desc: 'AI projects documented' },
-        { num: '5',   desc: 'paid media reels produced' },
+        { num: '10+', desc: 'documented AI explorations' },
+        { num: '5',   desc: 'reels produced with workflow support' },
         { num: '5',   desc: 'formats from one single brief' },
-        { num: '0',   desc: 'photo shoots for AI posts' },
+        { num: '0',   desc: 'photo shoots for AI-generated pieces' },
       ],
     },
   },

@@ -30,7 +30,7 @@ export default function ProyectosPage() {
               </p>
             </div>
             <p className="hidden sm:block font-mono text-[11px] text-muted2 tracking-[1.76px] pb-4">
-              {projects.length} {p.count[lang]} · 2024—2026
+              {projects.length} {p.count[lang]} · 2023—2026
             </p>
           </div>
         </div>

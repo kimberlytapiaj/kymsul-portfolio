@@ -36,39 +36,130 @@ const franklin = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL('https://kymsul.art'),
   title: {
-    default: 'kymsul — Brand & Content Designer',
+    default: 'Kimberly Tapia Rubio — Brand & Content Designer',
     template: '%s — kymsul',
   },
-  description: 'Kimberly Tapia Rubio — Brand & Content Designer especializada en sistemas visuales de marca, motion graphics e IA aplicada. Puebla, México.',
+  description: 'Brand & Content Designer based in Mexico. Visual systems, motion graphics, content production, and AI-native creative workflows for brands, campaigns, and social media.',
   keywords: [
-    'Brand Designer', 'Motion Designer', 'Content Designer', 'Diseñadora de marca',
-    'identidad visual', 'motion graphics', 'branding', 'social media',
-    'IA creativa', 'After Effects', 'Puebla', 'México', 'Kimberly Tapia', 'kymsul',
+    'Kimberly Tapia Rubio',
+    'kymsul',
+    'Brand & Content Designer',
+    'Brand Designer',
+    'Content Designer',
+    'Visual Designer',
+    'Motion Graphics',
+    'AI-native workflows',
+    'Creative automation',
+    'Visual systems',
+    'Social media content',
+    'Paid media assets',
+    'Short-form content',
+    'Art direction',
+    'Creative production',
+    'After Effects',
+    'Figma',
+    'Adobe Creative Suite',
+    'Remotion',
+    'Generative AI',
+    'Diseñadora de marca',
+    'México',
+    'Puebla',
   ],
   authors: [{ name: 'Kimberly Tapia Rubio', url: 'https://kymsul.art' }],
+  creator: 'Kimberly Tapia Rubio',
+  publisher: 'kymsul',
   robots: { index: true, follow: true },
   openGraph: {
-    title: 'kymsul — Brand & Content Designer',
-    description: 'Kimberly Tapia Rubio — Brand & Content Designer en Puebla, México. Sistemas visuales, motion graphics e IA aplicada al diseño.',
+    title: 'Kimberly Tapia Rubio — Brand & Content Designer',
+    description: 'Visual systems, motion graphics, content production, and AI-native creative workflows for brands, campaigns, and social media.',
     url: 'https://kymsul.art',
     siteName: 'kymsul',
     locale: 'es_MX',
     type: 'website',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Kimberly Tapia Rubio — Brand & Content Designer portfolio',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'kymsul — Brand & Content Designer',
-    description: 'Brand & Content Designer en Puebla, México. Sistemas visuales, motion graphics e IA aplicada al diseño.',
+    title: 'Kimberly Tapia Rubio — Brand & Content Designer',
+    description: 'Visual systems, motion graphics, content production, and AI-native creative workflows.',
+    images: ['/twitter-image'],
   },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Person',
+        '@id': 'https://kymsul.art/#person',
+        name: 'Kimberly Tapia Rubio',
+        alternateName: 'kymsul',
+        url: 'https://kymsul.art',
+        image: 'https://kymsul.art/assets/kym-foto.jpg',
+        jobTitle: 'Brand & Content Designer',
+        description:
+          'Brand & Content Designer focused on visual systems, motion graphics, content production, and AI-native creative workflows.',
+        email: 'mailto:kimberly.tapiaj@gmail.com',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Puebla',
+          addressCountry: 'MX',
+        },
+        knowsAbout: [
+          'Brand identity',
+          'Visual systems',
+          'Motion graphics',
+          'Content production',
+          'Social media content',
+          'Paid media assets',
+          'AI-native workflows',
+          'Creative automation',
+          'Generative AI',
+          'Art direction',
+          'After Effects',
+          'Figma',
+          'Adobe Creative Suite',
+          'Remotion',
+        ],
+        sameAs: [
+          'https://www.linkedin.com/in/kimberly-tapia-rubio-39a35828a/',
+          'https://www.behance.net/kimberlytapia2',
+          'https://www.instagram.com/kymsul/',
+        ],
+      },
+      {
+        '@type': 'WebSite',
+        '@id': 'https://kymsul.art/#website',
+        name: 'kymsul',
+        url: 'https://kymsul.art',
+        inLanguage: ['es-MX', 'en'],
+        author: { '@id': 'https://kymsul.art/#person' },
+        description:
+          'Portfolio of Kimberly Tapia Rubio, Brand & Content Designer working across visual systems, motion, and AI-native creative workflows.',
+      },
+    ],
+  }
+
   return (
     <html
       lang="es"
       className={`${fraunces.variable} ${jetbrainsMono.variable} ${inter.variable} ${franklinCond.variable} ${franklin.variable}`}
     >
-      <body><LangProvider>{children}</LangProvider></body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <LangProvider>{children}</LangProvider>
+      </body>
     </html>
   )
 }

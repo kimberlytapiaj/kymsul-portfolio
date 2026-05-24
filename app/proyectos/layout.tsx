@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Proyectos',
-  description: 'Casos de estudio en branding, motion graphics e IA aplicada. Portafolio de Kimberly Tapia Rubio — kymsul.',
+  title: 'Selected Work — Kimberly Tapia Rubio',
+  description: 'Selected brand, content, motion, and AI-native workflow case studies by Kimberly Tapia Rubio.',
   alternates: { canonical: '/proyectos' },
 }
 

@@ -51,10 +51,10 @@ export const projects: Project[] = [
     id: 'zealix',
     name: 'Zealix',
     category: 'BRANDING · SOCIAL MEDIA',
-    year: '2024–26',
+    year: '2024 →',
     image: '/assets/thumbnail-zealix.jpg',
     accentColor: 'white',
-    tagline: 'Automatiza. Optimiza. Evoluciona.',
+    tagline: 'Naming, identidad visual y sistema de marca para SaaS restaurantero.',
     tags: ['Naming', 'Identidad visual', 'Brand guidelines', 'Manual de marca', 'Papelería', 'Social media'],
     overview:
       'Zealix es una plataforma mexicana con IA como motor central, diseñada para automatizar la gestión de restaurantes, cafeterías y negocios de comida: desde el inventario y las órdenes hasta el análisis de rentabilidad con el asistente Zea AI. El proyecto fue end-to-end: naming de Zealix y Zea, identidad visual completa desde boceto, aplicación de identidad en el producto digital y papelería corporativa. Dirección creativa de la producción visual para redes sociales.',
@@ -326,16 +326,16 @@ export const projects: Project[] = [
     year: '2026',
     image: '/assets/thumbnail-kop.png',
     accentColor: 'white',
-    tagline: 'Donde el deporte se convierte en estilo de vida.',
+    tagline: 'Contenido social, motion y campañas para club deportivo multimarca.',
     tags: ['Social media', 'Dirección de arte', 'Reels', 'Sub-marca', 'Paid Media', 'IA Generativa'],
     overview:
-      'KOP es un club de pádel y tenis en San Antonio, TX. El proyecto incluyó tanto la marca principal (contenido deportivo para el club) como Kings Tavern, su restaurante interno, con una línea editorial propia dentro del mismo ecosistema.',
-    role: 'Dirección de arte, producción de contenido y motion: editorial deportivo, carruseles educativos, reels, contenido diferenciado para Kings Tavern y paid media producido con imagen generativa IA y script de automatización en After Effects.',
+      'KOP es un club de pádel y tenis en San Antonio, TX. El trabajo incluyó piezas para la marca principal y para Kings Tavern, su restaurante interno, manteniendo dos líneas visuales dentro del mismo ecosistema.',
+    role: 'Dirección de arte, producción visual y motion dentro de un flujo multimarca: editorial deportivo, carruseles educativos, reels, contenido diferenciado para Kings Tavern y paid media con apoyo de imagen generativa y automatización en After Effects.',
     agency: 'NexLaunch',
     challenge:
       'Manejar dos voces dentro de una misma cuenta sin que el contenido del restaurante opacara la identidad deportiva del club, ni viceversa. Cada sub-marca tenía que sentirse cohesionada pero distinguible.',
     process:
-      'Creé un sistema visual de dos velocidades: posts editoriales de alto impacto para KOP (negro, blanco y verde energético) y una línea más cálida y atmosférica para Kings Tavern que convive sin romper el feed. Las piezas de paid media combinan imagen generativa con Gemini y un script de After Effects que monta el reel completo (timeline, texto, end card) en un solo clic.',
+      'Creé un sistema visual de dos velocidades: posts editoriales de alto impacto para KOP (negro, blanco y verde energético) y una línea más cálida y atmosférica para Kings Tavern que convive sin romper el feed. Las piezas de paid media combinan imagen generativa con Gemini y automatización en After Effects para acelerar el montaje base antes de la revisión final.',
     result:
       '30+ piezas entre editoriales, carruseles y reels para KOP, más contenido diferenciado para Kings Tavern. El reel de apertura de Sin Yolanda alcanzó 26.3K views y 212 likes en 6 semanas de forma orgánica. Reel de paid media de 22 segundos producido con flujo IA + script.',
     gallery: [
@@ -476,8 +476,8 @@ export const projects: Project[] = [
     tagline: 'Una marca global que habla dos idiomas sin perder su voz.',
     tags: ['Social media', 'Motion', 'Paid media', 'RedNote · 小红书', 'IA Generativa'],
     overview:
-      'BWL (Best World) es una marca de wellness de origen singapurense con distribución global y múltiples líneas de producto. El trabajo abarca producción de contenido para Instagram y paid media en inglés, más adaptación de reels al chino para RedNote (小红书), cada pieza traducida y reformateada para el contexto cultural y el algoritmo de cada plataforma.',
-    role: 'Dirección de arte, edición de video y producción de contenido. Adaptación bilingüe chino-inglés para Instagram y RedNote.',
+      'BWL (Best World) es una marca de wellness de origen singapurense con distribución global y múltiples líneas de producto. El trabajo abarca piezas de contenido para Instagram y paid media en inglés, más adaptación de reels al chino para RedNote (小红书), cada pieza reformateada para el contexto cultural y visual de cada plataforma.',
+    role: 'Dirección de arte, edición de video y producción visual dentro de un flujo multimarca. Adaptación bilingüe chino-inglés para Instagram y RedNote.',
     agency: 'NexLaunch',
     challenge:
       'Adaptar el mismo contenido a dos plataformas con culturas visuales distintas: lo que funciona en Instagram no necesariamente conecta en RedNote. Cada versión tenía que sentirse nativa en su plataforma, no una simple traducción.',
@@ -726,7 +726,7 @@ export const projects: Project[] = [
     year: '2025',
     image: '/assets/procyon/procyon-post-merch.jpg',
     accentColor: '#6B21A8',
-    tagline: 'Nuestro poder es cósmico, nuestra victoria inevitable.',
+    tagline: 'Identidad visual, contenido y sistema gráfico para organización esports.',
     tags: ['Branding', 'Esports', 'Social media', 'Identidad visual', 'Merch', 'Streaming'],
     overview:
       'Procyon es una organización esports mexicana competidora en Valorant Challengers LATAM Norte. El trabajo abarca la identidad visual completa: logo system, plantillas de contenido para redes, headers de plataforma y diseño del jersey oficial del equipo.',
@@ -810,17 +810,17 @@ export const projects: Project[] = [
     year: '2026',
     image: '/assets/amx/amx-c61-final-01.png',
     accentColor: '#0D0D0D',
-    tagline: 'Del prompt al entregable. Sin fricción.',
+    tagline: 'Workflows creativos con IA para producir con más control.',
     tags: ['IA Generativa', 'Gemini', 'Remotion', 'Claude Code', 'Automatización', 'Codex'],
     overview:
-      'Dos herramientas, dos dominios: Codex con Gemini Image 2 para todo lo estático — imagen generativa, carruseles, adaptación de formatos — y Claude Code con Remotion para todo lo que se mueve. Cuatro flujos de producción aplicados a clientes reales, donde la IA hace el trabajo pesado y el criterio creativo define el resultado.',
+      'Sistema de exploración y producción creativa con IA aplicado en piezas reales: imagen generativa, motion automatizado, adaptación de formatos y documentación de marca. La IA acelera partes del proceso; el criterio creativo define qué sirve, qué se ajusta y qué se descarta.',
     role: 'Dirección creativa y automatización: Claude Code + Remotion + After Effects para reels de paid media en movimiento; Codex + Gemini Image 2 para imagen generativa, carruseles y editorial de producto sin sesión; dirección de arte en Gemini Flow e Higgsfield para video generativo.',
     challenge:
       'El reto no es usar IA; es que el output siga comunicando la identidad del cliente. Cada flujo tiene un punto de intervención humana: selección de cortes en el reel, dirección de actuación en el video generativo, retoque de personas e iluminación en el carrusel. La IA acelera; el criterio creativo sigue siendo humano.',
     process:
-      'Dos lenguajes, dos dominios. Para todo lo que se mueve: el brief entra a Claude Code y sale una composición Remotion con timing, motion type y estructura de cortes; el humano selecciona y renderiza el final en After Effects. Para todo lo estático: Codex con Gemini Image 2 genera los componentes visuales desde el brief — carruseles, editorial de producto, adaptaciones de formato — sin construir ninguna pieza manualmente. Para video generativo: dirección de arte en Gemini Flow e Higgsfield desde el prompt inicial hasta las correcciones de actuación, y montaje final en AE.',
+      'Dos lenguajes, dos dominios. Para lo que se mueve: el brief entra a Claude Code y sale una composición Remotion con timing, motion type y estructura de cortes; después reviso, selecciono y termino el entregable en After Effects. Para lo estático: Codex con Gemini Image 2 ayuda a explorar componentes visuales desde el brief — carruseles, editorial de producto y adaptaciones de formato — con retoque, edición y cierre visual humano. Para video generativo: dirección de arte en Gemini Flow e Higgsfield desde el prompt inicial hasta las correcciones de actuación, y montaje final en AE.',
     result:
-      'Cinco reels de paid media producidos con la skill /reel: dos para AseguraMax, uno para KOP y dos para BWL. Cuatro piezas de video generativo para BWL con dirección de actuación aplicada en Gemini Flow. Posts editoriales de producto para KOP y BWL sin sesión fotográfica. Carrusel de 8 slides para AseguraMax generado con Codex. Flyer World Cup 2026 para KOP adaptado a 5 formatos con script de Photoshop.',
+      'Flujo documentado que reduce trabajo repetitivo y acelera la primera base editable. Reels producidos con apoyo de la skill /reel y revisión humana de cortes. Piezas de video generativo con dirección de actuación aplicada en Gemini Flow. Posts editoriales creados con imagen generativa y dirección de arte. Flyer World Cup 2026 para KOP adaptado a 5 formatos con script de Photoshop.',
     gallery: [],
     campaigns: [
       {
@@ -874,7 +874,7 @@ export const projects: Project[] = [
       },
       {
         name: 'Scripts + Codex',
-        objective: 'Generación de piezas de diseño con IA: script de Photoshop que adapta un flyer a 5 formatos en un clic, y carrusel construido con Codex donde la IA genera los componentes visuales desde el brief.',
+        objective: 'Generación de piezas de diseño con IA: script de Photoshop que adapta un flyer a 5 formatos con menos trabajo repetitivo, y carrusel explorado con Codex desde componentes visuales generados a partir del brief.',
         formats: ['Script PS · Claude Code', 'Codex · Claude Code'],
         collapsible: true,
         gallery: [],
@@ -941,7 +941,7 @@ export const projects: Project[] = [
       },
       {
         name: 'Imagen Generativa',
-        objective: 'Fotografía de escena, composiciones de marca y flats de producto generados con IA para clientes reales. Prompt engineering como herramienta de producción — sin sesión fotográfica, sin locación.',
+        objective: 'Fotografía de escena, composiciones de marca y flats de producto generados con IA para piezas reales. Prompt engineering como herramienta de exploración y producción visual — con dirección de arte y criterio humano.',
         formats: ['Gemini · ChatGPT', 'Prompt Engineering', 'Post · Instagram', 'Carrusel · Instagram'],
         collapsible: true,
         gallery: [],

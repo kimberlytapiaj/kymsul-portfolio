@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Sobre mí',
-  description: 'Kimberly Tapia Rubio — Brand & Content Designer con 3 años de experiencia en Puebla, México. Especializada en branding, motion graphics y producción IA-native.',
+  title: 'About Kimberly Tapia Rubio — Brand & Content Designer',
+  description: 'Brand & Content Designer based in Mexico. Visual systems, content production, motion graphics, and AI-native creative workflows.',
   alternates: { canonical: '/sobre-mi' },
 }
 

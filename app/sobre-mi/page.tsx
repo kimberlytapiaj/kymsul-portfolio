@@ -24,6 +24,7 @@ export default function SobreMiPage() {
   const capacidades = s.capacidades.cats[lang]
   const trayectoria = (s.trayectoria.entries[lang] as unknown) as { year: string; title: string; detail: string; current?: boolean }[]
   const formacion = s.formacion.entries[lang]
+  const idiomas = s.idiomas.entries[lang]
 
   return (
     <PageLayout>
@@ -150,6 +151,25 @@ export default function SobreMiPage() {
       </section>
 
       {/* ── Trayectoria ──────────────────── */}
+      <section className="px-6 lg:px-24 py-16 lg:py-20 border-b border-[rgba(13,13,13,0.08)]">
+        <div className="max-w-[1440px] mx-auto">
+          <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-8">
+            {s.idiomas.eyebrow[lang]}
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:max-w-[720px]">
+            {idiomas.map(({ lang: idioma, level }) => (
+              <div
+                key={idioma}
+                className="border-t-2 border-[#0d0d0d] pt-5"
+              >
+                <p className="font-sans text-[17px] text-dark mb-1">{idioma}</p>
+                <p className="font-mono text-[11px] text-muted2 tracking-[1.2px]">{level}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="bg-dark px-6 lg:px-24 py-16 lg:py-24">
         <div className="max-w-[1440px] mx-auto">
           <p className="font-mono text-[11px] text-[rgba(255,255,255,0.35)] tracking-[1.76px] mb-10 lg:mb-16">

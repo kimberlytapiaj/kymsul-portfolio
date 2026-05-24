@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'IA Aplicada',
-  description: 'Cómo uso la IA en cada etapa del diseño: documentación de marca, imagen generativa, automatización y producción de contenido. Kimberly Tapia Rubio — kymsul.',
+  title: 'AI-Native Creative Workflows — Kimberly Tapia Rubio',
+  description: 'AI-native creative workflows for brand documentation, generative image and video, motion automation, and multi-format content production.',
   alternates: { canonical: '/ia' },
 }
 

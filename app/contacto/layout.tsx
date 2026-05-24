@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Contacto',
-  description: 'Disponible para proyectos de branding, motion y contenido. Escríbeme a contacto@kymsul.art o usa el formulario.',
+  title: 'Contact — Kimberly Tapia Rubio',
+  description: 'Contact Kimberly Tapia Rubio for professional conversations around brand design, content production, motion graphics, and AI-native creative workflows.',
   alternates: { canonical: '/contacto' },
 }
 
