@@ -387,8 +387,8 @@ export const tr = {
         es: 'La skill /reel convierte un brief en una composición Remotion con timing, tipo de motion y estructura de cortes. El humano selecciona; el reel final se renderiza en After Effects. Cinco reels de paid media producidos con el mismo flujo: dos para AseguraMax, uno para KOP y dos para BWL.',
         en: 'The /reel skill turns a brief into a Remotion composition with timing, motion type and cut structure. The human selects; the final reel renders in After Effects. Five paid media reels produced with the same flow: two for AseguraMax, one for KOP and two for BWL.',
       },
-      beforeLabel: { es: 'COMPOSICIÓN REMOTION · KOP', en: 'REMOTION COMPOSITION · KOP' },
-      afterLabel:  { es: 'REEL FINAL · KOP PAID MEDIA · 22S', en: 'FINAL REEL · KOP PAID MEDIA · 22S' },
+      beforeLabel: { es: 'COMPOSICIÓN REMOTION · AMX', en: 'REMOTION COMPOSITION · AMX' },
+      afterLabel:  { es: 'REEL FINAL · AMX PAID MEDIA · 17S', en: 'FINAL REEL · AMX PAID MEDIA · 17S' },
     },
 
     imagen: {

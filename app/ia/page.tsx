@@ -147,7 +147,7 @@ export default function IAPage() {
             </p>
             <p className="text-[rgba(255,255,255,0.45)]">
               {ia.doc.terminalRead[lang]}{' '}
-              <span className="text-lav">Axomy Studio — Brand Guidelines.md</span>
+              <span className="text-lav">Kymsul — Brand Guidelines.md</span>
             </p>
             <p className="text-[rgba(255,255,255,0.45)]">
               {ia.doc.terminalLoading[lang]}
@@ -208,7 +208,7 @@ export default function IAPage() {
                   {ia.reel.beforeLabel[lang]}
                 </p>
                 <LazyVideo
-                  src="/assets/kop/kop-pm01-antes-web.mp4"
+                  src="/assets/amx/amx-pm-11-antes-web.mp4"
                   className="w-full rounded-sm aspect-[4/5] object-cover bg-[rgba(13,13,13,0.04)]"
                 />
               </div>
@@ -217,7 +217,7 @@ export default function IAPage() {
                   {ia.reel.afterLabel[lang]}
                 </p>
                 <LazyVideo
-                  src="/assets/kop/kop-paidmedia-01.mp4"
+                  src="/assets/amx/amx-pm-11-web.mp4"
                   className="w-full rounded-sm aspect-[4/5] object-cover bg-[rgba(13,13,13,0.04)]"
                 />
               </div>
