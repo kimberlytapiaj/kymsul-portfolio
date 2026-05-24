@@ -254,7 +254,7 @@ export default function IAPage() {
                 post-match atmosphere. Don't change any beverage or meal, just add the soccer court."
               </div>
               <div className="flex flex-wrap gap-2">
-                {['Gemini Image 2', 'Codex', 'ChatGPT'].map((t) => (
+                {['Gemini Image 2', 'Codex'].map((t) => (
                   <span key={t} className="border border-[rgba(13,13,13,0.12)] rounded-full px-3 py-1 font-mono text-[10px] text-muted">
                     {t}
                   </span>
