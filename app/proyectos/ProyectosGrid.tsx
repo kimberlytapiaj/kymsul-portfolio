@@ -21,6 +21,7 @@ const DISCIPLINES: Record<string, Discipline[]> = {
   'ai-creative':     ['ia', 'motion', 'social'],
   'corazon-mixteco': ['social'],
   'amorcito':        ['social'],
+  'procyon':         ['branding', 'motion', 'social'],
 }
 
 type ProjectMetaProps = {
@@ -56,6 +57,7 @@ export default function ProyectosGrid() {
   const amorcito       = getProject('amorcito')!
   const corazonMixteco = getProject('corazon-mixteco')!
   const aiCreative     = getProject('ai-creative')!
+  const procyon        = getProject('procyon')!
 
   const filtered = projects.filter(p =>
     active === 'todos' || (DISCIPLINES[p.id] ?? []).includes(active)
@@ -88,7 +90,7 @@ export default function ProyectosGrid() {
 
             {/* Mobile: columna única */}
             <div className="flex flex-col gap-10 lg:hidden">
-              {[zealix, brainy, kop, bwl, beatness, amorcito, corazonMixteco, activatedDecor, aiCreative].map(p => (
+              {[zealix, brainy, kop, bwl, beatness, amorcito, corazonMixteco, activatedDecor, procyon, aiCreative].map(p => (
                 <div key={p.id}>
                   <ProjectCard {...p} className="w-full h-[260px]" sizes="95vw" ctaLabel={ctaLabel} />
                   <ProjectMeta project={p} lang={lang} />
@@ -136,9 +138,15 @@ export default function ProyectosGrid() {
                 </div>
               </div>
 
-              <div className="mb-16">
-                <ProjectCard {...activatedDecor} className="w-full h-[500px]" ctaLabel={ctaLabel} />
-                <ProjectMeta project={activatedDecor} lang={lang} />
+              <div className="flex gap-6 mb-16">
+                <div className="flex-[496_1_0%]">
+                  <ProjectCard {...activatedDecor} className="h-[460px]" ctaLabel={ctaLabel} />
+                  <ProjectMeta project={activatedDecor} lang={lang} />
+                </div>
+                <div className="flex-[728_1_0%]">
+                  <ProjectCard {...procyon} className="h-[460px]" ctaLabel={ctaLabel} />
+                  <ProjectMeta project={procyon} lang={lang} />
+                </div>
               </div>
 
               <div>
