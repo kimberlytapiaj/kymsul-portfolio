@@ -44,11 +44,11 @@ export default function IAPage() {
               {ia.hero.line3[lang]}
             </p>
           </div>
-          <div className="border-t border-[rgba(13,13,13,0.1)] pt-6 lg:pt-8 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5">
-            <p className="font-sans text-[15px] lg:text-[17px] text-muted leading-[1.6] max-w-[580px]">
+          <div className="border-t border-[rgba(13,13,13,0.1)] pt-6 lg:pt-8 flex flex-col gap-6">
+            <p className="font-sans text-[15px] lg:text-[17px] text-muted leading-[1.6] max-w-[640px]">
               {ia.hero.sub[lang]}
             </p>
-            <p className="font-mono text-[10px] text-muted2 tracking-[1.4px] shrink-0">
+            <p className="font-mono text-[10px] text-muted2 tracking-[1.4px] lg:text-right">
               {ia.hero.tools[lang]}
             </p>
           </div>
