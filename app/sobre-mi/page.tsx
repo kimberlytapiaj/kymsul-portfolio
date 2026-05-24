@@ -29,44 +29,50 @@ export default function SobreMiPage() {
     <PageLayout>
 
       {/* ── Hero — dark editorial ─────────── */}
-      <section className="bg-dark px-6 lg:px-24 pt-12 lg:pt-20 pb-12 lg:pb-20">
-        <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
+      <section className="bg-dark overflow-hidden">
+        <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row lg:min-h-[680px]">
 
-          {/* Foto */}
-          <div className="relative w-full lg:w-[300px] shrink-0 aspect-[3/4] overflow-hidden">
+          {/* Foto — full height, left column */}
+          <div className="relative w-full lg:w-[40%] shrink-0 aspect-[4/5] lg:aspect-auto">
             <Image
               src="/assets/kym-foto.jpg"
               alt="Kimberly Tapia Rubio"
               fill
               quality={90}
               className="object-cover object-top grayscale contrast-110"
-              sizes="(max-width: 1024px) 100vw, 300px"
+              sizes="(max-width: 1024px) 100vw, 40vw"
             />
           </div>
 
-          {/* Nombre + datos */}
-          <div className="flex-1 pt-0 lg:pt-2">
-            <p className="font-mono text-[10px] text-[rgba(255,255,255,0.35)] tracking-[2px] mb-8 lg:mb-10">
+          {/* Nombre + datos — distribuido top→bottom */}
+          <div className="flex-1 flex flex-col justify-between px-8 lg:px-16 py-10 lg:py-14">
+
+            {/* Eyebrow top */}
+            <p className="font-mono text-[10px] text-[rgba(255,255,255,0.35)] tracking-[2px]">
               {s.eyebrow[lang]}
             </p>
 
-            <div className="mb-8 lg:mb-10 leading-[0.88]">
-              <p className="text-[clamp(56px,12vw,96px)] text-bg" style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 700 }}>
-                Kimberly
-              </p>
-              <p className="text-[clamp(56px,12vw,96px)] text-bg" style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 400 }}>
-                Tapia
-              </p>
-              <p className="font-fraunces font-light italic text-[clamp(56px,12vw,96px)] text-lav leading-[1]" style={WONK}>
-                Rubio.
+            {/* Nombre + bio centro */}
+            <div>
+              <div className="mb-6 lg:mb-8 leading-[0.88]">
+                <p className="text-[clamp(52px,9vw,96px)] text-bg" style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 700 }}>
+                  Kimberly
+                </p>
+                <p className="text-[clamp(52px,9vw,96px)] text-bg" style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 400 }}>
+                  Tapia
+                </p>
+                <p className="font-fraunces font-light italic text-[clamp(52px,9vw,96px)] text-lav leading-[1]" style={WONK}>
+                  Rubio.
+                </p>
+              </div>
+
+              <p className="font-sans text-[15px] text-[rgba(255,255,255,0.6)] leading-[1.7] max-w-[420px]">
+                {s.bio[lang]}
               </p>
             </div>
 
-            <p className="font-sans text-[15px] lg:text-[16px] text-[rgba(255,255,255,0.6)] leading-[1.7] max-w-[460px] mb-10 lg:mb-12">
-              {s.bio[lang]}
-            </p>
-
-            <div className="flex flex-wrap gap-10 lg:gap-14 border-t border-[rgba(255,255,255,0.08)] pt-6 lg:pt-8">
+            {/* Stats — fijados al fondo */}
+            <div className="flex flex-wrap gap-10 lg:gap-14 border-t border-[rgba(255,255,255,0.08)] pt-6">
               <div>
                 <p className="font-mono text-[10px] text-[rgba(255,255,255,0.3)] tracking-[1.6px] mb-2">{s.rolLabel[lang]}</p>
                 <p className="font-sans text-[14px] text-bg">{s.rolValue[lang]}</p>
@@ -80,6 +86,7 @@ export default function SobreMiPage() {
                 <p className="font-sans text-[14px] text-bg">{s.desdeValue[lang]}</p>
               </div>
             </div>
+
           </div>
 
         </div>
