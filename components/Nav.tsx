@@ -49,7 +49,7 @@ export default function Nav() {
             <div className="border border-[rgba(13,13,13,0.15)] rounded-full p-[3px] flex items-center">
               <button
                 onClick={() => setLang('es')}
-                className={`font-mono text-[10px] rounded-full w-9 h-[26px] flex items-center justify-center transition-colors cursor-pointer ${
+                className={`font-mono text-[10px] rounded-full w-9 h-[30px] lg:h-[26px] flex items-center justify-center transition-colors cursor-pointer ${
                   lang === 'es' ? 'bg-dark text-bg' : 'text-muted2/60 hover:text-muted2'
                 }`}
               >
@@ -57,7 +57,7 @@ export default function Nav() {
               </button>
               <button
                 onClick={() => setLang('en')}
-                className={`font-mono text-[10px] rounded-full w-9 h-[26px] flex items-center justify-center transition-colors cursor-pointer ${
+                className={`font-mono text-[10px] rounded-full w-9 h-[30px] lg:h-[26px] flex items-center justify-center transition-colors cursor-pointer ${
                   lang === 'en' ? 'bg-dark text-bg' : 'text-muted2/60 hover:text-muted2'
                 }`}
               >
@@ -67,7 +67,7 @@ export default function Nav() {
 
             {/* Hamburger — mobile only */}
             <button
-              className="lg:hidden flex flex-col gap-[5px] p-1"
+              className="lg:hidden flex flex-col gap-[5px] min-w-[44px] min-h-[44px] items-center justify-center"
               onClick={() => setOpen(!open)}
               aria-label="Menú"
             >

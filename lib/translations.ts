@@ -157,8 +157,8 @@ export const tr = {
   sobreMi: {
     eyebrow: { es: 'BRAND & CONTENT DESIGNER', en: 'BRAND & CONTENT DESIGNER' },
     bio: {
-      es: 'Brand & Content Designer. Empecé con assets animados para streamers y terminé construyendo sistemas de marca para startups — pasando por agencia, SaaS y producción IA-native. El hilo es siempre el mismo: entender el sistema antes de diseñar la pieza.',
-      en: 'Brand & Content Designer. I started with animated assets for streamers and ended up building brand systems for startups — through agency work, SaaS, and AI-native production. The thread is always the same: understand the system before designing the piece.',
+      es: 'Brand & Content Designer. Empecé con assets animados para streamers y terminé construyendo sistemas de marca para startups — pasando por agencia, SaaS y producción IA-native. Lo que no cambia: entender antes de ejecutar.',
+      en: 'Brand & Content Designer. I started with animated assets for streamers and ended up building brand systems for startups — through agency work, SaaS, and AI-native production. What never changes: understand before executing.',
     },
     rolLabel:   { es: 'ROL', en: 'ROLE' },
     baseLabel:  { es: 'BASE', en: 'BASE' },

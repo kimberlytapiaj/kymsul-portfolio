@@ -215,7 +215,7 @@ export default function ContactoPage() {
                       href={s.href}
                       target={s.href !== '#' ? '_blank' : undefined}
                       rel={s.href !== '#' ? 'noopener noreferrer' : undefined}
-                      className="block font-sans text-[15px] text-muted hover:text-dark transition-colors"
+                      className="block font-sans text-[15px] text-muted hover:text-dark transition-colors py-2"
                     >
                       {s.label}
                     </a>

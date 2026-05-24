@@ -18,6 +18,7 @@ const DISCIPLINES: Record<string, Discipline[]> = {
   'activated-decor': ['branding', 'motion'],
   'corazon-mixteco': ['social'],
   'amorcito':        ['social'],
+  'procyon':         ['branding', 'motion', 'social'],
 }
 
 export default function Portfolio() {
@@ -45,7 +46,8 @@ export default function Portfolio() {
         <p className="font-mono text-[10px] lg:text-[11px] text-muted2 tracking-[1.76px]">
           {tr.portfolio.label[lang]}
         </p>
-        <div className="flex items-center gap-2 overflow-x-auto flex-nowrap pb-1 sm:flex-wrap sm:overflow-visible">
+        <div className="relative">
+        <div className="flex items-center gap-2 overflow-x-auto flex-nowrap pb-1 sm:flex-wrap sm:overflow-visible after:pointer-events-none after:absolute after:right-0 after:top-0 after:h-full after:w-10 after:bg-gradient-to-l after:from-[rgba(250,250,248,1)] after:to-transparent sm:after:hidden">
           {FILTERS.map(({ label, value }) => (
             <button
               key={value}
@@ -59,6 +61,7 @@ export default function Portfolio() {
               {label}
             </button>
           ))}
+        </div>
         </div>
       </div>
 

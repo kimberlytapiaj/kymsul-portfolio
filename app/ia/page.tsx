@@ -78,7 +78,7 @@ export default function IAPage() {
                 <p className="font-sans text-[15px] lg:text-[16px] text-bg font-medium leading-[1.2] mb-1.5">
                   {step.label}
                 </p>
-                <p className="font-mono text-[10px] text-[rgba(255,255,255,0.3)] tracking-[1.1px] leading-[1.6]">
+                <p className="font-mono text-[11px] lg:text-[10px] text-[rgba(255,255,255,0.3)] tracking-[1.1px] leading-[1.6]">
                   {step.sub}
                 </p>
               </div>

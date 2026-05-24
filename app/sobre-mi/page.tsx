@@ -33,7 +33,7 @@ export default function SobreMiPage() {
         <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row lg:min-h-[680px]">
 
           {/* Foto — full height, left column */}
-          <div className="relative w-full lg:w-[40%] shrink-0 aspect-[4/5] lg:aspect-auto">
+          <div className="relative w-full lg:w-[40%] shrink-0 aspect-[4/5] max-h-[320px] lg:max-h-none lg:aspect-auto">
             <Image
               src="/assets/kym-foto.jpg"
               alt="Kimberly Tapia Rubio"
