@@ -302,7 +302,7 @@ export const tr = {
         es: 'Cinco flujos de producción aplicados a clientes reales: documentación de marca, reels y motion, imagen generativa sin sesión fotográfica, video generativo con dirección de arte, y piezas estáticas que escalan desde un brief.',
         en: 'Five production workflows applied to real clients: brand documentation, reels and motion, generative imagery without a photo shoot, generative video with art direction, and static pieces that scale from a brief.',
       },
-      tools: { es: 'Gemini · Higgsfield · Claude Code · Remotion · AE', en: 'Gemini · Higgsfield · Claude Code · Remotion · AE' },
+      tools: { es: 'Obsidian · Claude Code · Codex · Gemini · Higgsfield · Remotion · AE · Photoshop · Illustrator', en: 'Obsidian · Claude Code · Codex · Gemini · Higgsfield · Remotion · AE · Photoshop · Illustrator' },
     },
 
     flujo: {
