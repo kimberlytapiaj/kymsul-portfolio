@@ -397,7 +397,7 @@ export default function IAPage() {
                 </div>
               </div>
               <div className="flex flex-wrap gap-2">
-                {['Claude Code', 'Codex', 'After Effects', 'Photoshop', 'Illustrator'].map((t) => (
+                {['Codex', 'Photoshop', 'Illustrator'].map((t) => (
                   <span key={t} className="border border-[rgba(13,13,13,0.12)] rounded-full px-3 py-1 font-mono text-[10px] text-muted">
                     {t}
                   </span>
