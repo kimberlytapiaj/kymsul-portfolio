@@ -17,7 +17,7 @@ const DISCIPLINES: Record<string, Discipline[]> = {
   'beatness':        ['motion', 'social'],
   'kop':             ['motion', 'social'],
   'activated-decor': ['branding', 'motion'],
-  'bwl':             ['motion', 'social', 'ia'],
+  'bwl':             ['motion', 'social'],
   'ai-creative':     ['ia', 'motion', 'social'],
   'corazon-mixteco': ['social'],
   'amorcito':        ['social'],
