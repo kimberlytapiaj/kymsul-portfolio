@@ -13,11 +13,11 @@ export const tr = {
     eyebrow: { es: 'BRAND & CONTENT DESIGNER', en: 'BRAND & CONTENT DESIGNER' },
     line1:   { es: 'Brand identity,', en: 'Brand identity,' },
     line2:   { es: 'contenido visual', en: 'visual content' },
-    line3:   { es: 'producción IA‑native.', en: 'IA‑native production.' },
+    line3:   { es: 'producción IA‑native.', en: 'AI‑native production.' },
     tag:     { es: 'DESDE UNA SOLA DIRECCIÓN CREATIVA', en: 'FROM ONE CREATIVE DIRECTION' },
     sub:     {
-      es: 'Construyo marcas con esencia, que se sienten, se recuerdan y escalan con sistema.',
-      en: 'I build brands with soul — that feel, that stick, and scale with system.',
+      es: 'Construyo sistemas visuales de marca y los activo en contenido, motion y workflows creativos con IA.',
+      en: 'I build visual brand systems and activate them through content, motion, and AI-native creative workflows.',
     },
     cta: { es: 'Ver proyectos', en: 'See projects' },
   },
@@ -53,7 +53,7 @@ export const tr = {
 
   spec: {
     eyebrow: { es: 'ESPECIALIZACIÓN', en: 'SPECIALIZATION' },
-    h1:      { es: 'Tres servicios.', en: 'Three services.' },
+    h1:      { es: 'Tres capacidades.', en: 'Three capabilities.' },
     h2:      { es: 'Un sistema.', en: 'One system.' },
     cards: {
       es: [
@@ -67,7 +67,7 @@ export const tr = {
           num: '02',
           light: 'Producción',
           bold: 'IA‑native',
-          desc: 'Generación de imagen y video, flujos automatizados y sistemas de conocimiento integrados al proceso creativo. IA como ventaja de producción, sin perder el criterio.',
+          desc: 'Workflows creativos con IA para documentar marcas, explorar visuales, automatizar formatos y producir con más control sin perder criterio.',
         },
         {
           num: '03',
@@ -85,9 +85,9 @@ export const tr = {
         },
         {
           num: '02',
-          light: 'IA‑native',
+          light: 'AI‑native',
           bold: 'production',
-          desc: 'Image and video generation, automated workflows and knowledge systems integrated into the creative process. AI as a production advantage, without losing creative judgment.',
+          desc: 'AI-native creative workflows to document brands, explore visuals, automate formats, and produce with more control without losing creative judgment.',
         },
         {
           num: '03',
@@ -100,9 +100,9 @@ export const tr = {
   },
 
   cta: {
-    line1: { es: 'Las marcas con esencia', en: 'Meaningful brands' },
-    line2: { es: 'no se construyen solas.', en: "aren't built alone." },
-    btn:   { es: 'Trabajemos juntos', en: "Let's work together" },
+    line1: { es: 'Diseño, motion e IA.', en: 'Design, motion and AI.' },
+    line2: { es: 'En un mismo sistema.', en: 'In one system.' },
+    btn:   { es: 'Escríbeme', en: 'Get in touch' },
   },
 
   footer: {
