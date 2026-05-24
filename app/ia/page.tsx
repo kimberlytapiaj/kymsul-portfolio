@@ -58,9 +58,14 @@ export default function IAPage() {
       {/* ── Flujo overview — dark ────────────── */}
       <section className="bg-dark px-6 lg:px-24 py-14 lg:py-20">
         <div className="max-w-[1440px] mx-auto">
-          <p className="font-mono text-[10px] text-[rgba(255,255,255,0.3)] tracking-[1.76px] mb-10 lg:mb-14">
-            {ia.flujo.eyebrow[lang]}
-          </p>
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-3 mb-10 lg:mb-14">
+            <p className="font-mono text-[10px] text-[rgba(255,255,255,0.3)] tracking-[1.76px]">
+              {ia.flujo.eyebrow[lang]}
+            </p>
+            <p className="font-mono text-[10px] text-[rgba(255,255,255,0.2)] tracking-[1.1px]">
+              {ia.flujo.sub[lang]}
+            </p>
+          </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-0">
             {ia.flujo.steps[lang].map((step) => (
               <div

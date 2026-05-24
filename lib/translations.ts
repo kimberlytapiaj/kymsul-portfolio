@@ -307,18 +307,22 @@ export const tr = {
 
     flujo: {
       eyebrow: { es: 'EL FLUJO', en: 'THE FLOW' },
+      sub: {
+        es: 'Cuatro flujos de producción con casos reales de cliente.',
+        en: 'Four production workflows with real client cases.',
+      },
       steps: {
         es: [
           { num: '01', label: 'Skill /reel',       sub: 'Claude Code · Remotion · AE' },
           { num: '02', label: 'Imagen generativa', sub: 'Gemini Image 2 · Codex' },
           { num: '03', label: 'Video generativo',  sub: 'Gemini Flow · Higgsfield · AE' },
-          { num: '04', label: 'Scripts + Codex',   sub: 'Photoshop · After Effects' },
+          { num: '04', label: 'Scripts + Codex',   sub: 'Claude Code · Photoshop · AE' },
         ],
         en: [
           { num: '01', label: 'Skill /reel',        sub: 'Claude Code · Remotion · AE' },
           { num: '02', label: 'Generative imagery', sub: 'Gemini Image 2 · Codex' },
           { num: '03', label: 'Generative video',   sub: 'Gemini Flow · Higgsfield · AE' },
-          { num: '04', label: 'Scripts + Codex',    sub: 'Photoshop · After Effects' },
+          { num: '04', label: 'Scripts + Codex',    sub: 'Claude Code · Photoshop · AE' },
         ],
       },
     },
@@ -445,27 +449,27 @@ export const tr = {
     },
 
     frontend: {
-      eyebrow: { es: '— 06 · DISEÑO & FRONTEND', en: '— 06 · DESIGN & FRONTEND' },
+      eyebrow: { es: '— 06 · CASO DE ESTUDIO · KYMSUL.ART', en: '— 06 · CASE STUDY · KYMSUL.ART' },
       h1: { es: 'Este portafolio,', en: 'This portfolio,' },
       h2: { es: 'construido con el mismo sistema.', en: 'built with the same system.' },
       p: {
-        es: 'Dirección creativa y moodboard manual primero. Luego Claude Design para construir el prototipo visual. Figma para los ajustes finos. Claude Code para programar todo y hacer el deploy. El diseñador define cada etapa; las herramientas ejecutan.',
-        en: 'Creative direction and manual moodboard first. Then Claude Design to build the visual prototype. Figma for fine adjustments. Claude Code to program everything and deploy. The designer defines each stage; the tools execute.',
+        es: 'Lo que estás viendo es el resultado. kymsul.art no se contrató a alguien más — se diseñó y construyó con el mismo sistema que se usa para los clientes: dirección creativa propia, moodboard en papel, prototipo en Claude Design, ajuste en Figma, código generado con Claude y Codex, deploy en Vercel.',
+        en: 'What you\'re looking at is the result. kymsul.art wasn\'t outsourced — it was designed and built with the same system used for clients: original creative direction, manual moodboard, prototype in Claude Design, Figma adjustments, code generated with Claude and Codex, deployed on Vercel.',
       },
       details: {
         es: [
-          { label: 'DISEÑO',      val: 'Dirección creativa · moodboard manual · prototipo en Claude Design' },
-          { label: 'FIGMA',       val: 'Ajustes manuales de componentes y refinamiento visual' },
+          { label: 'DIRECCIÓN',   val: 'Moodboard en papel · brief de marca · estética definida desde cero' },
+          { label: 'PROTOTIPO',   val: 'Claude Design · primeras pantallas generadas desde el brief' },
+          { label: 'FIGMA',       val: 'Componentes ajustados a mano · refinamiento visual fino' },
           { label: 'CÓDIGO',      val: 'Codex para componentes estáticos · Claude para motion y animación' },
-          { label: 'ANIMACIÓN',   val: 'Framer Motion · transiciones generadas con Claude' },
-          { label: 'DEPLOY',      val: 'Vercel · CI/CD automático desde GitHub' },
+          { label: 'DEPLOY',      val: 'Vercel · kymsul.art live desde mayo 2026' },
         ],
         en: [
-          { label: 'DESIGN',      val: 'Creative direction · manual moodboard · prototype in Claude Design' },
-          { label: 'FIGMA',       val: 'Manual component adjustments and visual refinement' },
+          { label: 'DIRECTION',   val: 'Manual moodboard · brand brief · aesthetic defined from scratch' },
+          { label: 'PROTOTYPE',   val: 'Claude Design · first screens generated from the brief' },
+          { label: 'FIGMA',       val: 'Hand-adjusted components · fine visual refinement' },
           { label: 'CODE',        val: 'Codex for static components · Claude for motion and animation' },
-          { label: 'ANIMATION',   val: 'Framer Motion · transitions generated with Claude' },
-          { label: 'DEPLOY',      val: 'Vercel · automatic CI/CD from GitHub' },
+          { label: 'DEPLOY',      val: 'Vercel · kymsul.art live since May 2026' },
         ],
       },
     },
