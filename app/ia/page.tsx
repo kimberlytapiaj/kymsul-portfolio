@@ -498,7 +498,7 @@ export default function IAPage() {
                 ))}
               </div>
               <div className="flex flex-wrap gap-2">
-                {['Claude Code', 'Next.js', 'Tailwind CSS', 'Framer Motion', 'Vercel'].map((t) => (
+                {['Claude Design', 'Figma', 'Claude Code', 'Next.js', 'Vercel'].map((t) => (
                   <span key={t} className="border border-[rgba(255,255,255,0.1)] rounded-full px-3 py-1 font-mono text-[10px] text-[rgba(255,255,255,0.4)]">
                     {t}
                   </span>
