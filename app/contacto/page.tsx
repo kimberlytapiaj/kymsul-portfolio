@@ -39,7 +39,7 @@ export default function ContactoPage() {
       if (res.ok) setSent(true)
     } catch {
       // fallback: abre cliente de correo
-      window.location.href = `mailto:contacto@kymsul.art?subject=Proyecto: ${form.tipo}&body=${encodeURIComponent(form.mensaje)}`
+      window.location.href = `mailto:kimberly.tapiaj@gmail.com?subject=Proyecto: ${form.tipo}&body=${encodeURIComponent(form.mensaje)}`
     }
   }
 
@@ -173,10 +173,10 @@ export default function ContactoPage() {
                   EMAIL
                 </p>
                 <a
-                  href="mailto:contacto@kymsul.art"
+                  href="mailto:kimberly.tapiaj@gmail.com"
                   className="font-sans text-[15px] text-dark hover:text-muted transition-colors"
                 >
-                  contacto@kymsul.art
+                  kimberly.tapiaj@gmail.com
                 </a>
               </div>
 

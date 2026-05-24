@@ -249,7 +249,7 @@ export default function SobreMiPage() {
             </p>
             <div className="flex flex-wrap gap-3">
               <a
-                href="mailto:contacto@kymsul.art?subject=Oportunidad%20laboral"
+                href="mailto:kimberly.tapiaj@gmail.com?subject=Oportunidad%20laboral"
                 className="inline-flex items-center bg-lav text-dark font-sans text-[13px] rounded-full px-6 py-[14px] hover:opacity-90 transition-opacity"
               >
                 {s.cta.primary[lang]}

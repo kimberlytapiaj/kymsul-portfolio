@@ -113,8 +113,8 @@ export default function Footer() {
                 <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-6">{f.contactLabel[lang]}</p>
                 <ul className="space-y-[18px] lg:space-y-[22px]">
                   <li>
-                    <a href="mailto:contacto@kymsul.art" className="font-sans text-[13px] text-muted hover:text-dark transition-colors">
-                      contacto@kymsul.art
+                    <a href="mailto:kimberly.tapiaj@gmail.com" className="font-sans text-[13px] text-muted hover:text-dark transition-colors">
+                      kimberly.tapiaj@gmail.com
                     </a>
                   </li>
                   <li>

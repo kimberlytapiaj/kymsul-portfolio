@@ -33,7 +33,7 @@ export default function CTABand() {
         <div>
           <div className="flex flex-wrap gap-3">
             <a
-              href="mailto:contacto@kymsul.art?subject=Proyecto"
+              href="mailto:kimberly.tapiaj@gmail.com?subject=Proyecto"
               className="bg-lav text-dark font-sans text-[13px] rounded-full px-8 h-[50px] inline-flex items-center hover:opacity-90 transition-opacity"
             >
               {c.btn[lang]}
