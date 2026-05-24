@@ -299,8 +299,8 @@ export const tr = {
       line2:   { es: 'al entregable.', en: 'to deliverable.' },
       line3:   { es: 'Sin fricción.', en: 'No friction.' },
       sub: {
-        es: 'Cuatro flujos de producción aplicados a clientes reales: reels de paid media desde un prompt, imagen generativa sin sesión fotográfica, video generativo con dirección de arte, y carruseles y scripts que escalan desde un brief.',
-        en: 'Four production workflows applied to real clients: paid media reels from a prompt, generative imagery without a photo shoot, generative video with art direction, and carousels and scripts that scale from a brief.',
+        es: 'Cinco flujos de producción aplicados a clientes reales: documentación de marca, reels y motion, imagen generativa sin sesión fotográfica, video generativo con dirección de arte, y piezas estáticas que escalan desde un brief.',
+        en: 'Five production workflows applied to real clients: brand documentation, reels and motion, generative imagery without a photo shoot, generative video with art direction, and static pieces that scale from a brief.',
       },
       tools: { es: 'Gemini · Higgsfield · Claude Code · Remotion · AE', en: 'Gemini · Higgsfield · Claude Code · Remotion · AE' },
     },
@@ -308,8 +308,8 @@ export const tr = {
     flujo: {
       eyebrow: { es: 'EL FLUJO', en: 'THE FLOW' },
       sub: {
-        es: 'Cuatro flujos de producción con casos reales de cliente.',
-        en: 'Four production workflows with real client cases.',
+        es: 'Cinco flujos de producción con casos reales de cliente.',
+        en: 'Five production workflows with real client cases.',
       },
       steps: {
         es: [

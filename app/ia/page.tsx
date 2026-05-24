@@ -473,7 +473,7 @@ export default function IAPage() {
           <p className="font-mono text-[10px] text-[rgba(255,255,255,0.3)] tracking-[1.76px] mb-10 lg:mb-16">
             {ia.frontend.eyebrow[lang]}
           </p>
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 lg:items-stretch">
 
             {/* Left */}
             <div className="lg:w-[420px] shrink-0">
@@ -511,17 +511,17 @@ export default function IAPage() {
               </div>
             </div>
 
-            {/* Right: stats grid */}
-            <div className="flex-1 grid grid-cols-2 gap-3 content-start">
+            {/* Right: stats — vertical list que llena el alto */}
+            <div className="flex-1 flex flex-col justify-between">
               {STATS.map(({ num, desc }) => (
-                <div key={num} className="border border-[rgba(255,255,255,0.06)] rounded-sm p-5 lg:p-6">
+                <div key={num} className="border-t border-[rgba(255,255,255,0.06)] pt-5 pb-5">
                   <p
                     className="text-lav leading-[1] mb-2"
-                    style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 700, fontSize: 'clamp(32px,3.5vw,52px)' }}
+                    style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 700, fontSize: 'clamp(36px,4vw,64px)' }}
                   >
                     {num}
                   </p>
-                  <p className="font-sans text-[12px] text-[rgba(255,255,255,0.4)] leading-[1.4]">{desc}</p>
+                  <p className="font-sans text-[13px] text-[rgba(255,255,255,0.4)] leading-[1.4]">{desc}</p>
                 </div>
               ))}
             </div>
