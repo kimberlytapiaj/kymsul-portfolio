@@ -502,41 +502,26 @@ export default function IAPage() {
                   </div>
                 ))}
               </div>
-              <div className="flex flex-wrap gap-2 mb-10">
+              <div className="flex flex-wrap gap-2">
                 {['Claude Design', 'Figma', 'Claude Code', 'Next.js', 'Vercel'].map((t) => (
                   <span key={t} className="border border-[rgba(255,255,255,0.1)] rounded-full px-3 py-1 font-mono text-[10px] text-[rgba(255,255,255,0.4)]">
                     {t}
                   </span>
                 ))}
               </div>
-              <div className="grid grid-cols-2 gap-3">
-                {STATS.map(({ num, desc }) => (
-                  <div key={num} className="border border-[rgba(255,255,255,0.06)] rounded-sm p-4">
-                    <p
-                      className="text-lav leading-[1] mb-1.5"
-                      style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 700, fontSize: 'clamp(24px,2.5vw,36px)' }}
-                    >
-                      {num}
-                    </p>
-                    <p className="font-sans text-[11px] text-[rgba(255,255,255,0.4)] leading-[1.4]">{desc}</p>
-                  </div>
-                ))}
-              </div>
             </div>
 
-            {/* Right: portfolio screenshots 2×2 */}
+            {/* Right: stats grid */}
             <div className="flex-1 grid grid-cols-2 gap-3 content-start">
-              {[
-                { src: '/assets/portfolio-screen-home.png',      label: 'Inicio' },
-                { src: '/assets/portfolio-screen-proyectos.png', label: 'Proyectos' },
-                { src: '/assets/portfolio-screen-ia.png',        label: 'IA' },
-                { src: '/assets/portfolio-screen-sobre-mi.png',  label: 'Sobre Mí' },
-              ].map(({ src, label }) => (
-                <div key={label}>
-                  <div className="relative aspect-[4/3] overflow-hidden rounded-sm border border-[rgba(255,255,255,0.06)] mb-2">
-                    <Image src={src} alt={label} fill className="object-cover object-top" sizes="(max-width: 1024px) 45vw, 25vw" />
-                  </div>
-                  <p className="font-mono text-[9px] text-[rgba(255,255,255,0.3)] tracking-[1.2px]">{label.toUpperCase()}</p>
+              {STATS.map(({ num, desc }) => (
+                <div key={num} className="border border-[rgba(255,255,255,0.06)] rounded-sm p-5 lg:p-6">
+                  <p
+                    className="text-lav leading-[1] mb-2"
+                    style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 700, fontSize: 'clamp(32px,3.5vw,52px)' }}
+                  >
+                    {num}
+                  </p>
+                  <p className="font-sans text-[12px] text-[rgba(255,255,255,0.4)] leading-[1.4]">{desc}</p>
                 </div>
               ))}
             </div>
