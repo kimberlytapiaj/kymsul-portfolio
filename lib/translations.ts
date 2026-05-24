@@ -453,21 +453,21 @@ export const tr = {
       h1: { es: 'Este portafolio,', en: 'This portfolio,' },
       h2: { es: 'construido con el mismo sistema.', en: 'built with the same system.' },
       p: {
-        es: 'Lo que estás viendo es el resultado. kymsul.art no se contrató a alguien más — se diseñó y construyó con el mismo sistema que se usa para los clientes: dirección creativa propia, moodboard en papel, prototipo en Claude Design, ajuste en Figma, código generado con Claude y Codex, deploy en Vercel.',
-        en: 'What you\'re looking at is the result. kymsul.art wasn\'t outsourced — it was designed and built with the same system used for clients: original creative direction, manual moodboard, prototype in Claude Design, Figma adjustments, code generated with Claude and Codex, deployed on Vercel.',
+        es: 'Lo que estás viendo es el resultado. kymsul.art no se contrató a alguien más — se diseñó y construyó con el mismo sistema que se usa para los clientes: dirección creativa propia, moodboard, prototipo en Claude Design, ajuste en Figma vía plugin, código generado con Claude y Codex, deploy en Vercel.',
+        en: 'What you\'re looking at is the result. kymsul.art wasn\'t outsourced — it was designed and built with the same system used for clients: original creative direction, moodboard, prototype in Claude Design, Figma adjustments via plugin, code generated with Claude and Codex, deployed on Vercel.',
       },
       details: {
         es: [
-          { label: 'DIRECCIÓN',   val: 'Moodboard en papel · brief de marca · estética definida desde cero' },
+          { label: 'DIRECCIÓN',   val: 'Moodboard · brief de marca · estética definida desde cero' },
           { label: 'PROTOTIPO',   val: 'Claude Design · primeras pantallas generadas desde el brief' },
-          { label: 'FIGMA',       val: 'Componentes ajustados a mano · refinamiento visual fino' },
+          { label: 'FIGMA',       val: 'De Claude Design a Figma vía plugin · refinamiento manual de componentes' },
           { label: 'CÓDIGO',      val: 'Codex para componentes estáticos · Claude para motion y animación' },
           { label: 'DEPLOY',      val: 'Vercel · kymsul.art live desde mayo 2026' },
         ],
         en: [
-          { label: 'DIRECTION',   val: 'Manual moodboard · brand brief · aesthetic defined from scratch' },
+          { label: 'DIRECTION',   val: 'Moodboard · brand brief · aesthetic defined from scratch' },
           { label: 'PROTOTYPE',   val: 'Claude Design · first screens generated from the brief' },
-          { label: 'FIGMA',       val: 'Hand-adjusted components · fine visual refinement' },
+          { label: 'FIGMA',       val: 'From Claude Design to Figma via plugin · manual component refinement' },
           { label: 'CODE',        val: 'Codex for static components · Claude for motion and animation' },
           { label: 'DEPLOY',      val: 'Vercel · kymsul.art live since May 2026' },
         ],
@@ -476,16 +476,14 @@ export const tr = {
 
     stats: {
       es: [
-        { num: '10+', desc: 'proyectos documentados en código' },
-        { num: '307', desc: 'líneas de JSX generadas en un prompt' },
-        { num: '22s', desc: 'reel de paid media producido con script' },
+        { num: '10+', desc: 'proyectos con IA documentados' },
+        { num: '5',   desc: 'reels de paid media producidos' },
         { num: '5',   desc: 'formatos desde un solo brief' },
         { num: '0',   desc: 'sesiones fotográficas para posts IA' },
       ],
       en: [
-        { num: '10+', desc: 'projects documented in code' },
-        { num: '307', desc: 'JSX lines generated in one prompt' },
-        { num: '22s', desc: 'paid media reel produced with script' },
+        { num: '10+', desc: 'AI projects documented' },
+        { num: '5',   desc: 'paid media reels produced' },
         { num: '5',   desc: 'formats from one single brief' },
         { num: '0',   desc: 'photo shoots for AI posts' },
       ],
