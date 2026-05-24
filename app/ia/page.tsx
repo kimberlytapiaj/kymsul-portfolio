@@ -426,21 +426,34 @@ export default function IAPage() {
                 <p className="font-mono text-[9px] text-muted2 tracking-[1.2px] mb-3">
                   {ia.scripts.formatsLabel[lang]}
                 </p>
-                <div className="flex gap-3 overflow-x-auto pb-1">
-                  {[
-                    { src: '/assets/kop/kop-wc-post.png',   label: 'Post' },
-                    { src: '/assets/kop/kop-wc-story.png',  label: 'Story' },
-                    { src: '/assets/kop/kop-wc-flyer.png',  label: 'Flyer' },
-                    { src: '/assets/kop/kop-wc-tv.png',     label: 'TV Screen' },
-                    { src: '/assets/kop/kop-wc-banner.png', label: 'Banner App' },
-                  ].map(({ src, label }) => (
-                    <div key={label} className="shrink-0 text-center">
-                      <div className="relative w-[100px] h-[100px] rounded-sm overflow-hidden bg-[rgba(13,13,13,0.04)] mb-1.5">
-                        <Image src={src} alt={label} fill className="object-contain" sizes="100px" />
+                <div className="space-y-3">
+                  <div className="grid grid-cols-3 gap-3">
+                    {[
+                      { src: '/assets/kop/kop-wc-post.png',  label: 'Post' },
+                      { src: '/assets/kop/kop-wc-story.png', label: 'Story' },
+                      { src: '/assets/kop/kop-wc-flyer.png', label: 'Flyer' },
+                    ].map(({ src, label }) => (
+                      <div key={label} className="text-center">
+                        <div className="relative aspect-[4/5] rounded-sm overflow-hidden bg-[rgba(13,13,13,0.04)] mb-1.5">
+                          <Image src={src} alt={label} fill className="object-contain" sizes="20vw" />
+                        </div>
+                        <p className="font-mono text-[8px] text-muted2 tracking-[1px]">{label.toUpperCase()}</p>
                       </div>
-                      <p className="font-mono text-[8px] text-muted2 tracking-[1px]">{label.toUpperCase()}</p>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
+                  <div className="grid grid-cols-2 gap-3">
+                    {[
+                      { src: '/assets/kop/kop-wc-tv.png',     label: 'TV Screen' },
+                      { src: '/assets/kop/kop-wc-banner.png', label: 'Banner App' },
+                    ].map(({ src, label }) => (
+                      <div key={label} className="text-center">
+                        <div className="relative aspect-video rounded-sm overflow-hidden bg-[rgba(13,13,13,0.04)] mb-1.5">
+                          <Image src={src} alt={label} fill className="object-contain" sizes="30vw" />
+                        </div>
+                        <p className="font-mono text-[8px] text-muted2 tracking-[1px]">{label.toUpperCase()}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
