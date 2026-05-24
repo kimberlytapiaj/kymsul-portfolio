@@ -344,13 +344,13 @@ export const tr = {
       bullets: {
         es: [
           'Obsidian como base de conocimiento de marca',
-          'Claude Code lee guidelines antes de ejecutar',
+          'Claude Code y Codex leen guidelines antes de ejecutar',
           'Coherencia asegurada desde el origen',
           'Documentación entregada como activo al cliente',
         ],
         en: [
           'Obsidian as brand knowledge base',
-          'Claude Code reads guidelines before executing',
+          'Claude Code and Codex read guidelines before executing',
           'Consistency ensured from the source',
           'Documentation delivered as a client asset',
         ],
@@ -361,7 +361,7 @@ export const tr = {
       terminalTypo: { es: 'Tipografía', en: 'Typography' },
       terminalTone: { es: 'Tono', en: 'Tone' },
       terminalNever: { es: 'Nunca', en: 'Never' },
-      terminalLabel2: { es: 'CLAUDE CODE · LEE EL CONTEXTO', en: 'CLAUDE CODE · READS CONTEXT' },
+      terminalLabel2: { es: 'CLAUDE CODE · CODEX · LEEN EL CONTEXTO', en: 'CLAUDE CODE · CODEX · READ CONTEXT' },
       terminalRead: {
         es: '> Leyendo',
         en: '> Reading',
