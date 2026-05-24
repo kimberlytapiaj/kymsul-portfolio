@@ -313,16 +313,16 @@ export const tr = {
       },
       steps: {
         es: [
-          { num: '01', label: 'Skill /reel',       sub: 'Claude Code · Remotion · Script AE' },
+          { num: '01', label: 'Motion',            sub: 'Claude Code · Remotion · Script AE' },
           { num: '02', label: 'Imagen generativa', sub: 'Gemini · Imagen 2' },
           { num: '03', label: 'Video generativo',  sub: 'Gemini Flow · Higgsfield' },
-          { num: '04', label: 'Scripts + Codex',   sub: 'Claude Code · Codex · AE · PS · AI' },
+          { num: '04', label: 'Estático',          sub: 'Codex · Photoshop · Illustrator' },
         ],
         en: [
-          { num: '01', label: 'Skill /reel',        sub: 'Claude Code · Remotion · Script AE' },
+          { num: '01', label: 'Motion',             sub: 'Claude Code · Remotion · Script AE' },
           { num: '02', label: 'Generative imagery', sub: 'Gemini · Imagen 2' },
           { num: '03', label: 'Generative video',   sub: 'Gemini Flow · Higgsfield' },
-          { num: '04', label: 'Scripts + Codex',    sub: 'Claude Code · Codex · AE · PS · AI' },
+          { num: '04', label: 'Static',             sub: 'Codex · Photoshop · Illustrator' },
         ],
       },
     },
@@ -382,7 +382,7 @@ export const tr = {
     },
 
     reel: {
-      eyebrow: { es: '— 02 · SKILL /REEL', en: '— 02 · SKILL /REEL' },
+      eyebrow: { es: '— 02 · MOTION', en: '— 02 · MOTION' },
       h: {
         es: 'Del brief al reel en un prompt.',
         en: 'From brief to reel in one prompt.',
@@ -425,7 +425,7 @@ export const tr = {
     },
 
     scripts: {
-      eyebrow: { es: '— 05 · SCRIPTS + CODEX', en: '— 05 · SCRIPTS + CODEX' },
+      eyebrow: { es: '— 05 · ESTÁTICO', en: '— 05 · STATIC' },
       h: {
         es: 'Codex genera. El script escala.',
         en: 'Codex generates. The script scales.',
