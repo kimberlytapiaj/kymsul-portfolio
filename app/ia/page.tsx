@@ -115,7 +115,7 @@ export default function IAPage() {
               ))}
             </ul>
             <div className="flex flex-wrap gap-2">
-              {['Obsidian', 'Claude Code'].map((t) => (
+              {['Obsidian', 'Claude Code', 'Codex'].map((t) => (
                 <span key={t} className="border border-[rgba(13,13,13,0.12)] rounded-full px-3 py-1 font-mono text-[10px] text-muted">
                   {t}
                 </span>
@@ -198,7 +198,7 @@ export default function IAPage() {
                 {ia.reel.p[lang]}
               </p>
               <div className="flex flex-wrap gap-2">
-                {['Claude Code', 'Remotion', 'After Effects'].map((t) => (
+                {['Claude Code', 'Remotion', 'Script AE', 'After Effects'].map((t) => (
                   <span key={t} className="border border-[rgba(13,13,13,0.12)] rounded-full px-3 py-1 font-mono text-[10px] text-muted">
                     {t}
                   </span>
@@ -259,7 +259,7 @@ export default function IAPage() {
                 post-match atmosphere. Don't change any beverage or meal, just add the soccer court."
               </div>
               <div className="flex flex-wrap gap-2">
-                {['Gemini Image 2', 'Codex'].map((t) => (
+                {['Gemini', 'Imagen 2'].map((t) => (
                   <span key={t} className="border border-[rgba(13,13,13,0.12)] rounded-full px-3 py-1 font-mono text-[10px] text-muted">
                     {t}
                   </span>
@@ -325,7 +325,7 @@ export default function IAPage() {
                 {ia.videoGen.p[lang]}
               </p>
               <div className="flex flex-wrap gap-2">
-                {['Gemini Flow', 'Higgsfield', 'After Effects'].map((t) => (
+                {['Gemini Flow', 'Higgsfield'].map((t) => (
                   <span key={t} className="border border-[rgba(13,13,13,0.12)] rounded-full px-3 py-1 font-mono text-[10px] text-muted">
                     {t}
                   </span>

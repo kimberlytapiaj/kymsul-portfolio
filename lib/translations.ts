@@ -313,15 +313,15 @@ export const tr = {
       },
       steps: {
         es: [
-          { num: '01', label: 'Skill /reel',       sub: 'Claude Code · Remotion · AE' },
-          { num: '02', label: 'Imagen generativa', sub: 'Gemini Image 2 · Codex' },
-          { num: '03', label: 'Video generativo',  sub: 'Gemini Flow · Higgsfield · AE' },
+          { num: '01', label: 'Skill /reel',       sub: 'Claude Code · Remotion · Script AE' },
+          { num: '02', label: 'Imagen generativa', sub: 'Gemini · Imagen 2' },
+          { num: '03', label: 'Video generativo',  sub: 'Gemini Flow · Higgsfield' },
           { num: '04', label: 'Scripts + Codex',   sub: 'Claude Code · Codex · AE · PS · AI' },
         ],
         en: [
-          { num: '01', label: 'Skill /reel',        sub: 'Claude Code · Remotion · AE' },
-          { num: '02', label: 'Generative imagery', sub: 'Gemini Image 2 · Codex' },
-          { num: '03', label: 'Generative video',   sub: 'Gemini Flow · Higgsfield · AE' },
+          { num: '01', label: 'Skill /reel',        sub: 'Claude Code · Remotion · Script AE' },
+          { num: '02', label: 'Generative imagery', sub: 'Gemini · Imagen 2' },
+          { num: '03', label: 'Generative video',   sub: 'Gemini Flow · Higgsfield' },
           { num: '04', label: 'Scripts + Codex',    sub: 'Claude Code · Codex · AE · PS · AI' },
         ],
       },
