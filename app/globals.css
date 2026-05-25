@@ -34,3 +34,11 @@ body {
   animation: marquee-scroll 28s linear infinite;
   will-change: transform;
 }
+
+/* Hide native browser disclosure triangle on <summary> (Safari iOS fix) */
+summary::-webkit-details-marker {
+  display: none;
+}
+details > summary {
+  list-style: none;
+}

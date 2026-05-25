@@ -316,14 +316,14 @@ export const projectTranslationsEN: Record<string, ProjectTranslation> = {
     tagline: 'AI-native creative workflows for producing with more control.',
     tags: ['Generative AI', 'Gemini', 'AE Script', 'PS Script', 'Automation', 'Codex'],
     overview:
-      'AI-powered creative production workflow applied to real pieces: generative imagery, editing automation and design component exploration through scripts. Not just a tool test; a working method with human direction.',
-    role: 'Creative direction, prompt engineering, image generation with Gemini and ChatGPT, and assembly automation in After Effects and Photoshop with scripts written with Codex.',
+      'AI creative system applied to real pieces: brand documentation, visual exploration, automated motion, generative video, and multi-format adaptation. This is not a tool test; it is a production method where AI helps reach an editable base faster and human judgment decides what works, what needs adjustment, and what should be discarded.',
+    role: 'Creative direction and automation: brand documentation in Obsidian, Claude Code + Remotion + After Effects for paid media reels, Codex + Gemini Image for carousels and product editorial, and art direction in Gemini Flow and Higgsfield for generative video.',
     challenge:
-      "The challenge isn't using AI; it's using it in a way that the result doesn't look generic and still communicates the brand's identity. The tools accelerate parts of the process, but the visual criteria and final decisions stay human.",
+      'The challenge was not using AI for novelty, but integrating it without breaking each brand identity. Every flow keeps a human decision point: reading guidelines before generating, selecting cuts, directing acting in video, retouching lighting, and deciding when stock works better than AI backgrounds so the result feels more natural.',
     process:
-      'Three layers: (1) Generative imagery: prompt engineering to create scene photography and product compositions. (2) AE Script: automation that builds an editable reel base with motion type, clip scaling and end card; I review cuts and adjust final details. (3) PS Script: Claude Code researches the brand, explores components with AI and iterates versions until producing an editable PSD for human review.',
+      'The system is divided into five flows, the same ones documented on the AI page: brand documentation, motion, generative image, generative video, and static design. For motion, the brief goes into Claude Code and becomes a Remotion composition with timing and cut structure; I review, select, and finish the deliverable in After Effects. For static pieces, Codex and Gemini help explore visual components from the brief. For generative video, Gemini Flow and Higgsfield are used with art direction from the initial prompt to acting corrections.',
     result:
-      'A documented workflow that reduces repetitive work and speeds up the first editable base. A 22-second reel produced with script support and human cut review. A flyer adapted into 5 formats from an approved design. Editorial product posts created with generative imagery and art direction.',
+      'A documented workflow that reduces repetitive work and speeds up the first editable base without removing creative review. It includes reels produced with the /reel skill, generative video pieces with acting direction, editorial posts created with generative imagery, and a World Cup 2026 flyer for KOP adapted into 5 formats with a Photoshop script. To see the full system, the AI page shows the working logic behind these cases.',
     campaigns: [
       {
         name: '/reel Skill · From Brief to Video',

@@ -167,6 +167,15 @@ export default function ProjectDetailView({ project }: { project: Project }) {
               <div>
                 <p className="font-mono text-[10px] text-muted2 tracking-[1.6px] mb-4">{c.resultado[lang]}</p>
                 <p className="font-sans text-[14px] lg:text-[16px] text-muted leading-[1.7]">{p.result}</p>
+                {p.id === 'ai-creative' && (
+                  <Link
+                    href="/ia"
+                    className="mt-6 inline-flex items-center gap-2 border border-[rgba(13,13,13,0.14)] px-4 py-2 font-mono text-[10px] tracking-[1.4px] uppercase text-dark hover:bg-dark hover:text-white transition-colors"
+                  >
+                    {lang === 'es' ? 'Ver sistema completo en IA' : 'View full AI system'}
+                    <span aria-hidden="true">→</span>
+                  </Link>
+                )}
               </div>
             </div>
 
@@ -498,11 +507,11 @@ function SectionsContent({ sections, name, isPaidMedia }: { sections: Section[];
               )}
               <div className="relative grid grid-cols-2">
                 <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-px bg-[rgba(13,13,13,0.12)] pointer-events-none" />
-                <div className="pr-6">
+                <div className="pr-2 sm:pr-6">
                   {leftGroup.label && <ColHeader group={leftGroup} />}
                   <SplitGroupContent group={leftGroup} name={name} isPaidMedia={isPaidMedia} />
                 </div>
-                <div className="pl-6">
+                <div className="pl-2 sm:pl-6">
                   {rightGroup.label && <ColHeader group={rightGroup} />}
                   <SplitGroupContent group={rightGroup} name={name} isPaidMedia={isPaidMedia} />
                 </div>
@@ -597,21 +606,39 @@ function BentoGrid({ items, name, isPaidMedia, contain }: {
   // Mixed-format campaigns: flex-column masonry so every image shows at natural ratio
   if (hasImages && n >= 3) {
     const numCols = n <= 3 ? 3 : n === 4 ? 4 : 5
-    const cols: (typeof items)[] = Array.from({ length: numCols }, () => [])
-    items.forEach((item, i) => cols[i % numCols].push(item))
+    const mobileCols = 2
+    const desktopArr: (typeof items)[] = Array.from({ length: numCols }, () => [])
+    const mobileArr: (typeof items)[] = Array.from({ length: mobileCols }, () => [])
+    items.forEach((item, i) => {
+      desktopArr[i % numCols].push(item)
+      mobileArr[i % mobileCols].push(item)
+    })
     return (
-      <div className="flex gap-3 w-full">
-        {cols.map((col, ci) => (
-          <div key={ci} className="flex flex-col gap-3 flex-1 min-w-0">
-            {col.map((item, ii) => {
-              const idx = ci + ii * numCols
-              return (
-                <MediaCell key={idx} {...item} name={name} index={idx} isPaidMedia={isPaidMedia} natural />
-              )
-            })}
-          </div>
-        ))}
-      </div>
+      <>
+        {/* Mobile: 2 columns */}
+        <div className="flex sm:hidden gap-2 w-full">
+          {mobileArr.map((col, ci) => (
+            <div key={ci} className="flex flex-col gap-2 flex-1 min-w-0">
+              {col.map((item, ii) => (
+                <MediaCell key={ii} {...item} name={name} index={ci + ii * mobileCols} isPaidMedia={isPaidMedia} natural />
+              ))}
+            </div>
+          ))}
+        </div>
+        {/* Desktop: numCols columns */}
+        <div className="hidden sm:flex gap-3 w-full">
+          {desktopArr.map((col, ci) => (
+            <div key={ci} className="flex flex-col gap-3 flex-1 min-w-0">
+              {col.map((item, ii) => {
+                const idx = ci + ii * numCols
+                return (
+                  <MediaCell key={idx} {...item} name={name} index={idx} isPaidMedia={isPaidMedia} natural />
+                )
+              })}
+            </div>
+          ))}
+        </div>
+      </>
     )
   }
 

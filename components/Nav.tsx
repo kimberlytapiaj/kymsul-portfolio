@@ -2,7 +2,8 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 import { useLang } from '@/lib/lang-context'
 import { tr } from '@/lib/translations'
 
@@ -12,6 +13,12 @@ export default function Nav() {
   const { lang, setLang } = useLang()
 
   const links = tr.nav.links[lang].map((label, i) => ({ label, href: tr.nav.hrefs[i] }))
+
+  // Scroll lock — prevents iOS body scroll behind overlay
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [open])
 
   return (
     <>
@@ -45,8 +52,8 @@ export default function Nav() {
 
           {/* Right side */}
           <div className="flex items-center gap-4">
-            {/* Lang toggle */}
-            <div className="border border-[rgba(13,13,13,0.15)] rounded-full p-[3px] flex items-center">
+            {/* Lang toggle — fades out when mobile menu is open to avoid z-index conflict */}
+            <div className={`border border-[rgba(13,13,13,0.15)] rounded-full p-[3px] flex items-center transition-opacity duration-150 ${open ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
               <button
                 onClick={() => setLang('es')}
                 className={`font-mono text-[10px] rounded-full w-9 h-[30px] lg:h-[26px] flex items-center justify-center transition-colors cursor-pointer ${
@@ -81,31 +88,39 @@ export default function Nav() {
       </nav>
 
       {/* Mobile menu overlay */}
-      {open && (
-        <div className="lg:hidden fixed inset-0 z-40 bg-[rgba(250,250,248,0.98)] backdrop-blur-sm flex flex-col px-6 pt-24 pb-12">
-          <ul className="space-y-2 flex-1">
-            {links.map(({ label, href }) => {
-              const active = pathname === href
-              return (
-                <li key={href}>
-                  <Link
-                    href={href}
-                    onClick={() => setOpen(false)}
-                    className={`block font-sans text-[32px] py-3 border-b border-[rgba(13,13,13,0.06)] transition-colors ${
-                      active ? 'text-dark font-medium' : 'text-muted'
-                    }`}
-                  >
-                    {label}
-                  </Link>
-                </li>
-              )
-            })}
-          </ul>
-          <p className="font-mono text-[11px] text-muted2 tracking-[1.76px]">
-            KYMSUL · PUEBLA, MX
-          </p>
-        </div>
-      )}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, y: -6 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -6 }}
+            transition={{ duration: 0.18, ease: 'easeOut' }}
+            className="lg:hidden fixed inset-0 z-40 bg-[rgba(250,250,248,0.98)] backdrop-blur-sm flex flex-col px-6 pt-24 pb-12"
+          >
+            <ul className="space-y-2 flex-1">
+              {links.map(({ label, href }) => {
+                const active = pathname === href
+                return (
+                  <li key={href}>
+                    <Link
+                      href={href}
+                      onClick={() => setOpen(false)}
+                      className={`block font-sans text-[32px] py-3 border-b border-[rgba(13,13,13,0.06)] transition-colors ${
+                        active ? 'text-dark font-medium' : 'text-muted'
+                      }`}
+                    >
+                      {label}
+                    </Link>
+                  </li>
+                )
+              })}
+            </ul>
+            <p className="font-mono text-[11px] text-muted2 tracking-[1.76px]">
+              KYMSUL · PUEBLA, MX
+            </p>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   )
 }
