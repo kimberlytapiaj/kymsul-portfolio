@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import Image from 'next/image'
 import PageLayout from '@/components/PageLayout'
 import LazyVideo from '@/components/LazyVideo'
@@ -528,6 +529,28 @@ export default function IAPage() {
 
           </div>
 
+        </div>
+      </section>
+
+      {/* ── CTA → proyecto ─────────────────── */}
+      <section className="px-6 lg:px-24 py-12 lg:py-16 border-t border-[rgba(13,13,13,0.08)]">
+        <div className="max-w-[1440px] mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+          <div>
+            <p className="font-mono text-[10px] text-muted2 tracking-[1.76px] mb-2">
+              {lang === 'es' ? 'CASO DE ESTUDIO' : 'CASE STUDY'}
+            </p>
+            <p className="font-sans text-[17px] lg:text-[19px] text-dark leading-[1.4] max-w-[520px]">
+              {lang === 'es'
+                ? 'El sistema completo — flujos, herramientas y piezas reales — documentado como caso de estudio.'
+                : 'The full system — flows, tools, and real deliverables — documented as a case study.'}
+            </p>
+          </div>
+          <Link
+            href="/proyectos/ai-creative"
+            className="shrink-0 bg-dark text-bg font-sans text-[13px] rounded-full px-8 h-[50px] inline-flex items-center gap-2 hover:opacity-80 transition-opacity"
+          >
+            {lang === 'es' ? 'Ver proyecto' : 'See project'} →
+          </Link>
         </div>
       </section>
 

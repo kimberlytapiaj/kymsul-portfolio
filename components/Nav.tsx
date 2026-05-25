@@ -34,17 +34,19 @@ export default function Nav() {
           <div className="hidden lg:flex flex-1 items-center justify-center gap-10">
             {links.map(({ label, href }) => {
               const active = pathname === href
+              const isIA = href === '/ia'
               return (
                 <Link
                   key={href}
                   href={href}
-                  className={`font-sans text-[13px] relative pb-0.5 transition-colors ${
+                  className={`font-sans text-[13px] relative pb-0.5 transition-colors inline-flex items-center gap-1.5 ${
                     active
                       ? 'font-medium text-dark after:absolute after:bottom-[-17px] after:left-0 after:w-full after:h-px after:bg-dark'
                       : 'font-normal text-[rgba(85,80,74,0.65)] hover:text-muted'
                   }`}
                 >
                   {label}
+                  {isIA && <span className="w-[5px] h-[5px] rounded-full bg-lav shrink-0 mb-[1px]" />}
                 </Link>
               )
             })}
@@ -100,16 +102,18 @@ export default function Nav() {
             <ul className="space-y-2 flex-1">
               {links.map(({ label, href }) => {
                 const active = pathname === href
+                const isIA = href === '/ia'
                 return (
                   <li key={href}>
                     <Link
                       href={href}
                       onClick={() => setOpen(false)}
-                      className={`block font-sans text-[32px] py-3 border-b border-[rgba(13,13,13,0.06)] transition-colors ${
+                      className={`flex items-center gap-3 font-sans text-[32px] py-3 border-b border-[rgba(13,13,13,0.06)] transition-colors ${
                         active ? 'text-dark font-medium' : 'text-muted'
                       }`}
                     >
                       {label}
+                      {isIA && <span className="w-2 h-2 rounded-full bg-lav shrink-0 mb-[2px]" />}
                     </Link>
                   </li>
                 )
