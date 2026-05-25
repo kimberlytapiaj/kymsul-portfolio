@@ -347,22 +347,20 @@ function CampaignBlock({ campaign }: { campaign: SubProject }) {
     if (campaign.collapsible) {
       return (
         <details className="group">
-          <summary className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 lg:gap-0 pb-6 border-b border-[rgba(13,13,13,0.08)] cursor-pointer list-none select-none">
-            <div>
-              <p className="text-[24px] lg:text-[32px] text-dark leading-[1] mb-3" style={{ fontFamily: 'var(--font-franklin-cond)' }}>
+          <summary className="pb-6 border-b border-[rgba(13,13,13,0.08)] cursor-pointer list-none select-none">
+            <div className="flex items-start justify-between gap-4 mb-2">
+              <p className="text-[24px] lg:text-[32px] text-dark leading-[1]" style={{ fontFamily: 'var(--font-franklin-cond)' }}>
                 {campaign.name}
               </p>
-              <p className="font-sans text-[13px] lg:text-[14px] text-muted leading-[1.6] max-w-[560px]">
-                {campaign.objective}
-              </p>
+              <span className="font-mono text-[12px] text-muted2 shrink-0 mt-1 inline-block transition-transform duration-200 group-open:rotate-180">↓</span>
             </div>
-            <div className="flex items-center gap-4 lg:shrink-0 lg:ml-8">
-              <div className="flex flex-wrap gap-2">
-                {campaign.formats.map((f) => (
-                  <span key={f} className="bg-[rgba(13,13,13,0.06)] rounded-full px-3 py-1 font-mono text-[10px] text-muted2 tracking-[1.2px]">{f}</span>
-                ))}
-              </div>
-              <span className="font-mono text-[12px] text-muted2 inline-block transition-transform duration-200 group-open:rotate-180">↓</span>
+            <p className="font-sans text-[13px] lg:text-[14px] text-muted leading-[1.6] max-w-[560px] mb-3">
+              {campaign.objective}
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {campaign.formats.map((f) => (
+                <span key={f} className="bg-[rgba(13,13,13,0.06)] rounded-full px-3 py-1 font-mono text-[10px] text-muted2 tracking-[1.2px]">{f}</span>
+              ))}
             </div>
           </summary>
           <div className="pt-8">{subList}</div>
@@ -412,24 +410,22 @@ function CampaignBlock({ campaign }: { campaign: SubProject }) {
     if (campaign.collapsible) {
       return (
         <details className="group">
-          <summary className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 lg:gap-0 pb-6 border-b border-[rgba(13,13,13,0.08)] cursor-pointer list-none select-none">
-            <div>
-              <p className="text-[24px] lg:text-[32px] text-dark leading-[1] mb-3" style={{ fontFamily: 'var(--font-franklin-cond)' }}>
+          <summary className="pb-6 border-b border-[rgba(13,13,13,0.08)] cursor-pointer list-none select-none">
+            <div className="flex items-start justify-between gap-4 mb-2">
+              <p className="text-[24px] lg:text-[32px] text-dark leading-[1]" style={{ fontFamily: 'var(--font-franklin-cond)' }}>
                 {campaign.name}
               </p>
-              <p className="font-sans text-[13px] lg:text-[14px] text-muted leading-[1.6] max-w-[560px]">
-                {campaign.objective}
-              </p>
+              <span className="font-mono text-[12px] text-muted2 shrink-0 mt-1 inline-block transition-transform duration-200 group-open:rotate-180">↓</span>
             </div>
-            <div className="flex items-center gap-4 lg:shrink-0 lg:ml-8">
-              <div className="flex flex-wrap gap-2">
-                {campaign.formats.map((f) => (
-                  <span key={f} className="bg-[rgba(13,13,13,0.06)] rounded-full px-3 py-1 font-mono text-[10px] text-muted2 tracking-[1.2px]">
-                    {f}
-                  </span>
-                ))}
-              </div>
-              <span className="font-mono text-[12px] text-muted2 inline-block transition-transform duration-200 group-open:rotate-180">↓</span>
+            <p className="font-sans text-[13px] lg:text-[14px] text-muted leading-[1.6] max-w-[560px] mb-3">
+              {campaign.objective}
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {campaign.formats.map((f) => (
+                <span key={f} className="bg-[rgba(13,13,13,0.06)] rounded-full px-3 py-1 font-mono text-[10px] text-muted2 tracking-[1.2px]">
+                  {f}
+                </span>
+              ))}
             </div>
           </summary>
           <div className="pt-8">
@@ -564,24 +560,22 @@ function SubCampaignItem({ campaign }: { campaign: SubProject }) {
 
   return (
     <details className="group">
-      <summary className="flex flex-col lg:flex-row lg:items-center lg:justify-between py-5 gap-3 lg:gap-0 cursor-pointer list-none select-none">
-        <div>
+      <summary className="py-5 cursor-pointer list-none select-none">
+        <div className="flex items-start justify-between gap-4 mb-1.5">
           <p className="font-sans text-[16px] text-dark font-medium leading-[1]">
             {campaign.name}
           </p>
-          <p className="font-sans text-[13px] text-muted mt-1.5 leading-[1.5] max-w-[500px]">
-            {campaign.objective}
-          </p>
+          <span className="font-mono text-[12px] text-muted2 shrink-0 mt-0.5 inline-block transition-transform duration-200 group-open:rotate-180">↓</span>
         </div>
-        <div className="flex items-center gap-4 lg:shrink-0 lg:ml-8">
-          <div className="flex flex-wrap gap-1.5">
-            {campaign.formats.map((f) => (
-              <span key={f} className="bg-[rgba(13,13,13,0.06)] rounded-full px-2.5 py-0.5 font-mono text-[9px] text-muted2 tracking-[1.2px]">
-                {f}
-              </span>
-            ))}
-          </div>
-          <span className="font-mono text-[12px] text-muted2 inline-block transition-transform duration-200 group-open:rotate-180">↓</span>
+        <p className="font-sans text-[13px] text-muted leading-[1.5] max-w-[500px] mb-2.5">
+          {campaign.objective}
+        </p>
+        <div className="flex flex-wrap gap-1.5">
+          {campaign.formats.map((f) => (
+            <span key={f} className="bg-[rgba(13,13,13,0.06)] rounded-full px-2.5 py-0.5 font-mono text-[9px] text-muted2 tracking-[1.2px]">
+              {f}
+            </span>
+          ))}
         </div>
       </summary>
       <div className="pb-8 pt-2">
