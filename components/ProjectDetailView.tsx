@@ -338,7 +338,7 @@ function CampaignBlock({ campaign }: { campaign: SubProject }) {
     if (campaign.collapsible) {
       return (
         <details className="group">
-          <summary className="flex items-center justify-between pb-6 border-b border-[rgba(13,13,13,0.08)] cursor-pointer list-none select-none">
+          <summary className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 lg:gap-0 pb-6 border-b border-[rgba(13,13,13,0.08)] cursor-pointer list-none select-none">
             <div>
               <p className="text-[24px] lg:text-[32px] text-dark leading-[1] mb-3" style={{ fontFamily: 'var(--font-franklin-cond)' }}>
                 {campaign.name}
@@ -347,8 +347,8 @@ function CampaignBlock({ campaign }: { campaign: SubProject }) {
                 {campaign.objective}
               </p>
             </div>
-            <div className="flex items-center gap-4 shrink-0 ml-8">
-              <div className="flex flex-wrap gap-2 lg:justify-end lg:max-w-[280px]">
+            <div className="flex items-center gap-4 lg:shrink-0 lg:ml-8">
+              <div className="flex flex-wrap gap-2">
                 {campaign.formats.map((f) => (
                   <span key={f} className="bg-[rgba(13,13,13,0.06)] rounded-full px-3 py-1 font-mono text-[10px] text-muted2 tracking-[1.2px]">{f}</span>
                 ))}
@@ -403,7 +403,7 @@ function CampaignBlock({ campaign }: { campaign: SubProject }) {
     if (campaign.collapsible) {
       return (
         <details className="group">
-          <summary className="flex items-center justify-between pb-6 border-b border-[rgba(13,13,13,0.08)] cursor-pointer list-none select-none">
+          <summary className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 lg:gap-0 pb-6 border-b border-[rgba(13,13,13,0.08)] cursor-pointer list-none select-none">
             <div>
               <p className="text-[24px] lg:text-[32px] text-dark leading-[1] mb-3" style={{ fontFamily: 'var(--font-franklin-cond)' }}>
                 {campaign.name}
@@ -412,8 +412,8 @@ function CampaignBlock({ campaign }: { campaign: SubProject }) {
                 {campaign.objective}
               </p>
             </div>
-            <div className="flex items-center gap-4 shrink-0 ml-8">
-              <div className="flex flex-wrap gap-2 lg:justify-end lg:max-w-[280px]">
+            <div className="flex items-center gap-4 lg:shrink-0 lg:ml-8">
+              <div className="flex flex-wrap gap-2">
                 {campaign.formats.map((f) => (
                   <span key={f} className="bg-[rgba(13,13,13,0.06)] rounded-full px-3 py-1 font-mono text-[10px] text-muted2 tracking-[1.2px]">
                     {f}
@@ -441,12 +441,14 @@ function CampaignBlock({ campaign }: { campaign: SubProject }) {
   const items = extractBentoItems(campaign)
   const n = items.length
   const hasWide = items.some(it => it.wide || (it.span && it.span > 1))
-  const gridStyle: React.CSSProperties = (() => {
-    if (hasWide) return { gridTemplateColumns: 'repeat(3, 1fr)' }
-    if (n === 1) return { maxWidth: '380px', margin: '0 auto' }
-    if (n === 2) return { gridTemplateColumns: 'repeat(2, 1fr)', maxWidth: '760px', margin: '0 auto' }
-    return { gridTemplateColumns: 'repeat(3, 1fr)' }
-  })()
+  const gridCols =
+    hasWide ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3' :
+    n === 1 ? '' :
+    n === 2 ? 'grid-cols-1 sm:grid-cols-2' :
+    'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
+  const gridStyle: React.CSSProperties =
+    n === 1 ? { maxWidth: '380px', margin: '0 auto' } :
+    n === 2 ? { maxWidth: '760px', margin: '0 auto' } : {}
 
   const spanClass = (item: BentoItem) => {
     if (item.wide) return 'col-span-3'
@@ -457,7 +459,7 @@ function CampaignBlock({ campaign }: { campaign: SubProject }) {
   return (
     <div>
       {campaignHeader}
-      <div className="grid gap-3 items-start" style={gridStyle}>
+      <div className={`grid gap-3 items-start ${gridCols}`} style={gridStyle}>
         {items.map((item, i) => (
           <div key={i} className={spanClass(item)}>
             <MediaCell {...item} name={campaign.name} index={i} isPaidMedia={isPaidMedia} />
@@ -511,12 +513,14 @@ function SectionsContent({ sections, name, isPaidMedia }: { sections: Section[];
         const sectionItems = extractSectionItems(section)
         const sn = sectionItems.length
         const sHasWide = sectionItems.some(it => it.wide || (it.span && it.span > 1))
-        const sGridStyle: React.CSSProperties = (() => {
-          if (sHasWide) return { gridTemplateColumns: 'repeat(3, 1fr)' }
-          if (sn === 1) return { maxWidth: '560px', margin: '0 auto' }
-          if (sn === 2) return { gridTemplateColumns: 'repeat(2, 1fr)', maxWidth: '760px', margin: '0 auto' }
-          return { gridTemplateColumns: 'repeat(3, 1fr)' }
-        })()
+        const sCols =
+          sHasWide ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3' :
+          sn === 1 ? '' :
+          sn === 2 ? 'grid-cols-1 sm:grid-cols-2' :
+          'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
+        const sStyle: React.CSSProperties =
+          sn === 1 ? { maxWidth: '560px', margin: '0 auto' } :
+          sn === 2 ? { maxWidth: '760px', margin: '0 auto' } : {}
         const sSpanClass = (item: BentoItem) => item.wide ? 'col-span-3' : item.span === 2 ? 'col-span-2' : ''
         const hasLabels = sectionItems.some(it => it.label)
         return (
@@ -526,7 +530,7 @@ function SectionsContent({ sections, name, isPaidMedia }: { sections: Section[];
                 {section.label}
               </p>
             )}
-            <div className="grid gap-3" style={{ ...sGridStyle, alignItems: hasLabels ? 'end' : 'start' }}>
+            <div className={`grid gap-3 ${sCols}`} style={{ ...sStyle, alignItems: hasLabels ? 'end' : 'start' }}>
               {sectionItems.map((item, i) => (
                 <div key={i} className={sSpanClass(item)}>
                   {item.label && <LabelChip label={item.label} />}
@@ -551,7 +555,7 @@ function SubCampaignItem({ campaign }: { campaign: SubProject }) {
 
   return (
     <details className="group">
-      <summary className="flex items-center justify-between py-5 cursor-pointer list-none select-none">
+      <summary className="flex flex-col lg:flex-row lg:items-center lg:justify-between py-5 gap-3 lg:gap-0 cursor-pointer list-none select-none">
         <div>
           <p className="font-sans text-[16px] text-dark font-medium leading-[1]">
             {campaign.name}
@@ -560,8 +564,8 @@ function SubCampaignItem({ campaign }: { campaign: SubProject }) {
             {campaign.objective}
           </p>
         </div>
-        <div className="flex items-center gap-4 shrink-0 ml-8">
-          <div className="flex flex-wrap gap-1.5 justify-end max-w-[260px]">
+        <div className="flex items-center gap-4 lg:shrink-0 lg:ml-8">
+          <div className="flex flex-wrap gap-1.5">
             {campaign.formats.map((f) => (
               <span key={f} className="bg-[rgba(13,13,13,0.06)] rounded-full px-2.5 py-0.5 font-mono text-[9px] text-muted2 tracking-[1.2px]">
                 {f}
@@ -612,16 +616,18 @@ function BentoGrid({ items, name, isPaidMedia, contain }: {
   }
 
   // Videos or small sets: uniform aspect-[4/5] grid
+  const gridCols = n === 1 ? '' :
+    n === 2 ? 'grid-cols-1 sm:grid-cols-2' :
+    n === 4 ? 'grid-cols-2' :
+    'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
   const style: React.CSSProperties = n === 1
     ? { maxWidth: '380px', margin: '0 auto' }
     : n === 2
-    ? { gridTemplateColumns: 'repeat(2, 1fr)', maxWidth: '760px', margin: '0 auto' }
-    : n === 4
-    ? { gridTemplateColumns: 'repeat(2, 1fr)' }
-    : { gridTemplateColumns: 'repeat(3, 1fr)' }
+    ? { maxWidth: '760px', margin: '0 auto' }
+    : {}
 
   return (
-    <div className="grid gap-3" style={style}>
+    <div className={`grid gap-3 ${gridCols}`} style={style}>
       {items.map((item, i) => (
         <MediaCell key={i} {...item} name={name} index={i} isPaidMedia={isPaidMedia} contain={contain} />
       ))}
