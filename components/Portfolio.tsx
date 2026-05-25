@@ -14,7 +14,7 @@ const DISCIPLINES: Record<string, Discipline[]> = {
   'brainy':          ['branding'],
   'beatness':        ['motion', 'social'],
   'kop':             ['motion', 'social'],
-  'bwl':             ['motion', 'social', 'ia'],
+  'bwl':             ['motion', 'social'],
   'activated-decor': ['branding', 'motion'],
   'corazon-mixteco': ['social'],
   'amorcito':        ['social'],
@@ -71,7 +71,7 @@ export default function Portfolio() {
 
           {/* Mobile: columna única */}
           <div className="flex flex-col gap-4 lg:hidden">
-            {[zealix, kop, bwl, amorcito, aiCreative].map(p => (
+            {[aiCreative, zealix, kop, bwl, amorcito].map(p => (
               <ProjectCard key={p.id} {...p} className="w-full h-[260px]" sizes="95vw" ctaLabel={ctaLabel} />
             ))}
           </div>
@@ -79,7 +79,7 @@ export default function Portfolio() {
           {/* Desktop: bento */}
           <div className="hidden lg:block">
             <div className="flex gap-6 mb-6">
-              <ProjectCard {...zealix}     className="flex-[728_1_0%] h-[524px]" sizes="(max-width: 1440px) 57vw, 742px" ctaLabel={ctaLabel} />
+              <ProjectCard {...aiCreative} className="flex-[728_1_0%] h-[524px]" sizes="(max-width: 1440px) 57vw, 742px" ctaLabel={ctaLabel} />
               <ProjectCard {...kop}        className="flex-[496_1_0%] h-[524px]" sizes="(max-width: 1440px) 39vw, 505px" ctaLabel={ctaLabel} />
             </div>
             <div className="mb-6">
@@ -87,7 +87,7 @@ export default function Portfolio() {
             </div>
             <div className="flex gap-6 mb-6">
               <ProjectCard {...amorcito}   className="flex-[496_1_0%] h-[524px]" sizes="(max-width: 1440px) 39vw, 505px" ctaLabel={ctaLabel} />
-              <ProjectCard {...aiCreative} className="flex-[728_1_0%] h-[524px]" sizes="(max-width: 1440px) 57vw, 742px" ctaLabel={ctaLabel} />
+              <ProjectCard {...zealix}     className="flex-[728_1_0%] h-[524px]" sizes="(max-width: 1440px) 57vw, 742px" ctaLabel={ctaLabel} />
             </div>
           </div>
 
