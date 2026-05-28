@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
+import { cookies } from 'next/headers'
 import { Fraunces, JetBrains_Mono, Inter } from 'next/font/google'
 import localFont from 'next/font/local'
 import './globals.css'
 import { LangProvider } from '@/lib/lang-context'
+import { LANGUAGE_COOKIE, normalizeLang } from '@/lib/translations'
 
 const fraunces = Fraunces({
   subsets: ['latin'],
@@ -74,7 +76,7 @@ export const metadata: Metadata = {
     description: 'Visual systems, motion graphics, content production, and AI-native creative workflows for brands, campaigns, and social media.',
     url: 'https://kymsul.art',
     siteName: 'kymsul',
-    locale: 'es_MX',
+    locale: 'en_US',
     type: 'website',
     images: [
       {
@@ -93,7 +95,10 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const cookieStore = await cookies()
+  const initialLang = normalizeLang(cookieStore.get(LANGUAGE_COOKIE)?.value)
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -140,7 +145,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         '@id': 'https://kymsul.art/#website',
         name: 'kymsul',
         url: 'https://kymsul.art',
-        inLanguage: ['es-MX', 'en'],
+        inLanguage: ['en', 'es-MX'],
         author: { '@id': 'https://kymsul.art/#person' },
         description:
           'Portfolio of Kimberly Tapia Rubio, Brand & Content Designer working across visual systems, motion, and AI-native creative workflows.',
@@ -150,7 +155,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <html
-      lang="es"
+      lang={initialLang}
       className={`${fraunces.variable} ${jetbrainsMono.variable} ${inter.variable} ${franklinCond.variable} ${franklin.variable}`}
     >
       <body>
@@ -158,7 +163,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <LangProvider>{children}</LangProvider>
+        <LangProvider initialLang={initialLang}>{children}</LangProvider>
       </body>
     </html>
   )

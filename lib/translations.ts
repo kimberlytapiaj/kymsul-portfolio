@@ -1,5 +1,12 @@
 export type Lang = 'es' | 'en'
 
+export const DEFAULT_LANG: Lang = 'en'
+export const LANGUAGE_COOKIE = 'kymsul-lang'
+
+export function normalizeLang(value: unknown): Lang {
+  return value === 'es' || value === 'en' ? value : DEFAULT_LANG
+}
+
 export const tr = {
   nav: {
     links: {
