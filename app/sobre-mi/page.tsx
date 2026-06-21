@@ -395,12 +395,12 @@ export default function SobreMiPage() {
               {s.cta.desc[lang]}
             </p>
             <div className="flex flex-wrap gap-3">
-              <a
-                href="mailto:kimberly.tapiaj@gmail.com?subject=Oportunidad%20laboral"
+              <Link
+                href="/contacto"
                 className="inline-flex items-center bg-lav text-dark font-sans text-[13px] rounded-full px-6 py-[14px] hover:opacity-90 transition-opacity"
               >
                 {s.cta.primary[lang]}
-              </a>
+              </Link>
               <a
                 href="https://www.linkedin.com/in/kimberly-tapia-rubio-39a35828a/"
                 target="_blank"
