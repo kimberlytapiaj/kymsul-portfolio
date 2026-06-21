@@ -183,8 +183,9 @@ export default function SobreMiPage() {
             </figure>
           </div>
 
-          {/* Producción fotográfica — retrato 4:5 */}
-          <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 mt-6 lg:mt-8">
+          {/* Producción fotográfica + Infografía propósito de vida */}
+          <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 mt-6 lg:mt-8 items-start">
+            {/* Producción fotográfica — retrato 4:5 */}
             <figure>
               <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-dark">
                 <Image
@@ -204,6 +205,43 @@ export default function SobreMiPage() {
                   {lang === 'es'
                     ? 'Retrato conceptual con efecto de dispersión, en la paleta de mi marca.'
                     : 'Conceptual portrait with a dispersion effect, in my brand palette.'}
+                </p>
+              </figcaption>
+            </figure>
+
+            {/* Infografía propósito de vida */}
+            <figure>
+              <a
+                href="/assets/egreso/infografia-proposito.png"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block relative aspect-[4/5] rounded-2xl overflow-hidden bg-[#f4f1ea] border border-[rgba(13,13,13,0.08)]"
+              >
+                <Image
+                  src="/assets/egreso/infografia-proposito.png"
+                  alt={lang === 'es' ? 'Infografía: propósito de vida (IKIGAI)' : 'Infographic: life purpose (IKIGAI)'}
+                  fill
+                  quality={90}
+                  className="object-contain p-2 transition-transform duration-500 group-hover:scale-[1.02]"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </a>
+              <figcaption className="mt-4">
+                <p className="font-mono text-[10px] text-lav tracking-[1.4px] mb-1">
+                  {lang === 'es' ? 'INFOGRAFÍA — PROPÓSITO DE VIDA' : 'INFOGRAPHIC — LIFE PURPOSE'}
+                </p>
+                <p className="font-sans text-[14px] text-muted leading-[1.6]">
+                  {lang === 'es'
+                    ? 'Mi propósito a partir del método IKIGAI. '
+                    : 'My purpose mapped through the IKIGAI method. '}
+                  <a
+                    href="/assets/egreso/infografia-proposito.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-dark underline underline-offset-2 hover:text-lav transition-colors"
+                  >
+                    {lang === 'es' ? 'Ver completa ↗' : 'View full ↗'}
+                  </a>
                 </p>
               </figcaption>
             </figure>
