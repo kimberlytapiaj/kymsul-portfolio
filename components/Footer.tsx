@@ -6,7 +6,7 @@ import { tr } from '@/lib/translations'
 
 const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
 
-const navHrefs = ['/', '/proyectos', '/ia', '/sobre-mi']
+const navHrefs = ['/', '/proyectos', '/ia', '/sobre-mi', '/servicios', '/contacto']
 
 const socialLinks = [
   {

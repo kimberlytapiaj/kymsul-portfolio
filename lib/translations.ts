@@ -3,10 +3,10 @@ export type Lang = 'es' | 'en'
 export const tr = {
   nav: {
     links: {
-      es: ['Inicio', 'Proyectos', 'IA', 'Sobre Mí'],
-      en: ['Home', 'Projects', 'AI', 'About'],
+      es: ['Inicio', 'Proyectos', 'IA', 'Sobre Mí', 'Servicios', 'Contacto'],
+      en: ['Home', 'Projects', 'AI', 'About', 'Services', 'Contact'],
     },
-    hrefs: ['/', '/proyectos', '/ia', '/sobre-mi'],
+    hrefs: ['/', '/proyectos', '/ia', '/sobre-mi', '/servicios', '/contacto'],
   },
 
   hero: {
@@ -111,8 +111,8 @@ export const tr = {
     contactLabel: { es: 'CONTACTO', en: 'CONTACT' },
     sistema:      { es: 'Sistema.', en: 'System.' },
     links: {
-      es: ['Inicio', 'Proyectos', 'IA', 'Sobre Mí'],
-      en: ['Home', 'Projects', 'AI', 'About'],
+      es: ['Inicio', 'Proyectos', 'IA', 'Sobre Mí', 'Servicios', 'Contacto'],
+      en: ['Home', 'Projects', 'AI', 'About', 'Services', 'Contact'],
     },
   },
 
