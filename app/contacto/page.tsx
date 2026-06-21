@@ -20,11 +20,27 @@ export default function ContactoPage() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  // Crea tu form gratis en formspree.io y reemplaza el ID aquí
-  const FORMSPREE_ID = 'YOUR_FORM_ID'
+  // Opcional: crea tu form gratis en formspree.io y pon el ID aquí (sin esto, usa mailto)
+  const FORMSPREE_ID = ''
+
+  function openMailto() {
+    const subject = `Proyecto: ${form.tipo || 'Consulta'}`
+    const body =
+      `Nombre: ${form.nombre}\n` +
+      `Email: ${form.email}\n` +
+      `Tipo: ${form.tipo || '—'}\n\n` +
+      `${form.mensaje}`
+    window.location.href = `mailto:kimberly.tapiaj@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+  }
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
+    // Sin ID de Formspree: abre el cliente de correo con todos los campos
+    if (!FORMSPREE_ID) {
+      openMailto()
+      setSent(true)
+      return
+    }
     try {
       const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
         method: 'POST',
@@ -37,9 +53,11 @@ export default function ContactoPage() {
         }),
       })
       if (res.ok) setSent(true)
+      else openMailto()
     } catch {
       // fallback: abre cliente de correo
-      window.location.href = `mailto:kimberly.tapiaj@gmail.com?subject=Proyecto: ${form.tipo}&body=${encodeURIComponent(form.mensaje)}`
+      openMailto()
+      setSent(true)
     }
   }
 
