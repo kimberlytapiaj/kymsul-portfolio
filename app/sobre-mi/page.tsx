@@ -1,6 +1,7 @@
 'use client'
 
 import PageLayout from '@/components/PageLayout'
+import LazyVideo from '@/components/LazyVideo'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useLang } from '@/lib/lang-context'
@@ -118,6 +119,94 @@ export default function SobreMiPage() {
             <p className="font-sans text-[15px] text-[rgba(255,255,255,0.65)] leading-[1.7]">
               {s.practica.p3[lang]}
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Producción multimedia — Proyecto de egreso ─── */}
+      <section className="px-6 lg:px-24 py-16 lg:py-24 border-b border-[rgba(13,13,13,0.08)]">
+        <div className="max-w-[1440px] mx-auto">
+          <p className="font-mono text-[11px] text-muted2 tracking-[1.76px] mb-6">
+            {lang === 'es' ? 'PROYECTO DE EGRESO — PRODUCCIÓN MULTIMEDIA' : 'GRADUATION PROJECT — MULTIMEDIA'}
+          </p>
+          <p className="text-dark leading-[1.05] mb-4" style={{ fontFamily: 'var(--font-franklin-cond)', fontSize: 'clamp(32px,5vw,52px)', fontWeight: 700 }}>
+            {lang === 'es' ? 'Piezas que ' : 'Pieces that '}
+            <span className="text-lav">{lang === 'es' ? 'me definen.' : 'define me.'}</span>
+          </p>
+          <p className="font-sans text-[15px] text-muted leading-[1.7] max-w-[560px] mb-12 lg:mb-16">
+            {lang === 'es'
+              ? 'Producción audiovisual y gráfica desarrollada durante mi formación, aplicando mi marca personal a motion, animación y fotografía.'
+              : 'Audiovisual and graphic production developed during my training, applying my personal brand to motion, animation, and photography.'}
+          </p>
+
+          {/* Videos — 16:9 */}
+          <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
+            {/* Identidad gráfica animada */}
+            <figure>
+              <div className="aspect-video rounded-2xl overflow-hidden bg-dark">
+                <LazyVideo src="/assets/egreso/identidad-animada.mp4" loop className="w-full h-full object-cover" />
+              </div>
+              <figcaption className="mt-4">
+                <p className="font-mono text-[10px] text-lav tracking-[1.4px] mb-1">
+                  {lang === 'es' ? 'IDENTIDAD GRÁFICA ANIMADA' : 'ANIMATED BRAND IDENTITY'}
+                </p>
+                <p className="font-sans text-[14px] text-muted leading-[1.6]">
+                  {lang === 'es'
+                    ? 'Animación del logotipo y elementos de mi marca personal kymsul.'
+                    : 'Logo and personal-brand elements of kymsul in motion.'}
+                </p>
+              </figcaption>
+            </figure>
+
+            {/* Learning to Be Me — práctica de animación */}
+            <figure>
+              <div className="aspect-video rounded-2xl overflow-hidden bg-dark">
+                <video
+                  src="/assets/egreso/learning-to-be-me.mp4"
+                  poster="/assets/egreso/learning-to-be-me-poster.jpg"
+                  controls
+                  playsInline
+                  preload="none"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <figcaption className="mt-4">
+                <p className="font-mono text-[10px] text-lav tracking-[1.4px] mb-1">
+                  {lang === 'es' ? 'PRÁCTICA DE ANIMACIÓN' : 'ANIMATION PRACTICE'}
+                </p>
+                <p className="font-sans text-[14px] text-muted leading-[1.6]">
+                  {lang === 'es'
+                    ? '“Learning to Be Me” — cortometraje de motion graphics (con audio).'
+                    : '“Learning to Be Me” — motion graphics short film (with audio).'}
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+
+          {/* Producción fotográfica — retrato 4:5 */}
+          <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 mt-6 lg:mt-8">
+            <figure>
+              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-dark">
+                <Image
+                  src="/assets/egreso/produccion-fotografica.jpg"
+                  alt={lang === 'es' ? 'Producción fotográfica — retrato conceptual' : 'Photography production — conceptual portrait'}
+                  fill
+                  quality={90}
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+              <figcaption className="mt-4">
+                <p className="font-mono text-[10px] text-lav tracking-[1.4px] mb-1">
+                  {lang === 'es' ? 'PRODUCCIÓN FOTOGRÁFICA' : 'PHOTOGRAPHY PRODUCTION'}
+                </p>
+                <p className="font-sans text-[14px] text-muted leading-[1.6]">
+                  {lang === 'es'
+                    ? 'Retrato conceptual con efecto de dispersión, en la paleta de mi marca.'
+                    : 'Conceptual portrait with a dispersion effect, in my brand palette.'}
+                </p>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>
