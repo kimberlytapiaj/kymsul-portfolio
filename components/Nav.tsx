@@ -27,7 +27,7 @@ export default function Nav() {
 
           {/* Logo */}
           <Link href="/" onClick={() => setOpen(false)}>
-            <img src="/assets/logo.png" alt="kymsul" className="h-[27px] w-auto" />
+            <img src="/assets/logo-animado.png" alt="kymsul" className="h-[27px] w-auto" />
           </Link>
 
           {/* Nav links — desktop */}
