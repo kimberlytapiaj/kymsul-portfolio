@@ -79,6 +79,8 @@ export default function Nav() {
               className="lg:hidden flex flex-col gap-[5px] min-w-[44px] min-h-[44px] items-center justify-center"
               onClick={() => setOpen(!open)}
               aria-label="Menú"
+              aria-expanded={open}
+              aria-controls="mobile-menu"
             >
               <span className={`block w-5 h-[1.5px] bg-dark transition-transform duration-200 ${open ? 'translate-y-[6.5px] rotate-45' : ''}`} />
               <span className={`block w-5 h-[1.5px] bg-dark transition-opacity duration-200 ${open ? 'opacity-0' : ''}`} />
@@ -93,6 +95,7 @@ export default function Nav() {
       <AnimatePresence>
         {open && (
           <motion.div
+            id="mobile-menu"
             initial={{ opacity: 0, y: -6 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -6 }}

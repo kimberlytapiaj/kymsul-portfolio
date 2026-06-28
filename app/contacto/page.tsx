@@ -105,10 +105,11 @@ export default function ContactoPage() {
               <form onSubmit={handleSubmit} className="space-y-8">
                 {/* Nombre */}
                 <div>
-                  <label className="font-mono text-[10px] text-muted2 tracking-[1.4px] block mb-2">
+                  <label htmlFor="c-nombre" className="font-mono text-[10px] text-muted2 tracking-[1.4px] block mb-2">
                     NOMBRE
                   </label>
                   <input
+                    id="c-nombre"
                     name="nombre"
                     value={form.nombre}
                     onChange={handleChange}
@@ -120,10 +121,11 @@ export default function ContactoPage() {
 
                 {/* Email */}
                 <div>
-                  <label className="font-mono text-[10px] text-muted2 tracking-[1.4px] block mb-2">
+                  <label htmlFor="c-email" className="font-mono text-[10px] text-muted2 tracking-[1.4px] block mb-2">
                     EMAIL
                   </label>
                   <input
+                    id="c-email"
                     name="email"
                     type="email"
                     value={form.email}
@@ -135,10 +137,10 @@ export default function ContactoPage() {
                 </div>
 
                 {/* Tipo de proyecto */}
-                <div>
-                  <label className="font-mono text-[10px] text-muted2 tracking-[1.4px] block mb-3">
+                <div role="group" aria-label="Tipo de proyecto">
+                  <p className="font-mono text-[10px] text-muted2 tracking-[1.4px] block mb-3">
                     TIPO DE PROYECTO
-                  </label>
+                  </p>
                   <div className="flex flex-wrap gap-2">
                     {projectTypes.map((tipo) => (
                       <button
@@ -159,10 +161,11 @@ export default function ContactoPage() {
 
                 {/* Mensaje */}
                 <div>
-                  <label className="font-mono text-[10px] text-muted2 tracking-[1.4px] block mb-2">
+                  <label htmlFor="c-mensaje" className="font-mono text-[10px] text-muted2 tracking-[1.4px] block mb-2">
                     MENSAJE
                   </label>
                   <textarea
+                    id="c-mensaje"
                     name="mensaje"
                     value={form.mensaje}
                     onChange={handleChange}

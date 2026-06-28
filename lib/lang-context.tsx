@@ -24,6 +24,12 @@ export function LangProvider({ children }: { children: React.ReactNode }) {
     } catch {}
   }, [])
 
+  // Keep <html lang> in sync so screen readers and search engines read the
+  // active language correctly (es / en) instead of always "es".
+  useEffect(() => {
+    document.documentElement.lang = lang
+  }, [lang])
+
   function setLang(l: Lang) {
     setLangState(l)
     try {

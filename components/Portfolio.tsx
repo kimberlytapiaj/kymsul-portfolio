@@ -71,15 +71,15 @@ export default function Portfolio() {
 
           {/* Mobile: columna única */}
           <div className="flex flex-col gap-4 lg:hidden">
-            {[aiCreative, zealix, kop, bwl, amorcito].map(p => (
-              <ProjectCard key={p.id} {...p} className="w-full h-[260px]" sizes="95vw" ctaLabel={ctaLabel} />
+            {[aiCreative, zealix, kop, bwl, amorcito].map((p, i) => (
+              <ProjectCard key={p.id} {...p} className="w-full h-[260px]" sizes="95vw" ctaLabel={ctaLabel} priority={i === 0} />
             ))}
           </div>
 
           {/* Desktop: bento */}
           <div className="hidden lg:block">
             <div className="flex gap-6 mb-6">
-              <ProjectCard {...aiCreative} className="flex-[728_1_0%] h-[524px]" sizes="(max-width: 1440px) 57vw, 742px" ctaLabel={ctaLabel} />
+              <ProjectCard {...aiCreative} className="flex-[728_1_0%] h-[524px]" sizes="(max-width: 1440px) 57vw, 742px" ctaLabel={ctaLabel} priority />
               <ProjectCard {...kop}        className="flex-[496_1_0%] h-[524px]" sizes="(max-width: 1440px) 39vw, 505px" ctaLabel={ctaLabel} />
             </div>
             <div className="mb-6">

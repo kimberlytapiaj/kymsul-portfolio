@@ -15,6 +15,7 @@ type ProjectCardProps = {
   className?: string
   sizes?: string
   ctaLabel?: string
+  priority?: boolean
 }
 
 export default function ProjectCard({
@@ -29,6 +30,7 @@ export default function ProjectCard({
   className = '',
   sizes = '(max-width: 1440px) 55vw, 728px',
   ctaLabel = 'VER CASO',
+  priority = false,
 }: ProjectCardProps) {
   return (
     <Link href={`/proyectos/${id}`} className={`overflow-hidden flex flex-col cursor-pointer group ${className}`}>
@@ -39,6 +41,10 @@ export default function ProjectCard({
           fill
           quality={90}
           sizes={sizes}
+          // Next 16: `priority` is deprecated. For the above-the-fold LCP card,
+          // load eagerly with high fetch priority instead.
+          loading={priority ? 'eager' : undefined}
+          fetchPriority={priority ? 'high' : undefined}
           className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
         />
         <div className="absolute bottom-0 left-0 right-0 h-11 bg-gradient-to-t from-black/60 to-transparent flex items-center px-5">
