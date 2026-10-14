@@ -6,10 +6,16 @@
     "dev": "next dev --webpack",
     "dev:turbopack": "next dev --turbopack",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "media:prepare": "node scripts/prepare-media.mjs && node scripts/media-index.mjs",
+    "media:check": "node scripts/check-media.mjs",
+    "media:upload": "node scripts/upload-media-r2.mjs",
+    "media:upload:dry": "node scripts/upload-media-r2.mjs --dry-run",
+    "summaries": "node scripts/project-summaries.mjs",
+    "prebuild": "node scripts/project-summaries.mjs && node scripts/media-index.mjs && node scripts/check-media.mjs"
   },
   "dependencies": {
-    "framer-motion": "^12.38.0",
     "next": "16.2.6",
     "react": "19.2.4",
     "react-dom": "19.2.4"

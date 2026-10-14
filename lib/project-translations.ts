@@ -27,14 +27,133 @@ export type ProjectTranslation = {
 }
 
 export const projectTranslationsEN: Record<string, ProjectTranslation> = {
+  // Provisional: case narratives pending Kimberly's new text.
+  bardana: {
+    tagline: 'Identity for a Mexico‑Asia kitchen, from brief to manual.',
+    tags: ['Visual Identity', 'Character', 'Lettering', 'Brand Manual'],
+    overview: 'Bardana is a Mexico‑Asia restaurant in Metepec for people aged 20 to 40: informal, artistic and made to work by day and by night.',
+    role: 'Full brand identity: research, visual routes, character, lettering, palette, logos and identity manual.',
+    challenge: 'Text in progress.',
+    process: 'Text in progress.',
+    result: 'Text in progress.',
+    campaignsLabel: 'PROCESS',
+    campaigns: [
+      { name: 'The brief', objective: 'A Mexico‑Asia kitchen with a character of its own: young, simple, imperfect on purpose. No geishas, no kanji, no talavera.', formats: ['Brief', 'Personality'] },
+      {
+        name: 'Three routes',
+        objective: 'Three paths for the same idea: between two worlds, everything takes another shape.',
+        subCampaigns: [
+          { name: 'Matter', objective: 'Clay, wood and ceramics: the kitchen as matter that transforms.', formats: ['Logo moodboard', 'Scene'] },
+          { name: 'Stamp', objective: 'Flat shapes and market colour: a brand you can stamp.', formats: ['Logo moodboard', 'Scene'] },
+          { name: 'Stroke', objective: 'The gesture of the hand: brush lettering and living drawing.', formats: ['Logo moodboard', 'Scene'] },
+        ],
+      },
+      { name: 'The character', objective: 'A burdock peeking out of the bowl, tested in four drawing styles.', formats: ['Ink', 'Engraving', 'Fanzine', 'Brush'] },
+      { name: 'The lettering', objective: 'From type to brush stroke: dozens of tests to the final signature.', formats: ['Type exploration', 'Hand lettering', 'Brush'] },
+      { name: 'The identity', objective: 'Primary, horizontal and lettering logos, in positive and negative.', formats: ['Primary', 'Horizontal', 'Lettering'] },
+      { name: 'Brand manual', objective: 'Twenty-two pages: stroke, negative, palette, type, photography and applications.', formats: ['Identity manual · 22 pages'] },
+    ],
+  },
+  'motion-centre': {
+    tagline: 'Identity for a physiotherapy centre: the body in motion.',
+    tags: ['Visual Identity', 'Iconography', 'Patterns', 'Stationery', 'Brand Manual'],
+    overview: 'Motion Centre is a physiotherapy and health space that helps people understand, care for and develop their bodies.',
+    role: 'Full brand identity: visual concept, four-figure iconography, logo, palette, clinical stationery and identity manual.',
+    challenge: 'Text in progress.',
+    process: 'Text in progress.',
+    result: 'Text in progress.',
+    campaignsLabel: 'PROCESS',
+    campaigns: [
+      { name: 'The brand', objective: 'Knowing how to move: a clear, warm, expert brand that explains the body without jargon.', formats: ['Mission', 'Personality', 'Tone'] },
+      { name: 'Visual concept', objective: 'Movement as shape: organic figures, flat colour and companionship.', formats: ['Moodboard', 'Concept'] },
+      { name: 'Iconography', objective: 'Four figures for four stages: understand, prepare, recover and move forward.', formats: ['Understand', 'Prepare', 'Recover', 'Move forward'] },
+      { name: 'The identity', objective: 'The figures become symbol and pattern; blue, navy and bone; Campton and Rubik.', formats: ['Symbol', 'Logotype', 'Palette', 'Typography'] },
+      { name: 'Applications', objective: 'Digital card, clinical stationery and three proposals for patient documents.', formats: ['Digital card', 'Stationery', 'Proposals'] },
+      { name: 'Brand manual', objective: 'Twenty-four pages: essence, logo and icon construction, and applications.', formats: ['Identity manual · 24 pages'] },
+    ],
+  },
+  'sin-yolanda': {
+    tagline: 'Promos, reels and requests for its Texas locations.',
+    tags: ['Social Media', 'Promotional Design', 'Typography', 'Reels', 'Motion'],
+    overview: 'Sin Yolanda is a Mexican cantina and restaurant with locations in Houston, San Antonio, The Woodlands and El Paso.',
+    role: 'Design and composition of promotional pieces, reels and motion.',
+    challenge: 'Text in progress.',
+    process: 'Text in progress.',
+    result: 'Text in progress.',
+    campaignsLabel: 'WORK',
+    campaigns: [
+      { name: 'Content', objective: 'Nights, drinks and music across its four locations. Terracotta, mustard and type you can hear.', formats: ['Post', 'Reel'] },
+      {
+        name: 'Creative requests',
+        objective: 'Requests per location: openings, weekly nights, ambiance reels and the Jorge Guevara series.',
+        subCampaigns: [
+          { name: 'Jorge Guevara', objective: 'Interview series with the singer, ahead of his night at Sin Yolanda The Woodlands.', formats: ['Reel 9:16', 'Animated captions'] },
+          { name: 'Nights in El Paso', objective: "One piece for each of the El Paso location's weekly nights.", formats: ['Ladies Night', 'Birthday Bash', 'Open Mic', 'Ahogo y Desahogo'] },
+          { name: 'Friday Industry Night', objective: 'A night for hospitality people in Houston: reel and email.', formats: ['Reel 9:16', 'Email'] },
+          { name: 'Grand Opening', objective: 'El Paso opening reel: the champagne toast.', formats: ['Reel 9:16'] },
+          { name: 'Food Reel', objective: 'San Antonio food, dish by dish.', formats: ['Reel 9:16'] },
+          { name: 'Night Ambiance', objective: 'What a night in San Antonio feels like.', formats: ['Reel 9:16'] },
+          { name: 'Cocktail Experience', objective: "Houston's cocktails, drink by drink.", formats: ['Reel 9:16'] },
+          { name: 'Now Hiring', objective: 'Animated job-openings reel for the El Paso opening.', formats: ['Reel 9:16 · motion'] },
+        ],
+      },
+    ],
+  },
+  aseguramax: {
+    tagline: 'Insurance explained without the fine print.',
+    tags: ['Social Media', 'Carousels', 'Reels', 'Paid Media'],
+    overview: 'AseguraMax is an insurance agency, a GNP agent, with online quotes at aseguramax.com.',
+    role: 'Design of carousels, posts, reels and ads.',
+    challenge: 'Text in progress.',
+    process: 'Text in progress.',
+    result: 'Text in progress.',
+    campaignsLabel: 'WORK',
+    campaigns: [
+      { name: 'Content', objective: 'Car, home and medical insurance as simple questions. Navy, coral and checklists you tick off.', formats: ['Carousel', 'Post', 'Reel'] },
+      { name: 'Paid media', objective: 'Video ads to get a quote online.', formats: ['Ad · Reel 9:16'] },
+    ],
+  },
+  iamonemind: {
+    tagline: 'Wellness in a strip: supplements without the pills.',
+    tags: ['Social Media', 'Posts', 'Reels', 'Product'],
+    overview: 'iamonemind sells supplements as oral strips: Glow, Calm, Spark, Aware and Serenity.',
+    role: 'Design of product posts and reels.',
+    challenge: 'Text in progress.',
+    process: 'Text in progress.',
+    result: 'Text in progress.',
+    campaignsLabel: 'WORK',
+    campaigns: [
+      { name: 'Content', objective: 'Product up front and real skin: a strip for every moment of the day.', formats: ['Post', 'Reel'] },
+    ],
+  },
+  nexlaunch: {
+    tagline: 'The agency talking about itself: strategy before content.',
+    tags: ['Social Media', 'Carousels', 'Reels', 'Illustration'],
+    overview: "NexLaunch is the marketing agency where I currently work; this is the content for its own brand.",
+    role: "Design of carousels, posts and reels for the agency's brand.",
+    challenge: 'Text in progress.',
+    process: 'Text in progress.',
+    result: 'Text in progress.',
+    campaignsLabel: 'WORK',
+    campaigns: [
+      { name: 'Content', objective: 'Short messages for business owners: speed, strategy and data. Electric blue and lines you read at a glance.', formats: ['Carousel', 'Post', 'Reel'] },
+      {
+        name: 'Creative requests',
+        objective: "Requests for the agency's website.",
+        subCampaigns: [
+          { name: 'Social sharing image', objective: 'The image that shows up when the site is shared on social and in messages.', formats: ['1200 × 630'] },
+        ],
+      },
+    ],
+  },
   zealix: {
     tagline: 'Naming, visual identity and brand system for a restaurant SaaS.',
     tags: ['Naming', 'Visual Identity', 'Brand Guidelines', 'Brand Manual', 'Stationery', 'Social Media'],
     overview:
       'Zealix is a Mexican AI-powered platform designed to automate restaurant, café and food business management, from inventory and orders to profitability analysis with the Zea AI assistant. The project was end-to-end: naming of Zealix and Zea, full visual identity from sketch, brand application to the digital product and corporate stationery, and creative direction of social media production.',
-    role: 'Art Director and Brand Designer. Naming, full visual identity, brand manual and corporate stationery for 6 team members. Creative direction of visual production for IG · FB · LinkedIn.',
+    role: 'Naming, visual identity, brand manual and stationery. Visual production for IG, FB and LinkedIn.',
     challenge:
-      'Building a Mexican tech brand that felt approachable for restaurant owners with no software experience, without losing the credibility a B2B product requires. The identity had to anchor Mexican heritage without falling into the folkloric. The system had to work in light and dark mode, on screen and in print, with a visual language clear enough that any business operator could understand without jargon.',
+      'A Mexican tech brand that felt approachable for restaurant owners with no software experience. The identity had to anchor Mexican heritage without falling into the folkloric. The system had to work in light and dark mode, on screen and in print, with a visual language clear enough that any business operator could understand without jargon.',
     process:
       'The project starts with naming: Zealix comes from "the root of corn," anchoring the identity in Mexican heritage and communicating the idea of being the foundation from which businesses grow. Zea, the AI assistant, branches from the same origin. The logo translates that concept: hand sketches exploring growth and connection, built on a grid and documented in three versions. From there, the identity extends to motion with the animated logo and to social media with creative direction of visual production.',
     result:
@@ -86,13 +205,12 @@ export const projectTranslationsEN: Record<string, ProjectTranslation> = {
       "I designed Bud, a modular mascot based on a children's inventor helmet with a virtual reality visor, functioning as a living brand element: capable of expressing emotions, adapting to contexts, and scaling to merchandise or animation. The palette combines CMY primaries with black and lavender to deliver energy without overwhelming.",
     result:
       'Complete brand book: logo construction, reduction system, documented Pantone palette, typography and Bud character. Identity applied in digital platform mockup.',
+    campaignsLabel: 'WORK',
     campaigns: [
-      {
-        name: 'Branding',
-        objective:
-          'Complete visual identity for BrainyBudzz: logo and Bud mascot construction, color variant system, Pantone palette, typography and digital platform application.',
-        formats: ['Logotype', 'Mascot · Bud', 'Color Palette', 'Typography', 'Reductions', 'Digital Application'],
-      },
+      { name: 'The brand', objective: 'An educational video game platform: mission, values and a friendly, fun, trustworthy tone.', formats: ['Mission', 'Values', 'Tone'] },
+      { name: 'Construction', objective: 'Bud, the character: helmet, visor and smile; the logo and its reductions.', formats: ['Symbol', 'Logotype', 'Reductions'] },
+      { name: 'Visual system', objective: 'Primary colours with cyan, yellow and magenta, and a rounded typeface.', formats: ['Palette', 'Typography', 'Versions'] },
+      { name: 'Applications', objective: 'The identity on the platform: desktop, mobile and brand pattern.', formats: ['Digital', 'Pattern'] },
     ],
   },
 
@@ -108,107 +226,112 @@ export const projectTranslationsEN: Record<string, ProjectTranslation> = {
       "I worked within the Beatness visual system: dark palette with neon accents, impact typography, fast cuts. Paid media for the club's disciplines, organic content for feed and stories, and event activations. For the Kinabela Derma collab: invitation reels and live content capture at the event.",
     result:
       'Paid media, reels, stories and organic carousels for the club. Beatness × Kinabela collab: 2 fully booked cycling classes on the rooftop, ~40 people.',
+    campaignsLabel: 'WORK',
     campaigns: [
+      { name: 'Content', objective: "Real photography in the gym, neon accents and impact type: the club's feed.", formats: ['Post', 'Reel'] },
+      { name: 'Paid media', objective: '"Different disciplines" ads: four photo variations, also as HD banners.', formats: ['Post · 4 variations', 'HD banner'] },
       {
-        name: 'Paid Media · Club Disciplines',
-        objective:
-          'Paid media campaign in 4 photo variations and 2 formats (square post and HD banner) for brand activation in digital ads.',
-        formats: ['Post · 4 variations', 'HD Banner · 2 variations'],
-      },
-      {
-        name: 'Events',
-        objective:
-          'Activation pieces for special club events, from grand openings and external collaborations to themed classes and inclusive programs.',
-        formats: ['Story · Instagram', 'Post · Instagram'],
-      },
-      {
-        name: 'Collab · Beatness × Kinabela',
-        objective:
-          'Cycling class on the Kinabela Derma rooftop, collab between the fitness studio and the aesthetics clinic. Invitation reel and live content capture at the event.',
-        formats: ['Reel · Invitation'],
-      },
-      {
-        name: 'The ___ Beat',
-        objective:
-          'Editorial series by discipline: each sport with its own color accent and real gym photography. Boxing, Functional, Bootcamp and Cycling in one visual system.',
-        formats: ['Post · Instagram · 4 disciplines'],
+        name: 'Creative requests',
+        objective: "The club's series, events and collaborations.",
+        subCampaigns: [
+          { name: 'The ___ Beat', objective: 'One series per discipline, each with its own colour accent.', formats: ['Box', 'Functional', 'Bootcamp', 'Cycling'] },
+          { name: 'Events', objective: "The club's openings, themed classes, talks and programmes.", formats: ['Story', 'Post'] },
+          { name: '10K Beatdown', objective: "The club's Hyrox-style event: reel with an external videographer and promo stories.", formats: ['Reel', 'Story'] },
+          { name: 'Beatness × Kinabela', objective: 'Cycling class on the Kinabela Derma rooftop: invitation and event reels.', formats: ['Reel · Invitation', 'Reel · Event'] },
+        ],
       },
     ],
   },
 
   kop: {
-    tagline: 'Social content, motion and campaigns for a multi-brand sports club.',
+    tagline: 'Social content, motion and ads for a sports club.',
     tags: ['Social Media', 'Art Direction', 'Reels', 'Sub-brand', 'Paid Media', 'Generative AI'],
     overview:
-      'KOP is a padel and tennis club in San Antonio, TX. The work included pieces for the main brand and Kings Tavern, its in-house restaurant, maintaining two visual lines within the same ecosystem.',
-    role: 'Art direction, visual production and motion within a multi-brand workflow: sports editorial, educational carousels, reels, differentiated content for Kings Tavern and paid media supported by generative imagery and After Effects automation.',
+      'KOP is a padel and tennis club in San Antonio, TX. Kings Tavern, its in-house restaurant, has its own case.',
+    role: 'Art direction, visual production and motion within a multi-brand workflow: sports editorial, educational carousels, reels and paid media supported by generative imagery and After Effects automation.',
     challenge:
       "Managing two voices within one account without the restaurant content overshadowing the club's sports identity, or vice versa. Each sub-brand had to feel cohesive but distinguishable.",
     process:
       'I created a two-speed visual system: high-impact editorial posts for KOP (black, white and energetic green) and a warmer, more atmospheric line for Kings Tavern that coexists without breaking the feed. The paid media pieces combine generative imagery with Gemini and After Effects automation to speed up the editable base before final review.',
     result:
-      '30+ pieces across editorials, carousels and reels for KOP, plus differentiated content for Kings Tavern. The Sin Yolanda opening reel reached 26.3K views and 212 likes in 6 weeks organically. A 22-second paid media reel produced with an AI + script workflow.',
+      'Posts, carousels, reels and ads for the club.',
+    campaignsLabel: 'WORK',
     campaigns: [
       {
-        name: 'Campaigns',
-        objective:
-          'Communication system for events, activations and club operations, each piece adapted to the required formats and screens.',
+        name: 'Content',
+        objective: 'The sports club: padel, soccer and volleyball under one roof. Black, white and energetic green.',
+        formats: ['Post', 'Carousel', 'Reel', 'Ad'],
+      },
+      {
+        name: 'Paid media',
+        objective: 'September 2026 ad campaign: two angles to get people to book the whole venue.',
+        formats: ['Ad · Reel 9:16'],
+      },
+      {
+        name: 'Creative requests',
+        objective: 'Requests for club events and operations: one design adapted to every format and screen.',
         subCampaigns: [
           {
-            name: 'Soccer Tournament · Maestro Dobel',
-            objective:
-              'Comprehensive campaign for a sponsored soccer tournament. One design adapted to 5 formats and screens, from printable flyer to app banner.',
-            formats: ['Flyer', 'Post', 'Story', 'TV Screen', 'App Banner'],
+            name: 'World Cup 2026 · Sticker Swap Day',
+            objective: 'World Cup activation: flyer, post, story, in-venue screen and app banner.',
+            formats: ['Flyer', 'Post', 'Story', 'TV', 'App banner'],
           },
           {
-            name: 'World Cup 2026 · Sticker Swap',
-            objective:
-              'Activation campaign leveraging the 2026 World Cup. Concept adapted to 5 formats: flyer, social media, in-venue TV, digital banner and email.',
-            formats: ['Flyer', 'Post', 'Story', 'TV Screen', 'App Banner'],
+            name: 'Padel every night',
+            objective: 'Weekly padel events template, adaptable to each day.',
+            formats: ['Flyer', 'Daily flyer', 'Post', 'Story', 'TV'],
           },
           {
-            name: 'Plan Weeks Opens',
-            objective:
-              'Weekly communication system for club opening hours. Designed as a modular template adaptable to each day and delivered in 4 different formats.',
-            formats: ['Flyer', 'Post', 'Story', 'TV Screen'],
-          },
-          {
-            name: 'Highlights per Sport',
-            objective:
-              '30-second videos per sport at the club (Padel, Soccer and Volleyball) for activation on venue screens and social media.',
-            formats: ['Reel 30s · Padel', 'Reel 30s · Soccer', 'Reel 30s · Volleyball'],
-          },
-          {
-            name: 'SPURS Watch Party',
-            objective:
-              'Activation reel for the San Antonio Spurs Watch Party at the club, a seasonal sports event for members and the community.',
-            formats: ['Reel · Event'],
+            name: 'Sponsors TV',
+            objective: 'Video for the club screens inviting brands to sponsor: padel, volleyball and "One place. All in."',
+            formats: ['TV 16:9 · 10 s'],
           },
         ],
       },
+    ],
+  },
+
+  'kings-tavern': {
+    tagline: 'Food, drinks and game nights inside KOP.',
+    tags: ['Social Media', 'Art Direction', 'Reels', 'Paid Media', 'Game day series'],
+    overview: 'Kings Tavern is the restaurant and bar inside KOP, the sports club in San Antonio, TX.',
+    role: 'Art direction, visual production and motion: posts, carousels, reels, ads and the game day series.',
+    challenge: 'Text in progress.',
+    process: 'Text in progress.',
+    result: 'Text in progress.',
+    campaignsLabel: 'WORK',
+    campaigns: [
       {
-        name: 'Kings Tavern',
-        objective:
-          "Editorial content for the club's in-house restaurant. A warmer, more atmospheric visual line that coexists with KOP's sports identity without breaking the feed.",
-        formats: ['Post · Instagram', 'Carousel · Instagram'],
+        name: 'Content',
+        objective: 'Food, drinks and game nights. Purple, gold and a warmer line than the club.',
+        formats: ['Post', 'Carousel', 'Reel', 'Ad'],
       },
       {
-        name: 'Sin Yolanda',
-        objective:
-          'Reel series for the Sin Yolanda opening: three distinct pieces with two versions of the main opening for social media distribution. The main opening accumulated 26.3K views and 212 likes in 6 weeks organically.',
-        formats: ['Reel · Opening v1', 'Reel · Opening v2', 'Reel · Part 2', 'Reel · Part 3'],
+        name: 'Paid media',
+        objective: 'September 2026 campaign ad: reasons to watch the game at Kings Tavern.',
+        formats: ['Ad · Reel 9:16'],
       },
       {
-        name: 'Organic Content',
-        objective:
-          "Editorial posts, educational carousels and reels for KOP's Instagram feed, 15+ pieces building brand identity week by week.",
-        formats: ['Post', 'Carousel', 'Reel'],
+        name: 'Creative requests',
+        objective: 'Requests for the bar and its screens.',
+        subCampaigns: [
+          {
+            name: 'Game day',
+            objective: "A series for each team on the bar's screens: every poster takes the team's colours and its sponsor beer.",
+            formats: ['Texas A&M', 'Texas Longhorns', 'Spurs', 'UTSA'],
+          },
+          {
+            name: 'Sponsors TV',
+            objective: 'Video inviting brands to advertise in the bar: "Great food. Cold drinks." and "Want to advertise here?"',
+            formats: ['TV 16:9 · 10 s'],
+          },
+        ],
       },
     ],
   },
 
   bwl: {
-    tagline: 'A global brand that speaks two languages without losing its voice.',
+    tagline: 'Five skincare and supplement brands, in English and Chinese.',
     tags: ['Social Media', 'Motion', 'Paid Media', 'RedNote · 小红书', 'Generative AI'],
     overview:
       'BWL (Best World) is a Singapore-origin wellness brand with global distribution and multiple product lines. The work covers content pieces for Instagram and paid media in English, plus reel adaptation to Chinese for RedNote (小红书), each piece reformatted for the cultural and visual context of each platform.',
@@ -219,36 +342,20 @@ export const projectTranslationsEN: Record<string, ProjectTranslation> = {
       'For each reel: first the English version with premium stock, motion type and western pacing; then the Chinese adaptation with adjusted typography, native copy and visual references that connect with the RedNote audience. The paid media statics follow a clean, premium line that works in both markets.',
     result:
       '20+ pieces across static paid media, bilingual reels and editorial posts. A production system that allows adapting each piece to two languages without losing brand coherence. May 1 · Global Love Your Skin Month campaign: 53 likes and 43 sends, a high send ratio for editorial content.',
+    campaignsLabel: 'WORK',
     campaigns: [
       {
-        name: 'May 1 · Global Love Your Skin Month',
-        objective:
-          'Editorial campaign for Global Love Your Skin Day: carousel with photography of diverse skin tones and inclusive copy, adapted in English for Instagram and Chinese for RedNote. 53 likes · 43 organic sends.',
-        formats: ['Carousel EN · Instagram', 'Carousel 中文 · 小红书'],
+        name: 'The brands',
+        objective: 'Five brands from one family, each with its own visual language. Open each one to see all its pieces.',
+        subCampaigns: [
+          { name: 'BWL', objective: 'The parent brand: global campaigns in English and Chinese for Instagram and RedNote.', formats: ['Carousel EN · 中文', 'Reel'] },
+          { name: "DR's Secret", objective: 'Skincare: real skin, seasonal routines and the product up front.', formats: ['Carousel', 'Post', 'Reel'] },
+          { name: 'Avance', objective: 'Beauty and wellness supplements: daily rituals and collagen.', formats: ['Carousel', 'Post', 'Reel EN · 中文'] },
+          { name: 'Optrimax', objective: 'Functional drinks: colour, illustration and a more playful tone.', formats: ['Post', 'Reel'] },
+          { name: 'Pentalab', objective: "Body care: skin doesn't stop at your face.", formats: ['Carousel'] },
+        ],
       },
-      {
-        name: 'BWL · Organic Content',
-        objective: 'Editorial reels, product carousel and static posts for the main BWL brand channel.',
-        formats: ['Reel', 'Carousel', 'Post'],
-      },
-      {
-        name: 'Avance',
-        objective:
-          'Product content for Instagram and RedNote: bilingual platform-adapted reels and educational carousel designed for retention and saves.',
-        formats: ['Reel EN', 'Reel 中文', 'Carousel'],
-      },
-      {
-        name: 'Optrimax',
-        objective:
-          'Bilingual product reel adaptation: English version for Instagram and Chinese version for RedNote (小红书). Same visual concept, native copy in each language.',
-        formats: ['Reel EN · Instagram', 'Reel 中文 · 小红书'],
-      },
-      {
-        name: 'Paid Media',
-        objective:
-          'Ad pieces across multiple BWL brands: activation videos and static sets for feed and display.',
-        formats: ['Video · Paid Media', 'Statics · Paid Media'],
-      },
+      { name: 'Paid media', objective: 'Ads for the family of brands: from the parent brand to each product line.', formats: ['Ad · Reel 9:16', 'Ad · Carousel'] },
     ],
   },
 
@@ -259,32 +366,48 @@ export const projectTranslationsEN: Record<string, ProjectTranslation> = {
       'Procyon is a Mexican esports organization competing in Valorant Challengers LATAM Norte. The work covers the complete visual identity: logo system, social media content templates, platform headers and the design of the official team jersey.',
     role: 'Complete visual identity and content production: logo system in three variants, match day templates in three states (Gameday, Winners, Defeat), headers for Twitch, YouTube, Twitter and Facebook, player posts and official jersey design.',
     challenge:
-      'Building an identity that worked in the competitive Valorant Challengers context without losing its own personality. The name Procyon — the brightest star in Canis Minor — defined the direction: cosmic, precise, with an edge of mystery.',
+      'An identity for an esports team that would read in every piece, from posts to the jersey. The name Procyon — the brightest star in Canis Minor — defined the direction: cosmic, precise, with an edge of mystery.',
     process:
       'The system is built around a four-pointed star monogram as the central icon: geometric, symmetrical, with stellar references. The black/purple palette reinforces the spatial dimension of the name. The match templates operate in two modes: dark background with an intense character for match day, light background with expansive typography for winning results. The jersey reproduces the icon on the chest with topographic texture for the premium finish.',
     result:
       'Complete system published on @ProcyonGaming_: logo in three versions (horizontal, vertical, icon) in positive, negative and digital. Six result templates, headers on four platforms, player posts and official team jersey.',
+    campaignsLabel: 'WORK',
     campaigns: [
-      {
-        name: 'Visual Identity',
-        objective: 'Complete logo system in three variants (horizontal, vertical, icon) and two palettes (positive and negative) for use across all digital and physical contexts.',
-        formats: ['Horizontal Logo', 'Vertical Logo', 'Icon', 'Positive · Negative'],
-      },
-      {
-        name: 'Match Templates',
-        objective: 'Three templates for match results: Gameday (match announcement), Winners (positive result) and Defeat (negative result), each featuring a different Valorant character and distinct composition.',
-        formats: ['Gameday · 1080×1080', 'Winners · 1080×1080', 'Defeat · 1080×1080'],
-      },
-      {
-        name: 'Merch · Official Jersey',
-        objective: 'Official team jersey design with topographic texture, Procyon icon on the chest and wordmark on the front. Produced in white version.',
-        formats: ['Jersey · White', 'Sublimated Design'],
-      },
+      { name: 'Identity', objective: 'A four-pointed star: icon, horizontal and vertical logo.', formats: ['Icon', 'Horizontal', 'Vertical'] },
+      { name: 'Match day', objective: 'Templates for every match in three states: gameday, win and defeat.', formats: ['Gameday', 'Winners', 'Defeat'] },
+      { name: 'Players and creators', objective: 'Welcomes for the roster and content creators.', formats: ['Welcome', 'Players'] },
+      { name: 'Banners', objective: 'Headers for YouTube, Twitch and each creator.', formats: ['YouTube', 'Twitch', 'Creators'] },
+      { name: 'Merch', objective: "The organisation's official jersey.", formats: ['Jersey'] },
     ],
+  },
+  retrato: {
+    tagline: 'Ivanna and Michel, two sessions on a Canon T3i.',
+    tags: ['Photography', 'Portrait', 'Model direction'],
+    overview: 'Two portrait sessions: stairs, plants, a motorbike and a lift as the set, with natural and hard light.',
+    role: 'Photography, pose direction and selection.',
+    challenge: 'Text in progress.',
+    process: 'Text in progress.',
+    result: 'Text in progress.',
+    campaignsLabel: 'WORK',
+    campaigns: [
+      { name: 'Ivanna', objective: 'Blue hair against concrete, plants and metal: cold colour in grey spaces.', formats: ['Portrait', 'Outdoor'] },
+      { name: 'Michel', objective: 'From the tree to the lift: hard light, reflections and a close-up.', formats: ['Portrait', 'Outdoor', 'Indoor'] },
+    ],
+  },
+  kymsul: {
+    tagline: 'Illustration and animation commissions: from zero to sales. Coming soon.',
+    tags: ['Illustration', 'Animation', 'Emotes', 'Overlays', 'PNGtuber'],
+    overview: 'Kymsul started with illustration and animation commissions; I grew it from zero to sales.',
+    role: 'Illustration, animation, client care and commission sales.',
+    challenge: 'Text in progress.',
+    process: 'Text in progress.',
+    result: 'Text in progress.',
+    campaignsLabel: 'WORK',
+    campaigns: [],
   },
 
   'activated-decor': {
-    tagline: 'Rebranding for the brand behind Disney+, Four Seasons and Ritz-Carlton TV lifts.',
+    tagline: 'Rebranding for a Canadian TV-lift brand.',
     tags: ['Rebranding', 'Visual Identity', 'Animated Logo', 'Brand Guidelines', 'Motion'],
     overview:
       'Activated Decor is a Canadian company that designs and manufactures motorized TV lift and concealment systems for luxury architecture. Their installations are at Disney+, Four Seasons, Hilton, Marriott and Ritz-Carlton. The project was a complete rebranding: visual identity system, brand guidelines and animated logo in multiple versions for digital use.',
@@ -295,19 +418,12 @@ export const projectTranslationsEN: Record<string, ProjectTranslation> = {
       'I developed the "ad" monogram as the foundation of the system: geometric, clean, with personality. The deep black and burgundy palette communicates technical luxury without falling into generic corporate. The identity manual documents logo construction, correct usage across different backgrounds, typography and application variants. The animated logos were produced in three versions (icon, full logotype, short version) and two color palettes.',
     result:
       'Complete identity system with brand guidelines, logo in three static and animated versions delivered in GIF and MOV formats. The animated logo is in active use on their website, a brand worthy of the luxury venues where their products live.',
+    campaignsLabel: 'WORK',
     campaigns: [
-      {
-        name: 'Brand Identity',
-        objective:
-          'Complete visual identity system for Activated Decor: logo and monogram, color palette, typography, system construction and correct/incorrect usage guide.',
-        formats: ['Logotype · 3 versions', 'Color Palette', 'Typography', 'Brand Guidelines'],
-      },
-      {
-        name: 'Motion · Animated Logo',
-        objective:
-          'Animated logo in three versions (icon, full logotype and short version), produced in two color combinations: black/red and white/red.',
-        formats: ['Animated Logo · Black/Red', 'Animated Logo · White/Red', 'GIF · MOV'],
-      },
+      { name: 'Construction', objective: 'Monogram, logotype and short version, with their anatomy and how they adapt.', formats: ['Monogram', 'Logotype', 'Adaptation'] },
+      { name: 'System', objective: 'Black, wine and greys; Poppins and Inter; correct and incorrect use.', formats: ['Palette', 'Typography', 'Usage'] },
+      { name: 'Applications', objective: 'The brand on social and on product.', formats: ['Social', 'Mockup'] },
+      { name: 'Motion', objective: 'The animated logo in its versions.', formats: ['Animated logo', 'Monogram', 'Logotype'] },
     ],
   },
 
@@ -409,18 +525,15 @@ export const projectTranslationsEN: Record<string, ProjectTranslation> = {
       'Each grid starts with the product as protagonist: food photography with natural light, wooden props, clay vessels and Oaxacan textiles. Educational carousels complement the editorial by explaining processes and care tips. The copy plays with colloquial Mexican language without losing the premium tone.',
     result:
       'Continuous production: editorial grids for February and March 2026, two educational carousels, seven reels (three in February and four in March) and a roll-up banner for the point of sale.',
+    campaignsLabel: 'WORK',
     campaigns: [
+      { name: 'Content', objective: 'Cheese as the hero: natural light, wood, clay and Oaxacan textiles, plus carousels that teach how to recognise and care for it.', formats: ['Post', 'Carousel', 'Reel'] },
       {
-        name: 'Educational Carousels',
-        objective:
-          'Product carousels that educate consumers on the authenticity and care of artisanal cheese, in two formats: identifying artisanal cheese and preservation tips.',
-        formats: ['Carousel · Instagram', 'Educational · Product'],
-      },
-      {
-        name: 'Print Materials',
-        objective:
-          'Roll-up banner for point of sale and exhibitions: communicates the two main product lines (Quesillo and Panela) with clear brand identity and contact details.',
-        formats: ['Roll-up Banner · Point of Sale', 'Print'],
+        name: 'Creative requests',
+        objective: 'Printed material for point of sale.',
+        subCampaigns: [
+          { name: 'Roll-up banner', objective: 'The two main lines, Quesillo and Panela, for in-store display.', formats: ['Roll-up', 'Print'] },
+        ],
       },
     ],
   },
@@ -437,30 +550,18 @@ export const projectTranslationsEN: Record<string, ProjectTranslation> = {
       'The work had two fronts. Content production: reels, posts and campaign pieces built from the restaurant\'s aesthetic (warm lighting, yellow neon, wood). Mixology shoot: I prepared the shooting call with the copywriter, coordinated with the restaurant manager and co-directed the on-location shoot with the photographer. The resulting images feed the brand\'s visual bank for cocktail content.',
     result:
       "Monthly grids for Feb and March 2026, Valentine's Day campaign in digital and print, five-location kit in four formats, cocktail tent card, expansion survey and a mixology image bank produced on location.",
+    campaignsLabel: 'WORK',
     campaigns: [
+      { name: 'Content', objective: 'Sushi, cocktails and real people under the neon: the monthly grid of reels and posts.', formats: ['Post', 'Reel'] },
       {
-        name: "Valentine's Day Campaign",
-        objective:
-          'Activation campaign for February 14th: mini UGC campaign "Do you have a story with your amorcito?" across three Instagram stories: call for submissions, mechanics and closing.',
-        formats: ['Stories · Instagram', 'UGC · Activation'],
-      },
-      {
-        name: 'Location Kit',
-        objective:
-          'Content kit for the five locations in Puebla: square post and story with locations, adapted in two photo versions to rotate in the feed.',
-        formats: ['Post · Instagram', '5 Locations'],
-      },
-      {
-        name: 'TV Screen · Promos',
-        objective:
-          'Promotional video for in-venue screens: animated restaurant offers and promos adapted to HD TV screen format.',
-        formats: ['Video · HD Screen', 'TV Screen'],
-      },
-      {
-        name: 'Point of Sale Materials',
-        objective:
-          'Design of physical materials for the tables: cocktail tent card with QR and expansion survey to identify demand for a new location.',
-        formats: ['Tent Card · Cocktail Menu', 'Survey · New Location', 'Print'],
+        name: 'Creative requests',
+        objective: 'Campaigns, locations, screens and point of sale.',
+        subCampaigns: [
+          { name: "Valentine's Day", objective: 'UGC mini-campaign "Do you have a story with your amorcito?": call, mechanics and close, plus tabloid and cover.', formats: ['Story · UGC', 'Tabloid', 'Cover'] },
+          { name: 'Location kit', objective: 'The five Puebla locations as post and story, with two photos to rotate.', formats: ['Post', 'Story'] },
+          { name: 'TV screen', objective: "The restaurant's promos animated for the venue screens.", formats: ['TV 16:9'] },
+          { name: 'Point of sale', objective: 'For the tables: a cocktail tent card with QR and a survey to choose the next location.', formats: ['Tent card', 'Survey'] },
+        ],
       },
     ],
   },

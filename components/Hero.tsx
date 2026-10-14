@@ -1,64 +1,44 @@
 'use client'
 
+import Link from './LocaleLink'
+import Image from './MediaImage'
+import FeaturedCarousel from './FeaturedCarousel'
 import { useLang } from '@/lib/lang-context'
 import { tr } from '@/lib/translations'
 
-const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
-
+// Proposal A, "punto medio" layout chosen by Kimberly on 10 Oct 2026.
 export default function Hero() {
   const { lang } = useLang()
   const h = tr.hero
 
   return (
-    <section className="max-w-[1440px] mx-auto px-6 lg:px-24 pt-12 lg:pt-16 pb-8 lg:pb-20">
+    <section className="hero-a" aria-labelledby="hero-title">
+      <p className="hero-mono hero-eyebrow">{h.eyebrow[lang]}</p>
+      <h1 id="hero-title" className="hero-name">
+        {h.name[lang]}
+      </h1>
+      <div className="hero-composition">
+        <figure className="hero-portrait">
+          <Image
+            src="/assets/kym-foto.jpg"
+            alt={h.portraitAlt[lang]}
+            priority
+            sizes="(max-width: 600px) 76vw, (max-width: 1023px) 55vw, 480px"
+          />
+          <figcaption className="hero-signature" lang={lang}>
+            {h.signature[lang]}
+          </figcaption>
+        </figure>
 
-      {/* Eyebrow */}
-      <div className="mb-10 lg:mb-14">
-        <p className="font-mono text-[10px] lg:text-[11px] text-muted2 tracking-[1.76px]">
-          {h.eyebrow[lang]}
-        </p>
-      </div>
-
-      {/* Headline */}
-      <div className="mb-6 lg:mb-14">
-        <p
-          className="text-[clamp(34px,7.5vw,108px)] leading-[0.88] text-dark"
-          style={{ fontFamily: 'var(--font-franklin-cond)', fontWeight: 700 }}
-        >
-          {h.line1[lang]}
-        </p>
-        <p
-          className="font-fraunces font-light text-[clamp(28px,7.5vw,100px)] leading-[0.88] text-dark"
-          style={WONK}
-        >
-          {h.line2[lang]}
-        </p>
-        <p
-          className="font-fraunces font-light italic text-[clamp(22px,7.5vw,90px)] leading-[0.88] text-lav"
-          style={WONK}
-        >
-          {h.line3[lang]}
-        </p>
-      </div>
-
-      {/* Footer: sub izquierda, CTA derecha */}
-      <div className="border-t border-[rgba(13,13,13,0.1)] pt-6 lg:pt-8 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5">
-        <div>
-          <p className="font-mono text-[10px] lg:text-[11px] text-muted2 tracking-[1.76px] mb-2">
-            {h.tag[lang]}
-          </p>
-          <p className="font-sans text-[15px] lg:text-[17px] text-muted leading-[1.5] max-w-[540px]">
-            {h.sub[lang]}
-          </p>
+        <div className="hero-bio">
+          <h2>{h.lead[lang]}</h2>
+          <Link href="/sobre-mi" className="hero-text-link">
+            {h.story[lang]} <span aria-hidden="true">→</span>
+          </Link>
         </div>
-        <a
-          href="#portafolio"
-          className="self-start lg:self-end shrink-0 inline-flex items-center bg-dark text-bg font-sans text-[13px] rounded-full px-6 py-[14px] hover:opacity-80 transition-opacity"
-        >
-          {h.cta[lang]}
-        </a>
-      </div>
 
+        <FeaturedCarousel />
+      </div>
     </section>
   )
 }

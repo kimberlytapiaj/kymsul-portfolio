@@ -3,52 +3,33 @@
 import { useLang } from '@/lib/lang-context'
 import { tr } from '@/lib/translations'
 
-const WONK = { fontVariationSettings: "'SOFT' 0, 'WONK' 1" }
+const EMAIL = 'kimberly.tapiaj@gmail.com'
 
+/** Single closing: "Hablemos.", the email as the main action and a hand-written
+ *  sign-off that echoes the hero's "Soy Kim.". */
 export default function CTABand() {
   const { lang } = useLang()
   const c = tr.cta
 
   return (
-    <section className="bg-dark w-full">
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-24 py-16 lg:py-24 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10 lg:gap-16">
-
-        {/* Heading */}
-        <div className="shrink-0">
-          <p
-            className="font-fraunces font-light text-white leading-[0.9] text-[clamp(36px,4.5vw,56px)]"
-            style={WONK}
+    <section id="contacto" className="ed-section close" aria-labelledby="close-title">
+      <div className="ed-wrap text-center">
+        <p className="ed-label mb-8">{c.eyebrow[lang]}</p>
+        <h2 id="close-title" className="ed-title close-title">
+          {c.title[lang]}
+        </h2>
+        <p className="close-mail">
+          <a
+            href={`mailto:${EMAIL}?subject=${lang === 'es' ? 'Conversaci%C3%B3n%20profesional' : 'Professional%20conversation'}`}
+            className="area-more"
           >
-            {c.line1[lang]}
-          </p>
-          <p
-            className="font-fraunces italic text-lav leading-[0.9] text-[clamp(36px,4.5vw,56px)]"
-            style={WONK}
-          >
-            {c.line2[lang]}
-          </p>
-        </div>
-
-        {/* Right content */}
-        <div>
-          <div className="flex flex-wrap gap-3">
-            <a
-              href="mailto:kimberly.tapiaj@gmail.com?subject=Conversaci%C3%B3n%20profesional"
-              className="bg-lav text-dark font-sans text-[13px] rounded-full px-8 h-[50px] inline-flex items-center hover:opacity-90 transition-opacity"
-            >
-              {c.btn[lang]}
-            </a>
-            <a
-              href="https://www.linkedin.com/in/kimberly-tapia-rubio-39a35828a/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border border-[rgba(255,255,255,0.2)] text-white font-sans text-[13px] rounded-full px-8 h-[50px] inline-flex items-center hover:border-[rgba(255,255,255,0.5)] transition-colors"
-            >
-              LinkedIn
-            </a>
-          </div>
-        </div>
-
+            <span className="area-more-text">{EMAIL}</span>
+            <span className="area-more-arrow" aria-hidden="true">⟶</span>
+          </a>
+        </p>
+        <span className="close-sign" aria-hidden="true">
+          {c.sign[lang]}
+        </span>
       </div>
     </section>
   )
